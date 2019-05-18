@@ -1,0 +1,32 @@
+@import 'true';
+@import './color';
+
+@include describe('The color mixin') {
+  $colors: (
+    transparent: transparent,
+    gray: (
+      100: #f7fafc,
+      200: #edf2f7,
+    ),
+  );
+  $prefix: '';
+
+  @include it('should output color stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include color($prefix, $colors);
+      }
+      @include expect {
+        .text-transparent {
+          color: transparent;
+        }
+        .text-gray-100 {
+          color: #f7fafc;
+        }
+        .text-gray-200 {
+          color: #edf2f7;
+        }
+      }
+    }
+  }
+}
