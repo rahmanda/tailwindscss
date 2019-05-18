@@ -7,7 +7,7 @@ $theme-letter-spacing: (
   widest: 0.1em,
 ) !default;
 
-@mixin letter-spacing($prefix, $maps: $theme-font-size) {
+@mixin letter-spacing($prefix, $maps: $theme-letter-spacing) {
   @each $unit, $value in $maps {
     .#{$prefix}tracking-#{$unit} {
       letter-spacing: $value;
