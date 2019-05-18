@@ -1,0 +1,15 @@
+@mixin object-fit($prefix) {
+  $props: (
+    object-contain: contain,
+    object-cover: cover,
+    object-fill: fill,
+    object-none: none,
+    object-scale-down: scale-down,
+  );
+
+  @each $name, $value in $props {
+    .#{$prefix}#{$name} {
+      object-fit: $value;
+    }
+  }
+}

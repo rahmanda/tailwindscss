@@ -1,0 +1,32 @@
+@import 'true';
+@import './object-fit';
+
+@include describe('The float mixin') {
+  $prefix: '';
+
+  @include it('should output float stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include object-fit($prefix);
+      }
+
+      @include expect {
+        .object-contain {
+          object-fit: contain;
+        }
+        .object-cover {
+          object-fit: cover;
+        }
+        .object-fill {
+          object-fit: fill;
+        }
+        .object-none {
+          object-fit: none;
+        }
+        .object-scale-down {
+          object-fit: scale-down;
+        }
+      }
+    }
+  }
+}
