@@ -1,0 +1,32 @@
+@import 'true';
+@import './word-break';
+
+@include describe('The word-break mixin') {
+  $prefix: '';
+
+  @include it('should output word-break stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include word-break($prefix);
+      }
+
+      @include expect {
+        .break-normal {
+          word-break: normal;
+          overflow-wrap: normal;
+        }
+        .break-words {
+          overflow-wrap: break-word;
+        }
+        .break-all {
+          word-break: normal;
+        }
+        .truncate {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@mixin word-break($prefix) {
+  .#{$prefix}break-normal {
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+  .#{$prefix}break-words {
+    overflow-wrap: break-word;
+  }
+  .#{$prefix}break-all {
+    word-break: normal;
+  }
+  .#{$prefix}truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
