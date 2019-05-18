@@ -1,0 +1,89 @@
+@import 'true';
+@import './align';
+
+@include describe('The align-items mixin') {
+  $prefix: '';
+
+  @include it('should output align-items stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include align-items($prefix);
+      }
+      @include expect {
+        .items-stretch {
+          align-items: stretch;
+        }
+        .items-start {
+          align-items: flex-start;
+        }
+        .items-center {
+          align-items: center;
+        }
+        .items-end {
+          align-items: flex-end;
+        }
+        .items-baseline {
+          align-items: baseline;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The align-content mixin') {
+  $prefix: '';
+
+  @include it('should output align-content stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include align-content($prefix);
+      }
+      @include expect {
+        .content-start {
+          align-content: flex-start;
+        }
+        .content-center {
+          align-content: center;
+        }
+        .content-end {
+          align-content: flex-end;
+        }
+        .content-between {
+          align-content: space-between;
+        }
+        .content-around {
+          align-content: space-around;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The align-self mixin') {
+  $prefix: '';
+
+  @include it('should output align-self stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include align-self($prefix);
+      }
+      @include expect {
+        .self-auto {
+          align-self: auto;
+        }
+        .self-start {
+          align-self: flex-start;
+        }
+        .self-center {
+          align-self: center;
+        }
+        .self-end {
+          align-self: flex-end;
+        }
+        .self-stretch {
+          align-self: stretch;
+        }
+      }
+    }
+  }
+}

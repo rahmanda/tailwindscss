@@ -1,0 +1,44 @@
+@mixin align-items($prefix) {
+  $maps: (
+    stretch: stretch,
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    baseline: baseline,
+  );
+  @each $unit, $value in $maps {
+    .#{$prefix}items-#{$unit} {
+      align-items: $value;
+    }
+  }
+}
+
+@mixin align-content($prefix) {
+  $maps: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    between: space-between,
+    around: space-around,
+  );
+  @each $unit, $value in $maps {
+    .#{$prefix}content-#{$unit} {
+      align-content: $value;
+    }
+  }
+}
+
+@mixin align-self($prefix) {
+  $maps: (
+    auto: auto,
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    stretch: stretch,
+  );
+  @each $unit, $value in $maps {
+    .#{$prefix}self-#{$unit} {
+      align-self: $value;
+    }
+  }
+}
