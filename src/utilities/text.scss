@@ -19,3 +19,18 @@
     text-decoration: none;
   }
 }
+
+@mixin text-transform($prefix) {
+  .#{$prefix}uppercase {
+    text-transform: uppercase;
+  }
+  .#{$prefix}lowercase {
+    text-transform: lowercase;
+  }
+  .#{$prefix}capitalize {
+    text-transform: capitalize;
+  }
+  .#{$prefix}normal-case {
+    text-transform: none;
+  }
+}

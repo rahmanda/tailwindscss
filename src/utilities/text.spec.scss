@@ -51,3 +51,30 @@
     }
   }
 }
+
+@include describe('The text-transform mixin') {
+  $prefix: '';
+
+  @include it('should output text-transform stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include text-transform($prefix);
+      }
+
+      @include expect {
+        .uppercase {
+          text-transform: uppercase;
+        }
+        .lowercase {
+          text-transform: lowercase;
+        }
+        .capitalize {
+          text-transform: capitalize;
+        }
+        .normal-case {
+          text-transform: none;
+        }
+      }
+    }
+  }
+}
