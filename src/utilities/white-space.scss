@@ -1,0 +1,17 @@
+@mixin white-space($prefix) {
+  .#{$prefix}whitespace-normal {
+    white-space: normal;
+  }
+  .#{$prefix}whitespace-no-wrap {
+    white-space: nowrap;
+  }
+  .#{$prefix}whitespace-pre {
+    white-space: pre;
+  }
+  .#{$prefix}whitespace-pre-line {
+    white-space: pre-line;
+  }
+  .#{$prefix}whitespace-pre-wrap {
+    white-space: pre-wrap;
+  }
+}

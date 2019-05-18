@@ -1,0 +1,32 @@
+@import 'true';
+@import './white-space';
+
+@include describe('The white-space mixin') {
+  $prefix: '';
+
+  @include it('should output white-space stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include white-space($prefix);
+      }
+
+      @include expect {
+        .whitespace-normal {
+          white-space: normal;
+        }
+        .whitespace-no-wrap {
+          white-space: nowrap;
+        }
+        .whitespace-pre {
+          white-space: pre;
+        }
+        .whitespace-pre-line {
+          white-space: pre-line;
+        }
+        .whitespace-pre-wrap {
+          white-space: pre-wrap;
+        }
+      }
+    }
+  }
+}
