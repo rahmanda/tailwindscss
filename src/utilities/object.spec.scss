@@ -1,13 +1,13 @@
 @import 'true';
 @import './object';
 
-@include describe('The object mixin') {
+@include describe('The object-fit mixin') {
   $prefix: '';
 
-  @include it('should output object stylesheet correctly') {
+  @include it('should output object-fit stylesheet correctly') {
     @include assert {
       @include output {
-        @include object($prefix);
+        @include object-fit($prefix);
       }
 
       @include expect {
@@ -26,6 +26,21 @@
         .object-scale-down {
           object-fit: scale-down;
         }
+      }
+    }
+  }
+}
+
+@include describe('The object-position mixin') {
+  $prefix: '';
+
+  @include it('should output object-position stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include object-position($prefix);
+      }
+
+      @include expect {
         .object-bottom {
           object-position: bottom;
         }

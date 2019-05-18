@@ -1,4 +1,4 @@
-@mixin object($prefix) {
+@mixin object-fit($prefix) {
   $object-fit-props: (
     object-contain: contain,
     object-cover: cover,
@@ -7,6 +7,14 @@
     object-scale-down: scale-down,
   );
 
+  @each $name, $value in $object-fit-props {
+    .#{$prefix}#{$name} {
+      object-fit: $value;
+    }
+  }
+}
+
+@mixin object-position($prefix) {
   $object-position-props: (
     object-bottom: bottom,
     object-center: center,
@@ -18,12 +26,6 @@
     object-right-top: right top,
     object-top: top,
   );
-
-  @each $name, $value in $object-fit-props {
-    .#{$prefix}#{$name} {
-      object-fit: $value;
-    }
-  }
 
   @each $name, $value in $object-position-props {
     .#{$prefix}#{$name} {
