@@ -21,6 +21,23 @@ $prefix: '' !default;
 @include z-index($prefix);
 
 
+// Typography
+
+@import './src/utilities/font';
+@import './src/utilities/letter-spacing';
+@import './src/utilities/line-height';
+@import './src/utilities/list-style';
+@import './src/utilities/text';
+@import './src/utilities/vertical-align';
+@import './src/utilities/white-space';
+@import './src/utilities/word-break';
+
+@include font-family($prefix);
+@include font-size($prefix);
+@include font-smoothing($prefix);
+@include font-style($prefix);
+@include font-weight($prefix);
+
 // Flex
 
 @import './src/utilities/flex';
