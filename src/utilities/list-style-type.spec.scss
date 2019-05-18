@@ -1,0 +1,26 @@
+@import 'true';
+@import './list-style-type';
+
+@include describe('The list-style-type mixin') {
+  $prefix: '';
+
+  @include it('should output list-style-type stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include list-style-type($prefix);
+      }
+
+      @include expect {
+        .list-none {
+          list-style-type: none;
+        }
+        .list-disc {
+          list-style-type: disc;
+        }
+        .list-decimal {
+          list-style-type: decimal;
+        }
+      }
+    }
+  }
+}
