@@ -41,7 +41,7 @@
   @include it('should output position\'s direction stylesheet correctly') {
     @include assert {
       @include output {
-        @include position-direction($maps, $prefix);
+        @include position-direction($prefix, $maps);
       }
 
       @include expect {

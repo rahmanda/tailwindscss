@@ -1,7 +1,0 @@
-@mixin z-index($maps, $prefix) {
-  @each $unit, $value in $maps {
-    .#{$prefix}z-#{$unit} {
-      z-index: $value;
-    }
-  }
-}

@@ -1,4 +1,11 @@
-@mixin flex($maps, $prefix) {
+$theme-flex: (
+  initial: 0 1 auto,
+  1: 1 1 0%,
+  auto: auto,
+  none: none,
+) !default;
+
+@mixin flex($prefix, $maps: $theme-flex) {
   @each $unit, $value in $maps {
     .#{$prefix}flex-#{$unit} {
       flex: $value;
@@ -35,7 +42,12 @@
   }
 }
 
-@mixin flex-grow($maps, $prefix) {
+$theme-flex-grow: (
+  0: 0,
+  default: 1,
+) !default;
+
+@mixin flex-grow($prefix, $maps: $theme-flex-grow) {
   @each $unit, $value in $maps {
     @if $unit == default {
       .#{$prefix}flex-grow {
@@ -50,7 +62,12 @@
   }
 }
 
-@mixin flex-shrink($maps, $prefix) {
+$theme-flex-grow: (
+  0: 0,
+  default: 1,
+) !default;
+
+@mixin flex-shrink($prefix, $maps: $theme-flex-grow) {
   @each $unit, $value in $maps {
     @if $unit == default {
       .#{$prefix}flex-shrink {

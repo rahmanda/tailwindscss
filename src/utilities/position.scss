@@ -8,7 +8,12 @@
   }
 }
 
-@mixin position-direction($maps, $prefix) {
+$theme-position-direction: (
+  0: 0,
+  auto: auto,
+) !default;
+
+@mixin position-direction($prefix, $maps: $theme-position-direction) {
   $map-props: (
     inset: top right bottom left,
     inset-x: right left,

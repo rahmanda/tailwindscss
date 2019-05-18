@@ -10,7 +10,7 @@
   @include it('should output spacing stylesheet correctly') {
     @include assert {
       @include output {
-        @include spacing($maps, $prefix);
+        @include spacing($prefix, $maps);
       }
 
       @include expect {
