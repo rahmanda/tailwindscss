@@ -1,0 +1,31 @@
+@import 'true';
+@import './letter-spacing';
+
+@include describe('The letter-spacing mixin') {
+  $maps: (
+    tight: -0.025em,
+    normal: 0,
+    wide: 0.025em,
+  );
+  $prefix: '';
+
+  @include it('should output letter-spacing stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include letter-spacing($prefix, $maps);
+      }
+
+      @include expect {
+        .tracking-tight {
+          letter-spacing: -0.025em;
+        }
+        .tracking-normal {
+          letter-spacing: 0;
+        }
+        .tracking-wide {
+          letter-spacing: 0.025em;
+        }
+      }
+    }
+  }
+}
