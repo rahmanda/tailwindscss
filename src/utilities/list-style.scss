@@ -1,0 +1,19 @@
+@mixin list-style-type($prefix) {
+  $values: none disc decimal;
+
+  @each $value in $values {
+    .#{$prefix}list-#{$value} {
+      list-style-type: $value;
+    }
+  }
+}
+
+@mixin list-style-position($prefix) {
+  $values: inside outside;
+
+  @each $value in $values {
+    .#{$prefix}list-#{$value} {
+      list-style-position: $value;
+    }
+  }
+}

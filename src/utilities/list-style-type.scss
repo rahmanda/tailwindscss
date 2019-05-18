@@ -1,9 +1,0 @@
-@mixin list-style-type($prefix) {
-  $values: none disc decimal;
-
-  @each $value in $values {
-    .#{$prefix}list-#{$value} {
-      list-style-type: $value;
-    }
-  }
-}
