@@ -1,0 +1,31 @@
+@import 'true';
+@import './justify-content';
+
+@include describe('The justify-content mixin') {
+  $prefix: '';
+
+  @include it('should output justify-content stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include justify-content($prefix);
+      }
+      @include expect {
+        .justify-start {
+          justify-content: flex-start;
+        }
+        .justify-center {
+          justify-content: center;
+        }
+        .justify-end {
+          justify-content: flex-end;
+        }
+        .justify-between {
+          justify-content: space-between;
+        }
+        .justify-around {
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}

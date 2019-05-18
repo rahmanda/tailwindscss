@@ -1,0 +1,14 @@
+@mixin justify-content($prefix) {
+  $maps: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    between: space-between,
+    around: space-around,
+  );
+  @each $unit, $value in $maps {
+    .#{$prefix}justify-#{$unit} {
+      justify-content: $value;
+    }
+  }
+}
