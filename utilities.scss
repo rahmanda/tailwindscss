@@ -40,13 +40,21 @@ $prefix: '' !default;
 
 // Flex
 
+@import './src/utilities/align';
 @import './src/utilities/flex';
+@import './src/utilities/justify-content';
+@import './src/utilities/order';
 
+@include align-items($prefix);
+@include align-content($prefix);
+@include align-self($prefix);
 @include flex($prefix);
 @include flex-direction($prefix);
 @include flex-wrap($prefix);
 @include flex-grow($prefix);
 @include flex-shrink($prefix);
+@include justify-content($prefix);
+@include order($prefix);
 
 // Spacing
 
