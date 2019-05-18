@@ -1,0 +1,31 @@
+@import 'true';
+@import './line-height';
+
+@include describe('The line-height mixin') {
+  $maps: (
+    snug: 1.375,
+    normal: 1.5,
+    relaxed: 1.625,
+  );
+  $prefix: '';
+
+  @include it('should output line-height stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include line-height($prefix, $maps);
+      }
+
+      @include expect {
+        .leading-snug {
+          line-height: 1.375;
+        }
+        .leading-normal {
+          line-height: 1.5;
+        }
+        .leading-relaxed {
+          line-height: 1.625;
+        }
+      }
+    }
+  }
+}
