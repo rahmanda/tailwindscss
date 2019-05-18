@@ -7,3 +7,15 @@
     }
   }
 }
+
+@mixin text-decoration($prefix) {
+  .#{$prefix}underline {
+    text-decoration: underline;
+  }
+  .#{$prefix}line-through {
+    text-decoration: line-through;
+  }
+  .#{$prefix}no-underline {
+    text-decoration: none;
+  }
+}

@@ -27,3 +27,27 @@
     }
   }
 }
+
+@include describe('The text-decoration mixin') {
+  $prefix: '';
+
+  @include it('should output text-decoration stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include text-decoration($prefix);
+      }
+
+      @include expect {
+        .underline {
+          text-decoration: underline;
+        }
+        .line-through {
+          text-decoration: line-through;
+        }
+        .no-underline {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
