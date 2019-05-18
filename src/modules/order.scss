@@ -1,0 +1,7 @@
+@mixin order($maps, $prefix) {
+  @each $unit, $value in $maps {
+    .#{$prefix}order-#{$unit} {
+      order: $value;
+    }
+  }
+}

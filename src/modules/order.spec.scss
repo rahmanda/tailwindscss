@@ -1,0 +1,34 @@
+@import 'true';
+@import './order';
+
+@include describe('The order mixin') {
+  $maps: (
+    first: -1,
+    last: 999,
+    none: 0,
+    1: 1,
+  );
+  $prefix: '';
+
+  @include it('should output order stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include order($maps, $prefix);
+      }
+      @include expect {
+        .order-first {
+          order: -1;
+        }
+        .order-last {
+          order: 999;
+        }
+        .order-none {
+          order: 0;
+        }
+        .order-1 {
+          order: 1;
+        }
+      }
+    }
+  }
+}
