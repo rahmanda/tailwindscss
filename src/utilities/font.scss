@@ -1,0 +1,74 @@
+$theme-font-family: (
+  sans: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"),
+  serif: (Georgia, Cambria, "Times New Roman", Times, serif),
+  mono: (Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace),
+) !default;
+
+@mixin font-family($prefix, $maps: $theme-font-family) {
+  @each $unit, $value in $maps {
+    .#{$prefix}font-#{$unit} {
+      font-family: $value;
+    }
+  }
+}
+
+$theme-font-size: (
+  xs: 0.75rem,
+  sm: 0.875rem,
+  base: 1rem,
+  lg: 1.125rem,
+  xl: 1.25rem,
+  2xl: 1.5rem,
+  3xl: 1.875rem,
+  4xl: 2.25rem,
+  5xl: 3rem,
+  6xl: 4rem,
+) !default;
+
+@mixin font-size($prefix, $maps: $theme-font-size) {
+  @each $unit, $value in $maps {
+    .#{$prefix}text-#{$unit} {
+      font-size: $value;
+    }
+  }
+}
+
+@mixin font-smoothing($prefix) {
+  .#{$prefix}antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .#{$prefix}subpixel-antialiased {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin font-style($prefix) {
+  .#{$prefix}italic {
+    font-style: italic;
+  }
+  .#{$prefix}not-italic {
+    font-style: normal;
+  }
+}
+
+$theme-font-weight: (
+  hairline: 100,
+  thin: 200,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  black: 900,
+) !default;
+
+@mixin font-weight($prefix, $maps: $theme-font-weight) {
+  @each $unit, $value in $maps {
+    .#{$prefix}font-#{$unit} {
+      font-weight: $value;
+    }
+  }
+}
