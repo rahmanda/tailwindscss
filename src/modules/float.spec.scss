@@ -1,0 +1,31 @@
+@import 'true';
+@import './float';
+
+@include describe('The float mixin') {
+  $prefix: '';
+
+  @include it('should output float stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include float($prefix);
+      }
+
+      @include expect {
+        .float-right {
+          float: right;
+        }
+        .float-left {
+          float: left;
+        }
+        .float-none {
+          float: none;
+        }
+        .clearfix::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+    }
+  }
+}

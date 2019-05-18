@@ -1,0 +1,19 @@
+@mixin float($prefix) {
+  $props: (
+    float-right: right,
+    float-left: left,
+    float-none: none,
+  );
+
+  @each $name, $value in $props {
+    .#{$prefix}#{$name} {
+      float: $value;
+    }
+  }
+
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
