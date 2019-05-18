@@ -28,4 +28,76 @@
       }
     }
   }
+
+}
+
+@include describe('The position-direction mixin') {
+  $maps: (
+    0: 0,
+    auto: auto,
+  );
+  $prefix: '';
+
+  @include it('should output position\'s direction stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include position-direction($maps, $prefix);
+      }
+
+      @include expect {
+        .inset-0 {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+        .inset-auto {
+          top: auto;
+          right: auto;
+          bottom: auto;
+          left: auto;
+        }
+        .inset-x-0 {
+          right: 0;
+          left: 0;
+        }
+        .inset-x-auto {
+          right: auto;
+          left: auto;
+        }
+        .inset-y-0 {
+          top: 0;
+          bottom: 0;
+        }
+        .inset-y-auto {
+          top: auto;
+          bottom: auto;
+        }
+        .top-0 {
+          top: 0;
+        }
+        .top-auto {
+          top: auto;
+        }
+        .right-0 {
+          right: 0;
+        }
+        .right-auto {
+          right: auto;
+        }
+        .bottom-0 {
+          bottom: 0;
+        }
+        .bottom-auto {
+          bottom: auto;
+        }
+        .left-0 {
+          left: 0;
+        }
+        .left-auto {
+          left: auto;
+        }
+      }
+    }
+  }
 }

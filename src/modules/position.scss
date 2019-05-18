@@ -7,3 +7,25 @@
     }
   }
 }
+
+@mixin position-direction($maps, $prefix) {
+  $map-props: (
+    inset: top right bottom left,
+    inset-x: right left,
+    inset-y: top bottom,
+    top: top,
+    right: right,
+    bottom: bottom,
+    left: left,
+  );
+
+  @each $name, $props in $map-props {
+    @each $unit, $value in $maps {
+      .#{$prefix}#{$name}-#{$unit} {
+        @each $prop in $props {
+          #{$prop}: $value;
+        }
+      }
+    }
+  }
+}
