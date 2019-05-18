@@ -1,21 +1,39 @@
-@mixin spacing($maps, $name, $props, $prefix) {
-  @each $unit, $value in $maps {
-    // Positive value
-    .#{$prefix}#{$name}-#{$unit} {
-      @each $prop in $props {
-        #{$prop}: $value;
+@mixin spacing($maps, $prefix) {
+  $map-props: (
+    m: margin,
+    mt: margin-top,
+    mr: margin-right,
+    mb: margin-bottom,
+    ml: margin-left,
+    mx: margin-left margin-right,
+    my: margin-top margin-bottom,
+    p: padding,
+    pt: padding-top,
+    pr: padding-right,
+    pb: padding-bottom,
+    pl: padding-left,
+    px: padding-left padding-right,
+    py: padding-top padding-bottom,
+  );
+  @each $name, $props in $map-props {
+    @each $unit, $value in $maps {
+      // Positive value
+      .#{$prefix}#{$name}-#{$unit} {
+        @each $prop in $props {
+          #{$prop}: $value;
+        }
       }
-    }
-    // Negative value
-    .#{$prefix}-#{$name}-#{$unit} {
-      @each $prop in $props {
-        #{$prop}: -#{$value};
+      // Negative value
+      .#{$prefix}-#{$name}-#{$unit} {
+        @each $prop in $props {
+          #{$prop}: -#{$value};
+        }
       }
-    }
-    // Auto value
-    .#{$name}-auto {
-      @each $prop in $props {
-        #{$prop}: auto;
+      // Auto value
+      .#{$name}-auto {
+        @each $prop in $props {
+          #{$prop}: auto;
+        }
       }
     }
   }

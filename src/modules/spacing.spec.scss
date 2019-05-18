@@ -7,24 +7,10 @@
   );
   $prefix: '';
 
-  @include it('should output single value correctly') {
+  @include it('should output spacing stylesheet correctly') {
     @include assert {
       @include output {
-        $props: (
-          m: margin,
-          mt: margin-top,
-          mr: margin-right,
-          mb: margin-bottom,
-          ml: margin-left,
-          p: padding,
-          pt: padding-top,
-          pr: padding-right,
-          pb: padding-bottom,
-          pl: padding-left,
-        );
-        @each $name, $prop in $props {
-          @include spacing($maps, $name, $prop, $prefix);
-        }
+        @include spacing($maps, $prefix);
       }
 
       @include expect {
@@ -73,6 +59,30 @@
         .ml-auto {
           margin-left: auto;
         }
+        .mx-1 {
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+        }
+        .-mx-1 {
+          margin-left: -0.25rem;
+          margin-right: -0.25rem;
+        }
+        .mx-auto {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .my-1 {
+          margin-top: 0.25rem;
+          margin-bottom: 0.25rem;
+        }
+        .-my-1 {
+          margin-top: -0.25rem;
+          margin-bottom: -0.25rem;
+        }
+        .my-auto {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
         .p-1 {
           padding: 0.25rem;
         }
@@ -117,48 +127,6 @@
         }
         .pl-auto {
           padding-left: auto;
-        }
-      }
-    }
-  }
-
-  @include it('should output double value correctly') {
-    @include assert {
-      @include output {
-        $props: (
-          mx: margin-left margin-right,
-          my: margin-top margin-bottom,
-          px: padding-left padding-right,
-          py: padding-top padding-bottom,
-        );
-        @each $name, $prop in $props {
-          @include spacing($maps, $name, $prop, $prefix);
-        }
-      }
-      @include expect {
-        .mx-1 {
-          margin-left: 0.25rem;
-          margin-right: 0.25rem;
-        }
-        .-mx-1 {
-          margin-left: -0.25rem;
-          margin-right: -0.25rem;
-        }
-        .mx-auto {
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .my-1 {
-          margin-top: 0.25rem;
-          margin-bottom: 0.25rem;
-        }
-        .-my-1 {
-          margin-top: -0.25rem;
-          margin-bottom: -0.25rem;
-        }
-        .my-auto {
-          margin-top: auto;
-          margin-bottom: auto;
         }
         .px-1 {
           padding-left: 0.25rem;
