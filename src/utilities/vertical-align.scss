@@ -1,0 +1,9 @@
+@mixin vertical-align($prefix) {
+  $values: baseline top middle bottom text-top text-bottom;
+
+  @each $value in $values {
+    .#{$prefix}align-#{$value} {
+      vertical-align: $value;
+    }
+  }
+}
