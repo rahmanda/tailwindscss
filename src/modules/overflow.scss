@@ -1,0 +1,15 @@
+@mixin overflow($prefix) {
+  $values: auto hidden visible scroll;
+
+  @each $value in $values {
+    .#{$prefix}overflow-#{$value} {
+      overflow: $value;
+    }
+    .#{$prefix}overflow-x-#{$value} {
+      overflow-x: $value;
+    }
+    .#{$prefix}overflow-y-#{$value} {
+      overflow-y: $value;
+    }
+  }
+}
