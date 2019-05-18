@@ -138,3 +138,7 @@ $theme-colors: (
 @mixin background-color($prefix, $colors: $theme-colors) {
   @include _color-style-generator($prefix, bg, background-color, $colors);
 }
+
+@mixin border-color($prefix, $colors: $theme-colors) {
+  @include _color-style-generator($prefix, border, border-color, $colors);
+}

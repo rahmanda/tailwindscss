@@ -60,3 +60,33 @@
     }
   }
 }
+
+@include describe('The border-color mixin') {
+  $colors: (
+    transparent: transparent,
+    gray: (
+      100: #f7fafc,
+      200: #edf2f7,
+    ),
+  );
+  $prefix: '';
+
+  @include it('should output border-color stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include border-color($prefix, $colors);
+      }
+      @include expect {
+        .border-transparent {
+          border-color: transparent;
+        }
+        .border-gray-100 {
+          border-color: #f7fafc;
+        }
+        .border-gray-200 {
+          border-color: #edf2f7;
+        }
+      }
+    }
+  }
+}
