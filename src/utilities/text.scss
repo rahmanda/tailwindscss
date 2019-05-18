@@ -1,0 +1,9 @@
+@mixin text-align($prefix) {
+  $values: left center right justify;
+
+  @each $value in $values {
+    .#{$prefix}text-#{$value} {
+      text-align: $value;
+    }
+  }
+}

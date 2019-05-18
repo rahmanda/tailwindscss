@@ -1,0 +1,29 @@
+@import 'true';
+@import './text';
+
+@include describe('The text-align mixin') {
+  $prefix: '';
+
+  @include it('should output text-align stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include text-align($prefix);
+      }
+
+      @include expect {
+        .text-left {
+          text-align: left;
+        }
+        .text-center {
+          text-align: center;
+        }
+        .text-right {
+          text-align: right;
+        }
+        .text-justify {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
