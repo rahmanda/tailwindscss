@@ -1,4 +1,11 @@
-@mixin order($maps, $prefix) {
+$theme-order: (
+  first: -1,
+  last: 999,
+  none: 0,
+  1: 1,
+) !default;
+
+@mixin order($prefix, $maps: $theme-order) {
   @each $unit, $value in $maps {
     .#{$prefix}order-#{$unit} {
       order: $value;

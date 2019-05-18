@@ -13,7 +13,7 @@
   @include it('should output order stylesheet correctly') {
     @include assert {
       @include output {
-        @include order($maps, $prefix);
+        @include order($prefix, $maps);
       }
       @include expect {
         .order-first {
