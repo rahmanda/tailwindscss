@@ -1,0 +1,59 @@
+@import 'true';
+@import './object';
+
+@include describe('The object mixin') {
+  $prefix: '';
+
+  @include it('should output object stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include object($prefix);
+      }
+
+      @include expect {
+        .object-contain {
+          object-fit: contain;
+        }
+        .object-cover {
+          object-fit: cover;
+        }
+        .object-fill {
+          object-fit: fill;
+        }
+        .object-none {
+          object-fit: none;
+        }
+        .object-scale-down {
+          object-fit: scale-down;
+        }
+        .object-bottom {
+          object-position: bottom;
+        }
+        .object-center {
+          object-position: center;
+        }
+        .object-left {
+          object-position: left;
+        }
+        .object-left-bottom {
+          object-position: left bottom;
+        }
+        .object-left-top {
+          object-position: left top;
+        }
+        .object-right {
+          object-position: right;
+        }
+        .object-right-bottom {
+          object-position: right bottom;
+        }
+        .object-right-top {
+          object-position: right top;
+        }
+        .object-top {
+          object-position: top;
+        }
+      }
+    }
+  }
+}
