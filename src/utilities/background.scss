@@ -1,0 +1,56 @@
+@mixin background-attachment($prefix) {
+  $values: fixed local scroll;
+
+  @each $value in $values {
+    .#{$prefix}bg-#{$value} {
+      background-attachment: $value;
+    }
+  }
+}
+
+@mixin background-position($prefix) {
+  $maps: (
+    bottom: bottom,
+    center: center,
+    left: left,
+    left-bottom: left-bottom,
+    left-top: left-top,
+    right: right,
+    right-bottom: right-bottom,
+    right-top: right-top,
+    top: top,
+  );
+
+  @each $unit, $value in $maps {
+    .#{$prefix}bg-#{$unit} {
+      background-position: $value;
+    }
+  }
+}
+
+@mixin background-repeat($prefix) {
+  $maps: (
+    repeat: repeat,
+    no-repeat: no-repeat,
+    repeat-x: repeat-x,
+    repeat-y: repeat-y,
+    repeat-round: round,
+    space: space,
+  );
+
+  @each $unit, $value in $maps {
+    .#{$prefix}bg-#{$unit} {
+      background-repeat: $value;
+    }
+  }
+}
+
+@mixin background-size($prefix) {
+  $values: auto cover contain;
+
+  @each $value in $values {
+    .#{$prefix}bg-#{$value} {
+      background-size: $value;
+    }
+  }
+}
