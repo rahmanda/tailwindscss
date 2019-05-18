@@ -38,6 +38,16 @@ $prefix: '' !default;
 @include font-style($prefix);
 @include font-weight($prefix);
 
+
+// Background
+
+@import './src/utilities/background';
+
+@include background-attachment($prefix);
+@include background-position($prefix);
+@include background-repeat($prefix);
+@include background-size($prefix);
+
 // Flex
 
 @import './src/utilities/align';
