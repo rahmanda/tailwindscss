@@ -114,19 +114,27 @@ $theme-colors: (
   ),
 ) !default;
 
-@mixin color($prefix, $colors: $theme-colors) {
+@mixin _color-style-generator($prefix, $name, $prop, $colors) {
   @each $color, $values in $colors {
     @if length($values) > 1 {
       @each $unit, $value in $values {
-        .#{$prefix}text-#{$color}-#{$unit} {
-          color: $value;
+        .#{$prefix}#{$name}-#{$color}-#{$unit} {
+          #{$prop}: $value;
         }
       }
     }
     @else {
-      .#{$prefix}text-#{$color} {
-        color: $values;
+      .#{$prefix}#{$name}-#{$color} {
+        #{$prop}: $values;
       }
     }
   }
+}
+
+@mixin color($prefix, $colors: $theme-colors) {
+  @include _color-style-generator($prefix, text, color, $colors);
+}
+
+@mixin background-color($prefix, $colors: $theme-colors) {
+  @include _color-style-generator($prefix, bg, background-color, $colors);
 }

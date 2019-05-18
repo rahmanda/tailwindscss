@@ -30,3 +30,33 @@
     }
   }
 }
+
+@include describe('The background-color mixin') {
+  $colors: (
+    transparent: transparent,
+    gray: (
+      100: #f7fafc,
+      200: #edf2f7,
+    ),
+  );
+  $prefix: '';
+
+  @include it('should output background-color stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include background-color($prefix, $colors);
+      }
+      @include expect {
+        .bg-transparent {
+          background-color: transparent;
+        }
+        .bg-gray-100 {
+          background-color: #f7fafc;
+        }
+        .bg-gray-200 {
+          background-color: #edf2f7;
+        }
+      }
+    }
+  }
+}
