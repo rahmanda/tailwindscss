@@ -6,7 +6,7 @@ SCSS version of Tailwind CSS for people who don't use modern module bundler (wor
 
 The original Tailwind CSS use PostCSS for its CSS preprocessor. Therefore, we have to use Node.js module bundler (Webpack, Rollup etc) in order to get fully control over Tailwind's customization. Unfortunately, there are many cases (mainly on legacy apps) where we couldn't use Node.js and I don't want this issue to prevent us from using Tailwind CSS.
 
-By using SCSS format, I hope that more people especialy who have non Node.js apps can start using Tailwind CSS and progressively improve their tech stack to use the original version eventually.
+By using SCSS format, I hope that more people especially who have non Node.js apps can start using Tailwind CSS and progressively improve their tech stack to use the original version eventually.
 
 ## Installation
 
