@@ -1,0 +1,66 @@
+@mixin flex($maps, $prefix) {
+  @each $unit, $value in $maps {
+    .#{$prefix}flex-#{$unit} {
+      flex: $value;
+    }
+  }
+}
+
+@mixin flex-direction($prefix) {
+  $maps: (
+    row: row,
+    row-reverse: row-reverse,
+    col: column,
+    col-reverse: column-reverse,
+  );
+
+  @each $unit, $value in $maps {
+    .#{$prefix}flex-#{$unit} {
+      flex-direction: $value;
+    }
+  }
+}
+
+@mixin flex-wrap($prefix) {
+  $maps: (
+    no-wrap: nowrap,
+    wrap: wrap,
+    wrap-reverse: wrap-reverse,
+  );
+
+  @each $unit, $value in $maps {
+    .#{$prefix}flex-#{$unit} {
+      flex-wrap: $value;
+    }
+  }
+}
+
+@mixin flex-grow($maps, $prefix) {
+  @each $unit, $value in $maps {
+    @if $unit == default {
+      .#{$prefix}flex-grow {
+        flex-grow: $value
+      }
+    }
+    @else {
+      .#{$prefix}flex-grow-#{$unit} {
+        flex-grow: $value;
+      }
+    }
+  }
+}
+
+@mixin flex-shrink($maps, $prefix) {
+  @each $unit, $value in $maps {
+    @if $unit == default {
+      .#{$prefix}flex-shrink {
+        flex-shrink: $value
+      }
+    }
+    @else {
+      .#{$prefix}flex-shrink-#{$unit} {
+        flex-shrink: $value;
+      }
+    }
+  }
+}

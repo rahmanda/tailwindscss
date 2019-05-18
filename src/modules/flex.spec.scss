@@ -1,0 +1,131 @@
+@import 'true';
+@import './flex';
+
+@include describe('The flex mixin') {
+  $maps: (
+    initial: 0 1 auto,
+    1: 1 1 0%,
+    auto: auto,
+    none: none,
+  );
+  $prefix: '';
+
+  @include it('should output flex stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include flex($maps, $prefix);
+      }
+      @include expect {
+        .flex-initial {
+          flex: 0 1 auto;
+        }
+        .flex-1 {
+          flex: 1 1 0%;
+        }
+        .flex-auto {
+          flex: auto;
+        }
+        .flex-none {
+          flex: none;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The flex-direction mixin') {
+  $prefix: '';
+
+  @include it('should output flex-direction stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include flex-direction($prefix);
+      }
+      @include expect {
+        .flex-row {
+          flex-direction: row;
+        }
+        .flex-row-reverse {
+          flex-direction: row-reverse;
+        }
+        .flex-col {
+          flex-direction: column;
+        }
+        .flex-col-reverse {
+          flex-direction: column-reverse;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The flex-wrap mixin') {
+  $prefix: '';
+
+  @include it('should output flex-wrap stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include flex-wrap($prefix);
+      }
+      @include expect {
+        .flex-no-wrap {
+          flex-wrap: nowrap;
+        }
+        .flex-wrap {
+          flex-wrap: wrap;
+        }
+        .flex-wrap-reverse {
+          flex-wrap: wrap-reverse;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The flex-grow mixin') {
+  $maps: (
+    0: 0,
+    default: 1,
+  );
+  $prefix: '';
+
+  @include it('should output flex-grow stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include flex-grow($maps, $prefix);
+      }
+      @include expect {
+        .flex-grow-0 {
+          flex-grow: 0;
+        }
+        .flex-grow {
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The flex-shrink mixin') {
+  $maps: (
+    0: 0,
+    default: 1,
+  );
+  $prefix: '';
+
+  @include it('should output flex-shrink stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include flex-shrink($maps, $prefix);
+      }
+      @include expect {
+        .flex-shrink-0 {
+          flex-shrink: 0;
+        }
+        .flex-shrink {
+          flex-shrink: 1;
+        }
+      }
+    }
+  }
+}
