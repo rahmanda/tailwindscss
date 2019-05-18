@@ -1,0 +1,9 @@
+@mixin visibility($prefix) {
+  .#{$prefix}visible {
+    visibility: visible;
+  }
+
+  .#{$prefix}invisible {
+    visibility: hidden;
+  }
+}

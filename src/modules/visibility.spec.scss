@@ -1,0 +1,22 @@
+@import 'true';
+@import './visibility';
+
+@include describe('The visibility mixin') {
+  $prefix: '';
+
+  @include it('should output visibility stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include visibility($prefix);
+      }
+      @include expect {
+        .visible {
+          visibility: visible;
+        }
+        .invisible {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}
