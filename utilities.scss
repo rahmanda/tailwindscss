@@ -12,12 +12,14 @@ $prefix: '' !default;
 
 @include display($prefix);
 @include float($prefix);
-@include object($prefix);
+@include object-fit($prefix);
+@include object-position($prefix);
 @include overflow($prefix);
 @include position($prefix);
 @include position-direction($prefix);
 @include visibility($prefix);
 @include z-index($prefix);
+
 
 // Flex
 
