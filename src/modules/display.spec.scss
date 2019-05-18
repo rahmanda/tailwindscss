@@ -1,0 +1,42 @@
+@import 'true';
+@import './display';
+
+@include describe('The display mixin') {
+  $prefix: '';
+  @include it('should output stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include display($prefix);
+      }
+      @include expect {
+        .block {
+          display: block;
+        }
+        .inline-block {
+          display: inline-block;
+        }
+        .inline {
+          display: inline;
+        }
+        .flex {
+          display: flex;
+        }
+        .inline-flex {
+          display: inline-flex;
+        }
+        .table {
+          display: table;
+        }
+        .table-row {
+          display: table-row;
+        }
+        .table-cell {
+          display: table-cell;
+        }
+        .hidden {
+          display: none;
+        }
+      }
+    }
+  }
+}

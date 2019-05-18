@@ -1,0 +1,19 @@
+@mixin display($prefix) {
+  $props: (
+    block: block,
+    inline-block: inline-block,
+    inline: inline,
+    flex: flex,
+    inline-flex: inline-flex,
+    table: table,
+    table-row: table-row,
+    table-cell: table-cell,
+    hidden: none,
+  );
+
+  @each $name, $value in $props {
+    .#{$prefix}#{$name} {
+      display: $value;
+    }
+  }
+}
