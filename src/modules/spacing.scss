@@ -1,0 +1,22 @@
+@mixin spacing($maps, $name, $props, $prefix) {
+  @each $unit, $value in $maps {
+    // Positive value
+    .#{$prefix}#{$name}-#{$unit} {
+      @each $prop in $props {
+        #{$prop}: $value;
+      }
+    }
+    // Negative value
+    .#{$prefix}-#{$name}-#{$unit} {
+      @each $prop in $props {
+        #{$prop}: -#{$value};
+      }
+    }
+    // Auto value
+    .#{$name}-auto {
+      @each $prop in $props {
+        #{$prop}: auto;
+      }
+    }
+  }
+}

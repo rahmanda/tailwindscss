@@ -1,0 +1,190 @@
+@import 'true';
+@import './spacing';
+
+@include describe('The spacing mixin') {
+  $maps: (
+    1: 0.25rem,
+  );
+  $prefix: '';
+
+  @include it('should output single value correctly') {
+    @include assert {
+      @include output {
+        $props: (
+          m: margin,
+          mt: margin-top,
+          mr: margin-right,
+          mb: margin-bottom,
+          ml: margin-left,
+          p: padding,
+          pt: padding-top,
+          pr: padding-right,
+          pb: padding-bottom,
+          pl: padding-left,
+        );
+        @each $name, $prop in $props {
+          @include spacing($maps, $name, $prop, $prefix);
+        }
+      }
+
+      @include expect {
+        .m-1 {
+          margin: 0.25rem;
+        }
+        .-m-1 {
+          margin: -0.25rem;
+        }
+        .m-auto {
+          margin: auto;
+        }
+        .mt-1 {
+          margin-top: 0.25rem;
+        }
+        .-mt-1 {
+          margin-top: -0.25rem;
+        }
+        .mt-auto {
+          margin-top: auto;
+        }
+        .mr-1 {
+          margin-right: 0.25rem;
+        }
+        .-mr-1 {
+          margin-right: -0.25rem;
+        }
+        .mr-auto {
+          margin-right: auto;
+        }
+        .mb-1 {
+          margin-bottom: 0.25rem;
+        }
+        .-mb-1 {
+          margin-bottom: -0.25rem;
+        }
+        .mb-auto {
+          margin-bottom: auto;
+        }
+        .ml-1 {
+          margin-left: 0.25rem;
+        }
+        .-ml-1 {
+          margin-left: -0.25rem;
+        }
+        .ml-auto {
+          margin-left: auto;
+        }
+        .p-1 {
+          padding: 0.25rem;
+        }
+        .-p-1 {
+          padding: -0.25rem;
+        }
+        .p-auto {
+          padding: auto;
+        }
+        .pt-1 {
+          padding-top: 0.25rem;
+        }
+        .-pt-1 {
+          padding-top: -0.25rem;
+        }
+        .pt-auto {
+          padding-top: auto;
+        }
+        .pr-1 {
+          padding-right: 0.25rem;
+        }
+        .-pr-1 {
+          padding-right: -0.25rem;
+        }
+        .pr-auto {
+          padding-right: auto;
+        }
+        .pb-1 {
+          padding-bottom: 0.25rem;
+        }
+        .-pb-1 {
+          padding-bottom: -0.25rem;
+        }
+        .pb-auto {
+          padding-bottom: auto;
+        }
+        .pl-1 {
+          padding-left: 0.25rem;
+        }
+        .-pl-1 {
+          padding-left: -0.25rem;
+        }
+        .pl-auto {
+          padding-left: auto;
+        }
+      }
+    }
+  }
+
+  @include it('should output double value correctly') {
+    @include assert {
+      @include output {
+        $props: (
+          mx: margin-left margin-right,
+          my: margin-top margin-bottom,
+          px: padding-left padding-right,
+          py: padding-top padding-bottom,
+        );
+        @each $name, $prop in $props {
+          @include spacing($maps, $name, $prop, $prefix);
+        }
+      }
+      @include expect {
+        .mx-1 {
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+        }
+        .-mx-1 {
+          margin-left: -0.25rem;
+          margin-right: -0.25rem;
+        }
+        .mx-auto {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .my-1 {
+          margin-top: 0.25rem;
+          margin-bottom: 0.25rem;
+        }
+        .-my-1 {
+          margin-top: -0.25rem;
+          margin-bottom: -0.25rem;
+        }
+        .my-auto {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+        .px-1 {
+          padding-left: 0.25rem;
+          padding-right: 0.25rem;
+        }
+        .-px-1 {
+          padding-left: -0.25rem;
+          padding-right: -0.25rem;
+        }
+        .px-auto {
+          padding-left: auto;
+          padding-right: auto;
+        }
+        .py-1 {
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+        }
+        .-py-1 {
+          padding-top: -0.25rem;
+          padding-bottom: -0.25rem;
+        }
+        .py-auto {
+          padding-top: auto;
+          padding-bottom: auto;
+        }
+      }
+    }
+  }
+}

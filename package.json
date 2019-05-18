@@ -1,0 +1,30 @@
+{
+  "name": "tailwindscss",
+  "version": "0.1.0",
+  "description": "SCSS version of Tailwind CSS for people who don't use modern module bundler",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahmanda/tailwindscss.git"
+  },
+  "keywords": [
+    "tailwindcss",
+    "scss",
+    "utilities"
+  ],
+  "author": "Rahmanda Wibowo <rahmandawibowo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rahmanda/tailwindscss/issues"
+  },
+  "homepage": "https://github.com/rahmanda/tailwindscss#readme",
+  "devDependencies": {
+    "glob": "^7.1.4",
+    "jest": "^24.8.0",
+    "node-sass": "^4.12.0",
+    "sass-true": "^4.0.0"
+  }
+}
