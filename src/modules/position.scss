@@ -1,0 +1,9 @@
+@mixin position($prefix) {
+  $values: static fixed absolute relative sticky;
+
+  @each $value in $values {
+    .#{$prefix}#{$value} {
+      position: $value;
+    }
+  }
+}

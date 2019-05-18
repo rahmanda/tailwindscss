@@ -1,0 +1,31 @@
+@import 'true';
+@import './position';
+
+@include describe('The position mixin') {
+  $prefix: '';
+
+  @include it('should output position stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include position($prefix);
+      }
+      @include expect {
+        .static {
+          position: static;
+        }
+        .fixed {
+          position: fixed;
+        }
+        .absolute {
+          position: absolute;
+        }
+        .relative {
+          position: relative;
+        }
+        .sticky {
+          position: sticky;
+        }
+      }
+    }
+  }
+}
