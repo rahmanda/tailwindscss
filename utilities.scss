@@ -2,13 +2,13 @@ $prefix: '' !default;
 
 // Layout
 
-@import './utilities/display';
-@import './utilities/float';
-@import './utilities/object';
-@import './utilities/overflow';
-@import './utilities/position';
-@import './utilities/visibility';
-@import './utilities/z-index';
+@import './src/utilities/display';
+@import './src/utilities/float';
+@import './src/utilities/object';
+@import './src/utilities/overflow';
+@import './src/utilities/position';
+@import './src/utilities/visibility';
+@import './src/utilities/z-index';
 
 @include display($prefix);
 @include float($prefix);
@@ -21,7 +21,7 @@ $prefix: '' !default;
 
 // Flex
 
-@import './utilities/flex';
+@import './src/utilities/flex';
 
 @include flex($prefix);
 @include flex-direction($prefix);
@@ -31,6 +31,6 @@ $prefix: '' !default;
 
 // Spacing
 
-@import './utilities/spacing';
+@import './src/utilities/spacing';
 
 @include spacing($prefix);
