@@ -1,12 +1,8 @@
 @mixin float($prefix) {
-  $props: (
-    float-right: right,
-    float-left: left,
-    float-none: none,
-  );
+  $values: right left none;
 
-  @each $name, $value in $props {
-    .#{$prefix}#{$name} {
+  @each $value in $values {
+    .#{$prefix}float-#{$value} {
       float: $value;
     }
   }
