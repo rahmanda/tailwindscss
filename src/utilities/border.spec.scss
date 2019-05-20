@@ -1,6 +1,14 @@
 @import 'true';
 @import './border';
 
+$screens: (
+  sm: 640px,
+  md: 768px,
+) !default;
+$variants: responsive hover focus !default;
+$separator: '_' !default;
+$prefix: '' !default;
+
 @include describe('The border-color mixin') {
   $colors: (
     transparent: transparent,
@@ -9,21 +17,104 @@
       200: #edf2f7,
     ),
   );
-  $prefix: '';
 
   @include it('should output border-color stylesheet correctly') {
     @include assert {
       @include output {
-        @include border-color($prefix, $colors);
+        @include border-color($prefix, $colors, $variants, $separator, $screens);
       }
       @include expect {
         .border-transparent {
           border-color: transparent;
         }
+        @media (min-width: 640px) {
+          .sm_border-transparent {
+            border-color: transparent;
+          }
+          .sm_hover_border-transparent:hover {
+            border-color: transparent;
+          }
+          .sm_focus_border-transparent:focus {
+            border-color: transparent;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-transparent {
+            border-color: transparent;
+          }
+          .md_hover_border-transparent:hover {
+            border-color: transparent;
+          }
+          .md_focus_border-transparent:focus {
+            border-color: transparent;
+          }
+        }
+        .hover_border-transparent:hover {
+          border-color: transparent;
+        }
+        .focus_border-transparent:focus {
+          border-color: transparent;
+        }
         .border-gray-100 {
           border-color: #f7fafc;
         }
+        @media (min-width: 640px) {
+          .sm_border-gray-100 {
+            border-color: #f7fafc;
+          }
+          .sm_hover_border-gray-100:hover {
+            border-color: #f7fafc;
+          }
+          .sm_focus_border-gray-100:focus {
+            border-color: #f7fafc;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-gray-100 {
+            border-color: #f7fafc;
+          }
+          .md_hover_border-gray-100:hover {
+            border-color: #f7fafc;
+          }
+          .md_focus_border-gray-100:focus {
+            border-color: #f7fafc;
+          }
+        }
+        .hover_border-gray-100:hover {
+          border-color: #f7fafc;
+        }
+        .focus_border-gray-100:focus {
+          border-color: #f7fafc;
+        }
         .border-gray-200 {
+          border-color: #edf2f7;
+        }
+        @media (min-width: 640px) {
+          .sm_border-gray-200 {
+            border-color: #edf2f7;
+          }
+          .sm_hover_border-gray-200:hover {
+            border-color: #edf2f7;
+          }
+          .sm_focus_border-gray-200:focus {
+            border-color: #edf2f7;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-gray-200 {
+            border-color: #edf2f7;
+          }
+          .md_hover_border-gray-200:hover {
+            border-color: #edf2f7;
+          }
+          .md_focus_border-gray-200:focus {
+            border-color: #edf2f7;
+          }
+        }
+        .hover_border-gray-200:hover {
+          border-color: #edf2f7;
+        }
+        .focus_border-gray-200:focus {
           border-color: #edf2f7;
         }
       }
@@ -32,24 +123,134 @@
 }
 
 @include describe('The border-style mixin') {
-  $prefix: '';
-
   @include it('should output border-style stylesheet correctly') {
     @include assert {
       @include output {
-        @include border-style($prefix);
+        @include border-style($prefix, $variants, $separator, $screens);
       }
       @include expect {
         .border-solid {
           border-style: solid;
         }
+        @media (min-width: 640px) {
+          .sm_border-solid {
+            border-style: solid;
+          }
+          .sm_hover_border-solid:hover {
+            border-style: solid;
+          }
+          .sm_focus_border-solid:focus {
+            border-style: solid;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-solid {
+            border-style: solid;
+          }
+          .md_hover_border-solid:hover {
+            border-style: solid;
+          }
+          .md_focus_border-solid:focus {
+            border-style: solid;
+          }
+        }
+        .hover_border-solid:hover {
+          border-style: solid;
+        }
+        .focus_border-solid:focus {
+          border-style: solid;
+        }
         .border-dashed {
+          border-style: dashed;
+        }
+        @media (min-width: 640px) {
+          .sm_border-dashed {
+            border-style: dashed;
+          }
+          .sm_hover_border-dashed:hover {
+            border-style: dashed;
+          }
+          .sm_focus_border-dashed:focus {
+            border-style: dashed;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-dashed {
+            border-style: dashed;
+          }
+          .md_hover_border-dashed:hover {
+            border-style: dashed;
+          }
+          .md_focus_border-dashed:focus {
+            border-style: dashed;
+          }
+        }
+        .hover_border-dashed:hover {
+          border-style: dashed;
+        }
+        .focus_border-dashed:focus {
           border-style: dashed;
         }
         .border-dotted {
           border-style: dotted;
         }
+        @media (min-width: 640px) {
+          .sm_border-dotted {
+            border-style: dotted;
+          }
+          .sm_hover_border-dotted:hover {
+            border-style: dotted;
+          }
+          .sm_focus_border-dotted:focus {
+            border-style: dotted;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-dotted {
+            border-style: dotted;
+          }
+          .md_hover_border-dotted:hover {
+            border-style: dotted;
+          }
+          .md_focus_border-dotted:focus {
+            border-style: dotted;
+          }
+        }
+        .hover_border-dotted:hover {
+          border-style: dotted;
+        }
+        .focus_border-dotted:focus {
+          border-style: dotted;
+        }
         .border-none {
+          border-style: none;
+        }
+        @media (min-width: 640px) {
+          .sm_border-none {
+            border-style: none;
+          }
+          .sm_hover_border-none:hover {
+            border-style: none;
+          }
+          .sm_focus_border-none:focus {
+            border-style: none;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-none {
+            border-style: none;
+          }
+          .md_hover_border-none:hover {
+            border-style: none;
+          }
+          .md_focus_border-none:focus {
+            border-style: none;
+          }
+        }
+        .hover_border-none:hover {
+          border-style: none;
+        }
+        .focus_border-none:focus {
           border-style: none;
         }
       }
@@ -62,42 +263,321 @@
     default: 1px,
     8: 8px,
   );
-  $prefix: '';
 
   @include it('should output border-width stylesheet correctly') {
     @include assert {
       @include output {
-        @include border-width($prefix, $theme-border-width);
+        @include border-width($prefix, $theme-border-width, $variants, $separator, $screens);
       }
       @include expect {
         .border {
           border-width: 1px;
         }
+        @media (min-width: 640px) {
+          .sm_border {
+            border-width: 1px;
+          }
+          .sm_hover_border:hover {
+            border-width: 1px;
+          }
+          .sm_focus_border:focus {
+            border-width: 1px;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border {
+            border-width: 1px;
+          }
+          .md_hover_border:hover {
+            border-width: 1px;
+          }
+          .md_focus_border:focus {
+            border-width: 1px;
+          }
+        }
+        .hover_border:hover {
+          border-width: 1px;
+        }
+        .focus_border:focus {
+          border-width: 1px;
+        }
         .border-8 {
+          border-width: 8px;
+        }
+        @media (min-width: 640px) {
+          .sm_border-8 {
+            border-width: 8px;
+          }
+          .sm_hover_border-8:hover {
+            border-width: 8px;
+          }
+          .sm_focus_border-8:focus {
+            border-width: 8px
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-8 {
+            border-width: 8px;
+          }
+          .md_hover_border-8:hover {
+            border-width: 8px;
+          }
+          .md_focus_border-8:focus {
+            border-width: 8px
+          }
+        }
+        .hover_border-8:hover {
+          border-width: 8px;
+        }
+        .focus_border-8:focus {
           border-width: 8px;
         }
         .border-t {
           border-top-width: 1px;
         }
+        @media (min-width: 640px) {
+          .sm_border-t {
+            border-top-width: 1px;
+          }
+          .sm_hover_border-t:hover {
+            border-top-width: 1px;
+          }
+          .sm_focus_border-t:focus {
+            border-top-width: 1px;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-t {
+            border-top-width: 1px;
+          }
+          .md_hover_border-t:hover {
+            border-top-width: 1px;
+          }
+          .md_focus_border-t:focus {
+            border-top-width: 1px;
+          }
+        }
+        .hover_border-t:hover {
+          border-top-width: 1px;
+        }
+        .focus_border-t:focus {
+          border-top-width: 1px;
+        }
         .border-t-8 {
+          border-top-width: 8px;
+        }
+        @media (min-width: 640px) {
+          .sm_border-t-8 {
+            border-top-width: 8px;
+          }
+          .sm_hover_border-t-8:hover {
+            border-top-width: 8px;
+          }
+          .sm_focus_border-t-8:focus {
+            border-top-width: 8px
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-t-8 {
+            border-top-width: 8px;
+          }
+          .md_hover_border-t-8:hover {
+            border-top-width: 8px;
+          }
+          .md_focus_border-t-8:focus {
+            border-top-width: 8px
+          }
+        }
+        .hover_border-t-8:hover {
+          border-top-width: 8px;
+        }
+        .focus_border-t-8:focus {
           border-top-width: 8px;
         }
         .border-r {
           border-right-width: 1px;
         }
+        @media (min-width: 640px) {
+          .sm_border-r {
+            border-right-width: 1px;
+          }
+          .sm_hover_border-r:hover {
+            border-right-width: 1px;
+          }
+          .sm_focus_border-r:focus {
+            border-right-width: 1px;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-r {
+            border-right-width: 1px;
+          }
+          .md_hover_border-r:hover {
+            border-right-width: 1px;
+          }
+          .md_focus_border-r:focus {
+            border-right-width: 1px;
+          }
+        }
+        .hover_border-r:hover {
+          border-right-width: 1px;
+        }
+        .focus_border-r:focus {
+          border-right-width: 1px;
+        }
         .border-r-8 {
+          border-right-width: 8px;
+        }
+        @media (min-width: 640px) {
+          .sm_border-r-8 {
+            border-right-width: 8px;
+          }
+          .sm_hover_border-r-8:hover {
+            border-right-width: 8px;
+          }
+          .sm_focus_border-r-8:focus {
+            border-right-width: 8px
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-r-8 {
+            border-right-width: 8px;
+          }
+          .md_hover_border-r-8:hover {
+            border-right-width: 8px;
+          }
+          .md_focus_border-r-8:focus {
+            border-right-width: 8px
+          }
+        }
+        .hover_border-r-8:hover {
+          border-right-width: 8px;
+        }
+        .focus_border-r-8:focus {
           border-right-width: 8px;
         }
         .border-b {
           border-bottom-width: 1px;
         }
+        @media (min-width: 640px) {
+          .sm_border-b {
+            border-bottom-width: 1px;
+          }
+          .sm_hover_border-b:hover {
+            border-bottom-width: 1px;
+          }
+          .sm_focus_border-b:focus {
+            border-bottom-width: 1px;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-b {
+            border-bottom-width: 1px;
+          }
+          .md_hover_border-b:hover {
+            border-bottom-width: 1px;
+          }
+          .md_focus_border-b:focus {
+            border-bottom-width: 1px;
+          }
+        }
+        .hover_border-b:hover {
+          border-bottom-width: 1px;
+        }
+        .focus_border-b:focus {
+          border-bottom-width: 1px;
+        }
         .border-b-8 {
+          border-bottom-width: 8px;
+        }
+        @media (min-width: 640px) {
+          .sm_border-b-8 {
+            border-bottom-width: 8px;
+          }
+          .sm_hover_border-b-8:hover {
+            border-bottom-width: 8px;
+          }
+          .sm_focus_border-b-8:focus {
+            border-bottom-width: 8px
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-b-8 {
+            border-bottom-width: 8px;
+          }
+          .md_hover_border-b-8:hover {
+            border-bottom-width: 8px;
+          }
+          .md_focus_border-b-8:focus {
+            border-bottom-width: 8px
+          }
+        }
+        .hover_border-b-8:hover {
+          border-bottom-width: 8px;
+        }
+        .focus_border-b-8:focus {
           border-bottom-width: 8px;
         }
         .border-l {
           border-left-width: 1px;
         }
+        @media (min-width: 640px) {
+          .sm_border-l {
+            border-left-width: 1px;
+          }
+          .sm_hover_border-l:hover {
+            border-left-width: 1px;
+          }
+          .sm_focus_border-l:focus {
+            border-left-width: 1px;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-l {
+            border-left-width: 1px;
+          }
+          .md_hover_border-l:hover {
+            border-left-width: 1px;
+          }
+          .md_focus_border-l:focus {
+            border-left-width: 1px;
+          }
+        }
+        .hover_border-l:hover {
+          border-left-width: 1px;
+        }
+        .focus_border-l:focus {
+          border-left-width: 1px;
+        }
         .border-l-8 {
+          border-left-width: 8px;
+        }
+        @media (min-width: 640px) {
+          .sm_border-l-8 {
+            border-left-width: 8px;
+          }
+          .sm_hover_border-l-8:hover {
+            border-left-width: 8px;
+          }
+          .sm_focus_border-l-8:focus {
+            border-left-width: 8px
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-l-8 {
+            border-left-width: 8px;
+          }
+          .md_hover_border-l-8:hover {
+            border-left-width: 8px;
+          }
+          .md_focus_border-l-8:focus {
+            border-left-width: 8px
+          }
+        }
+        .hover_border-l-8:hover {
+          border-left-width: 8px;
+        }
+        .focus_border-l-8:focus {
           border-left-width: 8px;
         }
       }
@@ -110,21 +590,112 @@
     default: 0.25rem,
     none: 0,
   );
-  $prefix: '';
 
   @include it('should output border-radius stylesheet correctly') {
     @include assert {
       @include output {
-        @include border-radius($prefix, $theme-border-radius);
+        @include border-radius($prefix, $theme-border-radius, $variants, $separator, $screens);
       }
       @include expect {
         .rounded {
           border-radius: 0.25rem;
         }
+        @media (min-width: 640px) {
+          .sm_rounded {
+            border-radius: 0.25rem;
+          }
+          .sm_hover_rounded:hover {
+            border-radius: 0.25rem;
+          }
+          .sm_focus_rounded:focus {
+            border-radius: 0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded {
+            border-radius: 0.25rem;
+          }
+          .md_hover_rounded:hover {
+            border-radius: 0.25rem;
+          }
+          .md_focus_rounded:focus {
+            border-radius: 0.25rem;
+          }
+        }
+        .hover_rounded:hover {
+          border-radius: 0.25rem;
+        }
+        .focus_rounded:focus {
+          border-radius: 0.25rem;
+        }
         .rounded-none {
           border-radius: 0;
         }
+        @media (min-width: 640px) {
+          .sm_rounded-none {
+            border-radius: 0;
+          }
+          .sm_hover_rounded-none:hover {
+            border-radius: 0;
+          }
+          .sm_focus_rounded-none:focus {
+            border-radius: 0;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-none {
+            border-radius: 0;
+          }
+          .md_hover_rounded-none:hover {
+            border-radius: 0;
+          }
+          .md_focus_rounded-none:focus {
+            border-radius: 0;
+          }
+        }
+        .hover_rounded-none:hover {
+          border-radius: 0;
+        }
+        .focus_rounded-none:focus {
+          border-radius: 0;
+        }
         .rounded-t {
+          border-top-left-radius: 0.25rem;
+          border-top-right-radius: 0.25rem;
+        }
+        @media (min-width: 640px) {
+          .sm_rounded-t {
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+          }
+          .sm_hover_rounded-t:hover {
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+          }
+          .sm_focus_rounded-t:focus {
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-t {
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+          }
+          .md_hover_rounded-t:hover {
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+          }
+          .md_focus_rounded-t:focus {
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+          }
+        }
+        .hover_rounded-t:hover {
+          border-top-left-radius: 0.25rem;
+          border-top-right-radius: 0.25rem;
+        }
+        .focus_rounded-t:focus {
           border-top-left-radius: 0.25rem;
           border-top-right-radius: 0.25rem;
         }
@@ -132,7 +703,79 @@
           border-top-left-radius: 0;
           border-top-right-radius: 0;
         }
+        @media (min-width: 640px) {
+          .sm_rounded-t-none {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+          .sm_hover_rounded-t-none:hover {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+          .sm_focus_rounded-t-none:focus {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-t-none {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+          .md_hover_rounded-t-none:hover {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+          .md_focus_rounded-t-none:focus {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+        }
+        .hover_rounded-t-none:hover {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+        .focus_rounded-t-none:focus {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
         .rounded-r {
+          border-top-right-radius: 0.25rem;
+          border-bottom-right-radius: 0.25rem;
+        }
+        @media (min-width: 640px) {
+          .sm_rounded-r {
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+          .sm_hover_rounded-r:hover {
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+          .sm_focus_rounded-r:focus {
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-r {
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+          .md_hover_rounded-r:hover {
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+          .md_focus_rounded-r:focus {
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+        }
+        .hover_rounded-r:hover {
+          border-top-right-radius: 0.25rem;
+          border-bottom-right-radius: 0.25rem;
+        }
+        .focus_rounded-r:focus {
           border-top-right-radius: 0.25rem;
           border-bottom-right-radius: 0.25rem;
         }
@@ -140,7 +783,79 @@
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
         }
+        @media (min-width: 640px) {
+          .sm_rounded-r-none {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          .sm_hover_rounded-r-none:hover {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          .sm_focus_rounded-r-none:focus {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-r-none {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          .md_hover_rounded-r-none:hover {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          .md_focus_rounded-r-none:focus {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+        .hover_rounded-r-none:hover {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        .focus_rounded-r-none:focus {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
         .rounded-b {
+          border-bottom-left-radius: 0.25rem;
+          border-bottom-right-radius: 0.25rem;
+        }
+        @media (min-width: 640px) {
+          .sm_rounded-b {
+            border-bottom-left-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+          .sm_hover_rounded-b:hover {
+            border-bottom-left-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+          .sm_focus_rounded-b:focus {
+            border-bottom-left-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-b {
+            border-bottom-left-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+          .md_hover_rounded-b:hover {
+            border-bottom-left-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+          .md_focus_rounded-b:focus {
+            border-bottom-left-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+        }
+        .hover_rounded-b:hover {
+          border-bottom-left-radius: 0.25rem;
+          border-bottom-right-radius: 0.25rem;
+        }
+        .focus_rounded-b:focus {
           border-bottom-left-radius: 0.25rem;
           border-bottom-right-radius: 0.25rem;
         }
@@ -148,7 +863,79 @@
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
         }
+        @media (min-width: 640px) {
+          .sm_rounded-b-none {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          .sm_hover_rounded-b-none:hover {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          .sm_focus_rounded-b-none:focus {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-b-none {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          .md_hover_rounded-b-none:hover {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+          .md_focus_rounded-b-none:focus {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+        .hover_rounded-b-none:hover {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        .focus_rounded-b-none:focus {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
         .rounded-l {
+          border-top-left-radius: 0.25rem;
+          border-bottom-left-radius: 0.25rem;
+        }
+        @media (min-width: 640px) {
+          .sm_rounded-l {
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem;
+          }
+          .sm_hover_rounded-l:hover {
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem;
+          }
+          .sm_focus_rounded-l:focus {
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-l {
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem;
+          }
+          .md_hover_rounded-l:hover {
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem;
+          }
+          .md_focus_rounded-l:focus {
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem;
+          }
+        }
+        .hover_rounded-l:hover {
+          border-top-left-radius: 0.25rem;
+          border-bottom-left-radius: 0.25rem;
+        }
+        .focus_rounded-l:focus {
           border-top-left-radius: 0.25rem;
           border-bottom-left-radius: 0.25rem;
         }
@@ -156,28 +943,288 @@
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
         }
+        @media (min-width: 640px) {
+          .sm_rounded-l-none {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+          .sm_hover_rounded-l-none:hover {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+          .sm_focus_rounded-l-none:focus {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-l-none {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+          .md_hover_rounded-l-none:hover {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+          .md_focus_rounded-l-none:focus {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+        .hover_rounded-l-none:hover {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+        .focus_rounded-l-none:focus {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
         .rounded-tl {
+          border-top-left-radius: 0.25rem;
+        }
+        @media (min-width: 640px) {
+          .sm_rounded-tl {
+            border-top-left-radius: 0.25rem;
+          }
+          .sm_hover_rounded-tl:hover {
+            border-top-left-radius: 0.25rem;
+          }
+          .sm_focus_rounded-tl:focus {
+            border-top-left-radius: 0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-tl {
+            border-top-left-radius: 0.25rem;
+          }
+          .md_hover_rounded-tl:hover {
+            border-top-left-radius: 0.25rem;
+          }
+          .md_focus_rounded-tl:focus {
+            border-top-left-radius: 0.25rem;
+          }
+        }
+        .hover_rounded-tl:hover {
+          border-top-left-radius: 0.25rem;
+        }
+        .focus_rounded-tl:focus {
           border-top-left-radius: 0.25rem;
         }
         .rounded-tl-none {
           border-top-left-radius: 0;
         }
+        @media (min-width: 640px) {
+          .sm_rounded-tl-none {
+            border-top-left-radius: 0;
+          }
+          .sm_hover_rounded-tl-none:hover {
+            border-top-left-radius: 0;
+          }
+          .sm_focus_rounded-tl-none:focus {
+            border-top-left-radius: 0;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-tl-none {
+            border-top-left-radius: 0;
+          }
+          .md_hover_rounded-tl-none:hover {
+            border-top-left-radius: 0;
+          }
+          .md_focus_rounded-tl-none:focus {
+            border-top-left-radius: 0;
+          }
+        }
+        .hover_rounded-tl-none:hover {
+          border-top-left-radius: 0;
+        }
+        .focus_rounded-tl-none:focus {
+          border-top-left-radius: 0;
+        }
         .rounded-tr {
+          border-top-right-radius: 0.25rem;
+        }
+        @media (min-width: 640px) {
+          .sm_rounded-tr {
+            border-top-right-radius: 0.25rem;
+          }
+          .sm_hover_rounded-tr:hover {
+            border-top-right-radius: 0.25rem;
+          }
+          .sm_focus_rounded-tr:focus {
+            border-top-right-radius: 0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-tr {
+            border-top-right-radius: 0.25rem;
+          }
+          .md_hover_rounded-tr:hover {
+            border-top-right-radius: 0.25rem;
+          }
+          .md_focus_rounded-tr:focus {
+            border-top-right-radius: 0.25rem;
+          }
+        }
+        .hover_rounded-tr:hover {
+          border-top-right-radius: 0.25rem;
+        }
+        .focus_rounded-tr:focus {
           border-top-right-radius: 0.25rem;
         }
         .rounded-tr-none {
           border-top-right-radius: 0;
         }
+        @media (min-width: 640px) {
+          .sm_rounded-tr-none {
+            border-top-right-radius: 0;
+          }
+          .sm_hover_rounded-tr-none:hover {
+            border-top-right-radius: 0;
+          }
+          .sm_focus_rounded-tr-none:focus {
+            border-top-right-radius: 0;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-tr-none {
+            border-top-right-radius: 0;
+          }
+          .md_hover_rounded-tr-none:hover {
+            border-top-right-radius: 0;
+          }
+          .md_focus_rounded-tr-none:focus {
+            border-top-right-radius: 0;
+          }
+        }
+        .hover_rounded-tr-none:hover {
+          border-top-right-radius: 0;
+        }
+        .focus_rounded-tr-none:focus {
+          border-top-right-radius: 0;
+        }
         .rounded-bl {
+          border-bottom-left-radius: 0.25rem;
+        }
+        @media (min-width: 640px) {
+          .sm_rounded-bl {
+            border-bottom-left-radius: 0.25rem;
+          }
+          .sm_hover_rounded-bl:hover {
+            border-bottom-left-radius: 0.25rem;
+          }
+          .sm_focus_rounded-bl:focus {
+            border-bottom-left-radius: 0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-bl {
+            border-bottom-left-radius: 0.25rem;
+          }
+          .md_hover_rounded-bl:hover {
+            border-bottom-left-radius: 0.25rem;
+          }
+          .md_focus_rounded-bl:focus {
+            border-bottom-left-radius: 0.25rem;
+          }
+        }
+        .hover_rounded-bl:hover {
+          border-bottom-left-radius: 0.25rem;
+        }
+        .focus_rounded-bl:focus {
           border-bottom-left-radius: 0.25rem;
         }
         .rounded-bl-none {
           border-bottom-left-radius: 0;
         }
+        @media (min-width: 640px) {
+          .sm_rounded-bl-none {
+            border-bottom-left-radius: 0;
+          }
+          .sm_hover_rounded-bl-none:hover {
+            border-bottom-left-radius: 0;
+          }
+          .sm_focus_rounded-bl-none:focus {
+            border-bottom-left-radius: 0;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-bl-none {
+            border-bottom-left-radius: 0;
+          }
+          .md_hover_rounded-bl-none:hover {
+            border-bottom-left-radius: 0;
+          }
+          .md_focus_rounded-bl-none:focus {
+            border-bottom-left-radius: 0;
+          }
+        }
+        .hover_rounded-bl-none:hover {
+          border-bottom-left-radius: 0;
+        }
+        .focus_rounded-bl-none:focus {
+          border-bottom-left-radius: 0;
+        }
         .rounded-br {
           border-bottom-right-radius: 0.25rem;
         }
+        @media (min-width: 640px) {
+          .sm_rounded-br {
+            border-bottom-right-radius: 0.25rem;
+          }
+          .sm_hover_rounded-br:hover {
+            border-bottom-right-radius: 0.25rem;
+          }
+          .sm_focus_rounded-br:focus {
+            border-bottom-right-radius: 0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-br {
+            border-bottom-right-radius: 0.25rem;
+          }
+          .md_hover_rounded-br:hover {
+            border-bottom-right-radius: 0.25rem;
+          }
+          .md_focus_rounded-br:focus {
+            border-bottom-right-radius: 0.25rem;
+          }
+        }
+        .hover_rounded-br:hover {
+          border-bottom-right-radius: 0.25rem;
+        }
+        .focus_rounded-br:focus {
+          border-bottom-right-radius: 0.25rem;
+        }
         .rounded-br-none {
+          border-bottom-right-radius: 0;
+        }
+        @media (min-width: 640px) {
+          .sm_rounded-br-none {
+            border-bottom-right-radius: 0;
+          }
+          .sm_hover_rounded-br-none:hover {
+            border-bottom-right-radius: 0;
+          }
+          .sm_focus_rounded-br-none:focus {
+            border-bottom-right-radius: 0;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_rounded-br-none {
+            border-bottom-right-radius: 0;
+          }
+          .md_hover_rounded-br-none:hover {
+            border-bottom-right-radius: 0;
+          }
+          .md_focus_rounded-br-none:focus {
+            border-bottom-right-radius: 0;
+          }
+        }
+        .hover_rounded-br-none:hover {
+          border-bottom-right-radius: 0;
+        }
+        .focus_rounded-br-none:focus {
           border-bottom-right-radius: 0;
         }
       }
@@ -191,13 +1238,69 @@
   @include it('should output border-collapse stylesheet correctly') {
     @include assert {
       @include output {
-        @include border-collapse($prefix);
+        @include border-collapse($prefix, $variants, $separator, $screens);
       }
       @include expect {
         .border-collapse {
           border-collapse: collapse;
         }
+        @media (min-width: 640px) {
+          .sm_border-collapse {
+            border-collapse: collapse;
+          }
+          .sm_hover_border-collapse:hover {
+            border-collapse: collapse;
+          }
+          .sm_focus_border-collapse:focus {
+            border-collapse: collapse;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-collapse {
+            border-collapse: collapse;
+          }
+          .md_hover_border-collapse:hover {
+            border-collapse: collapse;
+          }
+          .md_focus_border-collapse:focus {
+            border-collapse: collapse;
+          }
+        }
+        .hover_border-collapse:hover {
+          border-collapse: collapse;
+        }
+        .focus_border-collapse:focus {
+          border-collapse: collapse;
+        }
         .border-separate {
+          border-collapse: separate;
+        }
+        @media (min-width: 640px) {
+          .sm_border-separate {
+            border-collapse: separate;
+          }
+          .sm_hover_border-separate:hover {
+            border-collapse: separate;
+          }
+          .sm_focus_border-separate:focus {
+            border-collapse: separate;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_border-separate {
+            border-collapse: separate;
+          }
+          .md_hover_border-separate:hover {
+            border-collapse: separate;
+          }
+          .md_focus_border-separate:focus {
+            border-collapse: separate;
+          }
+        }
+        .hover_border-separate:hover {
+          border-collapse: separate;
+        }
+        .focus_border-separate:focus {
           border-collapse: separate;
         }
       }

@@ -63,11 +63,11 @@
 
 @import './src/utilities/border';
 
-@include border-style($prefix);
-@include border-width($prefix, $theme-border-width);
-@include border-radius($prefix, $theme-border-radius);
-@include border-color($prefix, $theme-colors);
-@include border-collapse($prefix);
+@include border-style($prefix, $variants-border-style, $separator, $theme-screens);
+@include border-width($prefix, $theme-border-width, $variants-border-width, $separator, $theme-screens);
+@include border-radius($prefix, $theme-border-radius, $variants-border-radius, $separator, $theme-screens);
+@include border-color($prefix, $theme-border-color, $variants-border-color, $separator, $theme-screens);
+@include border-collapse($prefix, $variants-border-collapse, $separator, $theme-screens);
 
 // Flex
 
