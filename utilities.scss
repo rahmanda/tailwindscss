@@ -91,7 +91,8 @@
 
 @import './src/utilities/spacing';
 
-@include spacing($prefix, $theme-spacing);
+@include margin($prefix, $theme-margin);
+@include padding($prefix, $theme-padding);
 
 // Tables
 

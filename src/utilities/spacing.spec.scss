@@ -1,156 +1,130 @@
 @import 'true';
 @import './spacing';
+@import '../helper';
 
-@include describe('The spacing mixin') {
-  $theme-spacing: (
-    1: 0.25rem,
+@include describe('The margin mixin') {
+  $theme-margin: map-merge(
+    (1: 0.25rem, auto: auto),
+    negative((1: 0.25rem)),
   );
   $prefix: '';
 
-  @include it('should output spacing stylesheet correctly') {
+  @include it('should output margin stylesheet correctly') {
     @include assert {
       @include output {
-        @include spacing($prefix, $theme-spacing);
+        @include margin($prefix, $theme-margin);
       }
 
       @include expect {
         .m-1 {
           margin: 0.25rem;
         }
-        .-m-1 {
-          margin: -0.25rem;
-        }
         .m-auto {
           margin: auto;
+        }
+        .-m-1 {
+          margin: -0.25rem;
         }
         .mt-1 {
           margin-top: 0.25rem;
         }
-        .-mt-1 {
-          margin-top: -0.25rem;
-        }
         .mt-auto {
           margin-top: auto;
+        }
+        .-mt-1 {
+          margin-top: -0.25rem;
         }
         .mr-1 {
           margin-right: 0.25rem;
         }
-        .-mr-1 {
-          margin-right: -0.25rem;
-        }
         .mr-auto {
           margin-right: auto;
+        }
+        .-mr-1 {
+          margin-right: -0.25rem;
         }
         .mb-1 {
           margin-bottom: 0.25rem;
         }
-        .-mb-1 {
-          margin-bottom: -0.25rem;
-        }
         .mb-auto {
           margin-bottom: auto;
+        }
+        .-mb-1 {
+          margin-bottom: -0.25rem;
         }
         .ml-1 {
           margin-left: 0.25rem;
         }
-        .-ml-1 {
-          margin-left: -0.25rem;
-        }
         .ml-auto {
           margin-left: auto;
+        }
+        .-ml-1 {
+          margin-left: -0.25rem;
         }
         .mx-1 {
           margin-left: 0.25rem;
           margin-right: 0.25rem;
         }
-        .-mx-1 {
-          margin-left: -0.25rem;
-          margin-right: -0.25rem;
-        }
         .mx-auto {
           margin-left: auto;
           margin-right: auto;
+        }
+        .-mx-1 {
+          margin-left: -0.25rem;
+          margin-right: -0.25rem;
         }
         .my-1 {
           margin-top: 0.25rem;
           margin-bottom: 0.25rem;
         }
-        .-my-1 {
-          margin-top: -0.25rem;
-          margin-bottom: -0.25rem;
-        }
         .my-auto {
           margin-top: auto;
           margin-bottom: auto;
         }
+        .-my-1 {
+          margin-top: -0.25rem;
+          margin-bottom: -0.25rem;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The padding mixin') {
+  $theme-padding: (
+    1: 0.25rem,
+  );
+  $prefix: '';
+
+  @include it('should output margin stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include padding($prefix, $theme-padding);
+      }
+
+      @include expect {
         .p-1 {
           padding: 0.25rem;
-        }
-        .-p-1 {
-          padding: -0.25rem;
-        }
-        .p-auto {
-          padding: auto;
         }
         .pt-1 {
           padding-top: 0.25rem;
         }
-        .-pt-1 {
-          padding-top: -0.25rem;
-        }
-        .pt-auto {
-          padding-top: auto;
-        }
         .pr-1 {
           padding-right: 0.25rem;
-        }
-        .-pr-1 {
-          padding-right: -0.25rem;
-        }
-        .pr-auto {
-          padding-right: auto;
         }
         .pb-1 {
           padding-bottom: 0.25rem;
         }
-        .-pb-1 {
-          padding-bottom: -0.25rem;
-        }
-        .pb-auto {
-          padding-bottom: auto;
-        }
         .pl-1 {
           padding-left: 0.25rem;
-        }
-        .-pl-1 {
-          padding-left: -0.25rem;
-        }
-        .pl-auto {
-          padding-left: auto;
         }
         .px-1 {
           padding-left: 0.25rem;
           padding-right: 0.25rem;
         }
-        .-px-1 {
-          padding-left: -0.25rem;
-          padding-right: -0.25rem;
-        }
-        .px-auto {
-          padding-left: auto;
-          padding-right: auto;
-        }
         .py-1 {
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
-        }
-        .-py-1 {
-          padding-top: -0.25rem;
-          padding-bottom: -0.25rem;
-        }
-        .py-auto {
-          padding-top: auto;
-          padding-bottom: auto;
         }
       }
     }

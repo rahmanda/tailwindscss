@@ -1,3 +1,5 @@
+@import './src/helper';
+
 $prefix: '' !default;
 
 $theme-align-items: (
@@ -326,6 +328,13 @@ $theme-spacing: (
   56: 14rem,
   64: 16rem,
 ) !default;
+
+$theme-margin: map-merge(
+  map-merge($theme-spacing, (auto: auto)),
+  negative($theme-spacing),
+) !default;
+
+$theme-padding: $theme-spacing !default;
 
 $theme-z-index: (
   auto: auto,

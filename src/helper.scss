@@ -1,32 +1,54 @@
+@function sanitize-value($value) {
+  @return if(quote($value) == $value, unquote($value), $value);
+}
+
+@function format-key($key, $unit) {
+  @if type-of($unit) == number and $unit < 0 {
+    @return -#{$key};
+  }
+  @if type-of($unit) == string and str-index($unit, "-") == 1 {
+    @return -#{$key};
+  }
+  @return $key;
+}
+
+@function format-unit($unit) {
+  @if type-of($unit) == number and $unit < 0 {
+    @return $unit * -1;
+  }
+  @if type-of($unit) == string and str-index($unit, "-") == 1 {
+    @return str-slice($unit, 2);
+  }
+  @return $unit;
+}
+
+@function format-selector($prefix, $key, $unit, $name, $separator-key-name) {
+  $formatted-key: format-key($key, $unit);
+  $formatted-unit: format-unit($unit);
+  @if $name == default and $formatted-unit == default {
+    @return ".#{$prefix}#{$formatted-key}";
+  }
+  @if $name == default and $formatted-unit != default {
+    @return ".#{$prefix}#{$formatted-key}-#{$formatted-unit}";
+  }
+  @if $unit == default {
+    @return ".#{$prefix}#{$formatted-key}-#{$name}";
+  }
+  @return ".#{$prefix}#{$formatted-key}#{$separator-key-name}#{$name}-#{$formatted-unit}";
+}
+
 @mixin prop($props, $value) {
-  $sanitized-value: if(quote($value) == $value, unquote($value), $value);
   @each $prop in $props {
-    #{$prop}: $sanitized-value;
+    #{$prop}: $value;
   }
 }
 
-@mixin style($prefix, $key, $map-values, $map-props) {
+@mixin style($prefix, $key, $map-values, $map-props, $separator-key-name: '-') {
   @each $name, $props in $map-props {
     @each $unit, $value in $map-values {
-      @if $name == default and $unit == default {
-        .#{$prefix}#{$key} {
-          @include prop($props, $value);
-        }
-      }
-      @else if $name == default and $unit != default {
-        .#{$prefix}#{$key}-#{$unit} {
-          @include prop($props, $value);
-        }
-      }
-      @else if $unit == default {
-        .#{$prefix}#{$key}-#{$name} {
-          @include prop($props, $value);
-        }
-      }
-      @else {
-        .#{$prefix}#{$key}-#{$name}-#{$unit} {
-          @include prop($props, $value);
-        }
+      $formatted-selector: format-selector($prefix, $key, $unit, $name, $separator-key-name);
+      #{$formatted-selector} {
+        @include prop($props, sanitize-value($value));
       }
     }
   }
@@ -41,4 +63,19 @@
       @include style($prefix, $name, ($color: $map-values), $map-props);
     }
   }
+}
+
+@function negative($map-values) {
+  @if type-of($map-values) == map {
+    $values: ();
+    @each $key, $value in $map-values {
+      $new-value: (-#{$key}: $value);
+      @if type-of($value) == number {
+        $new-value: (-#{$key}: -1 * $value);
+      }
+      $values: map-merge($values, $new-value);
+    }
+    @return $values;
+  }
+  @return $map-values;
 }

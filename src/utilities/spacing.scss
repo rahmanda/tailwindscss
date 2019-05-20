@@ -1,40 +1,27 @@
-@mixin spacing($prefix, $map-values) {
+@import "../helper";
+
+@mixin margin($prefix, $map-values) {
   $map-props: (
-    m: margin,
-    mt: margin-top,
-    mr: margin-right,
-    mb: margin-bottom,
-    ml: margin-left,
-    mx: margin-left margin-right,
-    my: margin-top margin-bottom,
-    p: padding,
-    pt: padding-top,
-    pr: padding-right,
-    pb: padding-bottom,
-    pl: padding-left,
-    px: padding-left padding-right,
-    py: padding-top padding-bottom,
+    default: margin,
+    t: margin-top,
+    r: margin-right,
+    b: margin-bottom,
+    l: margin-left,
+    x: margin-left margin-right,
+    y: margin-top margin-bottom,
   );
-  @each $name, $props in $map-props {
-    @each $unit, $value in $map-values {
-      // Positive value
-      .#{$prefix}#{$name}-#{$unit} {
-        @each $prop in $props {
-          #{$prop}: $value;
-        }
-      }
-      // Negative value
-      .#{$prefix}-#{$name}-#{$unit} {
-        @each $prop in $props {
-          #{$prop}: -#{$value};
-        }
-      }
-      // Auto value
-      .#{$name}-auto {
-        @each $prop in $props {
-          #{$prop}: auto;
-        }
-      }
-    }
-  }
+  @include style($prefix, m, $map-values, $map-props, '');
+}
+
+@mixin padding($prefix, $map-values) {
+  $map-props: (
+    default: padding,
+    t: padding-top,
+    r: padding-right,
+    b: padding-bottom,
+    l: padding-left,
+    x: padding-left padding-right,
+    y: padding-top padding-bottom,
+  );
+  @include style($prefix, p, $map-values, $map-props, '');
 }
