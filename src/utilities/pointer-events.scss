@@ -1,0 +1,8 @@
+@mixin pointer-events($prefix) {
+  .#{$prefix}pointer-events-none {
+    pointer-events: none;
+  }
+  .#{$prefix}pointer-events-auto {
+    pointer-events: auto;
+  }
+}

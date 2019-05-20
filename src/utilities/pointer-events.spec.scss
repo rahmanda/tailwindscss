@@ -1,0 +1,22 @@
+@import 'true';
+@import './pointer-events';
+
+@include describe('The pointer-events mixin') {
+  $prefix: '';
+
+  @include it('should output pointer-events stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include pointer-events($prefix);
+      }
+      @include expect {
+        .pointer-events-none {
+          pointer-events: none;
+        }
+        .pointer-events-auto {
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+}
