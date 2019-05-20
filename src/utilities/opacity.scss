@@ -1,0 +1,8 @@
+@import "../helper";
+
+@mixin opacity($prefix, $map-values) {
+  $map-props: (
+    default: opacity,
+  );
+  @include style($prefix, opacity, $map-values, $map-props);
+}

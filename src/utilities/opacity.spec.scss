@@ -1,0 +1,27 @@
+@import 'true';
+@import './opacity';
+
+@include describe('The opacity mixin') {
+  $theme-opacity: (
+    0: 0,
+    25: 0.25,
+  );
+  $prefix: '';
+
+  @include it('should output opacity stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include opacity($prefix, $theme-opacity);
+      }
+
+      @include expect {
+        .opacity-0 {
+          opacity: 0;
+        }
+        .opacity-25 {
+          opacity: 0.25;
+        }
+      }
+    }
+  }
+}
