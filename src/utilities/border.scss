@@ -1,0 +1,42 @@
+@import "../helper";
+
+@mixin border-style($prefix, $map-values) {
+  $map-props: (
+    default: border-style,
+  );
+  @include style($prefix, border, $map-values, $map-props);
+}
+
+@mixin border-width($prefix, $map-values) {
+  $map-props: (
+    default: border-width,
+    t: border-top-width,
+    r: border-right-width,
+    b: border-bottom-width,
+    l: border-left-width,
+  );
+  @include style($prefix, border, $map-values, $map-props);
+}
+
+@mixin border-radius($prefix, $map-values) {
+  $map-props: (
+    default: border-radius,
+    t: border-top-left-radius border-top-right-radius,
+    r: border-top-right-radius border-bottom-right-radius,
+    b: border-bottom-left-radius border-bottom-right-radius,
+    l: border-top-left-radius border-bottom-left-radius,
+    tl: border-top-left-radius,
+    tr: border-top-right-radius,
+    bl: border-bottom-left-radius,
+    br: border-bottom-right-radius,
+  );
+
+  @include style($prefix, rounded, $map-values, $map-props);
+}
+
+@mixin border-color($prefix, $colors) {
+  $map-props: (
+    default: border-color,
+  );
+  @include style-color($prefix, border, $colors, $map-props);
+}

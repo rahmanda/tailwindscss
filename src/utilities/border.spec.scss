@@ -1,0 +1,192 @@
+@import 'true';
+@import './border';
+
+@include describe('The border-color mixin') {
+  $colors: (
+    transparent: transparent,
+    gray: (
+      100: #f7fafc,
+      200: #edf2f7,
+    ),
+  );
+  $prefix: '';
+
+  @include it('should output border-color stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include border-color($prefix, $colors);
+      }
+      @include expect {
+        .border-transparent {
+          border-color: transparent;
+        }
+        .border-gray-100 {
+          border-color: #f7fafc;
+        }
+        .border-gray-200 {
+          border-color: #edf2f7;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The border-style mixin') {
+  $theme-border-style: (
+    solid: solid,
+    dashed: dashed,
+    dotted: dotted,
+    none: none,
+  );
+  $prefix: '';
+
+  @include it('should output border-style stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include border-style($prefix, $theme-border-style);
+      }
+      @include expect {
+        .border-solid {
+          border-style: solid;
+        }
+        .border-dashed {
+          border-style: dashed;
+        }
+        .border-dotted {
+          border-style: dotted;
+        }
+        .border-none {
+          border-style: none;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The border-width mixin') {
+  $theme-border-width: (
+    default: 1px,
+    8: 8px,
+  );
+  $prefix: '';
+
+  @include it('should output border-width stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include border-width($prefix, $theme-border-width);
+      }
+      @include expect {
+        .border {
+          border-width: 1px;
+        }
+        .border-8 {
+          border-width: 8px;
+        }
+        .border-t {
+          border-top-width: 1px;
+        }
+        .border-t-8 {
+          border-top-width: 8px;
+        }
+        .border-r {
+          border-right-width: 1px;
+        }
+        .border-r-8 {
+          border-right-width: 8px;
+        }
+        .border-b {
+          border-bottom-width: 1px;
+        }
+        .border-b-8 {
+          border-bottom-width: 8px;
+        }
+        .border-l {
+          border-left-width: 1px;
+        }
+        .border-l-8 {
+          border-left-width: 8px;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The border-radius mixin') {
+  $theme-border-radius: (
+    default: 0.25rem,
+    none: 0,
+  );
+  $prefix: '';
+
+  @include it('should output border-radius stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include border-radius($prefix, $theme-border-radius);
+      }
+      @include expect {
+        .rounded {
+          border-radius: 0.25rem;
+        }
+        .rounded-none {
+          border-radius: 0;
+        }
+        .rounded-t {
+          border-top-left-radius: 0.25rem;
+          border-top-right-radius: 0.25rem;
+        }
+        .rounded-t-none {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+        .rounded-r {
+          border-top-right-radius: 0.25rem;
+          border-bottom-right-radius: 0.25rem;
+        }
+        .rounded-r-none {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        .rounded-b {
+          border-bottom-left-radius: 0.25rem;
+          border-bottom-right-radius: 0.25rem;
+        }
+        .rounded-b-none {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        .rounded-l {
+          border-top-left-radius: 0.25rem;
+          border-bottom-left-radius: 0.25rem;
+        }
+        .rounded-l-none {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+        .rounded-tl {
+          border-top-left-radius: 0.25rem;
+        }
+        .rounded-tl-none {
+          border-top-left-radius: 0;
+        }
+        .rounded-tr {
+          border-top-right-radius: 0.25rem;
+        }
+        .rounded-tr-none {
+          border-top-right-radius: 0;
+        }
+        .rounded-bl {
+          border-bottom-left-radius: 0.25rem;
+        }
+        .rounded-bl-none {
+          border-bottom-left-radius: 0;
+        }
+        .rounded-br {
+          border-bottom-right-radius: 0.25rem;
+        }
+        .rounded-br-none {
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+  }
+}
