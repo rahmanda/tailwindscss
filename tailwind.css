@@ -2060,6 +2060,12 @@ video {
 .border-pink-900 {
   border-color: #702459; }
 
+.border-collapse {
+  border-collapse: collapse; }
+
+.border-separate {
+  border-collapse: separate; }
+
 .items-stretch {
   align-items: stretch; }
 

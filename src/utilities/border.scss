@@ -40,3 +40,13 @@
   );
   @include style-color($prefix, border, $colors, $map-props);
 }
+
+@mixin border-collapse($prefix) {
+  .#{$prefix}border-collapse {
+    border-collapse: collapse;
+  }
+
+  .#{$prefix}border-separate {
+    border-collapse: separate;
+  }
+}

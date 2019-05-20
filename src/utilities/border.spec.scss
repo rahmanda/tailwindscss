@@ -190,3 +190,23 @@
     }
   }
 }
+
+@include describe('The border-collapse mixin') {
+  $prefix: '';
+
+  @include it('should output border-collapse stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include border-collapse($prefix);
+      }
+      @include expect {
+        .border-collapse {
+          border-collapse: collapse;
+        }
+        .border-separate {
+          border-collapse: separate;
+        }
+      }
+    }
+  }
+}

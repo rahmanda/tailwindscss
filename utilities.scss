@@ -67,6 +67,7 @@
 @include border-width($prefix, $theme-border-width);
 @include border-radius($prefix, $theme-border-radius);
 @include border-color($prefix, $theme-colors);
+@include border-collapse($prefix);
 
 // Flex
 
