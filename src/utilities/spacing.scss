@@ -10,7 +10,7 @@
     x: margin-left margin-right,
     y: margin-top margin-bottom,
   );
-  @include style($prefix, m, $map-values, $map-props, '');
+  @include style($prefix, m, $map-values, $map-props, $separator-key-name: '');
 }
 
 @mixin padding($prefix, $map-values) {
@@ -23,5 +23,5 @@
     x: padding-left padding-right,
     y: padding-top padding-bottom,
   );
-  @include style($prefix, p, $map-values, $map-props, '');
+  @include style($prefix, p, $map-values, $map-props, $separator-key-name: '');
 }

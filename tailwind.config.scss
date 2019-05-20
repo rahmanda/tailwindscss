@@ -1,6 +1,7 @@
 @import './src/helper';
 
 $prefix: '' !default;
+$separator: '_' !default;
 
 $theme-colors: (
   transparent: transparent,
@@ -116,6 +117,13 @@ $theme-colors: (
     800: #97266d,
     900: #702459,
   ),
+) !default;
+
+$theme-screens: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
 ) !default;
 
 $theme-spacing: (
@@ -412,3 +420,5 @@ $theme-inset: (
   0: 0,
   auto: auto,
 ) !default;
+
+$variants-background-color: (responsive, hover, focus) !default;

@@ -45,9 +45,9 @@
   @include style($prefix, bg, $map-values, $map-props);
 }
 
-@mixin background-color($prefix, $colors) {
+@mixin background-color($prefix, $colors, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: background-color,
   );
-  @include style-color($prefix, bg, $colors, $map-props);
+  @include style-color($prefix, bg, $colors, $map-props, $screens, $variants, $separator);
 }

@@ -56,7 +56,7 @@
 @include background-position($prefix, $theme-background-position);
 @include background-repeat($prefix);
 @include background-size($prefix, $theme-background-size);
-@include background-color($prefix, $theme-colors);
+@include background-color($prefix, $theme-background-color, $variants-background-color, $separator, $theme-screens);
 
 
 // Border

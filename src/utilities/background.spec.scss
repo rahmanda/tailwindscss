@@ -144,21 +144,111 @@
       200: #edf2f7,
     ),
   );
+  $theme-screens: (
+    sm: 640px,
+    md: 768px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output background-color stylesheet correctly') {
     @include assert {
       @include output {
-        @include background-color($prefix, $colors);
+        @include background-color($prefix, $colors, $variants, $separator, $theme-screens);
       }
       @include expect {
         .bg-transparent {
           background-color: transparent;
         }
+        @media (min-width: 640px) {
+          .sm_bg-transparent {
+            background-color: transparent;
+          }
+          .sm_hover_bg-transparent:hover {
+            background-color: transparent;
+          }
+          .sm_hover_bg-transparent:focus {
+            background-color: transparent;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-transparent {
+            background-color: transparent;
+          }
+          .md_hover_bg-transparent:hover {
+            background-color: transparent;
+          }
+          .md_hover_bg-transparent:focus {
+            background-color: transparent;
+          }
+        }
+        .hover_bg-transparent:hover {
+          background-color: transparent;
+        }
+        .focus_bg-transparent:focus {
+          background-color: transparent;
+        }
         .bg-gray-100 {
           background-color: #f7fafc;
         }
+        @media (min-width: 640px) {
+          .sm_bg-gray-100 {
+            background-color: #f7fafc;
+          }
+          .sm_hover_bg-gray-100:hover {
+            background-color: #f7fafc;
+          }
+          .sm_hover_bg-gray-100:focus {
+            background-color: #f7fafc;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-gray-100 {
+            background-color: #f7fafc;
+          }
+          .md_hover_bg-gray-100:hover {
+            background-color: #f7fafc;
+          }
+          .md_hover_bg-gray-100:focus {
+            background-color: #f7fafc;
+          }
+        }
+        .hover_bg-gray-100:hover {
+          background-color: #f7fafc;
+        }
+        .focus_bg-gray-100:focus {
+          background-color: #f7fafc;
+        }
         .bg-gray-200 {
+          background-color: #edf2f7;
+        }
+        @media (min-width: 640px) {
+          .sm_bg-gray-200 {
+            background-color: #edf2f7;
+          }
+          .sm_hover_bg-gray-200:hover {
+            background-color: #edf2f7;
+          }
+          .sm_hover_bg-gray-200:focus {
+            background-color: #edf2f7;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-gray-200 {
+            background-color: #edf2f7;
+          }
+          .md_hover_bg-gray-200:hover {
+            background-color: #edf2f7;
+          }
+          .md_hover_bg-gray-200:focus {
+            background-color: #edf2f7;
+          }
+        }
+        .hover_bg-gray-200:hover {
+          background-color: #edf2f7;
+        }
+        .focus_bg-gray-200:focus {
           background-color: #edf2f7;
         }
       }
