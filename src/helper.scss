@@ -43,6 +43,12 @@
   }
 }
 
+@mixin style-pseudo($prefix, $selector, $pseudo, $separator, $props, $value) {
+  .#{$prefix}#{$pseudo}#{$separator}#{$selector}:#{$pseudo} {
+    @include prop($props, $value);
+  }
+}
+
 @mixin style-responsive($prefix, $selector, $screens, $variants, $separator, $props, $value) {
   @each $screen, $breakpoint in $screens {
     @media (min-width: $breakpoint) {
@@ -50,22 +56,12 @@
         @include prop($props, $value);
       }
       @if index($variants, hover) {
-        .#{$prefix}#{$screen}#{$separator}hover#{$separator}#{$selector}:hover {
-          @include prop($props, $value);
-        }
+        @include style-pseudo(#{$prefix}#{$screen}#{$separator}, $selector, hover, $separator, $props, $value);
       }
       @if index($variants, focus) {
-        .#{$prefix}#{$screen}#{$separator}hover#{$separator}#{$selector}:focus {
-          @include prop($props, $value);
-        }
+        @include style-pseudo(#{$prefix}#{$screen}#{$separator}, $selector, focus, $separator, $props, $value);
       }
     }
-  }
-}
-
-@mixin style-pseudo($prefix, $selector, $pseudo, $separator, $props, $value) {
-  .#{$prefix}#{$pseudo}#{$separator}#{$selector}:#{$pseudo} {
-    @include prop($props, $value);
   }
 }
 

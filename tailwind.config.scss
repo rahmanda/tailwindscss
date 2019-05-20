@@ -423,9 +423,9 @@ $theme-inset: (
 
 $variants-appearance: (responsive) !default;
 $variants-background-color: (responsive, hover, focus) !default;
-// $variants-background-position: (responsive) !default;
-// $variants-background-repeat: (responsive) !default;
-// $variants-background-size: (responsive) !default;
+$variants-background-position: (responsive) !default;
+$variants-background-repeat: (responsive) !default;
+$variants-background-size: (responsive) !default;
 // $variants-border-collapse: (responsive) !default;
 // $variants-border-color: (responsive, hover, focus) !default;
 // $variants-border-radius: (responsive) !default;

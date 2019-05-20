@@ -53,9 +53,9 @@
 @import './src/utilities/background';
 
 @include background-attachment($prefix);
-@include background-position($prefix, $theme-background-position);
+@include background-position($prefix, $theme-background-position, $variants-background-position, $separator, $theme-screens);
 @include background-repeat($prefix);
-@include background-size($prefix, $theme-background-size);
+@include background-size($prefix, $theme-background-size, $variants-background-size, $separator, $theme-screens);
 @include background-color($prefix, $theme-background-color, $variants-background-color, $separator, $theme-screens);
 
 

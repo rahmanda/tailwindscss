@@ -1,6 +1,6 @@
 @import "../helper";
 
-@mixin background-attachment($prefix) {
+@mixin background-attachment($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     fixed: fixed,
     local: local,
@@ -10,39 +10,39 @@
     default: background-attachment,
   );
 
-  @include style($prefix, bg, $map-values, $map-props);
+  @include style($prefix, bg, $map-values, $map-props, $screens, $variants, $separator);
 }
 
-@mixin background-position($prefix, $map-values) {
+@mixin background-position($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: background-position,
   );
 
-  @include style($prefix, bg, $map-values, $map-props);
+  @include style($prefix, bg, $map-values, $map-props, $screens, $variants, $separator);
 }
 
-@mixin background-repeat($prefix) {
+@mixin background-repeat($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     repeat: repeat,
     no-repeat: no-repeat,
     repeat-x: repeat-x,
     repeat-y: repeat-y,
     repeat-round: round,
-    space: space,
+    repeat-space: space,
   );
   $map-props: (
     default: background-repeat,
   );
 
-  @include style($prefix, bg, $map-values, $map-props);
+  @include style($prefix, bg, $map-values, $map-props, $screens, $variants, $separator);
 }
 
-@mixin background-size($prefix, $map-values) {
+@mixin background-size($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: background-size,
   );
 
-  @include style($prefix, bg, $map-values, $map-props);
+  @include style($prefix, bg, $map-values, $map-props, $screens, $variants, $separator);
 }
 
 @mixin background-color($prefix, $colors, $variants: (), $separator: '_', $screens: ()) {

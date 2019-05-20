@@ -1,8 +1,15 @@
 @import 'true';
 @import './background';
 
+$screens: (
+  sm: 640px,
+  md: 768px,
+) !default;
+$variants: responsive hover focus !default;
+$separator: '_' !default;
+$prefix: '' !default;
+
 @include describe('The background-attachment mixin') {
-  $prefix: '';
 
   @include it('should output background-attachment stylesheet correctly') {
     @include assert {
@@ -25,51 +32,110 @@
 }
 
 @include describe('The background-position mixin') {
-  $prefix: '';
   $theme-background-position: (
     bottom: bottom,
     center: center,
     left: left,
-    left-bottom: left-bottom,
-    left-top: left-top,
-    right: right,
-    right-bottom: right-bottom,
-    right-top: right-top,
-    top: top,
   );
 
   @include it('should output background-position stylesheet correctly') {
     @include assert {
       @include output {
-        @include background-position($prefix, $theme-background-position);
+        @include background-position($prefix, $theme-background-position, $variants, $separator, $screens);
       }
       @include expect {
         .bg-bottom {
           background-position: bottom;
         }
+        @media (min-width: 640px) {
+          .sm_bg-bottom {
+            background-position: bottom;
+          }
+          .sm_hover_bg-bottom:hover {
+            background-position: bottom;
+          }
+          .sm_focus_bg-bottom:focus {
+            background-position: bottom;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-bottom {
+            background-position: bottom;
+          }
+          .md_hover_bg-bottom:hover {
+            background-position: bottom;
+          }
+          .md_focus_bg-bottom:focus {
+            background-position: bottom;
+          }
+        }
+        .hover_bg-bottom:hover {
+          background-position: bottom;
+        }
+        .focus_bg-bottom:focus {
+          background-position: bottom;
+        }
         .bg-center {
+          background-position: center;
+        }
+        @media (min-width: 640px) {
+          .sm_bg-center {
+            background-position: center;
+          }
+          .sm_hover_bg-center:hover {
+            background-position: center;
+          }
+          .sm_focus_bg-center:focus {
+            background-position: center;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-center {
+            background-position: center;
+          }
+          .md_hover_bg-center:hover {
+            background-position: center;
+          }
+          .md_focus_bg-center:focus {
+            background-position: center;
+          }
+        }
+        .hover_bg-center:hover {
+          background-position: center;
+        }
+        .focus_bg-center:focus {
           background-position: center;
         }
         .bg-left {
           background-position: left;
         }
-        .bg-left-bottom {
-          background-position: left-bottom;
+        @media (min-width: 640px) {
+          .sm_bg-left {
+            background-position: left;
+          }
+          .sm_hover_bg-left:hover {
+            background-position: left;
+          }
+          .sm_focus_bg-left:focus {
+            background-position: left;
+          }
         }
-        .bg-left-top {
-          background-position: left-top;
+        @media (min-width: 768px) {
+          .md_bg-left {
+            background-position: left;
+          }
+          .md_hover_bg-left:hover {
+            background-position: left;
+          }
+          .md_focus_bg-left:focus {
+            background-position: left;
+          }
         }
-        .bg-right {
-          background-position: right;
+        .hover_bg-left:hover {
+          background-position: left;
         }
-        .bg-right-bottom {
-          background-position: right-bottom;
-        }
-        .bg-right-top {
-          background-position: right-top;
-        }
-        .bg-top {
-          background-position: top;
+        .focus_bg-left:focus {
+          background-position: left;
         }
       }
     }
@@ -77,30 +143,196 @@
 }
 
 @include describe('The background-repeat mixin') {
-  $prefix: '';
-
   @include it('should output background-repeat stylesheet correctly') {
     @include assert {
       @include output {
-        @include background-repeat($prefix);
+        @include background-repeat($prefix, $variants, $separator, $screens);
       }
       @include expect {
         .bg-repeat {
           background-repeat: repeat;
         }
+        @media (min-width: 640px) {
+          .sm_bg-repeat {
+            background-repeat: repeat;
+          }
+          .sm_hover_bg-repeat:hover {
+            background-repeat: repeat;
+          }
+          .sm_focus_bg-repeat:focus {
+            background-repeat: repeat;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-repeat {
+            background-repeat: repeat;
+          }
+          .md_hover_bg-repeat:hover {
+            background-repeat: repeat;
+          }
+          .md_focus_bg-repeat:focus {
+            background-repeat: repeat;
+          }
+        }
+        .hover_bg-repeat:hover {
+          background-repeat: repeat;
+        }
+        .focus_bg-repeat:focus {
+          background-repeat: repeat;
+        }
         .bg-no-repeat {
+          background-repeat: no-repeat;
+        }
+        @media (min-width: 640px) {
+          .sm_bg-no-repeat {
+            background-repeat: no-repeat;
+          }
+          .sm_hover_bg-no-repeat:hover {
+            background-repeat: no-repeat;
+          }
+          .sm_focus_bg-no-repeat:focus {
+            background-repeat: no-repeat;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-no-repeat {
+            background-repeat: no-repeat;
+          }
+          .md_hover_bg-no-repeat:hover {
+            background-repeat: no-repeat;
+          }
+          .md_focus_bg-no-repeat:focus {
+            background-repeat: no-repeat;
+          }
+        }
+        .hover_bg-no-repeat:hover {
+          background-repeat: no-repeat;
+        }
+        .focus_bg-no-repeat:focus {
           background-repeat: no-repeat;
         }
         .bg-repeat-x {
           background-repeat: repeat-x;
         }
+        @media (min-width: 640px) {
+          .sm_bg-repeat-x {
+            background-repeat: repeat-x;
+          }
+          .sm_hover_bg-repeat-x:hover {
+            background-repeat: repeat-x;
+          }
+          .sm_focus_bg-repeat-x:focus {
+            background-repeat: repeat-x;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-repeat-x {
+            background-repeat: repeat-x;
+          }
+          .md_hover_bg-repeat-x:hover {
+            background-repeat: repeat-x;
+          }
+          .md_focus_bg-repeat-x:focus {
+            background-repeat: repeat-x;
+          }
+        }
+        .hover_bg-repeat-x:hover {
+          background-repeat: repeat-x;
+        }
+        .focus_bg-repeat-x:focus {
+          background-repeat: repeat-x;
+        }
         .bg-repeat-y {
+          background-repeat: repeat-y;
+        }
+        @media (min-width: 640px) {
+          .sm_bg-repeat-y {
+            background-repeat: repeat-y;
+          }
+          .sm_hover_bg-repeat-y:hover {
+            background-repeat: repeat-y;
+          }
+          .sm_focus_bg-repeat-y:focus {
+            background-repeat: repeat-y;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-repeat-y {
+            background-repeat: repeat-y;
+          }
+          .md_hover_bg-repeat-y:hover {
+            background-repeat: repeat-y;
+          }
+          .md_focus_bg-repeat-y:focus {
+            background-repeat: repeat-y;
+          }
+        }
+        .hover_bg-repeat-y:hover {
+          background-repeat: repeat-y;
+        }
+        .focus_bg-repeat-y:focus {
           background-repeat: repeat-y;
         }
         .bg-repeat-round {
           background-repeat: round;
         }
-        .bg-space {
+        @media (min-width: 640px) {
+          .sm_bg-repeat-round {
+            background-repeat: round;
+          }
+          .sm_hover_bg-repeat-round:hover {
+            background-repeat: round;
+          }
+          .sm_focus_bg-repeat-round:focus {
+            background-repeat: round;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-repeat-round {
+            background-repeat: round;
+          }
+          .md_hover_bg-repeat-round:hover {
+            background-repeat: round;
+          }
+          .md_focus_bg-repeat-round:focus {
+            background-repeat: round;
+          }
+        }
+        .hover_bg-repeat-round:hover {
+          background-repeat: round;
+        }
+        .focus_bg-repeat-round:focus {
+          background-repeat: round;
+        }
+        .bg-repeat-space {
+          background-repeat: space;
+        }
+        @media (min-width: 640px) {
+          .sm_bg-repeat-space {
+            background-repeat: space;
+          }
+          .sm_hover_bg-repeat-space:hover {
+            background-repeat: space;
+          }
+          .sm_focus_bg-repeat-space:focus {
+            background-repeat: space;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-repeat-space {
+            background-repeat: space;
+          }
+          .md_hover_bg-repeat-space:hover {
+            background-repeat: space;
+          }
+          .md_focus_bg-repeat-space:focus {
+            background-repeat: space;
+          }
+        }
+        .hover_bg-repeat-space:hover {
+          background-repeat: space;
+        }
+        .focus_bg-repeat-space:focus {
           background-repeat: space;
         }
       }
@@ -109,7 +341,6 @@
 }
 
 @include describe('The background-size mixin') {
-  $prefix: '';
   $theme-background-size: (
     auto: auto,
     cover: cover,
@@ -119,16 +350,100 @@
   @include it('should output background-size stylesheet correctly') {
     @include assert {
       @include output {
-        @include background-size($prefix, $theme-background-size);
+        @include background-size($prefix, $theme-background-size, $variants, $separator, $screens);
       }
       @include expect {
         .bg-auto {
           background-size: auto;
         }
+        @media (min-width: 640px) {
+          .sm_bg-auto {
+            background-size: auto;
+          }
+          .sm_hover_bg-auto:hover {
+            background-size: auto;
+          }
+          .sm_focus_bg-auto:focus {
+            background-size: auto;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-auto {
+            background-size: auto;
+          }
+          .md_hover_bg-auto:hover {
+            background-size: auto;
+          }
+          .md_focus_bg-auto:focus {
+            background-size: auto;
+          }
+        }
+        .hover_bg-auto:hover {
+          background-size: auto;
+        }
+        .focus_bg-auto:focus {
+          background-size: auto;
+        }
         .bg-cover {
           background-size: cover;
         }
+        @media (min-width: 640px) {
+          .sm_bg-cover {
+            background-size: cover;
+          }
+          .sm_hover_bg-cover:hover {
+            background-size: cover;
+          }
+          .sm_focus_bg-cover:focus {
+            background-size: cover;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-cover {
+            background-size: cover;
+          }
+          .md_hover_bg-cover:hover {
+            background-size: cover;
+          }
+          .md_focus_bg-cover:focus {
+            background-size: cover;
+          }
+        }
+        .hover_bg-cover:hover {
+          background-size: cover;
+        }
+        .focus_bg-cover:focus {
+          background-size: cover;
+        }
         .bg-contain {
+          background-size: contain;
+        }
+        @media (min-width: 640px) {
+          .sm_bg-contain {
+            background-size: contain;
+          }
+          .sm_hover_bg-contain:hover {
+            background-size: contain;
+          }
+          .sm_focus_bg-contain:focus {
+            background-size: contain;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_bg-contain {
+            background-size: contain;
+          }
+          .md_hover_bg-contain:hover {
+            background-size: contain;
+          }
+          .md_focus_bg-contain:focus {
+            background-size: contain;
+          }
+        }
+        .hover_bg-contain:hover {
+          background-size: contain;
+        }
+        .focus_bg-contain:focus {
           background-size: contain;
         }
       }
@@ -144,18 +459,11 @@
       200: #edf2f7,
     ),
   );
-  $theme-screens: (
-    sm: 640px,
-    md: 768px,
-  );
-  $variants: responsive hover focus;
-  $separator: '_';
-  $prefix: '';
 
   @include it('should output background-color stylesheet correctly') {
     @include assert {
       @include output {
-        @include background-color($prefix, $colors, $variants, $separator, $theme-screens);
+        @include background-color($prefix, $colors, $variants, $separator, $screens);
       }
       @include expect {
         .bg-transparent {
@@ -168,7 +476,7 @@
           .sm_hover_bg-transparent:hover {
             background-color: transparent;
           }
-          .sm_hover_bg-transparent:focus {
+          .sm_focus_bg-transparent:focus {
             background-color: transparent;
           }
         }
@@ -179,7 +487,7 @@
           .md_hover_bg-transparent:hover {
             background-color: transparent;
           }
-          .md_hover_bg-transparent:focus {
+          .md_focus_bg-transparent:focus {
             background-color: transparent;
           }
         }
@@ -199,7 +507,7 @@
           .sm_hover_bg-gray-100:hover {
             background-color: #f7fafc;
           }
-          .sm_hover_bg-gray-100:focus {
+          .sm_focus_bg-gray-100:focus {
             background-color: #f7fafc;
           }
         }
@@ -210,7 +518,7 @@
           .md_hover_bg-gray-100:hover {
             background-color: #f7fafc;
           }
-          .md_hover_bg-gray-100:focus {
+          .md_focus_bg-gray-100:focus {
             background-color: #f7fafc;
           }
         }
@@ -230,7 +538,7 @@
           .sm_hover_bg-gray-200:hover {
             background-color: #edf2f7;
           }
-          .sm_hover_bg-gray-200:focus {
+          .sm_focus_bg-gray-200:focus {
             background-color: #edf2f7;
           }
         }
@@ -241,7 +549,7 @@
           .md_hover_bg-gray-200:hover {
             background-color: #edf2f7;
           }
-          .md_hover_bg-gray-200:focus {
+          .md_focus_bg-gray-200:focus {
             background-color: #edf2f7;
           }
         }
