@@ -1,0 +1,5 @@
+@mixin appearance($prefix) {
+  .#{$prefix}appearance-none {
+    appearance: none;
+  }
+}

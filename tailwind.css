@@ -4849,3 +4849,6 @@ video {
 
 .opacity-100 {
   opacity: 1; }
+
+.appearance-none {
+  appearance: none; }

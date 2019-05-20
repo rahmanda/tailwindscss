@@ -1,0 +1,18 @@
+@import 'true';
+@import './appearance';
+
+@include describe('The appearance mixin') {
+  $prefix: '';
+  @include it('should output appearance stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include appearance($prefix);
+      }
+      @include expect {
+        .appearance-none {
+          appearance: none;
+        }
+      }
+    }
+  }
+}

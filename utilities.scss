@@ -106,3 +106,9 @@
 
 @include box-shadow($prefix, $theme-box-shadow);
 @include opacity($prefix, $theme-opacity);
+
+// Interactivity
+
+@import './src/utilities/appearance';
+
+@include appearance($prefix);
