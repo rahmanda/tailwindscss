@@ -37,10 +37,16 @@
 @include font-smoothing($prefix);
 @include font-style($prefix);
 @include font-weight($prefix, $theme-font-weight);
+@include letter-spacing($prefix, $theme-letter-spacing);
+@include line-height($prefix, $theme-line-height);
+@include list-style-type($prefix, $theme-list-style-type);
+@include list-style-position($prefix);
 @include text-align($prefix);
 @include text-decoration($prefix);
 @include text-transform($prefix);
 @include color($prefix, $theme-colors);
+@include white-space($prefix);
+@include word-break($prefix);
 
 // Background
 
