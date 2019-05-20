@@ -2,11 +2,14 @@
 @import './fill';
 
 @include describe('The fill mixin') {
+  $theme-fill: (
+    current: currentColor,
+  );
   $prefix: '';
   @include it('should output fill stylesheet correctly') {
     @include assert {
       @include output {
-        @include fill($prefix);
+        @include fill($prefix, $theme-fill);
       }
       @include expect {
         .fill-current {

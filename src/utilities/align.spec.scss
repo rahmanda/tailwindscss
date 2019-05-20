@@ -3,18 +3,11 @@
 
 @include describe('The align-items mixin') {
   $prefix: '';
-  $theme-align-items: (
-    stretch: stretch,
-    start: flex-start,
-    center: center,
-    end: flex-end,
-    baseline: baseline,
-  );
 
   @include it('should output align-items stylesheet correctly') {
     @include assert {
       @include output {
-        @include align-items($prefix, $theme-align-items);
+        @include align-items($prefix);
       }
       @include expect {
         .items-stretch {
@@ -39,18 +32,11 @@
 
 @include describe('The align-content mixin') {
   $prefix: '';
-  $theme-align-content: (
-    start: flex-start,
-    center: center,
-    end: flex-end,
-    between: space-between,
-    around: space-around,
-  );
 
   @include it('should output align-content stylesheet correctly') {
     @include assert {
       @include output {
-        @include align-content($prefix, $theme-align-content);
+        @include align-content($prefix);
       }
       @include expect {
         .content-start {
@@ -75,18 +61,11 @@
 
 @include describe('The align-self mixin') {
   $prefix: '';
-  $theme-align-self: (
-    auto: auto,
-    start: flex-start,
-    center: center,
-    end: flex-end,
-    stretch: stretch,
-  ) !default;
 
   @include it('should output align-self stylesheet correctly') {
     @include assert {
       @include output {
-        @include align-self($prefix, $theme-align-self);
+        @include align-self($prefix);
       }
       @include expect {
         .self-auto {

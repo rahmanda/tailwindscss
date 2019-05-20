@@ -3,16 +3,11 @@
 
 @include describe('The background-attachment mixin') {
   $prefix: '';
-  $theme-background-attachment: (
-    fixed: fixed,
-    local: local,
-    scroll: scroll,
-  );
 
   @include it('should output background-attachment stylesheet correctly') {
     @include assert {
       @include output {
-        @include background-attachment($prefix, $theme-background-attachment);
+        @include background-attachment($prefix);
       }
       @include expect {
         .bg-fixed {
@@ -83,19 +78,11 @@
 
 @include describe('The background-repeat mixin') {
   $prefix: '';
-  $theme-background-repeat: (
-    repeat: repeat,
-    no-repeat: no-repeat,
-    repeat-x: repeat-x,
-    repeat-y: repeat-y,
-    repeat-round: round,
-    space: space,
-  );
 
   @include it('should output background-repeat stylesheet correctly') {
     @include assert {
       @include output {
-        @include background-repeat($prefix, $theme-background-repeat);
+        @include background-repeat($prefix);
       }
       @include expect {
         .bg-repeat {

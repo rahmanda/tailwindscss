@@ -1,6 +1,11 @@
 @import "../helper";
 
-@mixin background-attachment($prefix, $map-values) {
+@mixin background-attachment($prefix) {
+  $map-values: (
+    fixed: fixed,
+    local: local,
+    scroll: scroll,
+  );
   $map-props: (
     default: background-attachment,
   );
@@ -16,7 +21,15 @@
   @include style($prefix, bg, $map-values, $map-props);
 }
 
-@mixin background-repeat($prefix, $map-values) {
+@mixin background-repeat($prefix) {
+  $map-values: (
+    repeat: repeat,
+    no-repeat: no-repeat,
+    repeat-x: repeat-x,
+    repeat-y: repeat-y,
+    repeat-round: round,
+    space: space,
+  );
   $map-props: (
     default: background-repeat,
   );

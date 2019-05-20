@@ -34,18 +34,12 @@
 }
 
 @include describe('The flex-direction mixin') {
-  $theme-flex-direction: (
-    row: row,
-    row-reverse: row-reverse,
-    col: column,
-    col-reverse: column-reverse,
-  );
   $prefix: '';
 
   @include it('should output flex-direction stylesheet correctly') {
     @include assert {
       @include output {
-        @include flex-direction($prefix, $theme-flex-direction);
+        @include flex-direction($prefix);
       }
       @include expect {
         .flex-row {
@@ -66,17 +60,12 @@
 }
 
 @include describe('The flex-wrap mixin') {
-  $theme-flex-wrap: (
-    no-wrap: nowrap,
-    wrap: wrap,
-    wrap-reverse: wrap-reverse,
-  );
   $prefix: '';
 
   @include it('should output flex-wrap stylesheet correctly') {
     @include assert {
       @include output {
-        @include flex-wrap($prefix, $theme-flex-wrap);
+        @include flex-wrap($prefix);
       }
       @include expect {
         .flex-no-wrap {

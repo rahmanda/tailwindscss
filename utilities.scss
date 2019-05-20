@@ -10,7 +10,7 @@
 @import './src/utilities/visibility';
 @import './src/utilities/z-index';
 
-@include display($prefix, $theme-display);
+@include display($prefix);
 @include float($prefix);
 @include object-fit($prefix);
 @include object-position($prefix, $theme-object-position);
@@ -52,9 +52,9 @@
 
 @import './src/utilities/background';
 
-@include background-attachment($prefix, $theme-background-attachment);
+@include background-attachment($prefix);
 @include background-position($prefix, $theme-background-position);
-@include background-repeat($prefix, $theme-background-repeat);
+@include background-repeat($prefix);
 @include background-size($prefix, $theme-background-size);
 @include background-color($prefix, $theme-colors);
 
@@ -63,7 +63,7 @@
 
 @import './src/utilities/border';
 
-@include border-style($prefix, $theme-border-style);
+@include border-style($prefix);
 @include border-width($prefix, $theme-border-width);
 @include border-radius($prefix, $theme-border-radius);
 @include border-color($prefix, $theme-colors);
@@ -76,12 +76,12 @@
 @import './src/utilities/justify-content';
 @import './src/utilities/order';
 
-@include align-items($prefix, $theme-align-items);
-@include align-content($prefix, $theme-align-content);
-@include align-self($prefix, $theme-align-self);
+@include align-items($prefix);
+@include align-content($prefix);
+@include align-self($prefix);
 @include flex($prefix, $theme-flex);
-@include flex-direction($prefix, $theme-flex-direction);
-@include flex-wrap($prefix, $theme-flex-wrap);
+@include flex-direction($prefix);
+@include flex-wrap($prefix);
 @include flex-grow($prefix, $theme-flex-grow);
 @include flex-shrink($prefix, $theme-flex-shrink);
 @include justify-content($prefix);
@@ -129,5 +129,5 @@
 @import './src/utilities/fill';
 @import './src/utilities/stroke';
 
-@include fill($prefix);
-@include stroke($prefix);
+@include fill($prefix, $theme-fill);
+@include stroke($prefix, $theme-stroke);

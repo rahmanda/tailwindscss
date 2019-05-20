@@ -1,5 +1,8 @@
-@mixin stroke($prefix) {
-  .#{$prefix}stroke-current {
-    stroke: currentColor;
-  }
+@import '../helper';
+
+@mixin stroke($prefix, $map-values) {
+  $map-props: (
+    default: stroke,
+  );
+  @include style($prefix, stroke, $map-values, $map-props);
 }

@@ -1,6 +1,12 @@
 @import "../helper";
 
-@mixin border-style($prefix, $map-values) {
+@mixin border-style($prefix) {
+  $map-values: (
+    solid: solid,
+    dashed: dashed,
+    dotted: dotted,
+    none: none,
+  );
   $map-props: (
     default: border-style,
   );

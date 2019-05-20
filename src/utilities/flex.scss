@@ -7,14 +7,25 @@
   @include style($prefix, flex, $map-values, $map-props);
 }
 
-@mixin flex-direction($prefix, $map-values) {
+@mixin flex-direction($prefix) {
+  $map-values: (
+    row: row,
+    row-reverse: row-reverse,
+    col: column,
+    col-reverse: column-reverse,
+  );
   $map-props: (
     default: flex-direction,
   );
   @include style($prefix, flex, $map-values, $map-props);
 }
 
-@mixin flex-wrap($prefix, $map-values) {
+@mixin flex-wrap($prefix) {
+  $map-values: (
+    no-wrap: nowrap,
+    wrap: wrap,
+    wrap-reverse: wrap-reverse,
+  );
   $map-props: (
     default: flex-wrap,
   );

@@ -1,5 +1,8 @@
-@mixin fill($prefix) {
-  .#{$prefix}fill-current {
-    fill: currentColor;
-  }
+@import '../helper';
+
+@mixin fill($prefix, $map-values) {
+  $map-props: (
+    default: fill,
+  );
+  @include style($prefix, fill, $map-values, $map-props);
 }

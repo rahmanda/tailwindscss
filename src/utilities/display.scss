@@ -1,4 +1,16 @@
-@mixin display($prefix, $map-values) {
+@mixin display($prefix) {
+  $map-values: (
+    block: block,
+    inline-block: inline-block,
+    inline: inline,
+    flex: flex,
+    inline-flex: inline-flex,
+    table: table,
+    table-row: table-row,
+    table-cell: table-cell,
+    hidden: none,
+  );
+
   @each $key, $value in $map-values {
     .#{$prefix}#{$key} {
       display: $value;

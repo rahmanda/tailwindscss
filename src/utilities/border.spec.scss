@@ -32,18 +32,12 @@
 }
 
 @include describe('The border-style mixin') {
-  $theme-border-style: (
-    solid: solid,
-    dashed: dashed,
-    dotted: dotted,
-    none: none,
-  );
   $prefix: '';
 
   @include it('should output border-style stylesheet correctly') {
     @include assert {
       @include output {
-        @include border-style($prefix, $theme-border-style);
+        @include border-style($prefix);
       }
       @include expect {
         .border-solid {

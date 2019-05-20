@@ -2,11 +2,15 @@
 @import './stroke';
 
 @include describe('The stroke mixin') {
+  $theme-stroke: (
+    current: currentColor,
+  );
   $prefix: '';
+
   @include it('should output stroke stylesheet correctly') {
     @include assert {
       @include output {
-        @include stroke($prefix);
+        @include stroke($prefix, $theme-stroke);
       }
       @include expect {
         .stroke-current {
