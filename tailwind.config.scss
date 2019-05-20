@@ -239,6 +239,78 @@ $theme-cursor: (
   not-allowed: not-allowed,
 ) !default;
 
+$theme-width: map-merge(
+  map-merge($theme-spacing, (auto: auto)),
+  (
+    1_2: 50%,
+    1_3: 33.33333%,
+    2_3: 66.66667%,
+    1_4: 25%,
+    2_4: 50%,
+    3_4: 75%,
+    1_5: 20%,
+    2_5: 40%,
+    3_5: 60%,
+    4_5: 80%,
+    1_6: 16.66667%,
+    2_6: 33.33333%,
+    3_6: 50%,
+    4_6: 66.66667%,
+    5_6: 83.33333%,
+    1_12: 8.33333%,
+    2_12: 16.66667%,
+    3_12: 25%,
+    4_12: 33.33333%,
+    5_12: 41.66667%,
+    6_12: 50%,
+    7_12: 58.33333%,
+    8_12: 66.66667%,
+    9_12: 75%,
+    10_12: 83.33333%,
+    11_12: 91.66667%,
+    full: 100%,
+    screen: 100vw,
+  ),
+) !default;
+
+$theme-height: map-merge(
+   map-merge($theme-spacing, (auto: auto)),
+   (
+     full: 100%,
+     screen: 100vh,
+   ),
+) !default;
+
+$theme-min-width: (
+  0: 0,
+  full: 100%,
+) !default;
+
+$theme-min-height: (
+  0: 0,
+  full: 100%,
+  screen: 100vh,
+) !default;
+
+$theme-max-width: (
+  xs: 20rem,
+  sm: 24rem,
+  md: 28rem,
+  lg: 32rem,
+  xl: 36rem,
+  2xl: 42rem,
+  3xl: 48rem,
+  4xl: 56rem,
+  5xl: 64rem,
+  6xl: 72rem,
+  full: 100%,
+) !default;
+
+$theme-max-height: (
+  full: 100%,
+  screen: 100vh,
+) !default;
+
 $theme-padding: $theme-spacing !default;
 
 $theme-margin: map-merge(

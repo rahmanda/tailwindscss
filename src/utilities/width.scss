@@ -1,0 +1,25 @@
+@import '../helper';
+
+@mixin width($prefix, $map-values) {
+  $map-props: (
+    default: width,
+  );
+
+  @include style($prefix, w, $map-values, $map-props);
+}
+
+@mixin min-width($prefix, $map-values) {
+  $map-props: (
+    default: min-width,
+  );
+
+  @include style($prefix, min-w, $map-values, $map-props);
+}
+
+@mixin max-width($prefix, $map-values) {
+  $map-props: (
+    default: max-width,
+  );
+
+  @include style($prefix, max-w, $map-values, $map-props);
+}

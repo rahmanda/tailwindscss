@@ -1,0 +1,81 @@
+@import 'true';
+@import './height';
+
+@include describe('The height mixin') {
+  $theme-height: (
+    0: 0,
+    screen: 100vh,
+    1_2: 8.33333%,
+  );
+  $prefix: '';
+
+  @include it('should output height stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include height($prefix, $theme-height);
+      }
+
+      @include expect {
+        .h-0 {
+          height: 0;
+        }
+        .h-screen {
+          height: 100vh;
+        }
+        .h-1_2 {
+          height: 8.33333%;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The min-height mixin') {
+  $theme-min-height: (
+    full: 100%,
+    screen: 100vh,
+  );
+  $prefix: '';
+
+  @include it('should output min-height stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include min-height($prefix, $theme-min-height);
+      }
+
+      @include expect {
+        .min-h-full {
+          min-height: 100%;
+        }
+        .min-h-screen {
+          min-height: 100vh;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The max-height mixin') {
+  $theme-max-height: (
+    full: 100%,
+    screen: 100vh,
+  );
+  $prefix: '';
+
+  @include it('should output max-height stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include max-height($prefix, $theme-max-height);
+      }
+
+      @include expect {
+        .max-h-full {
+          max-height: 100%;
+        }
+        .max-h-screen {
+          max-height: 100vh;
+        }
+      }
+    }
+  }
+}

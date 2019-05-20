@@ -94,6 +94,18 @@
 @include margin($prefix, $theme-margin);
 @include padding($prefix, $theme-padding);
 
+// Sizing
+
+@import './src/utilities/width';
+@import './src/utilities/height';
+
+@include width($prefix, $theme-width);
+@include min-width($prefix, $theme-min-width);
+@include max-width($prefix, $theme-max-width);
+@include height($prefix, $theme-height);
+@include min-height($prefix, $theme-min-height);
+@include max-height($prefix, $theme-max-height);
+
 // Tables
 
 @import './src/utilities/table';
