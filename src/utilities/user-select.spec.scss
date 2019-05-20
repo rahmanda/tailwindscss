@@ -1,0 +1,28 @@
+@import 'true';
+@import './user-select';
+
+@include describe('The user-select mixin') {
+  $prefix: '';
+
+  @include it('should output user-select stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include user-select($prefix);
+      }
+      @include expect {
+        .select-none {
+          user-select: none;
+        }
+        .select-text {
+          user-select: text;
+        }
+        .select-all {
+          user-select: all;
+        }
+        .select-auto {
+          user-select: auto;
+        }
+      }
+    }
+  }
+}

@@ -114,9 +114,11 @@
 @import './src/utilities/outline';
 @import './src/utilities/pointer-events';
 @import './src/utilities/resize';
+@import './src/utilities/user-select';
 
 @include appearance($prefix);
 @include cursor($prefix, $theme-cursor);
 @include outline($prefix);
 @include pointer-events($prefix);
 @include resize($prefix);
+@include user-select($prefix);

@@ -1,0 +1,14 @@
+@import '../helper';
+
+@mixin user-select($prefix) {
+  $map-values: (
+    none: none,
+    text: text,
+    all: all,
+    auto: auto,
+  );
+  $map-props: (
+    default: user-select,
+  );
+  @include style($prefix, select, $map-values, $map-props);
+}
