@@ -122,3 +122,9 @@
 @include pointer-events($prefix);
 @include resize($prefix);
 @include user-select($prefix);
+
+// SVG
+
+@import './src/utilities/fill';
+
+@include fill($prefix);

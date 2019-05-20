@@ -1,0 +1,18 @@
+@import 'true';
+@import './fill';
+
+@include describe('The fill mixin') {
+  $prefix: '';
+  @include it('should output fill stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include fill($prefix);
+      }
+      @include expect {
+        .fill-current {
+          fill: currentColor;
+        }
+      }
+    }
+  }
+}

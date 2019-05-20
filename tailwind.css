@@ -4906,3 +4906,6 @@ video {
 
 .select-auto {
   user-select: auto; }
+
+.fill-current {
+  fill: currentColor; }
