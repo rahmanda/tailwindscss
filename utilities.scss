@@ -110,5 +110,7 @@
 // Interactivity
 
 @import './src/utilities/appearance';
+@import './src/utilities/cursor';
 
 @include appearance($prefix);
+@include cursor($prefix, $theme-cursor);

@@ -4852,3 +4852,24 @@ video {
 
 .appearance-none {
   appearance: none; }
+
+.cursor-auto {
+  cursor: auto; }
+
+.cursor {
+  cursor: default; }
+
+.cursor-pointer {
+  cursor: pointer; }
+
+.cursor-wait {
+  cursor: wait; }
+
+.cursor-text {
+  cursor: text; }
+
+.cursor-move {
+  cursor: move; }
+
+.cursor-not-allowed {
+  cursor: not-allowed; }

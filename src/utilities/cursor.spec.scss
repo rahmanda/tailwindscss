@@ -1,0 +1,30 @@
+@import 'true';
+@import './cursor';
+
+@include describe('The cursor mixin') {
+  $theme-cursor: (
+    auto: auto,
+    default: default,
+    pointer: pointer,
+  );
+  $prefix: '';
+
+  @include it('should output cursor stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include cursor($prefix, $theme-cursor);
+      }
+      @include expect {
+        .cursor-auto {
+          cursor: auto,
+        }
+        .cursor-default {
+          cursor: default,
+        }
+        .cursor-pointer {
+          cursor: pointer,
+        }
+      }
+    }
+  }
+}

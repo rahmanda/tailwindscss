@@ -356,3 +356,13 @@ $theme-opacity: (
   75: 0.75,
   100: 1,
 ) !default;
+
+$theme-cursor: (
+  auto: auto,
+  default: default,
+  pointer: pointer,
+  wait: wait,
+  text: text,
+  move: move,
+  not-allowed: not-allowed,
+) !default;
