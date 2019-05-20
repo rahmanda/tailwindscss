@@ -1,6 +1,7 @@
 @mixin prop($props, $value) {
+  $sanitized-value: if(quote($value) == $value, unquote($value), $value);
   @each $prop in $props {
-    #{$prop}: $value;
+    #{$prop}: $sanitized-value;
   }
 }
 

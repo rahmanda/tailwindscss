@@ -98,3 +98,9 @@
 @import './src/utilities/table';
 
 @include table-layout($prefix);
+
+// Effects
+
+@import './src/utilities/box-shadow';
+
+@include box-shadow($prefix, $theme-box-shadow);
