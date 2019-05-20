@@ -4882,3 +4882,15 @@ video {
 
 .pointer-events-auto {
   pointer-events: auto; }
+
+.resize {
+  resize: both; }
+
+.resize-none {
+  resize: none; }
+
+.resize-y {
+  resize: vertical; }
+
+.resize-x {
+  resize: horizontal; }

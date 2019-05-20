@@ -113,8 +113,10 @@
 @import './src/utilities/cursor';
 @import './src/utilities/outline';
 @import './src/utilities/pointer-events';
+@import './src/utilities/resize';
 
 @include appearance($prefix);
 @include cursor($prefix, $theme-cursor);
 @include outline($prefix);
 @include pointer-events($prefix);
+@include resize($prefix);

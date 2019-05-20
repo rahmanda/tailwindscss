@@ -1,0 +1,14 @@
+@import '../helper';
+
+@mixin resize($prefix) {
+  $map-values: (
+    default: both,
+    none: none,
+    y: vertical,
+    x: horizontal,
+  );
+  $map-props: (
+    default: resize,
+  );
+  @include style($prefix, resize, $map-values, $map-props);
+}

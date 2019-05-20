@@ -1,0 +1,28 @@
+@import 'true';
+@import './resize';
+
+@include describe('The resize mixin') {
+  $prefix: '';
+
+  @include it('should output resize stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include resize($prefix);
+      }
+      @include expect {
+        .resize {
+          resize: both;
+        }
+        .resize-none {
+          resize: none;
+        }
+        .resize-y {
+          resize: vertical;
+        }
+        .resize-x {
+          resize: horizontal;
+        }
+      }
+    }
+  }
+}
