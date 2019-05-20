@@ -126,5 +126,7 @@
 // SVG
 
 @import './src/utilities/fill';
+@import './src/utilities/stroke';
 
 @include fill($prefix);
+@include stroke($prefix);

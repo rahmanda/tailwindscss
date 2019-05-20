@@ -1,0 +1,18 @@
+@import 'true';
+@import './stroke';
+
+@include describe('The stroke mixin') {
+  $prefix: '';
+  @include it('should output stroke stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include stroke($prefix);
+      }
+      @include expect {
+        .stroke-current {
+          stroke: currentColor;
+        }
+      }
+    }
+  }
+}

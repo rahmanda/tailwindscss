@@ -1,0 +1,5 @@
+@mixin stroke($prefix) {
+  .#{$prefix}stroke-current {
+    stroke: currentColor;
+  }
+}
