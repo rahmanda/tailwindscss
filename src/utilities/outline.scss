@@ -1,0 +1,5 @@
+@mixin outline($prefix) {
+  .#{$prefix}outline-none {
+    outline: 0;
+  }
+}

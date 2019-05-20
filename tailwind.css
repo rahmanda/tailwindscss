@@ -4873,3 +4873,6 @@ video {
 
 .cursor-not-allowed {
   cursor: not-allowed; }
+
+.outline-none {
+  outline: 0; }

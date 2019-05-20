@@ -111,6 +111,8 @@
 
 @import './src/utilities/appearance';
 @import './src/utilities/cursor';
+@import './src/utilities/outline';
 
 @include appearance($prefix);
 @include cursor($prefix, $theme-cursor);
+@include outline($prefix);

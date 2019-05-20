@@ -1,0 +1,19 @@
+@import 'true';
+@import './outline';
+
+@include describe('The outline mixin') {
+  $prefix: '';
+
+  @include it('should output outline stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include outline($prefix);
+      }
+      @include expect {
+        .outline-none {
+          outline: 0;
+        }
+      }
+    }
+  }
+}
