@@ -52,6 +52,16 @@
 @include background-size($prefix, $theme-background-size);
 @include background-color($prefix, $theme-colors);
 
+
+// Border
+
+@import './src/utilities/border';
+
+@include border-style($prefix, $theme-border-style);
+@include border-width($prefix, $theme-border-width);
+@include border-radius($prefix, $theme-border-radius);
+@include border-color($prefix, $theme-colors);
+
 // Flex
 
 @import './src/utilities/align';
