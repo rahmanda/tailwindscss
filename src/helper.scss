@@ -29,12 +29,12 @@
     @return "#{$formatted-key}";
   }
   @if $name == default and $formatted-unit != default {
-    @return "#{$formatted-key}-#{$formatted-unit}";
+    @return if($formatted-key == '', "#{$formatted-unit}", "#{$formatted-key}-#{$formatted-unit}");
   }
-  @if $unit == default {
-    @return "#{$formatted-key}-#{$name}";
+  @if $formatted-unit == default {
+    @return if($formatted-key == '', "#{$name}", "#{$formatted-key}-#{$name}");
   }
-  @return "#{$formatted-key}#{$separator-key-name}#{$name}-#{$formatted-unit}";
+  @return if($formatted-key == '', "#{$name}-#{$formatted-unit}", "#{$formatted-key}#{$separator-key-name}#{$name}-#{$formatted-unit}");
 }
 
 @mixin prop($props, $value) {

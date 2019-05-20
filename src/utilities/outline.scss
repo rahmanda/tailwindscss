@@ -1,5 +1,12 @@
+@import '../helper';
+
 @mixin outline($prefix) {
-  .#{$prefix}outline-none {
-    outline: 0;
-  }
+  $map-values: (
+    none: 0,
+  );
+  $map-props: (
+    default: outline,
+  );
+
+  @include style($prefix, outline, $map-values, $map-props);
 }

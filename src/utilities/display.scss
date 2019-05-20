@@ -1,3 +1,5 @@
+@import '../helper';
+
 @mixin display($prefix) {
   $map-values: (
     block: block,
@@ -10,10 +12,9 @@
     table-cell: table-cell,
     hidden: none,
   );
+  $map-props: (
+    default: display,
+  );
 
-  @each $key, $value in $map-values {
-    .#{$prefix}#{$key} {
-      display: $value;
-    }
-  }
+  @include style($prefix, '', $map-values, $map-props);
 }

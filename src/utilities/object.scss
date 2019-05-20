@@ -1,19 +1,18 @@
 @import "../helper";
 
 @mixin object-fit($prefix) {
-  $object-fit-props: (
-    object-contain: contain,
-    object-cover: cover,
-    object-fill: fill,
-    object-none: none,
-    object-scale-down: scale-down,
+  $map-values: (
+    contain: contain,
+    cover: cover,
+    fill: fill,
+    none: none,
+    scale-down: scale-down,
+  );
+  $map-props: (
+    default: object-fit,
   );
 
-  @each $name, $value in $object-fit-props {
-    .#{$prefix}#{$name} {
-      object-fit: $value;
-    }
-  }
+  @include style($prefix, object, $map-values, $map-props);
 }
 
 @mixin object-position($prefix, $map-values) {

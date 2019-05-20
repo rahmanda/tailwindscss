@@ -1,8 +1,13 @@
+@import '../helper';
+
 @mixin pointer-events($prefix) {
-  .#{$prefix}pointer-events-none {
-    pointer-events: none;
-  }
-  .#{$prefix}pointer-events-auto {
-    pointer-events: auto;
-  }
+  $map-values: (
+    none: none,
+    auto: auto,
+  );
+  $map-props: (
+    default: pointer-events,
+  );
+
+  @include style($prefix, pointer-events, $map-values, $map-props);
 }

@@ -1,13 +1,18 @@
 @import "../helper";
 
 @mixin position($prefix) {
-  $values: static fixed absolute relative sticky;
+  $map-values: (
+    static: static,
+    fixed: fixed,
+    absolute: absolute,
+    relative: relative,
+    sticky: sticky,
+  );
+  $map-props: (
+    default: position,
+  );
 
-  @each $value in $values {
-    .#{$prefix}#{$value} {
-      position: $value;
-    }
-  }
+  @include style($prefix, '', $map-values, $map-props);
 }
 
 @mixin position-direction($prefix) {
@@ -26,13 +31,5 @@
     left: left,
   );
 
-  @each $name, $props in $map-props {
-    @each $unit, $value in $map-values {
-      .#{$prefix}#{$name}-#{$unit} {
-        @each $prop in $props {
-          #{$prop}: $value;
-        }
-      }
-    }
-  }
+  @include style($prefix, '', $map-values, $map-props);
 }

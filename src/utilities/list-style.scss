@@ -8,11 +8,13 @@
 }
 
 @mixin list-style-position($prefix) {
-  $values: inside outside;
+  $map-values: (
+    inside: inside,
+    outside: outside,
+  );
+  $map-props: (
+    default: list-style-position,
+  );
 
-  @each $value in $values {
-    .#{$prefix}list-#{$value} {
-      list-style-position: $value;
-    }
-  }
+  @include style($prefix, list, $map-values, $map-props);
 }

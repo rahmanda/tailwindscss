@@ -1,15 +1,17 @@
-@mixin overflow($prefix) {
-  $values: auto hidden visible scroll;
+@import '../helper';
 
-  @each $value in $values {
-    .#{$prefix}overflow-#{$value} {
-      overflow: $value;
-    }
-    .#{$prefix}overflow-x-#{$value} {
-      overflow-x: $value;
-    }
-    .#{$prefix}overflow-y-#{$value} {
-      overflow-y: $value;
-    }
-  }
+@mixin overflow($prefix) {
+  $map-values: (
+    auto: auto,
+    hidden: hidden,
+    visible: visible,
+    scroll: scroll,
+  );
+  $map-props: (
+    default: overflow,
+    x: overflow-x,
+    y: overflow-y,
+  );
+
+  @include style($prefix, overflow, $map-values, $map-props);
 }

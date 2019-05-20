@@ -1,40 +1,41 @@
 @import "../helper";
 
 @mixin text-align($prefix) {
-  $values: left center right justify;
-
-  @each $value in $values {
-    .#{$prefix}text-#{$value} {
-      text-align: $value;
-    }
-  }
+  $map-values: (
+    left: left,
+    center: center,
+    right: right,
+    justify: justify,
+  );
+  $map-props: (
+    default: text-align,
+  );
+  @include style($prefix, text, $map-values, $map-props);
 }
 
 @mixin text-decoration($prefix) {
-  .#{$prefix}underline {
-    text-decoration: underline;
-  }
-  .#{$prefix}line-through {
-    text-decoration: line-through;
-  }
-  .#{$prefix}no-underline {
-    text-decoration: none;
-  }
+  $map-values: (
+    underline: underline,
+    line-through: line-through,
+    no-underline: none,
+  );
+  $map-props: (
+    default: text-decoration,
+  );
+  @include style($prefix, '', $map-values, $map-props);
 }
 
 @mixin text-transform($prefix) {
-  .#{$prefix}uppercase {
-    text-transform: uppercase;
-  }
-  .#{$prefix}lowercase {
-    text-transform: lowercase;
-  }
-  .#{$prefix}capitalize {
-    text-transform: capitalize;
-  }
-  .#{$prefix}normal-case {
-    text-transform: none;
-  }
+  $map-values: (
+    uppercase: uppercase,
+    lowercase: lowercase,
+    capitalize: capitalize,
+    normal-case: none,
+  );
+  $map-props: (
+    default: text-transform,
+  );
+  @include style($prefix, '', $map-values, $map-props);
 }
 
 @mixin color($prefix, $colors) {

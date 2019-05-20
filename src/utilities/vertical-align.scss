@@ -1,9 +1,16 @@
-@mixin vertical-align($prefix) {
-  $values: baseline top middle bottom text-top text-bottom;
+@import '../helper';
 
-  @each $value in $values {
-    .#{$prefix}align-#{$value} {
-      vertical-align: $value;
-    }
-  }
+@mixin vertical-align($prefix) {
+  $map-values: (
+    baseline: baseline,
+    top: top,
+    middle: middle,
+    bottom: bottom,
+    text-top: text-top,
+    text-bottom: text-bottom,
+  );
+  $map-props: (
+    default: vertical-align,
+  );
+  @include style($prefix, align, $map-values, $map-props);
 }

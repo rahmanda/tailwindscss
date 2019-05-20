@@ -1,10 +1,12 @@
 @import "../helper";
 
 @mixin table-layout($prefix) {
-  .#{$prefix}table-auto {
-    table-layout: auto;
-  }
-  .#{$prefix}table-fixed {
-    table-layout: fixed;
-  }
+  $map-values: (
+    auto: auto,
+    fixed: fixed,
+  );
+  $map-props: (
+    default: table-layout,
+  );
+  @include style($prefix, table, $map-values, $map-props);
 }

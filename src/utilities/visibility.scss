@@ -1,9 +1,12 @@
-@mixin visibility($prefix) {
-  .#{$prefix}visible {
-    visibility: visible;
-  }
+@import '../helper';
 
-  .#{$prefix}invisible {
-    visibility: hidden;
-  }
+@mixin visibility($prefix) {
+  $map-values: (
+    visible: visible,
+    invisible: hidden,
+  );
+  $map-props: (
+    default: visibility,
+  );
+  @include style($prefix, '', $map-values, $map-props);
 }

@@ -1,17 +1,16 @@
+@import '../helper';
+
 @mixin white-space($prefix) {
-  .#{$prefix}whitespace-normal {
-    white-space: normal;
-  }
-  .#{$prefix}whitespace-no-wrap {
-    white-space: nowrap;
-  }
-  .#{$prefix}whitespace-pre {
-    white-space: pre;
-  }
-  .#{$prefix}whitespace-pre-line {
-    white-space: pre-line;
-  }
-  .#{$prefix}whitespace-pre-wrap {
-    white-space: pre-wrap;
-  }
+  $map-values: (
+    normal: normal,
+    no-wrap: nowrap,
+    pre: pre,
+    pre-line: pre-line,
+    pre-wrap: pre-wrap,
+  );
+  $map-props: (
+    default: white-space,
+  );
+
+  @include style($prefix, whitespace, $map-values, $map-props);
 }

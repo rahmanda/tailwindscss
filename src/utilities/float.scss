@@ -1,11 +1,16 @@
-@mixin float($prefix) {
-  $values: right left none;
+@import '../helper';
 
-  @each $value in $values {
-    .#{$prefix}float-#{$value} {
-      float: $value;
-    }
-  }
+@mixin float($prefix) {
+  $map-values: (
+    right: right,
+    left: left,
+    none: none,
+  );
+  $map-props: (
+    default: float,
+  );
+
+  @include style($prefix, float, $map-values, $map-props);
 
   .clearfix::after {
     content: "";
