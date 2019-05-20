@@ -12346,25 +12346,329 @@ video {
 .shadow {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
 
+@media (min-width: 640px) {
+  .sm_shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+  .sm_hover_shadow:hover {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+  .sm_focus_shadow:focus {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); } }
+
+@media (min-width: 768px) {
+  .md_shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+  .md_hover_shadow:hover {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+  .md_focus_shadow:focus {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); } }
+
+@media (min-width: 1024px) {
+  .lg_shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+  .lg_hover_shadow:hover {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+  .lg_focus_shadow:focus {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); } }
+
+@media (min-width: 1280px) {
+  .xl_shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+  .xl_hover_shadow:hover {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+  .xl_focus_shadow:focus {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); } }
+
+.hover_shadow:hover {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+
+.focus_shadow:focus {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+
 .shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+
+@media (min-width: 640px) {
+  .sm_shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+  .sm_hover_shadow-md:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+  .sm_focus_shadow-md:focus {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); } }
+
+@media (min-width: 768px) {
+  .md_shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+  .md_hover_shadow-md:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+  .md_focus_shadow-md:focus {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); } }
+
+@media (min-width: 1024px) {
+  .lg_shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+  .lg_hover_shadow-md:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+  .lg_focus_shadow-md:focus {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); } }
+
+@media (min-width: 1280px) {
+  .xl_shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+  .xl_hover_shadow-md:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+  .xl_focus_shadow-md:focus {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); } }
+
+.hover_shadow-md:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+
+.focus_shadow-md:focus {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
 
 .shadow-lg {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
 
+@media (min-width: 640px) {
+  .sm_shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+  .sm_hover_shadow-lg:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+  .sm_focus_shadow-lg:focus {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); } }
+
+@media (min-width: 768px) {
+  .md_shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+  .md_hover_shadow-lg:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+  .md_focus_shadow-lg:focus {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); } }
+
+@media (min-width: 1024px) {
+  .lg_shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+  .lg_hover_shadow-lg:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+  .lg_focus_shadow-lg:focus {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); } }
+
+@media (min-width: 1280px) {
+  .xl_shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+  .xl_hover_shadow-lg:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+  .xl_focus_shadow-lg:focus {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); } }
+
+.hover_shadow-lg:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+
+.focus_shadow-lg:focus {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+
 .shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+
+@media (min-width: 640px) {
+  .sm_shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+  .sm_hover_shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+  .sm_focus_shadow-xl:focus {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); } }
+
+@media (min-width: 768px) {
+  .md_shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+  .md_hover_shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+  .md_focus_shadow-xl:focus {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); } }
+
+@media (min-width: 1024px) {
+  .lg_shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+  .lg_hover_shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+  .lg_focus_shadow-xl:focus {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); } }
+
+@media (min-width: 1280px) {
+  .xl_shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+  .xl_hover_shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+  .xl_focus_shadow-xl:focus {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); } }
+
+.hover_shadow-xl:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+
+.focus_shadow-xl:focus {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
 
 .shadow-2xl {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
 
+@media (min-width: 640px) {
+  .sm_shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+  .sm_hover_shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+  .sm_focus_shadow-2xl:focus {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); } }
+
+@media (min-width: 768px) {
+  .md_shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+  .md_hover_shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+  .md_focus_shadow-2xl:focus {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); } }
+
+@media (min-width: 1024px) {
+  .lg_shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+  .lg_hover_shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+  .lg_focus_shadow-2xl:focus {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); } }
+
+@media (min-width: 1280px) {
+  .xl_shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+  .xl_hover_shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+  .xl_focus_shadow-2xl:focus {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); } }
+
+.hover_shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+
+.focus_shadow-2xl:focus {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+
 .shadow-inner {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+
+@media (min-width: 640px) {
+  .sm_shadow-inner {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+  .sm_hover_shadow-inner:hover {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+  .sm_focus_shadow-inner:focus {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); } }
+
+@media (min-width: 768px) {
+  .md_shadow-inner {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+  .md_hover_shadow-inner:hover {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+  .md_focus_shadow-inner:focus {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); } }
+
+@media (min-width: 1024px) {
+  .lg_shadow-inner {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+  .lg_hover_shadow-inner:hover {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+  .lg_focus_shadow-inner:focus {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); } }
+
+@media (min-width: 1280px) {
+  .xl_shadow-inner {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+  .xl_hover_shadow-inner:hover {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+  .xl_focus_shadow-inner:focus {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); } }
+
+.hover_shadow-inner:hover {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+
+.focus_shadow-inner:focus {
   box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
 
 .shadow-outline {
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); }
 
+@media (min-width: 640px) {
+  .sm_shadow-outline {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); }
+  .sm_hover_shadow-outline:hover {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); }
+  .sm_focus_shadow-outline:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); } }
+
+@media (min-width: 768px) {
+  .md_shadow-outline {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); }
+  .md_hover_shadow-outline:hover {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); }
+  .md_focus_shadow-outline:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); } }
+
+@media (min-width: 1024px) {
+  .lg_shadow-outline {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); }
+  .lg_hover_shadow-outline:hover {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); }
+  .lg_focus_shadow-outline:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); } }
+
+@media (min-width: 1280px) {
+  .xl_shadow-outline {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); }
+  .xl_hover_shadow-outline:hover {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); }
+  .xl_focus_shadow-outline:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); } }
+
+.hover_shadow-outline:hover {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); }
+
+.focus_shadow-outline:focus {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); }
+
 .shadow-none {
+  box-shadow: none; }
+
+@media (min-width: 640px) {
+  .sm_shadow-none {
+    box-shadow: none; }
+  .sm_hover_shadow-none:hover {
+    box-shadow: none; }
+  .sm_focus_shadow-none:focus {
+    box-shadow: none; } }
+
+@media (min-width: 768px) {
+  .md_shadow-none {
+    box-shadow: none; }
+  .md_hover_shadow-none:hover {
+    box-shadow: none; }
+  .md_focus_shadow-none:focus {
+    box-shadow: none; } }
+
+@media (min-width: 1024px) {
+  .lg_shadow-none {
+    box-shadow: none; }
+  .lg_hover_shadow-none:hover {
+    box-shadow: none; }
+  .lg_focus_shadow-none:focus {
+    box-shadow: none; } }
+
+@media (min-width: 1280px) {
+  .xl_shadow-none {
+    box-shadow: none; }
+  .xl_hover_shadow-none:hover {
+    box-shadow: none; }
+  .xl_focus_shadow-none:focus {
+    box-shadow: none; } }
+
+.hover_shadow-none:hover {
+  box-shadow: none; }
+
+.focus_shadow-none:focus {
   box-shadow: none; }
 
 .opacity-0 {

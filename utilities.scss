@@ -117,7 +117,7 @@
 @import './src/utilities/box-shadow';
 @import './src/utilities/opacity';
 
-@include box-shadow($prefix, $theme-box-shadow);
+@include box-shadow($prefix, $theme-box-shadow, $variants-box-shadow, $separator, $theme-screens);
 @include opacity($prefix, $theme-opacity);
 
 // Interactivity
