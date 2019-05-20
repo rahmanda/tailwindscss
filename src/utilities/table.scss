@@ -1,0 +1,10 @@
+@import "../helper";
+
+@mixin table-layout($prefix) {
+  .#{$prefix}table-auto {
+    table-layout: auto;
+  }
+  .#{$prefix}table-fixed {
+    table-layout: fixed;
+  }
+}

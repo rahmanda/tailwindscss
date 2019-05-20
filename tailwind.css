@@ -4804,3 +4804,9 @@ video {
 .py-auto {
   padding-top: auto;
   padding-bottom: auto; }
+
+.table-auto {
+  table-layout: auto; }
+
+.table-fixed {
+  table-layout: fixed; }

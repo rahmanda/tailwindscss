@@ -92,3 +92,9 @@
 @import './src/utilities/spacing';
 
 @include spacing($prefix, $theme-spacing);
+
+// Tables
+
+@import './src/utilities/table';
+
+@include table-layout($prefix);

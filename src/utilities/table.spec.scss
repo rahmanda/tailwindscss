@@ -1,0 +1,22 @@
+@import 'true';
+@import './table';
+
+@include describe('The table-layout mixin') {
+  $prefix: '';
+
+  @include it('should output table-layout stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include table-layout($prefix);
+      }
+      @include expect {
+        .table-auto {
+          table-layout: auto;
+        }
+        .table-fixed {
+          table-layout: fixed;
+        }
+      }
+    }
+  }
+}
