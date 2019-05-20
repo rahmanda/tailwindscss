@@ -3,11 +3,16 @@
 
 @include describe('The background-attachment mixin') {
   $prefix: '';
+  $theme-background-attachment: (
+    fixed: fixed,
+    local: local,
+    scroll: scroll,
+  );
 
   @include it('should output background-attachment stylesheet correctly') {
     @include assert {
       @include output {
-        @include background-attachment($prefix);
+        @include background-attachment($prefix, $theme-background-attachment);
       }
       @include expect {
         .bg-fixed {
@@ -26,11 +31,22 @@
 
 @include describe('The background-position mixin') {
   $prefix: '';
+  $theme-background-position: (
+    bottom: bottom,
+    center: center,
+    left: left,
+    left-bottom: left-bottom,
+    left-top: left-top,
+    right: right,
+    right-bottom: right-bottom,
+    right-top: right-top,
+    top: top,
+  );
 
   @include it('should output background-position stylesheet correctly') {
     @include assert {
       @include output {
-        @include background-position($prefix);
+        @include background-position($prefix, $theme-background-position);
       }
       @include expect {
         .bg-bottom {
@@ -67,11 +83,19 @@
 
 @include describe('The background-repeat mixin') {
   $prefix: '';
+  $theme-background-repeat: (
+    repeat: repeat,
+    no-repeat: no-repeat,
+    repeat-x: repeat-x,
+    repeat-y: repeat-y,
+    repeat-round: round,
+    space: space,
+  );
 
   @include it('should output background-repeat stylesheet correctly') {
     @include assert {
       @include output {
-        @include background-repeat($prefix);
+        @include background-repeat($prefix, $theme-background-repeat);
       }
       @include expect {
         .bg-repeat {
@@ -99,11 +123,16 @@
 
 @include describe('The background-size mixin') {
   $prefix: '';
+  $theme-background-size: (
+    auto: auto,
+    cover: cover,
+    contain: contain,
+  );
 
   @include it('should output background-size stylesheet correctly') {
     @include assert {
       @include output {
-        @include background-size($prefix);
+        @include background-size($prefix, $theme-background-size);
       }
       @include expect {
         .bg-auto {
@@ -114,6 +143,36 @@
         }
         .bg-contain {
           background-size: contain;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The background-color mixin') {
+  $colors: (
+    transparent: transparent,
+    gray: (
+      100: #f7fafc,
+      200: #edf2f7,
+    ),
+  );
+  $prefix: '';
+
+  @include it('should output background-color stylesheet correctly') {
+    @include assert {
+      @include output {
+        @include background-color($prefix, $colors);
+      }
+      @include expect {
+        .bg-transparent {
+          background-color: transparent;
+        }
+        .bg-gray-100 {
+          background-color: #f7fafc;
+        }
+        .bg-gray-200 {
+          background-color: #edf2f7;
         }
       }
     }

@@ -2,7 +2,7 @@
 @import './flex';
 
 @include describe('The flex mixin') {
-  $maps: (
+  $theme-flex: (
     initial: 0 1 auto,
     1: 1 1 0%,
     auto: auto,
@@ -13,7 +13,7 @@
   @include it('should output flex stylesheet correctly') {
     @include assert {
       @include output {
-        @include flex($prefix, $maps);
+        @include flex($prefix, $theme-flex);
       }
       @include expect {
         .flex-initial {
@@ -34,12 +34,18 @@
 }
 
 @include describe('The flex-direction mixin') {
+  $theme-flex-direction: (
+    row: row,
+    row-reverse: row-reverse,
+    col: column,
+    col-reverse: column-reverse,
+  );
   $prefix: '';
 
   @include it('should output flex-direction stylesheet correctly') {
     @include assert {
       @include output {
-        @include flex-direction($prefix);
+        @include flex-direction($prefix, $theme-flex-direction);
       }
       @include expect {
         .flex-row {
@@ -60,12 +66,17 @@
 }
 
 @include describe('The flex-wrap mixin') {
+  $theme-flex-wrap: (
+    no-wrap: nowrap,
+    wrap: wrap,
+    wrap-reverse: wrap-reverse,
+  );
   $prefix: '';
 
   @include it('should output flex-wrap stylesheet correctly') {
     @include assert {
       @include output {
-        @include flex-wrap($prefix);
+        @include flex-wrap($prefix, $theme-flex-wrap);
       }
       @include expect {
         .flex-no-wrap {
@@ -83,7 +94,7 @@
 }
 
 @include describe('The flex-grow mixin') {
-  $maps: (
+  $theme-flex-grow: (
     0: 0,
     default: 1,
   );
@@ -92,7 +103,7 @@
   @include it('should output flex-grow stylesheet correctly') {
     @include assert {
       @include output {
-        @include flex-grow($prefix, $maps);
+        @include flex-grow($prefix, $theme-flex-grow);
       }
       @include expect {
         .flex-grow-0 {
@@ -107,7 +118,7 @@
 }
 
 @include describe('The flex-shrink mixin') {
-  $maps: (
+  $theme-flex-shrink: (
     0: 0,
     default: 1,
   );
@@ -116,7 +127,7 @@
   @include it('should output flex-shrink stylesheet correctly') {
     @include assert {
       @include output {
-        @include flex-shrink($prefix, $maps);
+        @include flex-shrink($prefix, $theme-flex-shrink);
       }
       @include expect {
         .flex-shrink-0 {

@@ -1,0 +1,43 @@
+@mixin prop($props, $value) {
+  @each $prop in $props {
+    #{$prop}: $value;
+  }
+}
+
+@mixin style($prefix, $key, $map-values, $map-props) {
+  @each $name, $props in $map-props {
+    @each $unit, $value in $map-values {
+      @if $name == default and $unit == default {
+        .#{$prefix}#{$key} {
+          @include prop($props, $value);
+        }
+      }
+      @else if $name == default and $unit != default {
+        .#{$prefix}#{$key}-#{$unit} {
+          @include prop($props, $value);
+        }
+      }
+      @else if $unit == default {
+        .#{$prefix}#{$key}-#{$name} {
+          @include prop($props, $value);
+        }
+      }
+      @else {
+        .#{$prefix}#{$key}-#{$name}-#{$unit} {
+          @include prop($props, $value);
+        }
+      }
+    }
+  }
+}
+
+@mixin style-color($prefix, $name, $colors, $map-props) {
+  @each $color, $map-values in $colors {
+    @if length($map-values) > 1 {
+      @include style($prefix, #{$name}-#{$color}, $map-values, $map-props);
+    }
+    @else {
+      @include style($prefix, $name, ($color: $map-values), $map-props);
+    }
+  }
+}

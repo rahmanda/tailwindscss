@@ -2,7 +2,7 @@
 @import './z-index';
 
 @include describe('The z-index mixin') {
-  $maps: (
+  $theme-z-index: (
     0: 0,
     99: 99,
     auto: auto,
@@ -12,7 +12,7 @@
   @include it('should output z-index stylesheet correctly') {
     @include assert {
       @include output {
-        @include z-index($prefix, $maps);
+        @include z-index($prefix, $theme-z-index);
       }
       @include expect {
         .z-0 {

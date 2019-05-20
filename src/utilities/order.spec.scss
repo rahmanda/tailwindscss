@@ -2,18 +2,12 @@
 @import './order';
 
 @include describe('The order mixin') {
-  $maps: (
-    first: -1,
-    last: 999,
-    none: 0,
-    1: 1,
-  );
   $prefix: '';
 
   @include it('should output order stylesheet correctly') {
     @include assert {
       @include output {
-        @include order($prefix, $maps);
+        @include order($prefix);
       }
       @include expect {
         .order-first {

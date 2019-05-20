@@ -32,12 +32,23 @@
 }
 
 @include describe('The object-position mixin') {
+  $theme-object-position: (
+    bottom: bottom,
+    center: center,
+    left: left,
+    left-bottom: left bottom,
+    left-top: left top,
+    right: right,
+    right-bottom: right bottom,
+    right-top: right top,
+    top: top,
+  );
   $prefix: '';
 
   @include it('should output object-position stylesheet correctly') {
     @include assert {
       @include output {
-        @include object-position($prefix);
+        @include object-position($prefix, $theme-object-position);
       }
 
       @include expect {

@@ -1,17 +1,8 @@
-$theme-z-index: (
-  auto: auto,
-  0: 0,
-  10: 10,
-  20: 20,
-  30: 30,
-  40: 40,
-  50: 50,
-) !default;
+@import "../helper";
 
-@mixin z-index($prefix, $maps: $theme-z-index) {
-  @each $unit, $value in $maps {
-    .#{$prefix}z-#{$unit} {
-      z-index: $value;
-    }
-  }
+@mixin z-index($prefix, $map-values) {
+  $map-props: (
+    default: z-index,
+  );
+  @include style($prefix, z, $map-values, $map-props);
 }

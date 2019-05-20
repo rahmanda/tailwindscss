@@ -1,11 +1,10 @@
-@mixin list-style-type($prefix) {
-  $values: none disc decimal;
+@import "../helper";
 
-  @each $value in $values {
-    .#{$prefix}list-#{$value} {
-      list-style-type: $value;
-    }
-  }
+@mixin list-style-type($prefix, $map-values) {
+  $map-props: (
+    default: list-style-type,
+  );
+  @include style($prefix, list, $map-values, $map-props);
 }
 
 @mixin list-style-position($prefix) {

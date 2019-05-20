@@ -1,16 +1,8 @@
-$theme-line-height: (
-  none: 1,
-  tight: 1.25,
-  snug: 1.375,
-  normal: 1.5,
-  relaxed: 1.625,
-  loose: 2,
-) !default;
+@import "../helper";
 
-@mixin line-height($prefix, $maps: $theme-line-height) {
-  @each $unit, $value in $maps {
-    .#{$prefix}leading-#{$unit} {
-      line-height: $value;
-    }
-  }
+@mixin line-height($prefix, $map-values) {
+  $map-props: (
+    default: line-height,
+  );
+  @include style($prefix, leading, $map-values, $map-props);
 }

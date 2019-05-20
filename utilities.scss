@@ -1,4 +1,4 @@
-$prefix: '' !default;
+@import './tailwind.config';
 
 // Layout
 
@@ -10,15 +10,15 @@ $prefix: '' !default;
 @import './src/utilities/visibility';
 @import './src/utilities/z-index';
 
-@include display($prefix);
+@include display($prefix, $theme-display);
 @include float($prefix);
 @include object-fit($prefix);
-@include object-position($prefix);
+@include object-position($prefix, $theme-object-position);
 @include overflow($prefix);
 @include position($prefix);
 @include position-direction($prefix);
 @include visibility($prefix);
-@include z-index($prefix);
+@include z-index($prefix, $theme-z-index);
 
 
 // Typography
@@ -32,21 +32,25 @@ $prefix: '' !default;
 @import './src/utilities/white-space';
 @import './src/utilities/word-break';
 
-@include font-family($prefix);
-@include font-size($prefix);
+@include font-family($prefix, $theme-font-family);
+@include font-size($prefix, $theme-font-size);
 @include font-smoothing($prefix);
 @include font-style($prefix);
-@include font-weight($prefix);
-
+@include font-weight($prefix, $theme-font-weight);
+@include text-align($prefix);
+@include text-decoration($prefix);
+@include text-transform($prefix);
+@include color($prefix, $theme-colors);
 
 // Background
 
 @import './src/utilities/background';
 
-@include background-attachment($prefix);
-@include background-position($prefix);
-@include background-repeat($prefix);
-@include background-size($prefix);
+@include background-attachment($prefix, $theme-background-attachment);
+@include background-position($prefix, $theme-background-position);
+@include background-repeat($prefix, $theme-background-repeat);
+@include background-size($prefix, $theme-background-size);
+@include background-color($prefix, $theme-colors);
 
 // Flex
 
@@ -55,14 +59,14 @@ $prefix: '' !default;
 @import './src/utilities/justify-content';
 @import './src/utilities/order';
 
-@include align-items($prefix);
-@include align-content($prefix);
-@include align-self($prefix);
-@include flex($prefix);
-@include flex-direction($prefix);
-@include flex-wrap($prefix);
-@include flex-grow($prefix);
-@include flex-shrink($prefix);
+@include align-items($prefix, $theme-align-items);
+@include align-content($prefix, $theme-align-content);
+@include align-self($prefix, $theme-align-self);
+@include flex($prefix, $theme-flex);
+@include flex-direction($prefix, $theme-flex-direction);
+@include flex-wrap($prefix, $theme-flex-wrap);
+@include flex-grow($prefix, $theme-flex-grow);
+@include flex-shrink($prefix, $theme-flex-shrink);
 @include justify-content($prefix);
 @include order($prefix);
 
@@ -70,4 +74,4 @@ $prefix: '' !default;
 
 @import './src/utilities/spacing';
 
-@include spacing($prefix);
+@include spacing($prefix, $theme-spacing);

@@ -1,13 +1,7 @@
-@mixin display($prefix) {
-  $values: block inline-block inline flex inline-flex table table-row table-cell;
-
-  @each $value in $values {
-    .#{$prefix}#{$value} {
+@mixin display($prefix, $map-values) {
+  @each $key, $value in $map-values {
+    .#{$prefix}#{$key} {
       display: $value;
     }
-  }
-
-  .#{$prefix}hidden {
-    display: none;
   }
 }

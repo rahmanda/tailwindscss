@@ -1,36 +1,17 @@
-$theme-font-family: (
-  sans: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"),
-  serif: (Georgia, Cambria, "Times New Roman", Times, serif),
-  mono: (Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace),
-) !default;
+@import "../helper";
 
-@mixin font-family($prefix, $maps: $theme-font-family) {
-  @each $unit, $value in $maps {
-    .#{$prefix}font-#{$unit} {
-      font-family: $value;
-    }
-  }
+@mixin font-family($prefix, $map-values) {
+  $map-props: (
+    default: font-family,
+  );
+  @include style($prefix, font, $map-values, $map-props);
 }
 
-$theme-font-size: (
-  xs: 0.75rem,
-  sm: 0.875rem,
-  base: 1rem,
-  lg: 1.125rem,
-  xl: 1.25rem,
-  2xl: 1.5rem,
-  3xl: 1.875rem,
-  4xl: 2.25rem,
-  5xl: 3rem,
-  6xl: 4rem,
-) !default;
-
-@mixin font-size($prefix, $maps: $theme-font-size) {
-  @each $unit, $value in $maps {
-    .#{$prefix}text-#{$unit} {
-      font-size: $value;
-    }
-  }
+@mixin font-size($prefix, $map-values) {
+  $map-props: (
+    default: font-size,
+  );
+  @include style($prefix, text, $map-values, $map-props);
 }
 
 @mixin font-smoothing($prefix) {
@@ -53,22 +34,9 @@ $theme-font-size: (
   }
 }
 
-$theme-font-weight: (
-  hairline: 100,
-  thin: 200,
-  light: 300,
-  normal: 400,
-  medium: 500,
-  semibold: 600,
-  bold: 700,
-  extrabold: 800,
-  black: 900,
-) !default;
-
-@mixin font-weight($prefix, $maps: $theme-font-weight) {
-  @each $unit, $value in $maps {
-    .#{$prefix}font-#{$unit} {
-      font-weight: $value;
-    }
-  }
+@mixin font-weight($prefix, $map-values) {
+  $map-props: (
+    default: font-weight,
+  );
+  @include style($prefix, font, $map-values, $map-props);
 }

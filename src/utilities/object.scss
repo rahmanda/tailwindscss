@@ -1,3 +1,5 @@
+@import "../helper";
+
 @mixin object-fit($prefix) {
   $object-fit-props: (
     object-contain: contain,
@@ -14,22 +16,10 @@
   }
 }
 
-@mixin object-position($prefix) {
-  $object-position-props: (
-    object-bottom: bottom,
-    object-center: center,
-    object-left: left,
-    object-left-bottom: left bottom,
-    object-left-top: left top,
-    object-right: right,
-    object-right-bottom: right bottom,
-    object-right-top: right top,
-    object-top: top,
+@mixin object-position($prefix, $map-values) {
+  $map-props: (
+    default: object-position,
   );
 
-  @each $name, $value in $object-position-props {
-    .#{$prefix}#{$name} {
-      object-position: $value;
-    }
-  }
+  @include style($prefix, object, $map-values, $map-props);
 }

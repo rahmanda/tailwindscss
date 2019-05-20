@@ -2,7 +2,7 @@
 @import './font';
 
 @include describe('The font-family mixin') {
-  $maps: (
+  $theme-font-family: (
     sans: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"),
     serif: (Georgia, Cambria, "Times New Roman", Times, serif),
     mono: (Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace),
@@ -12,7 +12,7 @@
   @include it('should output font-family stylesheet correctly') {
     @include assert {
       @include output {
-        @include font-family($prefix, $maps);
+        @include font-family($prefix, $theme-font-family);
       }
 
       @include expect {
@@ -31,7 +31,7 @@
 }
 
 @include describe('The font-size mixin') {
-  $maps: (
+  $theme-font-size: (
     xs: 0.75rem,
     sm: 0.875rem,
     base: 1rem,
@@ -41,7 +41,7 @@
   @include it('should output font-size stylesheet correctly') {
     @include assert {
       @include output {
-        @include font-size($prefix, $maps);
+        @include font-size($prefix, $theme-font-size);
       }
 
       @include expect {
@@ -104,7 +104,7 @@
 }
 
 @include describe('The font-weight mixin') {
-  $maps: (
+  $theme-font-weight: (
     hairline: 100,
     thin: 200,
     light: 300,
@@ -114,7 +114,7 @@
   @include it('should output font-weight stylesheet correctly') {
     @include assert {
       @include output {
-        @include font-weight($prefix, $maps);
+        @include font-weight($prefix, $theme-font-weight);
       }
 
       @include expect {

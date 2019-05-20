@@ -1,44 +1,22 @@
-@mixin align-items($prefix) {
-  $maps: (
-    stretch: stretch,
-    start: flex-start,
-    center: center,
-    end: flex-end,
-    baseline: baseline,
+@import "../helper";
+
+@mixin align-items($prefix, $map-values) {
+  $map-props: (
+    default: align-items,
   );
-  @each $unit, $value in $maps {
-    .#{$prefix}items-#{$unit} {
-      align-items: $value;
-    }
-  }
+  @include style($prefix, items, $map-values, $map-props);
 }
 
-@mixin align-content($prefix) {
-  $maps: (
-    start: flex-start,
-    center: center,
-    end: flex-end,
-    between: space-between,
-    around: space-around,
+@mixin align-content($prefix, $map-values) {
+  $map-props: (
+    default: align-content,
   );
-  @each $unit, $value in $maps {
-    .#{$prefix}content-#{$unit} {
-      align-content: $value;
-    }
-  }
+  @include style($prefix, content, $map-values, $map-props);
 }
 
-@mixin align-self($prefix) {
-  $maps: (
-    auto: auto,
-    start: flex-start,
-    center: center,
-    end: flex-end,
-    stretch: stretch,
+@mixin align-self($prefix, $map-values) {
+  $map-props: (
+    default: align-self,
   );
-  @each $unit, $value in $maps {
-    .#{$prefix}self-#{$unit} {
-      align-self: $value;
-    }
-  }
+  @include style($prefix, self, $map-values, $map-props);
 }

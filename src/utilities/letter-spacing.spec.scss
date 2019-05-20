@@ -2,7 +2,7 @@
 @import './letter-spacing';
 
 @include describe('The letter-spacing mixin') {
-  $maps: (
+  $theme-letter-spacing: (
     tight: -0.025em,
     normal: 0,
     wide: 0.025em,
@@ -12,7 +12,7 @@
   @include it('should output letter-spacing stylesheet correctly') {
     @include assert {
       @include output {
-        @include letter-spacing($prefix, $maps);
+        @include letter-spacing($prefix, $theme-letter-spacing);
       }
 
       @include expect {

@@ -2,12 +2,17 @@
 @import './list-style';
 
 @include describe('The list-style-type mixin') {
+  $theme-list-style-type: (
+    none: none,
+    disc: disc,
+    decimal: decimal,
+  );
   $prefix: '';
 
   @include it('should output list-style-type stylesheet correctly') {
     @include assert {
       @include output {
-        @include list-style-type($prefix);
+        @include list-style-type($prefix, $theme-list-style-type);
       }
 
       @include expect {

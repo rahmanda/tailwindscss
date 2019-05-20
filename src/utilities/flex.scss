@@ -1,83 +1,36 @@
-$theme-flex: (
-  initial: 0 1 auto,
-  1: 1 1 0%,
-  auto: auto,
-  none: none,
-) !default;
+@import "../helper";
 
-@mixin flex($prefix, $maps: $theme-flex) {
-  @each $unit, $value in $maps {
-    .#{$prefix}flex-#{$unit} {
-      flex: $value;
-    }
-  }
-}
-
-@mixin flex-direction($prefix) {
-  $maps: (
-    row: row,
-    row-reverse: row-reverse,
-    col: column,
-    col-reverse: column-reverse,
+@mixin flex($prefix, $map-values) {
+  $map-props: (
+    default: flex,
   );
-
-  @each $unit, $value in $maps {
-    .#{$prefix}flex-#{$unit} {
-      flex-direction: $value;
-    }
-  }
+  @include style($prefix, flex, $map-values, $map-props);
 }
 
-@mixin flex-wrap($prefix) {
-  $maps: (
-    no-wrap: nowrap,
-    wrap: wrap,
-    wrap-reverse: wrap-reverse,
+@mixin flex-direction($prefix, $map-values) {
+  $map-props: (
+    default: flex-direction,
   );
-
-  @each $unit, $value in $maps {
-    .#{$prefix}flex-#{$unit} {
-      flex-wrap: $value;
-    }
-  }
+  @include style($prefix, flex, $map-values, $map-props);
 }
 
-$theme-flex-grow: (
-  0: 0,
-  default: 1,
-) !default;
-
-@mixin flex-grow($prefix, $maps: $theme-flex-grow) {
-  @each $unit, $value in $maps {
-    @if $unit == default {
-      .#{$prefix}flex-grow {
-        flex-grow: $value
-      }
-    }
-    @else {
-      .#{$prefix}flex-grow-#{$unit} {
-        flex-grow: $value;
-      }
-    }
-  }
+@mixin flex-wrap($prefix, $map-values) {
+  $map-props: (
+    default: flex-wrap,
+  );
+  @include style($prefix, flex, $map-values, $map-props);
 }
 
-$theme-flex-grow: (
-  0: 0,
-  default: 1,
-) !default;
+@mixin flex-grow($prefix, $map-values) {
+  $map-props: (
+    default: flex-grow,
+  );
+  @include style($prefix, flex-grow, $map-values, $map-props);
+}
 
-@mixin flex-shrink($prefix, $maps: $theme-flex-grow) {
-  @each $unit, $value in $maps {
-    @if $unit == default {
-      .#{$prefix}flex-shrink {
-        flex-shrink: $value
-      }
-    }
-    @else {
-      .#{$prefix}flex-shrink-#{$unit} {
-        flex-shrink: $value;
-      }
-    }
-  }
+@mixin flex-shrink($prefix, $map-values) {
+  $map-props: (
+    default: flex-shrink,
+  );
+  @include style($prefix, flex-shrink, $map-values, $map-props);
 }

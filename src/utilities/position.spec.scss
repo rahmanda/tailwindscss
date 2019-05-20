@@ -32,16 +32,12 @@
 }
 
 @include describe('The position-direction mixin') {
-  $maps: (
-    0: 0,
-    auto: auto,
-  );
   $prefix: '';
 
   @include it('should output position\'s direction stylesheet correctly') {
     @include assert {
       @include output {
-        @include position-direction($prefix, $maps);
+        @include position-direction($prefix);
       }
 
       @include expect {

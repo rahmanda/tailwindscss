@@ -2,36 +2,20 @@
 @import './display';
 
 @include describe('The display mixin') {
+  $theme-display: (
+    block: block,
+    hidden: none,
+  );
   $prefix: '';
+
   @include it('should output stylesheet correctly') {
     @include assert {
       @include output {
-        @include display($prefix);
+        @include display($prefix, $theme-display);
       }
       @include expect {
         .block {
           display: block;
-        }
-        .inline-block {
-          display: inline-block;
-        }
-        .inline {
-          display: inline;
-        }
-        .flex {
-          display: flex;
-        }
-        .inline-flex {
-          display: inline-flex;
-        }
-        .table {
-          display: table;
-        }
-        .table-row {
-          display: table-row;
-        }
-        .table-cell {
-          display: table-cell;
         }
         .hidden {
           display: none;

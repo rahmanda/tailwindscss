@@ -1,3 +1,5 @@
+@import "../helper";
+
 @mixin text-align($prefix) {
   $values: left center right justify;
 
@@ -33,4 +35,11 @@
   .#{$prefix}normal-case {
     text-transform: none;
   }
+}
+
+@mixin color($prefix, $colors) {
+  $map-props: (
+    default: color,
+  );
+  @include style-color($prefix, text, $colors, $map-props);
 }
