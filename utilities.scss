@@ -129,7 +129,7 @@
 @import './src/utilities/resize';
 @import './src/utilities/user-select';
 
-@include appearance($prefix);
+@include appearance($prefix, $variants-appearance, $separator, $theme-screens);
 @include cursor($prefix, $theme-cursor);
 @include outline($prefix);
 @include pointer-events($prefix);

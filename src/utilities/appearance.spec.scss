@@ -3,14 +3,31 @@
 
 @include describe('The appearance mixin') {
   $prefix: '';
+  $screens: (
+    sm: 640px,
+    md: 768px,
+  );
+  $variants: (responsive);
+  $separator: '_';
+
   @include it('should output appearance stylesheet correctly') {
     @include assert {
       @include output {
-        @include appearance($prefix);
+        @include appearance($prefix, $variants, $separator, $screens);
       }
       @include expect {
         .appearance-none {
           appearance: none;
+        }
+        @media (min-width: 640px) {
+          .sm_appearance-none {
+            appearance: none;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_appearance-none {
+            appearance: none;
+          }
         }
       }
     }

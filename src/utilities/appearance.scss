@@ -1,5 +1,11 @@
-@mixin appearance($prefix) {
-  .#{$prefix}appearance-none {
-    appearance: none;
-  }
+@import '../helper';
+
+@mixin appearance($prefix, $variants: (), $separator: '_', $screens: ()) {
+  $map-values: (
+    none: none,
+  );
+  $map-props: (
+    default: appearance,
+  );
+  @include style($prefix, appearance, $map-values, $map-props, $screens, $variants, $separator);
 }

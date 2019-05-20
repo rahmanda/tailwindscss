@@ -7363,6 +7363,22 @@ video {
 .appearance-none {
   appearance: none; }
 
+@media (min-width: 640px) {
+  .sm_appearance-none {
+    appearance: none; } }
+
+@media (min-width: 768px) {
+  .md_appearance-none {
+    appearance: none; } }
+
+@media (min-width: 1024px) {
+  .lg_appearance-none {
+    appearance: none; } }
+
+@media (min-width: 1280px) {
+  .xl_appearance-none {
+    appearance: none; } }
+
 .cursor-auto {
   cursor: auto; }
 
