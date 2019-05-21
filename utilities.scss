@@ -69,7 +69,7 @@
   @include letter-spacing($prefix, $theme-letter-spacing, $variants-letter-spacing, $separator, $theme-screens);
 }
 @if $core-plugins-line-height {
-  @include line-height($prefix, $theme-line-height);
+  @include line-height($prefix, $theme-line-height, $variants-line-height, $separator, $theme-screens);
 }
 @if $core-plugins-list-style-type {
   @include list-style-type($prefix, $theme-list-style-type);
