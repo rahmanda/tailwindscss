@@ -14,7 +14,7 @@
   @include display($prefix, $variants-display, $separator, $theme-screens);
 }
 @if $core-plugins-float {
-  @include float($prefix);
+  @include float($prefix, $variants-float, $separator, $theme-screens);
 }
 @if $core-plugins-object-fit {
   @include object-fit($prefix);

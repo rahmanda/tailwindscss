@@ -121,25 +121,25 @@
   @return $map-values;
 }
 
-@mixin raw-style-pseudo($prefix, $selector, $pseudo, $separator: '_') {
-  .#{$prefix}#{$pseudo}#{$separator}#{$selector}:#{$pseudo} {
+@mixin raw-style-pseudo($prefix, $selector, $pseudo, $separator: '_', $suffix: '') {
+  .#{$prefix}#{$pseudo}#{$separator}#{$selector}:#{$pseudo}#{$suffix} {
     @content;
   }
 }
 
-@mixin raw-style-responsive($prefix, $selector, $screens, $variants, $separator) {
+@mixin raw-style-responsive($prefix, $selector, $screens, $variants, $separator, $suffix) {
   @each $screen, $breakpoint in $screens {
     @media (min-width: $breakpoint) {
-      .#{$prefix}#{$screen}#{$separator}#{$selector} {
+      .#{$prefix}#{$screen}#{$separator}#{$selector}#{$suffix} {
         @content;
       }
       @if index($variants, hover) {
-        @include raw-style-pseudo(#{$prefix}#{$screen}#{$separator}, $selector, hover, $separator) {
+        @include raw-style-pseudo(#{$prefix}#{$screen}#{$separator}, $selector, hover, $separator, $suffix) {
           @content;
         }
       }
       @if index($variants, focus) {
-        @include raw-style-pseudo(#{$prefix}#{$screen}#{$separator}, $selector, focus, $separator) {
+        @include raw-style-pseudo(#{$prefix}#{$screen}#{$separator}, $selector, focus, $separator, $suffix) {
           @content;
         }
       }
@@ -147,22 +147,22 @@
   }
 }
 
-@mixin raw-style($prefix, $key, $screens: (), $variants: (), $separator: '_') {
-  .#{$prefix}#{$key} {
+@mixin raw-style($prefix, $key, $screens: (), $variants: (), $separator: '_', $suffix: '') {
+  .#{$prefix}#{$key}#{$suffix} {
     @content;
   }
   @if index($variants, responsive) {
-    @include raw-style-responsive($prefix, $key, $screens, $variants, $separator) {
+    @include raw-style-responsive($prefix, $key, $screens, $variants, $separator, $suffix) {
       @content;
     }
   }
   @if index($variants, hover) {
-    @include raw-style-pseudo($prefix, $key, hover, $separator) {
+    @include raw-style-pseudo($prefix, $key, hover, $separator, $suffix) {
       @content;
     }
   }
   @if index($variants, focus) {
-    @include raw-style-pseudo($prefix, $key, focus, $separator) {
+    @include raw-style-pseudo($prefix, $key, focus, $separator, $suffix) {
       @content;
     }
   }

@@ -575,6 +575,22 @@
       }
     }
   }
+  @include it('should render suffix') {
+    @include assert {
+      @include output {
+        @include raw-style('', antialiased, $suffix: ':after') {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+      @include expect {
+        .antialiased:after {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+    }
+  }
   @include it('should render variants style') {
     $variants: (responsive, hover, focus);
     $screens: (

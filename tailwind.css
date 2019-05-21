@@ -685,16 +685,88 @@ video {
 .float-right {
   float: right; }
 
+@media (min-width: 640px) {
+  .sm_float-right {
+    float: right; } }
+
+@media (min-width: 768px) {
+  .md_float-right {
+    float: right; } }
+
+@media (min-width: 1024px) {
+  .lg_float-right {
+    float: right; } }
+
+@media (min-width: 1280px) {
+  .xl_float-right {
+    float: right; } }
+
 .float-left {
   float: left; }
 
+@media (min-width: 640px) {
+  .sm_float-left {
+    float: left; } }
+
+@media (min-width: 768px) {
+  .md_float-left {
+    float: left; } }
+
+@media (min-width: 1024px) {
+  .lg_float-left {
+    float: left; } }
+
+@media (min-width: 1280px) {
+  .xl_float-left {
+    float: left; } }
+
 .float-none {
   float: none; }
+
+@media (min-width: 640px) {
+  .sm_float-none {
+    float: none; } }
+
+@media (min-width: 768px) {
+  .md_float-none {
+    float: none; } }
+
+@media (min-width: 1024px) {
+  .lg_float-none {
+    float: none; } }
+
+@media (min-width: 1280px) {
+  .xl_float-none {
+    float: none; } }
 
 .clearfix::after {
   content: "";
   display: table;
   clear: both; }
+
+@media (min-width: 640px) {
+  .sm_clearfix::after {
+    content: "";
+    display: table;
+    clear: both; } }
+
+@media (min-width: 768px) {
+  .md_clearfix::after {
+    content: "";
+    display: table;
+    clear: both; } }
+
+@media (min-width: 1024px) {
+  .lg_clearfix::after {
+    content: "";
+    display: table;
+    clear: both; } }
+
+@media (min-width: 1280px) {
+  .xl_clearfix::after {
+    content: "";
+    display: table;
+    clear: both; } }
 
 .object-contain {
   object-fit: contain; }
