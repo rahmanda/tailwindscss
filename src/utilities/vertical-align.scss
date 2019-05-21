@@ -1,6 +1,6 @@
 @import '../helper';
 
-@mixin vertical-align($prefix) {
+@mixin vertical-align($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     baseline: baseline,
     top: top,
@@ -12,5 +12,5 @@
   $map-props: (
     default: vertical-align,
   );
-  @include style($prefix, align, $map-values, $map-props);
+  @include style($prefix, align, $map-values, $map-props, $screens, $variants, $separator);
 }

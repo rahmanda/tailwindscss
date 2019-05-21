@@ -6231,6 +6231,120 @@ video {
 .focus_text-pink-900:focus {
   color: #702459; }
 
+.align-baseline {
+  vertical-align: baseline; }
+
+@media (min-width: 640px) {
+  .sm_align-baseline {
+    vertical-align: baseline; } }
+
+@media (min-width: 768px) {
+  .md_align-baseline {
+    vertical-align: baseline; } }
+
+@media (min-width: 1024px) {
+  .lg_align-baseline {
+    vertical-align: baseline; } }
+
+@media (min-width: 1280px) {
+  .xl_align-baseline {
+    vertical-align: baseline; } }
+
+.align-top {
+  vertical-align: top; }
+
+@media (min-width: 640px) {
+  .sm_align-top {
+    vertical-align: top; } }
+
+@media (min-width: 768px) {
+  .md_align-top {
+    vertical-align: top; } }
+
+@media (min-width: 1024px) {
+  .lg_align-top {
+    vertical-align: top; } }
+
+@media (min-width: 1280px) {
+  .xl_align-top {
+    vertical-align: top; } }
+
+.align-middle {
+  vertical-align: middle; }
+
+@media (min-width: 640px) {
+  .sm_align-middle {
+    vertical-align: middle; } }
+
+@media (min-width: 768px) {
+  .md_align-middle {
+    vertical-align: middle; } }
+
+@media (min-width: 1024px) {
+  .lg_align-middle {
+    vertical-align: middle; } }
+
+@media (min-width: 1280px) {
+  .xl_align-middle {
+    vertical-align: middle; } }
+
+.align-bottom {
+  vertical-align: bottom; }
+
+@media (min-width: 640px) {
+  .sm_align-bottom {
+    vertical-align: bottom; } }
+
+@media (min-width: 768px) {
+  .md_align-bottom {
+    vertical-align: bottom; } }
+
+@media (min-width: 1024px) {
+  .lg_align-bottom {
+    vertical-align: bottom; } }
+
+@media (min-width: 1280px) {
+  .xl_align-bottom {
+    vertical-align: bottom; } }
+
+.align-text-top {
+  vertical-align: text-top; }
+
+@media (min-width: 640px) {
+  .sm_align-text-top {
+    vertical-align: text-top; } }
+
+@media (min-width: 768px) {
+  .md_align-text-top {
+    vertical-align: text-top; } }
+
+@media (min-width: 1024px) {
+  .lg_align-text-top {
+    vertical-align: text-top; } }
+
+@media (min-width: 1280px) {
+  .xl_align-text-top {
+    vertical-align: text-top; } }
+
+.align-text-bottom {
+  vertical-align: text-bottom; }
+
+@media (min-width: 640px) {
+  .sm_align-text-bottom {
+    vertical-align: text-bottom; } }
+
+@media (min-width: 768px) {
+  .md_align-text-bottom {
+    vertical-align: text-bottom; } }
+
+@media (min-width: 1024px) {
+  .lg_align-text-bottom {
+    vertical-align: text-bottom; } }
+
+@media (min-width: 1280px) {
+  .xl_align-text-bottom {
+    vertical-align: text-bottom; } }
+
 .whitespace-normal {
   white-space: normal; }
 

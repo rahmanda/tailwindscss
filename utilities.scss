@@ -89,6 +89,9 @@
 @if $core-plugins-text-color {
   @include color($prefix, $theme-text-color, $variants-text-color, $separator, $theme-screens);
 }
+@if $core-plugins-vertical-align {
+  @include vertical-align($prefix, $variants-vertical-align, $separator, $theme-screens);
+}
 @if $core-plugins-white-space {
   @include white-space($prefix);
 }
