@@ -47,17 +47,17 @@ By default, it will generate all styles which are equivalent to Tailwind CSS's d
 
 @import 'tailwindscss/src/helper';
 
-$prefix: '' !default; // Selector prefix;
-$separator: '_' !default: // Separator for pseudo-class and media query modifier
+$prefix: ''; // Selector prefix;
+$separator: '_'; // Separator for pseudo-class and media query modifier
 
 $theme-colors: (
   transparent: transparent,
   black: #000,
-) !default; // Theme configuration
+); // Theme configuration
 
-$variants-text-color: (responsive, hover, focus) !default; // Variants configuration
+$variants-text-color: (responsive, hover, focus); // Variants configuration
 
-$core-plugins-text-color: true !default; // Set false to disable utility
+$core-plugins-text-color: true; // Set false to disable utility
 
 ```
 
