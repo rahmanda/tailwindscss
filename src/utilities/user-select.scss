@@ -8,7 +8,7 @@
     auto: auto,
   );
   $map-props: (
-    default: user-select,
+    default: -webkit-user-select -moz-user-select -ms-user-select user-select,
   );
   @include style($prefix, select, $map-values, $map-props, $variants, $separator);
 }

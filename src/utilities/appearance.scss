@@ -5,7 +5,7 @@
     none: none,
   );
   $map-props: (
-    default: appearance,
+    default: -webkit-appearance -moz-appearance appearance,
   );
   @include style($prefix, appearance, $map-values, $map-props, $variants, $separator);
 }

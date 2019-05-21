@@ -14,4 +14,14 @@
   );
 
   @include style($prefix, overflow, $map-values, $map-props, $variants, $separator);
+
+  $map-values-scrolling: (
+    touch: touch,
+    auto: auto,
+  );
+  $map-props-scrolling: (
+    default: -webkit-overflow-scrolling,
+  );
+
+  @include style($prefix, scrolling, $map-values-scrolling, $map-props-scrolling, $variants, $separator);
 }

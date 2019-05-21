@@ -630,6 +630,12 @@ video {
 .overflow-y-scroll {
   overflow-y: scroll; }
 
+.scrolling-touch {
+  -webkit-overflow-scrolling: touch; }
+
+.scrolling-auto {
+  -webkit-overflow-scrolling: auto; }
+
 .static {
   position: static; }
 
@@ -5616,6 +5622,8 @@ video {
   opacity: 1; }
 
 .appearance-none {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none; }
 
 .cursor-auto {
@@ -5664,15 +5672,27 @@ video {
   resize: horizontal; }
 
 .select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none; }
 
 .select-text {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
   user-select: text; }
 
 .select-all {
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
   user-select: all; }
 
 .select-auto {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
   user-select: auto; }
 
 .fill-current {
@@ -5762,6 +5782,10 @@ video {
     overflow-y: visible; }
   .sm_overflow-y-scroll {
     overflow-y: scroll; }
+  .sm_scrolling-touch {
+    -webkit-overflow-scrolling: touch; }
+  .sm_scrolling-auto {
+    -webkit-overflow-scrolling: auto; }
   .sm_static {
     position: static; }
   .sm_fixed {
@@ -9136,6 +9160,8 @@ video {
   .sm_opacity-100 {
     opacity: 1; }
   .sm_appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none; }
   .sm_cursor-auto {
     cursor: auto; }
@@ -9168,12 +9194,24 @@ video {
   .sm_resize-x {
     resize: horizontal; }
   .sm_select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none; }
   .sm_select-text {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
     user-select: text; }
   .sm_select-all {
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
     user-select: all; }
   .sm_select-auto {
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
     user-select: auto; }
   .sm_fill-current {
     fill: currentColor; }
@@ -9261,6 +9299,10 @@ video {
     overflow-y: visible; }
   .md_overflow-y-scroll {
     overflow-y: scroll; }
+  .md_scrolling-touch {
+    -webkit-overflow-scrolling: touch; }
+  .md_scrolling-auto {
+    -webkit-overflow-scrolling: auto; }
   .md_static {
     position: static; }
   .md_fixed {
@@ -12635,6 +12677,8 @@ video {
   .md_opacity-100 {
     opacity: 1; }
   .md_appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none; }
   .md_cursor-auto {
     cursor: auto; }
@@ -12667,12 +12711,24 @@ video {
   .md_resize-x {
     resize: horizontal; }
   .md_select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none; }
   .md_select-text {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
     user-select: text; }
   .md_select-all {
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
     user-select: all; }
   .md_select-auto {
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
     user-select: auto; }
   .md_fill-current {
     fill: currentColor; }
@@ -12760,6 +12816,10 @@ video {
     overflow-y: visible; }
   .lg_overflow-y-scroll {
     overflow-y: scroll; }
+  .lg_scrolling-touch {
+    -webkit-overflow-scrolling: touch; }
+  .lg_scrolling-auto {
+    -webkit-overflow-scrolling: auto; }
   .lg_static {
     position: static; }
   .lg_fixed {
@@ -16134,6 +16194,8 @@ video {
   .lg_opacity-100 {
     opacity: 1; }
   .lg_appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none; }
   .lg_cursor-auto {
     cursor: auto; }
@@ -16166,12 +16228,24 @@ video {
   .lg_resize-x {
     resize: horizontal; }
   .lg_select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none; }
   .lg_select-text {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
     user-select: text; }
   .lg_select-all {
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
     user-select: all; }
   .lg_select-auto {
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
     user-select: auto; }
   .lg_fill-current {
     fill: currentColor; }
@@ -16259,6 +16333,10 @@ video {
     overflow-y: visible; }
   .xl_overflow-y-scroll {
     overflow-y: scroll; }
+  .xl_scrolling-touch {
+    -webkit-overflow-scrolling: touch; }
+  .xl_scrolling-auto {
+    -webkit-overflow-scrolling: auto; }
   .xl_static {
     position: static; }
   .xl_fixed {
@@ -19633,6 +19711,8 @@ video {
   .xl_opacity-100 {
     opacity: 1; }
   .xl_appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none; }
   .xl_cursor-auto {
     cursor: auto; }
@@ -19665,12 +19745,24 @@ video {
   .xl_resize-x {
     resize: horizontal; }
   .xl_select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none; }
   .xl_select-text {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
     user-select: text; }
   .xl_select-all {
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
     user-select: all; }
   .xl_select-auto {
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
     user-select: auto; }
   .xl_fill-current {
     fill: currentColor; }
