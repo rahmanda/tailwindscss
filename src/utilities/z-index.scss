@@ -1,8 +1,8 @@
 @import "../helper";
 
-@mixin z-index($prefix, $map-values) {
+@mixin z-index($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: z-index,
   );
-  @include style($prefix, z, $map-values, $map-props);
+  @include style($prefix, z, $map-values, $map-props, $screens, $variants, $separator);
 }

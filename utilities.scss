@@ -35,7 +35,7 @@
   @include visibility($prefix, $variants-visibility, $separator, $theme-screens);
 }
 @if $core-plugins-z-index {
-  @include z-index($prefix, $theme-z-index);
+  @include z-index($prefix, $theme-z-index, $variants-z-index, $separator, $theme-screens);
 }
 
 
