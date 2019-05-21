@@ -557,3 +557,80 @@
     @include assert-equal($received-output, $expected-output);
   }
 }
+
+@include describe('The raw-style mixin') {
+  @include it('should render style') {
+    @include assert {
+      @include output {
+        @include raw-style('', antialiased) {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+      @include expect {
+        .antialiased {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+    }
+  }
+  @include it('should render variants style') {
+    $variants: (responsive, hover, focus);
+    $screens: (
+      sm: 640px,
+      md: 768px,
+    );
+    $separator: '_';
+    @include assert {
+      @include output {
+        @include raw-style('', antialiased, $screens, $variants, $separator) {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+      @include expect {
+        .antialiased {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        @media (min-width: 640px) {
+          .sm_antialiased {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+          .sm_hover_antialiased:hover {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+          .sm_focus_antialiased:focus {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_antialiased {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+          .md_hover_antialiased:hover {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+          .md_focus_antialiased:focus {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        }
+        .hover_antialiased:hover {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .focus_antialiased:focus {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+    }
+  }
+}

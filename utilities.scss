@@ -57,7 +57,7 @@
   @include font-size($prefix, $theme-font-size);
 }
 @if $core-plugins-font-smoothing {
-  @include font-smoothing($prefix);
+  @include font-smoothing($prefix, $variants-font-smoothing, $separator, $theme-screens);
 }
 @if $core-plugins-font-style {
   @include font-style($prefix);

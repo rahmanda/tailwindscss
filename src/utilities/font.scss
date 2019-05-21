@@ -14,12 +14,12 @@
   @include style($prefix, text, $map-values, $map-props);
 }
 
-@mixin font-smoothing($prefix) {
-  .#{$prefix}antialiased {
+@mixin font-smoothing($prefix, $variants: (), $separator: '_', $screens: ()) {
+  @include raw-style($prefix, antialiased, $screens, $variants, $separator) {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  .#{$prefix}subpixel-antialiased {
+  @include raw-style($prefix, subpixel-antialiased, $screens, $variants, $separator) {
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
   }

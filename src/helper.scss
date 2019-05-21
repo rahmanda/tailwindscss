@@ -120,3 +120,50 @@
   }
   @return $map-values;
 }
+
+@mixin raw-style-pseudo($prefix, $selector, $pseudo, $separator: '_') {
+  .#{$prefix}#{$pseudo}#{$separator}#{$selector}:#{$pseudo} {
+    @content;
+  }
+}
+
+@mixin raw-style-responsive($prefix, $selector, $screens, $variants, $separator) {
+  @each $screen, $breakpoint in $screens {
+    @media (min-width: $breakpoint) {
+      .#{$prefix}#{$screen}#{$separator}#{$selector} {
+        @content;
+      }
+      @if index($variants, hover) {
+        @include raw-style-pseudo(#{$prefix}#{$screen}#{$separator}, $selector, hover, $separator) {
+          @content;
+        }
+      }
+      @if index($variants, focus) {
+        @include raw-style-pseudo(#{$prefix}#{$screen}#{$separator}, $selector, focus, $separator) {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+@mixin raw-style($prefix, $key, $screens: (), $variants: (), $separator: '_') {
+  .#{$prefix}#{$key} {
+    @content;
+  }
+  @if index($variants, responsive) {
+    @include raw-style-responsive($prefix, $key, $screens, $variants, $separator) {
+      @content;
+    }
+  }
+  @if index($variants, hover) {
+    @include raw-style-pseudo($prefix, $key, hover, $separator) {
+      @content;
+    }
+  }
+  @if index($variants, focus) {
+    @include raw-style-pseudo($prefix, $key, focus, $separator) {
+      @content;
+    }
+  }
+}
