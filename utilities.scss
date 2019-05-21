@@ -249,7 +249,7 @@
   @include outline($prefix, $variants-outline, $separator, $theme-screens);
 }
 @if $core-plugins-pointer-events {
-  @include pointer-events($prefix);
+  @include pointer-events($prefix, $variants-pointer-events, $separator, $theme-screens);
 }
 @if $core-plugins-resize {
   @include resize($prefix);

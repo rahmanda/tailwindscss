@@ -15904,8 +15904,40 @@ video {
 .pointer-events-none {
   pointer-events: none; }
 
+@media (min-width: 640px) {
+  .sm_pointer-events-none {
+    pointer-events: none; } }
+
+@media (min-width: 768px) {
+  .md_pointer-events-none {
+    pointer-events: none; } }
+
+@media (min-width: 1024px) {
+  .lg_pointer-events-none {
+    pointer-events: none; } }
+
+@media (min-width: 1280px) {
+  .xl_pointer-events-none {
+    pointer-events: none; } }
+
 .pointer-events-auto {
   pointer-events: auto; }
+
+@media (min-width: 640px) {
+  .sm_pointer-events-auto {
+    pointer-events: auto; } }
+
+@media (min-width: 768px) {
+  .md_pointer-events-auto {
+    pointer-events: auto; } }
+
+@media (min-width: 1024px) {
+  .lg_pointer-events-auto {
+    pointer-events: auto; } }
+
+@media (min-width: 1280px) {
+  .xl_pointer-events-auto {
+    pointer-events: auto; } }
 
 .resize {
   resize: both; }
