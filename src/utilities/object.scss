@@ -1,6 +1,6 @@
 @import "../helper";
 
-@mixin object-fit($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin object-fit($prefix, $variants: (), $separator: '_') {
   $map-values: (
     contain: contain,
     cover: cover,
@@ -12,13 +12,13 @@
     default: object-fit,
   );
 
-  @include style($prefix, object, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, object, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin object-position($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin object-position($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: object-position,
   );
 
-  @include style($prefix, object, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, object, $map-values, $map-props, $variants, $separator);
 }

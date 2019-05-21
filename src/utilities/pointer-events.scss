@@ -1,6 +1,6 @@
 @import '../helper';
 
-@mixin pointer-events($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin pointer-events($prefix, $variants: (), $separator: '_') {
   $map-values: (
     none: none,
     auto: auto,
@@ -9,5 +9,5 @@
     default: pointer-events,
   );
 
-  @include style($prefix, pointer-events, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, pointer-events, $map-values, $map-props, $variants, $separator);
 }

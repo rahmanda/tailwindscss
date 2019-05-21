@@ -1,6 +1,6 @@
 @import '../helper';
 
-@mixin overflow($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin overflow($prefix, $variants: (), $separator: '_') {
   $map-values: (
     auto: auto,
     hidden: hidden,
@@ -13,5 +13,5 @@
     y: overflow-y,
   );
 
-  @include style($prefix, overflow, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, overflow, $map-values, $map-props, $variants, $separator);
 }

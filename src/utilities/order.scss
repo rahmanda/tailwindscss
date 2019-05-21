@@ -1,6 +1,6 @@
 @import "../helper";
 
-@mixin order($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin order($prefix, $variants: (), $separator: '_') {
   $map-values: (
     first: -1,
     last: 999,
@@ -12,5 +12,5 @@
     default: order,
   );
 
-  @include style($prefix, order, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, order, $map-values, $map-props, $variants, $separator);
 }

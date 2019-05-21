@@ -1,31 +1,31 @@
 @import "../helper";
 
-@mixin font-family($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin font-family($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: font-family,
   );
-  @include style($prefix, font, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, font, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin font-size($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin font-size($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: font-size,
   );
-  @include style($prefix, text, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, text, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin font-smoothing($prefix, $variants: (), $separator: '_', $screens: ()) {
-  @include raw-style($prefix, antialiased, $screens, $variants, $separator) {
+@mixin font-smoothing($prefix, $variants: (), $separator: '_') {
+  @include raw-style($prefix, antialiased, $variants, $separator) {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  @include raw-style($prefix, subpixel-antialiased, $screens, $variants, $separator) {
+  @include raw-style($prefix, subpixel-antialiased, $variants, $separator) {
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
   }
 }
 
-@mixin font-style($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin font-style($prefix, $variants: (), $separator: '_') {
   $map-values: (
     italic: italic,
     not-italic: normal,
@@ -33,12 +33,12 @@
   $map-props: (
     default: font-style,
   );
-  @include style($prefix, '', $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, '', $map-values, $map-props, $variants, $separator);
 }
 
-@mixin font-weight($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin font-weight($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: font-weight,
   );
-  @include style($prefix, font, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, font, $map-values, $map-props, $variants, $separator);
 }

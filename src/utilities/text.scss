@@ -1,6 +1,6 @@
 @import "../helper";
 
-@mixin text-align($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin text-align($prefix, $variants: (), $separator: '_') {
   $map-values: (
     left: left,
     center: center,
@@ -10,10 +10,10 @@
   $map-props: (
     default: text-align,
   );
-  @include style($prefix, text, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, text, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin text-decoration($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin text-decoration($prefix, $variants: (), $separator: '_') {
   $map-values: (
     underline: underline,
     line-through: line-through,
@@ -22,10 +22,10 @@
   $map-props: (
     default: text-decoration,
   );
-  @include style($prefix, '', $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, '', $map-values, $map-props, $variants, $separator);
 }
 
-@mixin text-transform($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin text-transform($prefix, $variants: (), $separator: '_') {
   $map-values: (
     uppercase: uppercase,
     lowercase: lowercase,
@@ -35,12 +35,12 @@
   $map-props: (
     default: text-transform,
   );
-  @include style($prefix, '', $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, '', $map-values, $map-props, $variants, $separator);
 }
 
-@mixin color($prefix, $colors, $variants: (), $separator: '_', $screens: ()) {
+@mixin color($prefix, $colors, $variants: (), $separator: '_') {
   $map-props: (
     default: color,
   );
-  @include style-color($prefix, text, $colors, $map-props, $screens, $variants, $separator);
+  @include style-color($prefix, text, $colors, $map-props, $variants, $separator);
 }

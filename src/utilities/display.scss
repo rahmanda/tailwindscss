@@ -1,6 +1,6 @@
 @import '../helper';
 
-@mixin display($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin display($prefix, $variants: (), $separator: '_') {
   $map-values: (
     block: block,
     inline-block: inline-block,
@@ -16,5 +16,5 @@
     default: display,
   );
 
-  @include style($prefix, '', $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, '', $map-values, $map-props, $variants, $separator);
 }

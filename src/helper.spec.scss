@@ -244,39 +244,13 @@
       x: margin-left margin-right,
     );
     $variants: (responsive, hover, focus);
-    $screens: (
-      sm: 640px,
-      md: 768px,
-    );
     @include assert {
       @include output {
-        @include style('', m, $map-values, $map-props, $screens, $variants, '_', $separator-key-name: '');
+        @include style('', m, $map-values, $map-props, $variants, '_', $separator-key-name: '');
       }
       @include expect {
         .m-1 {
           margin: 0.25rem;
-        }
-        @media (min-width: 640px) {
-          .sm_m-1 {
-            margin: 0.25rem;
-          }
-          .sm_hover_m-1:hover {
-            margin: 0.25rem;
-          }
-          .sm_focus_m-1:focus {
-            margin: 0.25rem;
-          }
-        }
-        @media (min-width: 768px) {
-          .md_m-1 {
-            margin: 0.25rem;
-          }
-          .md_hover_m-1:hover {
-            margin: 0.25rem;
-          }
-          .md_focus_m-1:focus {
-            margin: 0.25rem;
-          }
         }
         .hover_m-1:hover {
           margin: 0.25rem;
@@ -287,28 +261,6 @@
         .-m-1 {
           margin: -0.25rem;
         }
-        @media (min-width: 640px) {
-          .sm_-m-1 {
-            margin: -0.25rem;
-          }
-          .sm_hover_-m-1:hover {
-            margin: -0.25rem;
-          }
-          .sm_focus_-m-1:focus {
-            margin: -0.25rem;
-          }
-        }
-        @media (min-width: 768px) {
-          .md_-m-1 {
-            margin: -0.25rem;
-          }
-          .md_hover_-m-1:hover {
-            margin: -0.25rem;
-          }
-          .md_focus_-m-1:focus {
-            margin: -0.25rem;
-          }
-        }
         .hover_-m-1:hover {
           margin: -0.25rem;
         }
@@ -318,34 +270,6 @@
         .mx-1 {
           margin-left: 0.25rem;
           margin-right: 0.25rem;
-        }
-        @media (min-width: 640px) {
-          .sm_mx-1 {
-            margin-left: 0.25rem;
-            margin-right: 0.25rem;
-          }
-          .sm_hover_mx-1:hover {
-            margin-left: 0.25rem;
-            margin-right: 0.25rem;
-          }
-          .sm_focus_mx-1:focus {
-            margin-left: 0.25rem;
-            margin-right: 0.25rem;
-          }
-        }
-        @media (min-width: 768px) {
-          .md_mx-1 {
-            margin-left: 0.25rem;
-            margin-right: 0.25rem;
-          }
-          .md_hover_mx-1:hover {
-            margin-left: 0.25rem;
-            margin-right: 0.25rem;
-          }
-          .md_focus_mx-1:focus {
-            margin-left: 0.25rem;
-            margin-right: 0.25rem;
-          }
         }
         .hover_mx-1:hover {
           margin-left: 0.25rem;
@@ -358,34 +282,6 @@
         .-mx-1 {
           margin-left: -0.25rem;
           margin-right: -0.25rem;
-        }
-        @media (min-width: 640px) {
-          .sm_-mx-1 {
-            margin-left: -0.25rem;
-            margin-right: -0.25rem;
-          }
-          .sm_hover_-mx-1:hover {
-            margin-left: -0.25rem;
-            margin-right: -0.25rem;
-          }
-          .sm_focus_-mx-1:focus {
-            margin-left: -0.25rem;
-            margin-right: -0.25rem;
-          }
-        }
-        @media (min-width: 768px) {
-          .md_-mx-1 {
-            margin-left: -0.25rem;
-            margin-right: -0.25rem;
-          }
-          .md_hover_-mx-1:hover {
-            margin-left: -0.25rem;
-            margin-right: -0.25rem;
-          }
-          .md_focus_-mx-1:focus {
-            margin-left: -0.25rem;
-            margin-right: -0.25rem;
-          }
         }
         .hover_-mx-1:hover {
           margin-left: -0.25rem;
@@ -452,39 +348,13 @@
       ),
     );
     $variants: (responsive, hover, focus);
-    $screens: (
-      sm: 640px,
-      md: 768px,
-    );
     @include assert {
       @include output {
-        @include style-color('', text, $map-values, $map-props, $screens, $variants, '_');
+        @include style-color('', text, $map-values, $map-props, $variants, '_');
       }
       @include expect {
         .text-gray-100 {
           color: #f7fafc;
-        }
-        @media (min-width: 640px) {
-          .sm_text-gray-100 {
-            color: #f7fafc;
-          }
-          .sm_hover_text-gray-100:hover {
-            color: #f7fafc;
-          }
-          .sm_focus_text-gray-100:focus {
-            color: #f7fafc;
-          }
-        }
-        @media (min-width: 768px) {
-          .md_text-gray-100 {
-            color: #f7fafc;
-          }
-          .md_hover_text-gray-100:hover {
-            color: #f7fafc;
-          }
-          .md_focus_text-gray-100:focus {
-            color: #f7fafc;
-          }
         }
         .hover_text-gray-100:hover {
           color: #f7fafc;
@@ -494,28 +364,6 @@
         }
         .text-red-100 {
           color: #fff5f5;
-        }
-        @media (min-width: 640px) {
-          .sm_text-red-100 {
-            color: #fff5f5;
-          }
-          .sm_hover_text-red-100:hover {
-            color: #fff5f5;
-          }
-          .sm_focus_text-red-100:focus {
-            color: #fff5f5;
-          }
-        }
-        @media (min-width: 768px) {
-          .md_text-red-100 {
-            color: #fff5f5;
-          }
-          .md_hover_text-red-100:hover {
-            color: #fff5f5;
-          }
-          .md_focus_text-red-100:focus {
-            color: #fff5f5;
-          }
         }
         .hover_text-red-100:hover {
           color: #fff5f5;
@@ -593,14 +441,10 @@
   }
   @include it('should render variants style') {
     $variants: (responsive, hover, focus);
-    $screens: (
-      sm: 640px,
-      md: 768px,
-    );
     $separator: '_';
     @include assert {
       @include output {
-        @include raw-style('', antialiased, $screens, $variants, $separator) {
+        @include raw-style('', antialiased, $variants, $separator) {
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
@@ -609,34 +453,6 @@
         .antialiased {
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-        }
-        @media (min-width: 640px) {
-          .sm_antialiased {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-          }
-          .sm_hover_antialiased:hover {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-          }
-          .sm_focus_antialiased:focus {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-          }
-        }
-        @media (min-width: 768px) {
-          .md_antialiased {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-          }
-          .md_hover_antialiased:hover {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-          }
-          .md_focus_antialiased:focus {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-          }
         }
         .hover_antialiased:hover {
           -webkit-font-smoothing: antialiased;

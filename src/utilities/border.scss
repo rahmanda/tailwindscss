@@ -1,6 +1,6 @@
 @import "../helper";
 
-@mixin border-style($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin border-style($prefix, $variants: (), $separator: '_') {
   $map-values: (
     solid: solid,
     dashed: dashed,
@@ -10,10 +10,10 @@
   $map-props: (
     default: border-style,
   );
-  @include style($prefix, border, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, border, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin border-width($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin border-width($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: border-width,
     t: border-top-width,
@@ -21,10 +21,10 @@
     b: border-bottom-width,
     l: border-left-width,
   );
-  @include style($prefix, border, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, border, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin border-radius($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin border-radius($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: border-radius,
     t: border-top-left-radius border-top-right-radius,
@@ -36,17 +36,17 @@
     bl: border-bottom-left-radius,
     br: border-bottom-right-radius,
   );
-  @include style($prefix, rounded, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, rounded, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin border-color($prefix, $colors, $variants: (), $separator: '_', $screens: ()) {
+@mixin border-color($prefix, $colors, $variants: (), $separator: '_') {
   $map-props: (
     default: border-color,
   );
-  @include style-color($prefix, border, $colors, $map-props, $screens, $variants, $separator);
+  @include style-color($prefix, border, $colors, $map-props, $variants, $separator);
 }
 
-@mixin border-collapse($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin border-collapse($prefix, $variants: (), $separator: '_') {
   $map-values: (
     collapse: collapse,
     separate: separate,
@@ -54,5 +54,5 @@
   $map-props: (
     default: border-collapse,
   );
-  @include style($prefix, border, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, border, $map-values, $map-props, $variants, $separator);
 }

@@ -1,13 +1,13 @@
 @import "../helper";
 
-@mixin list-style-type($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin list-style-type($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: list-style-type,
   );
-  @include style($prefix, list, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, list, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin list-style-position($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin list-style-position($prefix, $variants: (), $separator: '_') {
   $map-values: (
     inside: inside,
     outside: outside,
@@ -16,5 +16,5 @@
     default: list-style-position,
   );
 
-  @include style($prefix, list, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, list, $map-values, $map-props, $variants, $separator);
 }

@@ -1,8 +1,8 @@
 @import '../helper';
 
-@mixin box-shadow($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin box-shadow($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: box-shadow,
   );
-  @include style($prefix, shadow, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, shadow, $map-values, $map-props, $variants, $separator);
 }

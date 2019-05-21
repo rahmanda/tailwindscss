@@ -1,8 +1,8 @@
 @import "../helper";
 
-@mixin opacity($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin opacity($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: opacity,
   );
-  @include style($prefix, opacity, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, opacity, $map-values, $map-props, $variants, $separator);
 }

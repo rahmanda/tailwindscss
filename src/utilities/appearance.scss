@@ -1,11 +1,11 @@
 @import '../helper';
 
-@mixin appearance($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin appearance($prefix, $variants: (), $separator: '_') {
   $map-values: (
     none: none,
   );
   $map-props: (
     default: appearance,
   );
-  @include style($prefix, appearance, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, appearance, $map-values, $map-props, $variants, $separator);
 }

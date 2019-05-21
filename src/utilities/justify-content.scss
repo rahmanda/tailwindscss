@@ -1,6 +1,6 @@
 @import '../helper';
 
-@mixin justify-content($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin justify-content($prefix, $variants: (), $separator: '_') {
   $map-values: (
     start: flex-start,
     center: center,
@@ -12,5 +12,5 @@
     default: justify-content,
   );
 
-  @include style($prefix, justify, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, justify, $map-values, $map-props, $variants, $separator);
 }

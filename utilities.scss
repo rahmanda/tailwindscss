@@ -1,5 +1,9 @@
 @import './tailwind.config';
 
+// ===========================
+// All Import
+// ===========================
+
 // Layout
 
 @import './src/utilities/display';
@@ -9,35 +13,6 @@
 @import './src/utilities/position';
 @import './src/utilities/visibility';
 @import './src/utilities/z-index';
-
-@if $core-plugins-display {
-  @include display($prefix, $variants-display, $separator, $theme-screens);
-}
-@if $core-plugins-float {
-  @include float($prefix, $variants-float, $separator, $theme-screens);
-}
-@if $core-plugins-object-fit {
-  @include object-fit($prefix, $variants-object-fit, $separator, $theme-screens);
-}
-@if $core-plugins-object-position {
-  @include object-position($prefix, $theme-object-position, $variants-object-position, $separator, $theme-screens);
-}
-@if $core-plugins-overflow {
-  @include overflow($prefix, $variants-overflow, $separator, $theme-screens);
-}
-@if $core-plugins-position {
-  @include position($prefix, $variants-position, $separator, $theme-screens);
-}
-@if $core-plugins-inset {
-  @include inset($prefix, $theme-inset, $variants-inset, $separator, $theme-screens);
-}
-@if $core-plugins-visibility {
-  @include visibility($prefix, $variants-visibility, $separator, $theme-screens);
-}
-@if $core-plugins-z-index {
-  @include z-index($prefix, $theme-z-index, $variants-z-index, $separator, $theme-screens);
-}
-
 
 // Typography
 
@@ -50,95 +25,13 @@
 @import './src/utilities/white-space';
 @import './src/utilities/word-break';
 
-@if $core-plugins-font-family {
-  @include font-family($prefix, $theme-font-family, $variants-font-family, $separator, $theme-screens);
-}
-@if $core-plugins-font-size {
-  @include font-size($prefix, $theme-font-size, $variants-font-size, $separator, $theme-screens);
-}
-@if $core-plugins-font-smoothing {
-  @include font-smoothing($prefix, $variants-font-smoothing, $separator, $theme-screens);
-}
-@if $core-plugins-font-style {
-  @include font-style($prefix, $variants-font-style, $separator, $theme-screens);
-}
-@if $core-plugins-font-weight {
-  @include font-weight($prefix, $theme-font-weight, $variants-font-weight, $separator, $theme-screens);
-}
-@if $core-plugins-letter-spacing {
-  @include letter-spacing($prefix, $theme-letter-spacing, $variants-letter-spacing, $separator, $theme-screens);
-}
-@if $core-plugins-line-height {
-  @include line-height($prefix, $theme-line-height, $variants-line-height, $separator, $theme-screens);
-}
-@if $core-plugins-list-style-type {
-  @include list-style-type($prefix, $theme-list-style-type, $variants-list-style-type, $separator, $theme-screens);
-}
-@if $core-plugins-list-style-position {
-  @include list-style-position($prefix, $variants-list-style-position, $separator, $theme-screens);
-}
-@if $core-plugins-text-align {
-  @include text-align($prefix, $variants-text-align, $separator, $theme-screens);
-}
-@if $core-plugins-text-decoration {
-  @include text-decoration($prefix, $variants-text-decoration, $separator, $theme-screens);
-}
-@if $core-plugins-text-transform {
-  @include text-transform($prefix, $variants-text-transform, $separator, $theme-screens);
-}
-@if $core-plugins-text-color {
-  @include color($prefix, $theme-text-color, $variants-text-color, $separator, $theme-screens);
-}
-@if $core-plugins-vertical-align {
-  @include vertical-align($prefix, $variants-vertical-align, $separator, $theme-screens);
-}
-@if $core-plugins-white-space {
-  @include white-space($prefix, $variants-white-space, $separator, $theme-screens);
-}
-@if $core-plugins-word-break {
-  @include word-break($prefix, $variants-word-break, $separator, $theme-screens);
-}
-
 // Background
 
 @import './src/utilities/background';
 
-@if $core-plugins-background-attachment {
-  @include background-attachment($prefix);
-}
-@if $core-plugins-background-position {
-  @include background-position($prefix, $theme-background-position, $variants-background-position, $separator, $theme-screens);
-}
-@if $core-plugins-background-repeat {
-  @include background-repeat($prefix);
-}
-@if $core-plugins-background-size {
-  @include background-size($prefix, $theme-background-size, $variants-background-size, $separator, $theme-screens);
-}
-@if $core-plugins-background-color {
-  @include background-color($prefix, $theme-background-color, $variants-background-color, $separator, $theme-screens);
-}
-
-
 // Border
 
 @import './src/utilities/border';
-
-@if $core-plugins-border-style {
-  @include border-style($prefix, $variants-border-style, $separator, $theme-screens);
-}
-@if $core-plugins-border-width {
-  @include border-width($prefix, $theme-border-width, $variants-border-width, $separator, $theme-screens);
-}
-@if $core-plugins-border-radius {
-  @include border-radius($prefix, $theme-border-radius, $variants-border-radius, $separator, $theme-screens);
-}
-@if $core-plugins-border-color {
-  @include border-color($prefix, $theme-border-color, $variants-border-color, $separator, $theme-screens);
-}
-@if $core-plugins-border-collapse {
-  @include border-collapse($prefix, $variants-border-collapse, $separator, $theme-screens);
-}
 
 // Flex
 
@@ -147,91 +40,23 @@
 @import './src/utilities/justify-content';
 @import './src/utilities/order';
 
-@if $core-plugins-align-items {
-  @include align-items($prefix, $variants-align-items, $separator, $theme-screens);
-}
-@if $core-plugins-align-content {
-  @include align-content($prefix, $variants-align-content, $separator, $theme-screens);
-}
-@if $core-plugins-align-self {
-  @include align-self($prefix, $variants-align-self, $separator, $theme-screens);
-}
-@if $core-plugins-flex {
-  @include flex($prefix, $theme-flex, $variants-flex, $separator, $theme-screens);
-}
-@if $core-plugins-flex-direction {
-  @include flex-direction($prefix, $variants-flex-direction, $separator, $theme-screens);
-}
-@if $core-plugins-flex-wrap {
-  @include flex-wrap($prefix, $variants-flex-wrap, $separator, $theme-screens);
-}
-@if $core-plugins-flex-grow {
-  @include flex-grow($prefix, $theme-flex-grow, $variants-flex-grow, $separator, $theme-screens);
-}
-@if $core-plugins-flex-shrink {
-  @include flex-shrink($prefix, $theme-flex-shrink, $variants-flex-shrink, $separator, $theme-screens);
-}
-@if $core-plugins-justify-content {
-  @include justify-content($prefix, $variants-justify-content, $separator, $theme-screens);
-}
-@if $core-plugins-order {
-  @include order($prefix, $variants-order, $separator, $theme-screens);
-}
-
 // Spacing
 
 @import './src/utilities/spacing';
-
-@if $core-plugins-margin {
-  @include margin($prefix, $theme-margin, $variants-margin, $separator, $theme-screens);
-}
-@if $core-plugins-padding {
-  @include padding($prefix, $theme-padding, $variants-padding, $separator, $theme-screens);
-}
 
 // Sizing
 
 @import './src/utilities/width';
 @import './src/utilities/height';
 
-@if $core-plugins-width {
-  @include width($prefix, $theme-width, $variants-width, $separator, $theme-screens);
-}
-@if $core-plugins-min-width {
-  @include min-width($prefix, $theme-min-width, $variants-min-width, $separator, $theme-screens);
-}
-@if $core-plugins-max-width {
-  @include max-width($prefix, $theme-max-width, $variants-max-width, $separator, $theme-screens);
-}
-@if $core-plugins-height {
-  @include height($prefix, $theme-height, $variants-height, $separator, $theme-screens);
-}
-@if $core-plugins-min-height {
-  @include min-height($prefix, $theme-min-height, $variants-min-height, $separator, $theme-screens);
-}
-@if $core-plugins-max-height {
-  @include max-height($prefix, $theme-max-height, $variants-max-height, $separator, $theme-screens);
-}
-
-// Tables
+// Table
 
 @import './src/utilities/table';
-
-@if $core-plugins-table-layout {
-  @include table-layout($prefix, $variants-table-layout, $separator, $theme-screens);
-}
 
 // Effects
 
 @import './src/utilities/box-shadow';
 @import './src/utilities/opacity';
-
-@if $core-plugins-box-shadow {
-  @include box-shadow($prefix, $theme-box-shadow, $variants-box-shadow, $separator, $theme-screens);
-}
-@if $core-plugins-opacity {
-  @include opacity($prefix, $theme-opacity, $variants-opacity, $separator, $theme-screens);
-}
 
 // Interactivity
 
@@ -242,33 +67,475 @@
 @import './src/utilities/resize';
 @import './src/utilities/user-select';
 
-@if $core-plugins-appearance {
-  @include appearance($prefix, $variants-appearance, $separator, $theme-screens);
-}
-@if $core-plugins-cursor {
-  @include cursor($prefix, $theme-cursor, $variants-cursor, $separator, $theme-screens);
-}
-@if $core-plugins-outline {
-  @include outline($prefix, $variants-outline, $separator, $theme-screens);
-}
-@if $core-plugins-pointer-events {
-  @include pointer-events($prefix, $variants-pointer-events, $separator, $theme-screens);
-}
-@if $core-plugins-resize {
-  @include resize($prefix, $variants-resize, $separator, $theme-screens);
-}
-@if $core-plugins-user-select {
-  @include user-select($prefix, $variants-user-select, $separator, $theme-screens);
-}
-
 // SVG
 
 @import './src/utilities/fill';
 @import './src/utilities/stroke';
 
+
+// ===========================
+// Generic Style
+// ===========================
+
+// Layout
+
+@if $core-plugins-display {
+  @include display($prefix, $variants-display, $separator);
+}
+@if $core-plugins-float {
+  @include float($prefix, $variants-float, $separator);
+}
+@if $core-plugins-object-fit {
+  @include object-fit($prefix, $variants-object-fit, $separator);
+}
+@if $core-plugins-object-position {
+  @include object-position($prefix, $theme-object-position, $variants-object-position, $separator);
+}
+@if $core-plugins-overflow {
+  @include overflow($prefix, $variants-overflow, $separator);
+}
+@if $core-plugins-position {
+  @include position($prefix, $variants-position, $separator);
+}
+@if $core-plugins-inset {
+  @include inset($prefix, $theme-inset, $variants-inset, $separator);
+}
+@if $core-plugins-visibility {
+  @include visibility($prefix, $variants-visibility, $separator);
+}
+@if $core-plugins-z-index {
+  @include z-index($prefix, $theme-z-index, $variants-z-index, $separator);
+}
+
+// Typography
+
+@if $core-plugins-font-family {
+  @include font-family($prefix, $theme-font-family, $variants-font-family, $separator);
+}
+@if $core-plugins-font-size {
+  @include font-size($prefix, $theme-font-size, $variants-font-size, $separator);
+}
+@if $core-plugins-font-smoothing {
+  @include font-smoothing($prefix, $variants-font-smoothing, $separator);
+}
+@if $core-plugins-font-style {
+  @include font-style($prefix, $variants-font-style, $separator);
+}
+@if $core-plugins-font-weight {
+  @include font-weight($prefix, $theme-font-weight, $variants-font-weight, $separator);
+}
+@if $core-plugins-letter-spacing {
+  @include letter-spacing($prefix, $theme-letter-spacing, $variants-letter-spacing, $separator);
+}
+@if $core-plugins-line-height {
+  @include line-height($prefix, $theme-line-height, $variants-line-height, $separator);
+}
+@if $core-plugins-list-style-type {
+  @include list-style-type($prefix, $theme-list-style-type, $variants-list-style-type, $separator);
+}
+@if $core-plugins-list-style-position {
+  @include list-style-position($prefix, $variants-list-style-position, $separator);
+}
+@if $core-plugins-text-align {
+  @include text-align($prefix, $variants-text-align, $separator);
+}
+@if $core-plugins-text-decoration {
+  @include text-decoration($prefix, $variants-text-decoration, $separator);
+}
+@if $core-plugins-text-transform {
+  @include text-transform($prefix, $variants-text-transform, $separator);
+}
+@if $core-plugins-text-color {
+  @include color($prefix, $theme-text-color, $variants-text-color, $separator);
+}
+@if $core-plugins-vertical-align {
+  @include vertical-align($prefix, $variants-vertical-align, $separator);
+}
+@if $core-plugins-white-space {
+  @include white-space($prefix, $variants-white-space, $separator);
+}
+@if $core-plugins-word-break {
+  @include word-break($prefix, $variants-word-break, $separator);
+}
+
+@if $core-plugins-background-attachment {
+  @include background-attachment($prefix);
+}
+@if $core-plugins-background-position {
+  @include background-position($prefix, $theme-background-position, $variants-background-position, $separator);
+}
+@if $core-plugins-background-repeat {
+  @include background-repeat($prefix);
+}
+@if $core-plugins-background-size {
+  @include background-size($prefix, $theme-background-size, $variants-background-size, $separator);
+}
+@if $core-plugins-background-color {
+  @include background-color($prefix, $theme-background-color, $variants-background-color, $separator);
+}
+
+// Border
+
+@if $core-plugins-border-style {
+  @include border-style($prefix, $variants-border-style, $separator);
+}
+@if $core-plugins-border-width {
+  @include border-width($prefix, $theme-border-width, $variants-border-width, $separator);
+}
+@if $core-plugins-border-radius {
+  @include border-radius($prefix, $theme-border-radius, $variants-border-radius, $separator);
+}
+@if $core-plugins-border-color {
+  @include border-color($prefix, $theme-border-color, $variants-border-color, $separator);
+}
+@if $core-plugins-border-collapse {
+  @include border-collapse($prefix, $variants-border-collapse, $separator);
+}
+
+// Flex
+
+@if $core-plugins-align-items {
+  @include align-items($prefix, $variants-align-items, $separator);
+}
+@if $core-plugins-align-content {
+  @include align-content($prefix, $variants-align-content, $separator);
+}
+@if $core-plugins-align-self {
+  @include align-self($prefix, $variants-align-self, $separator);
+}
+@if $core-plugins-flex {
+  @include flex($prefix, $theme-flex, $variants-flex, $separator);
+}
+@if $core-plugins-flex-direction {
+  @include flex-direction($prefix, $variants-flex-direction, $separator);
+}
+@if $core-plugins-flex-wrap {
+  @include flex-wrap($prefix, $variants-flex-wrap, $separator);
+}
+@if $core-plugins-flex-grow {
+  @include flex-grow($prefix, $theme-flex-grow, $variants-flex-grow, $separator);
+}
+@if $core-plugins-flex-shrink {
+  @include flex-shrink($prefix, $theme-flex-shrink, $variants-flex-shrink, $separator);
+}
+@if $core-plugins-justify-content {
+  @include justify-content($prefix, $variants-justify-content, $separator);
+}
+@if $core-plugins-order {
+  @include order($prefix, $variants-order, $separator);
+}
+
+// Spacing
+
+@if $core-plugins-margin {
+  @include margin($prefix, $theme-margin, $variants-margin, $separator);
+}
+@if $core-plugins-padding {
+  @include padding($prefix, $theme-padding, $variants-padding, $separator);
+}
+
+// Sizing
+
+@if $core-plugins-width {
+  @include width($prefix, $theme-width, $variants-width, $separator);
+}
+@if $core-plugins-min-width {
+  @include min-width($prefix, $theme-min-width, $variants-min-width, $separator);
+}
+@if $core-plugins-max-width {
+  @include max-width($prefix, $theme-max-width, $variants-max-width, $separator);
+}
+@if $core-plugins-height {
+  @include height($prefix, $theme-height, $variants-height, $separator);
+}
+@if $core-plugins-min-height {
+  @include min-height($prefix, $theme-min-height, $variants-min-height, $separator);
+}
+@if $core-plugins-max-height {
+  @include max-height($prefix, $theme-max-height, $variants-max-height, $separator);
+}
+
+// Tables
+
+@if $core-plugins-table-layout {
+  @include table-layout($prefix, $variants-table-layout, $separator);
+}
+
+// Effects
+
+@if $core-plugins-box-shadow {
+  @include box-shadow($prefix, $theme-box-shadow, $variants-box-shadow, $separator);
+}
+@if $core-plugins-opacity {
+  @include opacity($prefix, $theme-opacity, $variants-opacity, $separator);
+}
+
+// Interactivity
+
+@if $core-plugins-appearance {
+  @include appearance($prefix, $variants-appearance, $separator);
+}
+@if $core-plugins-cursor {
+  @include cursor($prefix, $theme-cursor, $variants-cursor, $separator);
+}
+@if $core-plugins-outline {
+  @include outline($prefix, $variants-outline, $separator);
+}
+@if $core-plugins-pointer-events {
+  @include pointer-events($prefix, $variants-pointer-events, $separator);
+}
+@if $core-plugins-resize {
+  @include resize($prefix, $variants-resize, $separator);
+}
+@if $core-plugins-user-select {
+  @include user-select($prefix, $variants-user-select, $separator);
+}
+
+// SVG
+
 @if $core-plugins-fill {
-  @include fill($prefix, $theme-fill, $variants-fill, $separator, $theme-screens);
+  @include fill($prefix, $theme-fill, $variants-fill, $separator);
 }
 @if $core-plugins-stroke {
-  @include stroke($prefix, $theme-stroke, $variants-stroke, $separator, $theme-screens);
+  @include stroke($prefix, $theme-stroke, $variants-stroke, $separator);
+}
+
+
+// ===========================
+// Responsive Style
+// ===========================
+
+@each $screen, $breakpoint in $theme-screens {
+
+  @media (min-width: $breakpoint) {
+
+    $prefix-screen: #{$prefix}#{$screen}#{$separator};
+
+    // Layout
+
+    @if $core-plugins-display and index($variants-display, responsive) {
+      @include display($prefix-screen, $variants-display, $separator);
+    }
+    @if $core-plugins-float and index($variants-float, responsive) {
+      @include float($prefix-screen, $variants-float, $separator);
+    }
+    @if $core-plugins-object-fit and index($variants-object-fit, responsive) {
+      @include object-fit($prefix-screen, $variants-object-fit, $separator);
+    }
+    @if $core-plugins-object-position and index($variants-object-position, responsive) {
+      @include object-position($prefix-screen, $theme-object-position, $variants-object-position, $separator);
+    }
+    @if $core-plugins-overflow and index($variants-overflow, responsive) {
+      @include overflow($prefix-screen, $variants-overflow, $separator);
+    }
+    @if $core-plugins-position and index($variants-position, responsive) {
+      @include position($prefix-screen, $variants-position, $separator);
+    }
+    @if $core-plugins-inset and index($variants-inset, responsive) {
+      @include inset($prefix-screen, $theme-inset, $variants-inset, $separator);
+    }
+    @if $core-plugins-visibility and index($variants-visibility, responsive) {
+      @include visibility($prefix-screen, $variants-visibility, $separator);
+    }
+    @if $core-plugins-z-index and index($variants-z-index, responsive) {
+      @include z-index($prefix-screen, $theme-z-index, $variants-z-index, $separator);
+    }
+
+    // Typography
+
+    @if $core-plugins-font-family and index($variants-font-family, responsive) {
+      @include font-family($prefix-screen, $theme-font-family, $variants-font-family, $separator);
+    }
+    @if $core-plugins-font-size and index($variants-font-size, responsive) {
+      @include font-size($prefix-screen, $theme-font-size, $variants-font-size, $separator);
+    }
+    @if $core-plugins-font-smoothing and index($variants-font-smoothing, responsive) {
+      @include font-smoothing($prefix-screen, $variants-font-smoothing, $separator);
+    }
+    @if $core-plugins-font-style and index($variants-font-style, responsive) {
+      @include font-style($prefix-screen, $variants-font-style, $separator);
+    }
+    @if $core-plugins-font-weight and index($variants-font-weight, responsive) {
+      @include font-weight($prefix-screen, $theme-font-weight, $variants-font-weight, $separator);
+    }
+    @if $core-plugins-letter-spacing and index($variants-letter-spacing, responsive) {
+      @include letter-spacing($prefix-screen, $theme-letter-spacing, $variants-letter-spacing, $separator);
+    }
+    @if $core-plugins-line-height and index($variants-line-height, responsive) {
+      @include line-height($prefix-screen, $theme-line-height, $variants-line-height, $separator);
+    }
+    @if $core-plugins-list-style-type and index($variants-list-style-type, responsive) {
+      @include list-style-type($prefix-screen, $theme-list-style-type, $variants-list-style-type, $separator);
+    }
+    @if $core-plugins-list-style-position and index($variants-list-style-position, responsive) {
+      @include list-style-position($prefix-screen, $variants-list-style-position, $separator);
+    }
+    @if $core-plugins-text-align and index($variants-text-align, responsive) {
+      @include text-align($prefix-screen, $variants-text-align, $separator);
+    }
+    @if $core-plugins-text-decoration and index($variants-text-decoration, responsive) {
+      @include text-decoration($prefix-screen, $variants-text-decoration, $separator);
+    }
+    @if $core-plugins-text-transform and index($variants-text-transform, responsive) {
+      @include text-transform($prefix-screen, $variants-text-transform, $separator);
+    }
+    @if $core-plugins-text-color and index($variants-text-color, responsive) {
+      @include color($prefix-screen, $theme-text-color, $variants-text-color, $separator);
+    }
+    @if $core-plugins-vertical-align and index($variants-vertical-align, responsive) {
+      @include vertical-align($prefix-screen, $variants-vertical-align, $separator);
+    }
+    @if $core-plugins-white-space and index($variants-white-space, responsive) {
+      @include white-space($prefix-screen, $variants-white-space, $separator);
+    }
+    @if $core-plugins-word-break and index($variants-word-break, responsive) {
+      @include word-break($prefix-screen, $variants-word-break, $separator);
+    }
+
+    // Background
+
+    @if $core-plugins-background-attachment and index($variants-background-attachment, responsive) {
+      @include background-attachment($prefix-screen, $variants-background-attachment);
+    }
+    @if $core-plugins-background-position and index($variants-background-position, responsive) {
+      @include background-position($prefix-screen, $theme-background-position, $variants-background-position, $separator);
+    }
+    @if $core-plugins-background-repeat and index($variants-background-repeat, responsive) {
+      @include background-repeat($prefix-screen, $variants-background-repeat);
+    }
+    @if $core-plugins-background-size and index($variants-background-size, responsive) {
+      @include background-size($prefix-screen, $theme-background-size, $variants-background-size, $separator);
+    }
+    @if $core-plugins-background-color and index($variants-background-color, responsive) {
+      @include background-color($prefix-screen, $theme-background-color, $variants-background-color, $separator);
+    }
+
+    // Border
+
+    @if $core-plugins-border-style and index($variants-border-style, responsive) {
+      @include border-style($prefix-screen, $variants-border-style, $separator);
+    }
+    @if $core-plugins-border-width and index($variants-border-width, responsive) {
+      @include border-width($prefix-screen, $theme-border-width, $variants-border-width, $separator);
+    }
+    @if $core-plugins-border-radius and index($variants-border-radius, responsive) {
+      @include border-radius($prefix-screen, $theme-border-radius, $variants-border-radius, $separator);
+    }
+    @if $core-plugins-border-color and index($variants-border-color, responsive) {
+      @include border-color($prefix-screen, $theme-border-color, $variants-border-color, $separator);
+    }
+    @if $core-plugins-border-collapse and index($variants-border-collapse, responsive) {
+      @include border-collapse($prefix-screen, $variants-border-collapse, $separator);
+    }
+
+    // Flex
+
+    @if $core-plugins-align-items and index($variants-align-items, responsive) {
+      @include align-items($prefix-screen, $variants-align-items, $separator);
+    }
+    @if $core-plugins-align-content and index($variants-align-content, responsive) {
+      @include align-content($prefix-screen, $variants-align-content, $separator);
+    }
+    @if $core-plugins-align-self and index($variants-align-self, responsive) {
+      @include align-self($prefix-screen, $variants-align-self, $separator);
+    }
+    @if $core-plugins-flex and index($variants-flex, responsive) {
+      @include flex($prefix-screen, $theme-flex, $variants-flex, $separator);
+    }
+    @if $core-plugins-flex-direction and index($variants-flex-direction, responsive) {
+      @include flex-direction($prefix-screen, $variants-flex-direction, $separator);
+    }
+    @if $core-plugins-flex-wrap and index($variants-flex-wrap, responsive) {
+      @include flex-wrap($prefix-screen, $variants-flex-wrap, $separator);
+    }
+    @if $core-plugins-flex-grow and index($variants-flex-grow, responsive) {
+      @include flex-grow($prefix-screen, $theme-flex-grow, $variants-flex-grow, $separator);
+    }
+    @if $core-plugins-flex-shrink and index($variants-flex-shrink, responsive) {
+      @include flex-shrink($prefix-screen, $theme-flex-shrink, $variants-flex-shrink, $separator);
+    }
+    @if $core-plugins-justify-content and index($variants-justify-content, responsive) {
+      @include justify-content($prefix-screen, $variants-justify-content, $separator);
+    }
+    @if $core-plugins-order and index($variants-order, responsive) {
+      @include order($prefix-screen, $variants-order, $separator);
+    }
+
+    // Spacing
+
+    @if $core-plugins-margin and index($variants-margin, responsive) {
+      @include margin($prefix-screen, $theme-margin, $variants-margin, $separator);
+    }
+    @if $core-plugins-padding and index($variants-padding, responsive) {
+      @include padding($prefix-screen, $theme-padding, $variants-padding, $separator);
+    }
+
+    // Sizing
+
+    @if $core-plugins-width and index($variants-width, responsive) {
+      @include width($prefix-screen, $theme-width, $variants-width, $separator);
+    }
+    @if $core-plugins-min-width and index($variants-min-width, responsive) {
+      @include min-width($prefix-screen, $theme-min-width, $variants-min-width, $separator);
+    }
+    @if $core-plugins-max-width and index($variants-max-width, responsive) {
+      @include max-width($prefix-screen, $theme-max-width, $variants-max-width, $separator);
+    }
+    @if $core-plugins-height and index($variants-height, responsive) {
+      @include height($prefix-screen, $theme-height, $variants-height, $separator);
+    }
+    @if $core-plugins-min-height and index($variants-min-height, responsive) {
+      @include min-height($prefix-screen, $theme-min-height, $variants-min-height, $separator);
+    }
+    @if $core-plugins-max-height and index($variants-max-height, responsive) {
+      @include max-height($prefix-screen, $theme-max-height, $variants-max-height, $separator);
+    }
+
+    // Tables
+
+    @if $core-plugins-table-layout and index($variants-table-layout, responsive) {
+      @include table-layout($prefix-screen, $variants-table-layout, $separator);
+    }
+
+    // Effects
+
+    @if $core-plugins-box-shadow and index($variants-box-shadow, responsive) {
+      @include box-shadow($prefix-screen, $theme-box-shadow, $variants-box-shadow, $separator);
+    }
+    @if $core-plugins-opacity and index($variants-opacity, responsive) {
+      @include opacity($prefix-screen, $theme-opacity, $variants-opacity, $separator);
+    }
+
+    // Interactivity
+
+    @if $core-plugins-appearance and index($variants-appearance, responsive) {
+      @include appearance($prefix-screen, $variants-appearance, $separator);
+    }
+    @if $core-plugins-cursor and index($variants-cursor, responsive) {
+      @include cursor($prefix-screen, $theme-cursor, $variants-cursor, $separator);
+    }
+    @if $core-plugins-outline and index($variants-outline, responsive) {
+      @include outline($prefix-screen, $variants-outline, $separator);
+    }
+    @if $core-plugins-pointer-events and index($variants-pointer-events, responsive) {
+      @include pointer-events($prefix-screen, $variants-pointer-events, $separator);
+    }
+    @if $core-plugins-resize and index($variants-resize, responsive) {
+      @include resize($prefix-screen, $variants-resize, $separator);
+    }
+    @if $core-plugins-user-select and index($variants-user-select, responsive) {
+      @include user-select($prefix-screen, $variants-user-select, $separator);
+    }
+
+    // SVG
+
+    @if $core-plugins-fill and index($variants-fill, responsive) {
+      @include fill($prefix-screen, $theme-fill, $variants-fill, $separator);
+    }
+    @if $core-plugins-stroke and index($variants-stroke, responsive) {
+      @include stroke($prefix-screen, $theme-stroke, $variants-stroke, $separator);
+    }
+
+  }
+
 }

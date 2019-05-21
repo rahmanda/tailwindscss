@@ -1,6 +1,6 @@
 @import '../helper';
 
-@mixin visibility($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin visibility($prefix, $variants: (), $separator: '_') {
   $map-values: (
     visible: visible,
     invisible: hidden,
@@ -8,5 +8,5 @@
   $map-props: (
     default: visibility,
   );
-  @include style($prefix, '', $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, '', $map-values, $map-props, $variants, $separator);
 }

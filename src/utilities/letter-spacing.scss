@@ -1,8 +1,8 @@
 @import "../helper";
 
-@mixin letter-spacing($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin letter-spacing($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: letter-spacing,
   );
-  @include style($prefix, tracking, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, tracking, $map-values, $map-props, $variants, $separator);
 }

@@ -1,8 +1,8 @@
 @import '../helper';
 
-@mixin fill($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin fill($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: fill,
   );
-  @include style($prefix, fill, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, fill, $map-values, $map-props, $variants, $separator);
 }

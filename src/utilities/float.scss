@@ -1,6 +1,6 @@
 @import '../helper';
 
-@mixin float($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin float($prefix, $variants: (), $separator: '_') {
   $map-values: (
     right: right,
     left: left,
@@ -10,8 +10,8 @@
     default: float,
   );
 
-  @include style($prefix, float, $map-values, $map-props, $screens, $variants, $separator);
-  @include raw-style($prefix, clearfix, $screens, $variants, $separator, '::after') {
+  @include style($prefix, float, $map-values, $map-props, $variants, $separator);
+  @include raw-style($prefix, clearfix, $variants, $separator, '::after') {
     content: "";
     display: table;
     clear: both;

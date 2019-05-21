@@ -1,17 +1,17 @@
 @import "../helper";
 
-@mixin word-break($prefix, $variants: (), $separator: '_', $screens: ()) {
-  @include raw-style($prefix, break-normal, $screens, $variants, $separator) {
+@mixin word-break($prefix, $variants: (), $separator: '_') {
+  @include raw-style($prefix, break-normal, $variants, $separator) {
     word-break: normal;
     overflow-wrap: normal;
   }
-  @include raw-style($prefix, break-words, $screens, $variants, $separator) {
+  @include raw-style($prefix, break-words, $variants, $separator) {
     overflow-wrap: break-word;
   }
-  @include raw-style($prefix, break-all, $screens, $variants, $separator) {
+  @include raw-style($prefix, break-all, $variants, $separator) {
     word-break: normal;
   }
-  @include raw-style($prefix, truncate, $screens, $variants, $separator) {
+  @include raw-style($prefix, truncate, $variants, $separator) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

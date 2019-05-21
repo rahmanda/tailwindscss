@@ -49,32 +49,13 @@
   }
 }
 
-@mixin style-responsive($prefix, $selector, $screens, $variants, $separator, $props, $value) {
-  @each $screen, $breakpoint in $screens {
-    @media (min-width: $breakpoint) {
-      .#{$prefix}#{$screen}#{$separator}#{$selector} {
-        @include prop($props, $value);
-      }
-      @if index($variants, hover) {
-        @include style-pseudo(#{$prefix}#{$screen}#{$separator}, $selector, hover, $separator, $props, $value);
-      }
-      @if index($variants, focus) {
-        @include style-pseudo(#{$prefix}#{$screen}#{$separator}, $selector, focus, $separator, $props, $value);
-      }
-    }
-  }
-}
-
-@mixin style($prefix, $key, $map-values, $map-props, $screens: (), $variants: (), $separator: '_', $separator-key-name: '-') {
+@mixin style($prefix, $key, $map-values, $map-props, $variants: (), $separator: '_', $separator-key-name: '-') {
   @each $name, $props in $map-props {
     @each $unit, $value in $map-values {
       $formatted-selector: format-selector($key, $unit, $name, $separator-key-name);
       $sanitized-value: sanitize-value($value);
       .#{$prefix}#{$formatted-selector} {
         @include prop($props, $sanitized-value);
-      }
-      @if index($variants, responsive) {
-        @include style-responsive($prefix, $formatted-selector, $screens, $variants, $separator, $props, $sanitized-value);
       }
       @if index($variants, hover) {
         @include style-pseudo($prefix, $formatted-selector, hover, $separator, $props, $sanitized-value);
@@ -86,13 +67,13 @@
   }
 }
 
-@mixin style-color($prefix, $name, $colors, $map-props, $screens: (), $variants: (), $separator: '_') {
+@mixin style-color($prefix, $name, $colors, $map-props, $variants: (), $separator: '_') {
   @each $color, $map-values in $colors {
     @if type-of($map-values) == map {
-      @include style($prefix, #{$name}-#{$color}, $map-values, $map-props, $screens, $variants, $separator);
+      @include style($prefix, #{$name}-#{$color}, $map-values, $map-props, $variants, $separator);
     }
     @else {
-      @include style($prefix, $name, ($color: $map-values), $map-props, $screens, $variants, $separator);
+      @include style($prefix, $name, ($color: $map-values), $map-props, $variants, $separator);
     }
   }
 }
@@ -127,34 +108,9 @@
   }
 }
 
-@mixin raw-style-responsive($prefix, $selector, $screens, $variants, $separator, $suffix) {
-  @each $screen, $breakpoint in $screens {
-    @media (min-width: $breakpoint) {
-      .#{$prefix}#{$screen}#{$separator}#{$selector}#{$suffix} {
-        @content;
-      }
-      @if index($variants, hover) {
-        @include raw-style-pseudo(#{$prefix}#{$screen}#{$separator}, $selector, hover, $separator, $suffix) {
-          @content;
-        }
-      }
-      @if index($variants, focus) {
-        @include raw-style-pseudo(#{$prefix}#{$screen}#{$separator}, $selector, focus, $separator, $suffix) {
-          @content;
-        }
-      }
-    }
-  }
-}
-
-@mixin raw-style($prefix, $key, $screens: (), $variants: (), $separator: '_', $suffix: '') {
+@mixin raw-style($prefix, $key, $variants: (), $separator: '_', $suffix: '') {
   .#{$prefix}#{$key}#{$suffix} {
     @content;
-  }
-  @if index($variants, responsive) {
-    @include raw-style-responsive($prefix, $key, $screens, $variants, $separator, $suffix) {
-      @content;
-    }
   }
   @if index($variants, hover) {
     @include raw-style-pseudo($prefix, $key, hover, $separator, $suffix) {

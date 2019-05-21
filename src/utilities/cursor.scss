@@ -1,8 +1,8 @@
 @import '../helper';
 
-@mixin cursor($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin cursor($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: cursor,
   );
-  @include style($prefix, cursor, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, cursor, $map-values, $map-props, $variants, $separator);
 }

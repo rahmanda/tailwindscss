@@ -1,13 +1,13 @@
 @import "../helper";
 
-@mixin flex($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin flex($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: flex,
   );
-  @include style($prefix, flex, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, flex, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin flex-direction($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin flex-direction($prefix, $variants: (), $separator: '_') {
   $map-values: (
     row: row,
     row-reverse: row-reverse,
@@ -17,10 +17,10 @@
   $map-props: (
     default: flex-direction,
   );
-  @include style($prefix, flex, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, flex, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin flex-wrap($prefix, $variants: (), $separator: '_', $screens: ()) {
+@mixin flex-wrap($prefix, $variants: (), $separator: '_') {
   $map-values: (
     no-wrap: nowrap,
     wrap: wrap,
@@ -29,19 +29,19 @@
   $map-props: (
     default: flex-wrap,
   );
-  @include style($prefix, flex, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, flex, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin flex-grow($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin flex-grow($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: flex-grow,
   );
-  @include style($prefix, flex-grow, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, flex-grow, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin flex-shrink($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin flex-shrink($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: flex-shrink,
   );
-  @include style($prefix, flex-shrink, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, flex-shrink, $map-values, $map-props, $variants, $separator);
 }

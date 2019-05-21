@@ -1,25 +1,25 @@
 @import '../helper';
 
-@mixin height($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin height($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: height,
   );
 
-  @include style($prefix, h, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, h, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin min-height($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin min-height($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: min-height,
   );
 
-  @include style($prefix, min-h, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, min-h, $map-values, $map-props, $variants, $separator);
 }
 
-@mixin max-height($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
+@mixin max-height($prefix, $map-values, $variants: (), $separator: '_') {
   $map-props: (
     default: max-height,
   );
 
-  @include style($prefix, max-h, $map-values, $map-props, $screens, $variants, $separator);
+  @include style($prefix, max-h, $map-values, $map-props, $variants, $separator);
 }
