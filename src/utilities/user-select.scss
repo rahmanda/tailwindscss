@@ -1,6 +1,6 @@
 @import '../helper';
 
-@mixin user-select($prefix) {
+@mixin user-select($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     none: none,
     text: text,
@@ -10,5 +10,5 @@
   $map-props: (
     default: user-select,
   );
-  @include style($prefix, select, $map-values, $map-props);
+  @include style($prefix, select, $map-values, $map-props, $screens, $variants, $separator);
 }

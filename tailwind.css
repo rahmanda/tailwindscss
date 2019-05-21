@@ -27010,14 +27010,78 @@ video {
 .select-none {
   user-select: none; }
 
+@media (min-width: 640px) {
+  .sm_select-none {
+    user-select: none; } }
+
+@media (min-width: 768px) {
+  .md_select-none {
+    user-select: none; } }
+
+@media (min-width: 1024px) {
+  .lg_select-none {
+    user-select: none; } }
+
+@media (min-width: 1280px) {
+  .xl_select-none {
+    user-select: none; } }
+
 .select-text {
   user-select: text; }
+
+@media (min-width: 640px) {
+  .sm_select-text {
+    user-select: text; } }
+
+@media (min-width: 768px) {
+  .md_select-text {
+    user-select: text; } }
+
+@media (min-width: 1024px) {
+  .lg_select-text {
+    user-select: text; } }
+
+@media (min-width: 1280px) {
+  .xl_select-text {
+    user-select: text; } }
 
 .select-all {
   user-select: all; }
 
+@media (min-width: 640px) {
+  .sm_select-all {
+    user-select: all; } }
+
+@media (min-width: 768px) {
+  .md_select-all {
+    user-select: all; } }
+
+@media (min-width: 1024px) {
+  .lg_select-all {
+    user-select: all; } }
+
+@media (min-width: 1280px) {
+  .xl_select-all {
+    user-select: all; } }
+
 .select-auto {
   user-select: auto; }
+
+@media (min-width: 640px) {
+  .sm_select-auto {
+    user-select: auto; } }
+
+@media (min-width: 768px) {
+  .md_select-auto {
+    user-select: auto; } }
+
+@media (min-width: 1024px) {
+  .lg_select-auto {
+    user-select: auto; } }
+
+@media (min-width: 1280px) {
+  .xl_select-auto {
+    user-select: auto; } }
 
 .fill-current {
   fill: currentColor; }

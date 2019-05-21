@@ -255,7 +255,7 @@
   @include resize($prefix, $variants-resize, $separator, $theme-screens);
 }
 @if $core-plugins-user-select {
-  @include user-select($prefix);
+  @include user-select($prefix, $variants-user-select, $separator, $theme-screens);
 }
 
 // SVG

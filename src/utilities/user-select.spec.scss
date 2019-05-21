@@ -2,24 +2,97 @@
 @import './user-select';
 
 @include describe('The user-select mixin') {
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output user-select stylesheet correctly') {
     @include assert {
       @include output {
-        @include user-select($prefix);
+        @include user-select($prefix, $variants, $separator, $screens);
       }
       @include expect {
         .select-none {
           user-select: none;
         }
+        @media (min-width: 640px) {
+          .sm_select-none {
+            user-select: none;
+          }
+          .sm_hover_select-none:hover {
+            user-select: none;
+          }
+          .sm_focus_select-none:focus {
+            user-select: none;
+          }
+        }
+        .hover_select-none:hover {
+          user-select: none;
+        }
+        .focus_select-none:focus {
+          user-select: none;
+        }
         .select-text {
+          user-select: text;
+        }
+        @media (min-width: 640px) {
+          .sm_select-text {
+            user-select: text;
+          }
+          .sm_hover_select-text:hover {
+            user-select: text;
+          }
+          .sm_focus_select-text:focus {
+            user-select: text;
+          }
+        }
+        .hover_select-text:hover {
+          user-select: text;
+        }
+        .focus_select-text:focus {
           user-select: text;
         }
         .select-all {
           user-select: all;
         }
+        @media (min-width: 640px) {
+          .sm_select-all {
+            user-select: all;
+          }
+          .sm_hover_select-all:hover {
+            user-select: all;
+          }
+          .sm_focus_select-all:focus {
+            user-select: all;
+          }
+        }
+        .hover_select-all:hover {
+          user-select: all;
+        }
+        .focus_select-all:focus {
+          user-select: all;
+        }
         .select-auto {
+          user-select: auto;
+        }
+        @media (min-width: 640px) {
+          .sm_select-auto {
+            user-select: auto;
+          }
+          .sm_hover_select-auto:hover {
+            user-select: auto;
+          }
+          .sm_focus_select-auto:focus {
+            user-select: auto;
+          }
+        }
+        .hover_select-auto:hover {
+          user-select: auto;
+        }
+        .focus_select-auto:focus {
           user-select: auto;
         }
       }
