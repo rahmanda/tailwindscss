@@ -172,7 +172,7 @@
   @include justify-content($prefix, $variants-justify-content, $separator, $theme-screens);
 }
 @if $core-plugins-order {
-  @include order($prefix);
+  @include order($prefix, $variants-order, $separator, $theme-screens);
 }
 
 // Spacing

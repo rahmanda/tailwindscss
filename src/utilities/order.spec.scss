@@ -2,24 +2,97 @@
 @import './order';
 
 @include describe('The order mixin') {
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output order stylesheet correctly') {
     @include assert {
       @include output {
-        @include order($prefix);
+        @include order($prefix, $variants, $separator, $screens);
       }
       @include expect {
         .order-first {
           order: -1;
         }
+        @media (min-width: 640px) {
+          .sm_order-first {
+            order: -1;
+          }
+          .sm_hover_order-first:hover {
+            order: -1;
+          }
+          .sm_focus_order-first:focus {
+            order: -1;
+          }
+        }
+        .hover_order-first:hover {
+          order: -1;
+        }
+        .focus_order-first:focus {
+          order: -1;
+        }
         .order-last {
+          order: 999;
+        }
+        @media (min-width: 640px) {
+          .sm_order-last {
+            order: 999;
+          }
+          .sm_hover_order-last:hover {
+            order: 999;
+          }
+          .sm_focus_order-last:focus {
+            order: 999;
+          }
+        }
+        .hover_order-last:hover {
+          order: 999;
+        }
+        .focus_order-last:focus {
           order: 999;
         }
         .order-none {
           order: 0;
         }
+        @media (min-width: 640px) {
+          .sm_order-none {
+            order: 0;
+          }
+          .sm_hover_order-none:hover {
+            order: 0;
+          }
+          .sm_focus_order-none:focus {
+            order: 0;
+          }
+        }
+        .hover_order-none:hover {
+          order: 0;
+        }
+        .focus_order-none:focus {
+          order: 0;
+        }
         .order-1 {
+          order: 1;
+        }
+        @media (min-width: 640px) {
+          .sm_order-1 {
+            order: 1;
+          }
+          .sm_hover_order-1:hover {
+            order: 1;
+          }
+          .sm_focus_order-1:focus {
+            order: 1;
+          }
+        }
+        .hover_order-1:hover {
+          order: 1;
+        }
+        .focus_order-1:focus {
           order: 1;
         }
       }
