@@ -267,5 +267,5 @@
   @include fill($prefix, $theme-fill, $variants-fill, $separator, $theme-screens);
 }
 @if $core-plugins-stroke {
-  @include stroke($prefix, $theme-stroke);
+  @include stroke($prefix, $theme-stroke, $variants-stroke, $separator, $theme-screens);
 }

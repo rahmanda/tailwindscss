@@ -23232,3 +23232,19 @@ video {
 
 .stroke-current {
   stroke: currentColor; }
+
+@media (min-width: 640px) {
+  .sm_stroke-current {
+    stroke: currentColor; } }
+
+@media (min-width: 768px) {
+  .md_stroke-current {
+    stroke: currentColor; } }
+
+@media (min-width: 1024px) {
+  .lg_stroke-current {
+    stroke: currentColor; } }
+
+@media (min-width: 1280px) {
+  .xl_stroke-current {
+    stroke: currentColor; } }

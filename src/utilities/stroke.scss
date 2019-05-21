@@ -1,8 +1,8 @@
 @import '../helper';
 
-@mixin stroke($prefix, $map-values) {
+@mixin stroke($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: stroke,
   );
-  @include style($prefix, stroke, $map-values, $map-props);
+  @include style($prefix, stroke, $map-values, $map-props, $screens, $variants, $separator);
 }
