@@ -92,5 +92,5 @@ SCSS does not support several characters like colon (`:`) and backslash (`/`) be
 
 - [ ] important flag
 - [x] responsive
-- [x] pseudo-class (hover and focus)
+- [x] pseudo-class (hover, focus, focus-within, active and group-hover)
 - [x] colors
