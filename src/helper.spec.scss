@@ -243,7 +243,7 @@
       default: margin,
       x: margin-left margin-right,
     );
-    $variants: (responsive, hover, focus, focus-within, active);
+    $variants: (responsive, hover, focus, focus-within, active, group-hover);
     @include assert {
       @include output {
         @include style('', m, $map-values, $map-props, $variants, '_', $separator-key-name: '');
@@ -264,6 +264,9 @@
         .active_m-1:active {
           margin: 0.25rem;
         }
+        .group:hover .group-hover_m-1 {
+          margin: 0.25rem;
+        }
         .-m-1 {
           margin: -0.25rem;
         }
@@ -277,6 +280,9 @@
           margin: -0.25rem;
         }
         .active_-m-1:active {
+          margin: -0.25rem;
+        }
+        .group:hover .group-hover_-m-1 {
           margin: -0.25rem;
         }
         .mx-1 {
@@ -299,6 +305,10 @@
           margin-left: 0.25rem;
           margin-right: 0.25rem;
         }
+        .group:hover .group-hover_mx-1 {
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+        }
         .-mx-1 {
           margin-left: -0.25rem;
           margin-right: -0.25rem;
@@ -316,6 +326,10 @@
           margin-right: -0.25rem;
         }
         .active_-mx-1:active {
+          margin-left: -0.25rem;
+          margin-right: -0.25rem;
+        }
+        .group:hover .group-hover_-mx-1 {
           margin-left: -0.25rem;
           margin-right: -0.25rem;
         }
@@ -375,7 +389,7 @@
         100: #fff5f5,
       ),
     );
-    $variants: (responsive, hover, focus, focus-within, active);
+    $variants: (responsive, hover, focus, focus-within, active, group-hover);
     @include assert {
       @include output {
         @include style-color('', text, $map-values, $map-props, $variants, '_');
@@ -396,6 +410,9 @@
         .active_text-gray-100:active {
           color: #f7fafc;
         }
+        .group:hover .group-hover_text-gray-100 {
+          color: #f7fafc;
+        }
         .text-red-100 {
           color: #fff5f5;
         }
@@ -409,6 +426,9 @@
           color: #fff5f5;
         }
         .active_text-red-100:active {
+          color: #fff5f5;
+        }
+        .group:hover .group-hover_text-red-100 {
           color: #fff5f5;
         }
       }
@@ -480,7 +500,7 @@
     }
   }
   @include it('should render variants style') {
-    $variants: (responsive, hover, focus, focus-within, active);
+    $variants: (responsive, hover, focus, focus-within, active, group-hover);
     $separator: '_';
     @include assert {
       @include output {
@@ -507,6 +527,10 @@
           -moz-osx-font-smoothing: grayscale;
         }
         .active_antialiased:active {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .group:hover .group-hover_antialiased {
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }

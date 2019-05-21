@@ -49,6 +49,12 @@
   }
 }
 
+@mixin style-group-hover($prefix, $selector, $separator, $props, $value) {
+  .#{$prefix}group:hover .#{$prefix}group-hover#{$separator}#{$selector} {
+    @include prop($props, $value);
+  }
+}
+
 @mixin style($prefix, $key, $map-values, $map-props, $variants: (), $separator: '_', $separator-key-name: '-') {
   @each $name, $props in $map-props {
     @each $unit, $value in $map-values {
@@ -68,6 +74,9 @@
       }
       @if index($variants, active) {
         @include style-pseudo($prefix, $formatted-selector, active, $separator, $props, $sanitized-value);
+      }
+      @if index($variants, group-hover) {
+        @include style-group-hover($prefix, $formatted-selector, $separator, $props, $value);
       }
     }
   }
@@ -114,6 +123,12 @@
   }
 }
 
+@mixin raw-style-group-hover($prefix, $selector, $separator: '_', $suffix: '') {
+  .#{$prefix}group:hover .#{$prefix}group-hover#{$separator}#{$selector}#{$suffix} {
+    @content;
+  }
+}
+
 @mixin raw-style($prefix, $key, $variants: (), $separator: '_', $suffix: '') {
   .#{$prefix}#{$key}#{$suffix} {
     @content;
@@ -135,6 +150,11 @@
   }
   @if index($variants, active) {
     @include raw-style-pseudo($prefix, $key, active, $separator, $suffix) {
+      @content;
+    }
+  }
+  @if index($variants, group-hover) {
+    @include raw-style-group-hover($prefix, $key, $separator, $suffix) {
       @content;
     }
   }
