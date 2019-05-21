@@ -15,12 +15,7 @@
   @include style($prefix, '', $map-values, $map-props);
 }
 
-@mixin position-direction($prefix) {
-  $map-values: (
-    0: 0,
-    auto: auto,
-  );
-
+@mixin inset($prefix, $map-values) {
   $map-props: (
     inset: top right bottom left,
     inset-x: right left,

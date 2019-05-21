@@ -31,13 +31,17 @@
 
 }
 
-@include describe('The position-direction mixin') {
+@include describe('The inset mixin') {
+  $theme-inset: (
+    0: 0,
+    auto: auto,
+  );
   $prefix: '';
 
-  @include it('should output position\'s direction stylesheet correctly') {
+  @include it('should output inset stylesheet correctly') {
     @include assert {
       @include output {
-        @include position-direction($prefix);
+        @include inset($prefix, $theme-inset);
       }
 
       @include expect {

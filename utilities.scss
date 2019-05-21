@@ -10,15 +10,33 @@
 @import './src/utilities/visibility';
 @import './src/utilities/z-index';
 
-@include display($prefix);
-@include float($prefix);
-@include object-fit($prefix);
-@include object-position($prefix, $theme-object-position);
-@include overflow($prefix);
-@include position($prefix);
-@include position-direction($prefix);
-@include visibility($prefix);
-@include z-index($prefix, $theme-z-index);
+@if $core-plugins-display {
+  @include display($prefix);
+}
+@if $core-plugins-float {
+  @include float($prefix);
+}
+@if $core-plugins-object-fit {
+  @include object-fit($prefix);
+}
+@if $core-plugins-object-position {
+  @include object-position($prefix, $theme-object-position);
+}
+@if $core-plugins-overflow {
+  @include overflow($prefix);
+}
+@if $core-plugins-position {
+  @include position($prefix);
+}
+@if $core-plugins-inset {
+  @include inset($prefix, $theme-inset);
+}
+@if $core-plugins-visibility {
+  @include visibility($prefix);
+}
+@if $core-plugins-z-index {
+  @include z-index($prefix, $theme-z-index);
+}
 
 
 // Typography
@@ -32,42 +50,92 @@
 @import './src/utilities/white-space';
 @import './src/utilities/word-break';
 
-@include font-family($prefix, $theme-font-family);
-@include font-size($prefix, $theme-font-size);
-@include font-smoothing($prefix);
-@include font-style($prefix);
-@include font-weight($prefix, $theme-font-weight);
-@include letter-spacing($prefix, $theme-letter-spacing);
-@include line-height($prefix, $theme-line-height);
-@include list-style-type($prefix, $theme-list-style-type);
-@include list-style-position($prefix);
-@include text-align($prefix);
-@include text-decoration($prefix);
-@include text-transform($prefix);
-@include color($prefix, $theme-colors);
-@include white-space($prefix);
-@include word-break($prefix);
+@if $core-plugins-font-family {
+  @include font-family($prefix, $theme-font-family);
+}
+@if $core-plugins-font-size {
+  @include font-size($prefix, $theme-font-size);
+}
+@if $core-plugins-font-smoothing {
+  @include font-smoothing($prefix);
+}
+@if $core-plugins-font-style {
+  @include font-style($prefix);
+}
+@if $core-plugins-font-weight {
+  @include font-weight($prefix, $theme-font-weight);
+}
+@if $core-plugins-letter-spacing {
+  @include letter-spacing($prefix, $theme-letter-spacing);
+}
+@if $core-plugins-line-height {
+  @include line-height($prefix, $theme-line-height);
+}
+@if $core-plugins-list-style-type {
+  @include list-style-type($prefix, $theme-list-style-type);
+}
+@if $core-plugins-list-style-position {
+  @include list-style-position($prefix);
+}
+@if $core-plugins-text-align {
+  @include text-align($prefix);
+}
+@if $core-plugins-text-decoration {
+  @include text-decoration($prefix);
+}
+@if $core-plugins-text-transform {
+  @include text-transform($prefix);
+}
+@if $core-plugins-text-color {
+  @include color($prefix, $theme-text-color);
+}
+@if $core-plugins-white-space {
+  @include white-space($prefix);
+}
+@if $core-plugins-word-break {
+  @include word-break($prefix);
+}
 
 // Background
 
 @import './src/utilities/background';
 
-@include background-attachment($prefix);
-@include background-position($prefix, $theme-background-position, $variants-background-position, $separator, $theme-screens);
-@include background-repeat($prefix);
-@include background-size($prefix, $theme-background-size, $variants-background-size, $separator, $theme-screens);
-@include background-color($prefix, $theme-background-color, $variants-background-color, $separator, $theme-screens);
+@if $core-plugins-background-attachment {
+  @include background-attachment($prefix);
+}
+@if $core-plugins-background-position {
+  @include background-position($prefix, $theme-background-position, $variants-background-position, $separator, $theme-screens);
+}
+@if $core-plugins-background-repeat {
+  @include background-repeat($prefix);
+}
+@if $core-plugins-background-size {
+  @include background-size($prefix, $theme-background-size, $variants-background-size, $separator, $theme-screens);
+}
+@if $core-plugins-background-color {
+  @include background-color($prefix, $theme-background-color, $variants-background-color, $separator, $theme-screens);
+}
 
 
 // Border
 
 @import './src/utilities/border';
 
-@include border-style($prefix, $variants-border-style, $separator, $theme-screens);
-@include border-width($prefix, $theme-border-width, $variants-border-width, $separator, $theme-screens);
-@include border-radius($prefix, $theme-border-radius, $variants-border-radius, $separator, $theme-screens);
-@include border-color($prefix, $theme-border-color, $variants-border-color, $separator, $theme-screens);
-@include border-collapse($prefix, $variants-border-collapse, $separator, $theme-screens);
+@if $core-plugins-border-style {
+  @include border-style($prefix, $variants-border-style, $separator, $theme-screens);
+}
+@if $core-plugins-border-width {
+  @include border-width($prefix, $theme-border-width, $variants-border-width, $separator, $theme-screens);
+}
+@if $core-plugins-border-radius {
+  @include border-radius($prefix, $theme-border-radius, $variants-border-radius, $separator, $theme-screens);
+}
+@if $core-plugins-border-color {
+  @include border-color($prefix, $theme-border-color, $variants-border-color, $separator, $theme-screens);
+}
+@if $core-plugins-border-collapse {
+  @include border-collapse($prefix, $variants-border-collapse, $separator, $theme-screens);
+}
 
 // Flex
 
@@ -76,49 +144,91 @@
 @import './src/utilities/justify-content';
 @import './src/utilities/order';
 
-@include align-items($prefix);
-@include align-content($prefix);
-@include align-self($prefix);
-@include flex($prefix, $theme-flex);
-@include flex-direction($prefix);
-@include flex-wrap($prefix);
-@include flex-grow($prefix, $theme-flex-grow);
-@include flex-shrink($prefix, $theme-flex-shrink);
-@include justify-content($prefix);
-@include order($prefix);
+@if $core-plugins-align-items {
+  @include align-items($prefix);
+}
+@if $core-plugins-align-content {
+  @include align-content($prefix);
+}
+@if $core-plugins-align-self {
+  @include align-self($prefix);
+}
+@if $core-plugins-flex {
+  @include flex($prefix, $theme-flex);
+}
+@if $core-plugins-flex-direction {
+  @include flex-direction($prefix);
+}
+@if $core-plugins-flex-wrap {
+  @include flex-wrap($prefix);
+}
+@if $core-plugins-flex-grow {
+  @include flex-grow($prefix, $theme-flex-grow);
+}
+@if $core-plugins-flex-shrink {
+  @include flex-shrink($prefix, $theme-flex-shrink);
+}
+@if $core-plugins-justify-content {
+  @include justify-content($prefix);
+}
+@if $core-plugins-order {
+  @include order($prefix);
+}
 
 // Spacing
 
 @import './src/utilities/spacing';
 
-@include margin($prefix, $theme-margin);
-@include padding($prefix, $theme-padding);
+@if $core-plugins-margin {
+  @include margin($prefix, $theme-margin);
+}
+@if $core-plugins-padding {
+  @include padding($prefix, $theme-padding);
+}
 
 // Sizing
 
 @import './src/utilities/width';
 @import './src/utilities/height';
 
-@include width($prefix, $theme-width);
-@include min-width($prefix, $theme-min-width);
-@include max-width($prefix, $theme-max-width);
-@include height($prefix, $theme-height);
-@include min-height($prefix, $theme-min-height);
-@include max-height($prefix, $theme-max-height);
+@if $core-plugins-width {
+  @include width($prefix, $theme-width);
+}
+@if $core-plugins-min-width {
+  @include min-width($prefix, $theme-min-width);
+}
+@if $core-plugins-max-width {
+  @include max-width($prefix, $theme-max-width);
+}
+@if $core-plugins-height {
+  @include height($prefix, $theme-height);
+}
+@if $core-plugins-min-height {
+  @include min-height($prefix, $theme-min-height);
+}
+@if $core-plugins-max-height {
+  @include max-height($prefix, $theme-max-height);
+}
 
 // Tables
 
 @import './src/utilities/table';
 
-@include table-layout($prefix);
+@if $core-plugins-table-layout {
+  @include table-layout($prefix);
+}
 
 // Effects
 
 @import './src/utilities/box-shadow';
 @import './src/utilities/opacity';
 
-@include box-shadow($prefix, $theme-box-shadow, $variants-box-shadow, $separator, $theme-screens);
-@include opacity($prefix, $theme-opacity);
+@if $core-plugins-box-shadow {
+  @include box-shadow($prefix, $theme-box-shadow, $variants-box-shadow, $separator, $theme-screens);
+}
+@if $core-plugins-opacity {
+  @include opacity($prefix, $theme-opacity);
+}
 
 // Interactivity
 
@@ -129,17 +239,33 @@
 @import './src/utilities/resize';
 @import './src/utilities/user-select';
 
-@include appearance($prefix, $variants-appearance, $separator, $theme-screens);
-@include cursor($prefix, $theme-cursor);
-@include outline($prefix);
-@include pointer-events($prefix);
-@include resize($prefix);
-@include user-select($prefix);
+@if $core-plugins-appearance {
+  @include appearance($prefix, $variants-appearance, $separator, $theme-screens);
+}
+@if $core-plugins-cursor {
+  @include cursor($prefix, $theme-cursor);
+}
+@if $core-plugins-outline {
+  @include outline($prefix);
+}
+@if $core-plugins-pointer-events {
+  @include pointer-events($prefix);
+}
+@if $core-plugins-resize {
+  @include resize($prefix);
+}
+@if $core-plugins-user-select {
+  @include user-select($prefix);
+}
 
 // SVG
 
 @import './src/utilities/fill';
 @import './src/utilities/stroke';
 
-@include fill($prefix, $theme-fill);
-@include stroke($prefix, $theme-stroke);
+@if $core-plugins-fill {
+  @include fill($prefix, $theme-fill);
+}
+@if $core-plugins-stroke {
+  @include stroke($prefix, $theme-stroke);
+}
