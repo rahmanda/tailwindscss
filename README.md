@@ -86,7 +86,7 @@ Sass do not support several characters like ':' and '/' because it will always b
 
 ## TODO
 
-- [] important flag
+- [ ] important flag
 - [x] responsive
 - [x] pseudo-class (hover and focus)
 - [x] colors
