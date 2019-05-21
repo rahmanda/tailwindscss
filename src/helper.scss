@@ -63,6 +63,12 @@
       @if index($variants, focus) {
         @include style-pseudo($prefix, $formatted-selector, focus, $separator, $props, $sanitized-value);
       }
+      @if index($variants, focus-within) {
+        @include style-pseudo($prefix, $formatted-selector, focus-within, $separator, $props, $sanitized-value);
+      }
+      @if index($variants, active) {
+        @include style-pseudo($prefix, $formatted-selector, active, $separator, $props, $sanitized-value);
+      }
     }
   }
 }
@@ -119,6 +125,16 @@
   }
   @if index($variants, focus) {
     @include raw-style-pseudo($prefix, $key, focus, $separator, $suffix) {
+      @content;
+    }
+  }
+  @if index($variants, focus-within) {
+    @include raw-style-pseudo($prefix, $key, focus-within, $separator, $suffix) {
+      @content;
+    }
+  }
+  @if index($variants, active) {
+    @include raw-style-pseudo($prefix, $key, active, $separator, $suffix) {
       @content;
     }
   }

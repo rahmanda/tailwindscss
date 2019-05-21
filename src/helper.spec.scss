@@ -243,7 +243,7 @@
       default: margin,
       x: margin-left margin-right,
     );
-    $variants: (responsive, hover, focus);
+    $variants: (responsive, hover, focus, focus-within, active);
     @include assert {
       @include output {
         @include style('', m, $map-values, $map-props, $variants, '_', $separator-key-name: '');
@@ -258,6 +258,12 @@
         .focus_m-1:focus {
           margin: 0.25rem;
         }
+        .focus-within_m-1:focus-within {
+          margin: 0.25rem;
+        }
+        .active_m-1:active {
+          margin: 0.25rem;
+        }
         .-m-1 {
           margin: -0.25rem;
         }
@@ -265,6 +271,12 @@
           margin: -0.25rem;
         }
         .focus_-m-1:focus {
+          margin: -0.25rem;
+        }
+        .focus-within_-m-1:focus-within {
+          margin: -0.25rem;
+        }
+        .active_-m-1:active {
           margin: -0.25rem;
         }
         .mx-1 {
@@ -279,6 +291,14 @@
           margin-left: 0.25rem;
           margin-right: 0.25rem;
         }
+        .focus-within_mx-1:focus-within {
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+        }
+        .active_mx-1:active {
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+        }
         .-mx-1 {
           margin-left: -0.25rem;
           margin-right: -0.25rem;
@@ -288,6 +308,14 @@
           margin-right: -0.25rem;
         }
         .focus_-mx-1:focus {
+          margin-left: -0.25rem;
+          margin-right: -0.25rem;
+        }
+        .focus-within_-mx-1:focus-within {
+          margin-left: -0.25rem;
+          margin-right: -0.25rem;
+        }
+        .active_-mx-1:active {
           margin-left: -0.25rem;
           margin-right: -0.25rem;
         }
@@ -347,7 +375,7 @@
         100: #fff5f5,
       ),
     );
-    $variants: (responsive, hover, focus);
+    $variants: (responsive, hover, focus, focus-within, active);
     @include assert {
       @include output {
         @include style-color('', text, $map-values, $map-props, $variants, '_');
@@ -362,6 +390,12 @@
         .focus_text-gray-100:focus {
           color: #f7fafc;
         }
+        .focus-within_text-gray-100:focus-within {
+          color: #f7fafc;
+        }
+        .active_text-gray-100:active {
+          color: #f7fafc;
+        }
         .text-red-100 {
           color: #fff5f5;
         }
@@ -369,6 +403,12 @@
           color: #fff5f5;
         }
         .focus_text-red-100:focus {
+          color: #fff5f5;
+        }
+        .focus-within_text-red-100:focus-within {
+          color: #fff5f5;
+        }
+        .active_text-red-100:active {
           color: #fff5f5;
         }
       }
@@ -440,7 +480,7 @@
     }
   }
   @include it('should render variants style') {
-    $variants: (responsive, hover, focus);
+    $variants: (responsive, hover, focus, focus-within, active);
     $separator: '_';
     @include assert {
       @include output {
@@ -459,6 +499,14 @@
           -moz-osx-font-smoothing: grayscale;
         }
         .focus_antialiased:focus {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .focus-within_antialiased:focus-within {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .active_antialiased:active {
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
