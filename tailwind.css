@@ -15682,6 +15682,33 @@ video {
 .outline-none {
   outline: 0; }
 
+@media (min-width: 640px) {
+  .sm_outline-none {
+    outline: 0; }
+  .sm_focus_outline-none:focus {
+    outline: 0; } }
+
+@media (min-width: 768px) {
+  .md_outline-none {
+    outline: 0; }
+  .md_focus_outline-none:focus {
+    outline: 0; } }
+
+@media (min-width: 1024px) {
+  .lg_outline-none {
+    outline: 0; }
+  .lg_focus_outline-none:focus {
+    outline: 0; } }
+
+@media (min-width: 1280px) {
+  .xl_outline-none {
+    outline: 0; }
+  .xl_focus_outline-none:focus {
+    outline: 0; } }
+
+.focus_outline-none:focus {
+  outline: 0; }
+
 .pointer-events-none {
   pointer-events: none; }
 

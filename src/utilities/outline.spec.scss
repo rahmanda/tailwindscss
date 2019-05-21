@@ -2,15 +2,37 @@
 @import './outline';
 
 @include describe('The outline mixin') {
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output outline stylesheet correctly') {
     @include assert {
       @include output {
-        @include outline($prefix);
+        @include outline($prefix, $variants, $separator, $screens);
       }
       @include expect {
         .outline-none {
+          outline: 0;
+        }
+        @media (min-width: 640px) {
+          .sm_outline-none {
+            outline: 0;
+          }
+          .sm_hover_outline-none:hover {
+            outline: 0;
+          }
+          .sm_focus_outline-none:focus {
+            outline: 0;
+          }
+        }
+        .hover_outline-none:hover {
+          outline: 0;
+        }
+        .focus_outline-none:focus {
           outline: 0;
         }
       }

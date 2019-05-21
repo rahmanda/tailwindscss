@@ -1,6 +1,6 @@
 @import '../helper';
 
-@mixin outline($prefix) {
+@mixin outline($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     none: 0,
   );
@@ -8,5 +8,5 @@
     default: outline,
   );
 
-  @include style($prefix, outline, $map-values, $map-props);
+  @include style($prefix, outline, $map-values, $map-props, $screens, $variants, $separator);
 }
