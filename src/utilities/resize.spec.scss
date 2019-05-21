@@ -2,24 +2,97 @@
 @import './resize';
 
 @include describe('The resize mixin') {
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output resize stylesheet correctly') {
     @include assert {
       @include output {
-        @include resize($prefix);
+        @include resize($prefix, $variants, $separator, $screens);
       }
       @include expect {
         .resize {
           resize: both;
         }
+        @media (min-width: 640px) {
+          .sm_resize {
+            resize: both;
+          }
+          .sm_hover_resize:hover {
+            resize: both;
+          }
+          .sm_focus_resize:focus {
+            resize: both;
+          }
+        }
+        .hover_resize:hover {
+          resize: both;
+        }
+        .focus_resize:focus {
+          resize: both;
+        }
         .resize-none {
+          resize: none;
+        }
+        @media (min-width: 640px) {
+          .sm_resize-none {
+            resize: none;
+          }
+          .sm_hover_resize-none:hover {
+            resize: none;
+          }
+          .sm_focus_resize-none:focus {
+            resize: none;
+          }
+        }
+        .hover_resize-none:hover {
+          resize: none;
+        }
+        .focus_resize-none:focus {
           resize: none;
         }
         .resize-y {
           resize: vertical;
         }
+        @media (min-width: 640px) {
+          .sm_resize-y {
+            resize: vertical;
+          }
+          .sm_hover_resize-y:hover {
+            resize: vertical;
+          }
+          .sm_focus_resize-y:focus {
+            resize: vertical;
+          }
+        }
+        .hover_resize-y:hover {
+          resize: vertical;
+        }
+        .focus_resize-y:focus {
+          resize: vertical;
+        }
         .resize-x {
+          resize: horizontal;
+        }
+        @media (min-width: 640px) {
+          .sm_resize-x {
+            resize: horizontal;
+          }
+          .sm_hover_resize-x:hover {
+            resize: horizontal;
+          }
+          .sm_focus_resize-x:focus {
+            resize: horizontal;
+          }
+        }
+        .hover_resize-x:hover {
+          resize: horizontal;
+        }
+        .focus_resize-x:focus {
           resize: horizontal;
         }
       }

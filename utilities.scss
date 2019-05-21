@@ -26,10 +26,10 @@
   @include overflow($prefix, $variants-overflow, $separator, $theme-screens);
 }
 @if $core-plugins-position {
-  @include position($prefix);
+  @include position($prefix, $variants-position, $separator, $theme-screens);
 }
 @if $core-plugins-inset {
-  @include inset($prefix, $theme-inset);
+  @include inset($prefix, $theme-inset, $variants-inset, $separator, $theme-screens);
 }
 @if $core-plugins-visibility {
   @include visibility($prefix);
@@ -252,7 +252,7 @@
   @include pointer-events($prefix, $variants-pointer-events, $separator, $theme-screens);
 }
 @if $core-plugins-resize {
-  @include resize($prefix);
+  @include resize($prefix, $variants-resize, $separator, $theme-screens);
 }
 @if $core-plugins-user-select {
   @include user-select($prefix);

@@ -1,6 +1,6 @@
 @import '../helper';
 
-@mixin resize($prefix) {
+@mixin resize($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     default: both,
     none: none,
@@ -10,5 +10,5 @@
   $map-props: (
     default: resize,
   );
-  @include style($prefix, resize, $map-values, $map-props);
+  @include style($prefix, resize, $map-values, $map-props, $screens, $variants, $separator);
 }

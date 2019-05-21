@@ -1,6 +1,6 @@
 @import "../helper";
 
-@mixin position($prefix) {
+@mixin position($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     static: static,
     fixed: fixed,
@@ -12,10 +12,10 @@
     default: position,
   );
 
-  @include style($prefix, '', $map-values, $map-props);
+  @include style($prefix, '', $map-values, $map-props, $screens, $variants, $separator);
 }
 
-@mixin inset($prefix, $map-values) {
+@mixin inset($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     inset: top right bottom left,
     inset-x: right left,
@@ -26,5 +26,5 @@
     left: left,
   );
 
-  @include style($prefix, '', $map-values, $map-props);
+  @include style($prefix, '', $map-values, $map-props, $screens, $variants, $separator);
 }

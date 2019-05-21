@@ -1265,17 +1265,97 @@ video {
 .static {
   position: static; }
 
+@media (min-width: 640px) {
+  .sm_static {
+    position: static; } }
+
+@media (min-width: 768px) {
+  .md_static {
+    position: static; } }
+
+@media (min-width: 1024px) {
+  .lg_static {
+    position: static; } }
+
+@media (min-width: 1280px) {
+  .xl_static {
+    position: static; } }
+
 .fixed {
   position: fixed; }
+
+@media (min-width: 640px) {
+  .sm_fixed {
+    position: fixed; } }
+
+@media (min-width: 768px) {
+  .md_fixed {
+    position: fixed; } }
+
+@media (min-width: 1024px) {
+  .lg_fixed {
+    position: fixed; } }
+
+@media (min-width: 1280px) {
+  .xl_fixed {
+    position: fixed; } }
 
 .absolute {
   position: absolute; }
 
+@media (min-width: 640px) {
+  .sm_absolute {
+    position: absolute; } }
+
+@media (min-width: 768px) {
+  .md_absolute {
+    position: absolute; } }
+
+@media (min-width: 1024px) {
+  .lg_absolute {
+    position: absolute; } }
+
+@media (min-width: 1280px) {
+  .xl_absolute {
+    position: absolute; } }
+
 .relative {
   position: relative; }
 
+@media (min-width: 640px) {
+  .sm_relative {
+    position: relative; } }
+
+@media (min-width: 768px) {
+  .md_relative {
+    position: relative; } }
+
+@media (min-width: 1024px) {
+  .lg_relative {
+    position: relative; } }
+
+@media (min-width: 1280px) {
+  .xl_relative {
+    position: relative; } }
+
 .sticky {
   position: sticky; }
+
+@media (min-width: 640px) {
+  .sm_sticky {
+    position: sticky; } }
+
+@media (min-width: 768px) {
+  .md_sticky {
+    position: sticky; } }
+
+@media (min-width: 1024px) {
+  .lg_sticky {
+    position: sticky; } }
+
+@media (min-width: 1280px) {
+  .xl_sticky {
+    position: sticky; } }
 
 .inset-0 {
   top: 0;
@@ -1283,51 +1363,315 @@ video {
   bottom: 0;
   left: 0; }
 
+@media (min-width: 640px) {
+  .sm_inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; } }
+
+@media (min-width: 768px) {
+  .md_inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; } }
+
+@media (min-width: 1024px) {
+  .lg_inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; } }
+
+@media (min-width: 1280px) {
+  .xl_inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; } }
+
 .inset-auto {
   top: auto;
   right: auto;
   bottom: auto;
   left: auto; }
 
+@media (min-width: 640px) {
+  .sm_inset-auto {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto; } }
+
+@media (min-width: 768px) {
+  .md_inset-auto {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto; } }
+
+@media (min-width: 1024px) {
+  .lg_inset-auto {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto; } }
+
+@media (min-width: 1280px) {
+  .xl_inset-auto {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto; } }
+
 .inset-x-0 {
   right: 0;
   left: 0; }
+
+@media (min-width: 640px) {
+  .sm_inset-x-0 {
+    right: 0;
+    left: 0; } }
+
+@media (min-width: 768px) {
+  .md_inset-x-0 {
+    right: 0;
+    left: 0; } }
+
+@media (min-width: 1024px) {
+  .lg_inset-x-0 {
+    right: 0;
+    left: 0; } }
+
+@media (min-width: 1280px) {
+  .xl_inset-x-0 {
+    right: 0;
+    left: 0; } }
 
 .inset-x-auto {
   right: auto;
   left: auto; }
 
+@media (min-width: 640px) {
+  .sm_inset-x-auto {
+    right: auto;
+    left: auto; } }
+
+@media (min-width: 768px) {
+  .md_inset-x-auto {
+    right: auto;
+    left: auto; } }
+
+@media (min-width: 1024px) {
+  .lg_inset-x-auto {
+    right: auto;
+    left: auto; } }
+
+@media (min-width: 1280px) {
+  .xl_inset-x-auto {
+    right: auto;
+    left: auto; } }
+
 .inset-y-0 {
   top: 0;
   bottom: 0; }
+
+@media (min-width: 640px) {
+  .sm_inset-y-0 {
+    top: 0;
+    bottom: 0; } }
+
+@media (min-width: 768px) {
+  .md_inset-y-0 {
+    top: 0;
+    bottom: 0; } }
+
+@media (min-width: 1024px) {
+  .lg_inset-y-0 {
+    top: 0;
+    bottom: 0; } }
+
+@media (min-width: 1280px) {
+  .xl_inset-y-0 {
+    top: 0;
+    bottom: 0; } }
 
 .inset-y-auto {
   top: auto;
   bottom: auto; }
 
+@media (min-width: 640px) {
+  .sm_inset-y-auto {
+    top: auto;
+    bottom: auto; } }
+
+@media (min-width: 768px) {
+  .md_inset-y-auto {
+    top: auto;
+    bottom: auto; } }
+
+@media (min-width: 1024px) {
+  .lg_inset-y-auto {
+    top: auto;
+    bottom: auto; } }
+
+@media (min-width: 1280px) {
+  .xl_inset-y-auto {
+    top: auto;
+    bottom: auto; } }
+
 .top-0 {
   top: 0; }
+
+@media (min-width: 640px) {
+  .sm_top-0 {
+    top: 0; } }
+
+@media (min-width: 768px) {
+  .md_top-0 {
+    top: 0; } }
+
+@media (min-width: 1024px) {
+  .lg_top-0 {
+    top: 0; } }
+
+@media (min-width: 1280px) {
+  .xl_top-0 {
+    top: 0; } }
 
 .top-auto {
   top: auto; }
 
+@media (min-width: 640px) {
+  .sm_top-auto {
+    top: auto; } }
+
+@media (min-width: 768px) {
+  .md_top-auto {
+    top: auto; } }
+
+@media (min-width: 1024px) {
+  .lg_top-auto {
+    top: auto; } }
+
+@media (min-width: 1280px) {
+  .xl_top-auto {
+    top: auto; } }
+
 .right-0 {
   right: 0; }
+
+@media (min-width: 640px) {
+  .sm_right-0 {
+    right: 0; } }
+
+@media (min-width: 768px) {
+  .md_right-0 {
+    right: 0; } }
+
+@media (min-width: 1024px) {
+  .lg_right-0 {
+    right: 0; } }
+
+@media (min-width: 1280px) {
+  .xl_right-0 {
+    right: 0; } }
 
 .right-auto {
   right: auto; }
 
+@media (min-width: 640px) {
+  .sm_right-auto {
+    right: auto; } }
+
+@media (min-width: 768px) {
+  .md_right-auto {
+    right: auto; } }
+
+@media (min-width: 1024px) {
+  .lg_right-auto {
+    right: auto; } }
+
+@media (min-width: 1280px) {
+  .xl_right-auto {
+    right: auto; } }
+
 .bottom-0 {
   bottom: 0; }
+
+@media (min-width: 640px) {
+  .sm_bottom-0 {
+    bottom: 0; } }
+
+@media (min-width: 768px) {
+  .md_bottom-0 {
+    bottom: 0; } }
+
+@media (min-width: 1024px) {
+  .lg_bottom-0 {
+    bottom: 0; } }
+
+@media (min-width: 1280px) {
+  .xl_bottom-0 {
+    bottom: 0; } }
 
 .bottom-auto {
   bottom: auto; }
 
+@media (min-width: 640px) {
+  .sm_bottom-auto {
+    bottom: auto; } }
+
+@media (min-width: 768px) {
+  .md_bottom-auto {
+    bottom: auto; } }
+
+@media (min-width: 1024px) {
+  .lg_bottom-auto {
+    bottom: auto; } }
+
+@media (min-width: 1280px) {
+  .xl_bottom-auto {
+    bottom: auto; } }
+
 .left-0 {
   left: 0; }
 
+@media (min-width: 640px) {
+  .sm_left-0 {
+    left: 0; } }
+
+@media (min-width: 768px) {
+  .md_left-0 {
+    left: 0; } }
+
+@media (min-width: 1024px) {
+  .lg_left-0 {
+    left: 0; } }
+
+@media (min-width: 1280px) {
+  .xl_left-0 {
+    left: 0; } }
+
 .left-auto {
   left: auto; }
+
+@media (min-width: 640px) {
+  .sm_left-auto {
+    left: auto; } }
+
+@media (min-width: 768px) {
+  .md_left-auto {
+    left: auto; } }
+
+@media (min-width: 1024px) {
+  .lg_left-auto {
+    left: auto; } }
+
+@media (min-width: 1280px) {
+  .xl_left-auto {
+    left: auto; } }
 
 .visible {
   visibility: visible; }
@@ -15942,14 +16286,78 @@ video {
 .resize {
   resize: both; }
 
+@media (min-width: 640px) {
+  .sm_resize {
+    resize: both; } }
+
+@media (min-width: 768px) {
+  .md_resize {
+    resize: both; } }
+
+@media (min-width: 1024px) {
+  .lg_resize {
+    resize: both; } }
+
+@media (min-width: 1280px) {
+  .xl_resize {
+    resize: both; } }
+
 .resize-none {
   resize: none; }
+
+@media (min-width: 640px) {
+  .sm_resize-none {
+    resize: none; } }
+
+@media (min-width: 768px) {
+  .md_resize-none {
+    resize: none; } }
+
+@media (min-width: 1024px) {
+  .lg_resize-none {
+    resize: none; } }
+
+@media (min-width: 1280px) {
+  .xl_resize-none {
+    resize: none; } }
 
 .resize-y {
   resize: vertical; }
 
+@media (min-width: 640px) {
+  .sm_resize-y {
+    resize: vertical; } }
+
+@media (min-width: 768px) {
+  .md_resize-y {
+    resize: vertical; } }
+
+@media (min-width: 1024px) {
+  .lg_resize-y {
+    resize: vertical; } }
+
+@media (min-width: 1280px) {
+  .xl_resize-y {
+    resize: vertical; } }
+
 .resize-x {
   resize: horizontal; }
+
+@media (min-width: 640px) {
+  .sm_resize-x {
+    resize: horizontal; } }
+
+@media (min-width: 768px) {
+  .md_resize-x {
+    resize: horizontal; } }
+
+@media (min-width: 1024px) {
+  .lg_resize-x {
+    resize: horizontal; } }
+
+@media (min-width: 1280px) {
+  .xl_resize-x {
+    resize: horizontal; } }
 
 .select-none {
   user-select: none; }
