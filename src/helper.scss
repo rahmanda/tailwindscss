@@ -112,7 +112,7 @@
   @if type-of($map-values) == map {
     $values: ();
     @each $key, $value in $map-values {
-      $new-key: "#{negative($key)}";
+      $new-key: negative($key);
       $new-value: negative($value);
       $values: map-merge($values, ($new-key: $new-value));
     }

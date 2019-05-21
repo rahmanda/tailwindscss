@@ -549,10 +549,10 @@
     );
     $received-output: negative-map($input);
     $expected-output: (
-      '-px': -1px,
-      '1': 0.25rem,
-      '-2': -0.5rem,
-      '-auto': -auto,
+      -px: -1px,
+      1: 0.25rem,
+      -2: -0.5rem,
+      -auto: -auto,
     );
     @include assert-equal($received-output, $expected-output);
   }
