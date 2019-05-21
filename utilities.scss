@@ -243,7 +243,7 @@
   @include appearance($prefix, $variants-appearance, $separator, $theme-screens);
 }
 @if $core-plugins-cursor {
-  @include cursor($prefix, $theme-cursor);
+  @include cursor($prefix, $theme-cursor, $variants-cursor, $separator, $theme-screens);
 }
 @if $core-plugins-outline {
   @include outline($prefix);

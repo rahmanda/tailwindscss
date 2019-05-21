@@ -7,21 +7,111 @@
     default: default,
     pointer: pointer,
   );
+  $screens: (
+    sm: 640px,
+    md: 768px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output cursor stylesheet correctly') {
     @include assert {
       @include output {
-        @include cursor($prefix, $theme-cursor);
+        @include cursor($prefix, $theme-cursor, $variants, $separator, $screens);
       }
       @include expect {
         .cursor-auto {
           cursor: auto;
         }
+        @media (min-width: 640px) {
+          .sm_cursor-auto {
+            cursor: auto;
+          }
+          .sm_hover_cursor-auto:hover {
+            cursor: auto;
+          }
+          .sm_focus_cursor-auto:focus {
+            cursor: auto;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_cursor-auto {
+            cursor: auto;
+          }
+          .md_hover_cursor-auto:hover {
+            cursor: auto;
+          }
+          .md_focus_cursor-auto:focus {
+            cursor: auto;
+          }
+        }
+        .hover_cursor-auto:hover {
+          cursor: auto;
+        }
+        .focus_cursor-auto:focus {
+          cursor: auto;
+        }
         .cursor {
           cursor: default;
         }
+        @media (min-width: 640px) {
+          .sm_cursor {
+            cursor: default;
+          }
+          .sm_hover_cursor:hover {
+            cursor: default;
+          }
+          .sm_focus_cursor:focus {
+            cursor: default;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_cursor {
+            cursor: default;
+          }
+          .md_hover_cursor:hover {
+            cursor: default;
+          }
+          .md_focus_cursor:focus {
+            cursor: default;
+          }
+        }
+        .hover_cursor:hover {
+          cursor: default;
+        }
+        .focus_cursor:focus {
+          cursor: default;
+        }
         .cursor-pointer {
+          cursor: pointer;
+        }
+        @media (min-width: 640px) {
+          .sm_cursor-pointer {
+            cursor: pointer;
+          }
+          .sm_hover_cursor-pointer:hover {
+            cursor: pointer;
+          }
+          .sm_focus_cursor-pointer:focus {
+            cursor: pointer;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_cursor-pointer {
+            cursor: pointer;
+          }
+          .md_hover_cursor-pointer:hover {
+            cursor: pointer;
+          }
+          .md_focus_cursor-pointer:focus {
+            cursor: pointer;
+          }
+        }
+        .hover_cursor-pointer:hover {
+          cursor: pointer;
+        }
+        .focus_cursor-pointer:focus {
           cursor: pointer;
         }
       }

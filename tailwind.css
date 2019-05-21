@@ -12725,23 +12725,135 @@ video {
 .cursor-auto {
   cursor: auto; }
 
+@media (min-width: 640px) {
+  .sm_cursor-auto {
+    cursor: auto; } }
+
+@media (min-width: 768px) {
+  .md_cursor-auto {
+    cursor: auto; } }
+
+@media (min-width: 1024px) {
+  .lg_cursor-auto {
+    cursor: auto; } }
+
+@media (min-width: 1280px) {
+  .xl_cursor-auto {
+    cursor: auto; } }
+
 .cursor {
   cursor: default; }
+
+@media (min-width: 640px) {
+  .sm_cursor {
+    cursor: default; } }
+
+@media (min-width: 768px) {
+  .md_cursor {
+    cursor: default; } }
+
+@media (min-width: 1024px) {
+  .lg_cursor {
+    cursor: default; } }
+
+@media (min-width: 1280px) {
+  .xl_cursor {
+    cursor: default; } }
 
 .cursor-pointer {
   cursor: pointer; }
 
+@media (min-width: 640px) {
+  .sm_cursor-pointer {
+    cursor: pointer; } }
+
+@media (min-width: 768px) {
+  .md_cursor-pointer {
+    cursor: pointer; } }
+
+@media (min-width: 1024px) {
+  .lg_cursor-pointer {
+    cursor: pointer; } }
+
+@media (min-width: 1280px) {
+  .xl_cursor-pointer {
+    cursor: pointer; } }
+
 .cursor-wait {
   cursor: wait; }
+
+@media (min-width: 640px) {
+  .sm_cursor-wait {
+    cursor: wait; } }
+
+@media (min-width: 768px) {
+  .md_cursor-wait {
+    cursor: wait; } }
+
+@media (min-width: 1024px) {
+  .lg_cursor-wait {
+    cursor: wait; } }
+
+@media (min-width: 1280px) {
+  .xl_cursor-wait {
+    cursor: wait; } }
 
 .cursor-text {
   cursor: text; }
 
+@media (min-width: 640px) {
+  .sm_cursor-text {
+    cursor: text; } }
+
+@media (min-width: 768px) {
+  .md_cursor-text {
+    cursor: text; } }
+
+@media (min-width: 1024px) {
+  .lg_cursor-text {
+    cursor: text; } }
+
+@media (min-width: 1280px) {
+  .xl_cursor-text {
+    cursor: text; } }
+
 .cursor-move {
   cursor: move; }
 
+@media (min-width: 640px) {
+  .sm_cursor-move {
+    cursor: move; } }
+
+@media (min-width: 768px) {
+  .md_cursor-move {
+    cursor: move; } }
+
+@media (min-width: 1024px) {
+  .lg_cursor-move {
+    cursor: move; } }
+
+@media (min-width: 1280px) {
+  .xl_cursor-move {
+    cursor: move; } }
+
 .cursor-not-allowed {
   cursor: not-allowed; }
+
+@media (min-width: 640px) {
+  .sm_cursor-not-allowed {
+    cursor: not-allowed; } }
+
+@media (min-width: 768px) {
+  .md_cursor-not-allowed {
+    cursor: not-allowed; } }
+
+@media (min-width: 1024px) {
+  .lg_cursor-not-allowed {
+    cursor: not-allowed; } }
+
+@media (min-width: 1280px) {
+  .xl_cursor-not-allowed {
+    cursor: not-allowed; } }
 
 .outline-none {
   outline: 0; }
