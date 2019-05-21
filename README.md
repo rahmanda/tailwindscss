@@ -1,12 +1,14 @@
 # Tailwind SCSS
 
-SCSS version of Tailwind CSS for people who don't use modern module bundler (work in progress).
+SCSS version of Tailwind CSS for people who don't use modern module bundler.
 
 ## Why??
 
 The original Tailwind CSS use PostCSS for its CSS preprocessor. Therefore, we have to use Node.js module bundler (Webpack, Rollup etc) in order to get fully control over Tailwind's customization. Unfortunately, there are many cases (mainly on legacy apps) where we couldn't use Node.js and I don't want this issue to prevent us from using Tailwind CSS.
 
 By using SCSS format, I hope that more people especially who have non Node.js apps can start using Tailwind CSS and progressively improve their tech stack to use the original version eventually.
+
+We try to keep this library as close as possible with future development of Tailwind CSS.
 
 ## Installation
 
@@ -21,6 +23,8 @@ or yarn:
 ```
 yarn add tailwindscss
 ```
+
+## Usage
 
 To use it on your SCSS, you can import entire style like this:
 
@@ -37,6 +41,43 @@ or you can choose to import one by one:
 
 ## Configuration
 
-By default, it will generate all styles which are equivalent to Tailwind CSS's default configuration.
+By default, it will generate all styles which are equivalent to Tailwind CSS's default configuration. Below is what our configuration looks like.
 
-To customize utilities...
+```
+
+@import 'tailwindscss/src/helper';
+
+$prefix: '' !default; // Selector prefix;
+$separator: '_' !default: // Separator for pseudo-class and media query modifier
+
+$theme-colors: (
+  transparent: transparent,
+  black: #000,
+) !default; // Theme configuration
+
+$variants-text-color: (responsive, hover, focus) !default; // Variants configuration
+
+$core-plugins-text-color: true !default; // Set false to disable utility
+
+```
+
+To customize utilities, you need to import your own configuration file at the top of your SCSS file.
+
+```
+@import "path-to/tailwindscss.config.scss";
+@import "tailwindscss/base";
+@import "tailwindscss/utilities";
+```
+
+For starting out, you can run `npx tailwindscss init` to get full configuration.
+
+## Documentation
+
+Head to [the original website](https://tailwindcss.com) for more guideline about utilities. Of course, some sections like installation are not applicable for this library.
+
+## Limitation
+
+Because of Sass limitation, below features cannot be provided in this library:
+
+- [Plugins](https://tailwindcss.com/docs/plugins)
+- [Functions & Directives](https://tailwindcss.com/docs/functions-and-directives)
