@@ -11,7 +11,7 @@
 @import './src/utilities/z-index';
 
 @if $core-plugins-display {
-  @include display($prefix);
+  @include display($prefix, $variants-display, $separator, $theme-screens);
 }
 @if $core-plugins-float {
   @include float($prefix);
