@@ -1,6 +1,6 @@
 @import "../helper";
 
-@mixin table-layout($prefix) {
+@mixin table-layout($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     auto: auto,
     fixed: fixed,
@@ -8,5 +8,5 @@
   $map-props: (
     default: table-layout,
   );
-  @include style($prefix, table, $map-values, $map-props);
+  @include style($prefix, table, $map-values, $map-props, $screens, $variants, $separator);
 }

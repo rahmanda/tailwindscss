@@ -2,18 +2,57 @@
 @import './table';
 
 @include describe('The table-layout mixin') {
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output table-layout stylesheet correctly') {
     @include assert {
       @include output {
-        @include table-layout($prefix);
+        @include table-layout($prefix, $variants, $separator, $screens);
       }
       @include expect {
         .table-auto {
           table-layout: auto;
         }
+        @media (min-width: 640px) {
+          .sm_table-auto {
+            table-layout: auto;
+          }
+          .sm_hover_table-auto:hover {
+            table-layout: auto;
+          }
+          .sm_focus_table-auto:focus {
+            table-layout: auto;
+          }
+        }
+        .hover_table-auto:hover {
+          table-layout: auto;
+        }
+        .focus_table-auto:focus {
+          table-layout: auto;
+        }
         .table-fixed {
+          table-layout: fixed;
+        }
+        @media (min-width: 640px) {
+          .sm_table-fixed {
+            table-layout: fixed;
+          }
+          .sm_hover_table-fixed:hover {
+            table-layout: fixed;
+          }
+          .sm_focus_table-fixed:focus {
+            table-layout: fixed;
+          }
+        }
+        .hover_table-fixed:hover {
+          table-layout: fixed;
+        }
+        .focus_table-fixed:focus {
           table-layout: fixed;
         }
       }

@@ -215,7 +215,7 @@
 @import './src/utilities/table';
 
 @if $core-plugins-table-layout {
-  @include table-layout($prefix);
+  @include table-layout($prefix, $variants-table-layout, $separator, $theme-screens);
 }
 
 // Effects

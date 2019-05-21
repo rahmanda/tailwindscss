@@ -22477,8 +22477,40 @@ video {
 .table-auto {
   table-layout: auto; }
 
+@media (min-width: 640px) {
+  .sm_table-auto {
+    table-layout: auto; } }
+
+@media (min-width: 768px) {
+  .md_table-auto {
+    table-layout: auto; } }
+
+@media (min-width: 1024px) {
+  .lg_table-auto {
+    table-layout: auto; } }
+
+@media (min-width: 1280px) {
+  .xl_table-auto {
+    table-layout: auto; } }
+
 .table-fixed {
   table-layout: fixed; }
+
+@media (min-width: 640px) {
+  .sm_table-fixed {
+    table-layout: fixed; } }
+
+@media (min-width: 768px) {
+  .md_table-fixed {
+    table-layout: fixed; } }
+
+@media (min-width: 1024px) {
+  .lg_table-fixed {
+    table-layout: fixed; } }
+
+@media (min-width: 1280px) {
+  .xl_table-fixed {
+    table-layout: fixed; } }
 
 .shadow {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
