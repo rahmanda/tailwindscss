@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/rahmanda/tailwindscss.svg?branch=master)](https://travis-ci.org/rahmanda/tailwindscss)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/tailwindscss.svg)](https://badge.fury.io/js/tailwindscss)
+
 # Tailwind SCSS
 
 SCSS version of Tailwind CSS for people who don't use modern module bundler.
