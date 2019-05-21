@@ -6380,17 +6380,97 @@ video {
 .whitespace-normal {
   white-space: normal; }
 
+@media (min-width: 640px) {
+  .sm_whitespace-normal {
+    white-space: normal; } }
+
+@media (min-width: 768px) {
+  .md_whitespace-normal {
+    white-space: normal; } }
+
+@media (min-width: 1024px) {
+  .lg_whitespace-normal {
+    white-space: normal; } }
+
+@media (min-width: 1280px) {
+  .xl_whitespace-normal {
+    white-space: normal; } }
+
 .whitespace-no-wrap {
   white-space: nowrap; }
+
+@media (min-width: 640px) {
+  .sm_whitespace-no-wrap {
+    white-space: nowrap; } }
+
+@media (min-width: 768px) {
+  .md_whitespace-no-wrap {
+    white-space: nowrap; } }
+
+@media (min-width: 1024px) {
+  .lg_whitespace-no-wrap {
+    white-space: nowrap; } }
+
+@media (min-width: 1280px) {
+  .xl_whitespace-no-wrap {
+    white-space: nowrap; } }
 
 .whitespace-pre {
   white-space: pre; }
 
+@media (min-width: 640px) {
+  .sm_whitespace-pre {
+    white-space: pre; } }
+
+@media (min-width: 768px) {
+  .md_whitespace-pre {
+    white-space: pre; } }
+
+@media (min-width: 1024px) {
+  .lg_whitespace-pre {
+    white-space: pre; } }
+
+@media (min-width: 1280px) {
+  .xl_whitespace-pre {
+    white-space: pre; } }
+
 .whitespace-pre-line {
   white-space: pre-line; }
 
+@media (min-width: 640px) {
+  .sm_whitespace-pre-line {
+    white-space: pre-line; } }
+
+@media (min-width: 768px) {
+  .md_whitespace-pre-line {
+    white-space: pre-line; } }
+
+@media (min-width: 1024px) {
+  .lg_whitespace-pre-line {
+    white-space: pre-line; } }
+
+@media (min-width: 1280px) {
+  .xl_whitespace-pre-line {
+    white-space: pre-line; } }
+
 .whitespace-pre-wrap {
   white-space: pre-wrap; }
+
+@media (min-width: 640px) {
+  .sm_whitespace-pre-wrap {
+    white-space: pre-wrap; } }
+
+@media (min-width: 768px) {
+  .md_whitespace-pre-wrap {
+    white-space: pre-wrap; } }
+
+@media (min-width: 1024px) {
+  .lg_whitespace-pre-wrap {
+    white-space: pre-wrap; } }
+
+@media (min-width: 1280px) {
+  .xl_whitespace-pre-wrap {
+    white-space: pre-wrap; } }
 
 .break-normal {
   word-break: normal;

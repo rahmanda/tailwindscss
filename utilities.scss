@@ -93,7 +93,7 @@
   @include vertical-align($prefix, $variants-vertical-align, $separator, $theme-screens);
 }
 @if $core-plugins-white-space {
-  @include white-space($prefix);
+  @include white-space($prefix, $variants-white-space, $separator, $theme-screens);
 }
 @if $core-plugins-word-break {
   @include word-break($prefix);
