@@ -1847,41 +1847,249 @@ video {
 .font-sans {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
 
+@media (min-width: 640px) {
+  .sm_font-sans {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; } }
+
+@media (min-width: 768px) {
+  .md_font-sans {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; } }
+
+@media (min-width: 1024px) {
+  .lg_font-sans {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; } }
+
+@media (min-width: 1280px) {
+  .xl_font-sans {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; } }
+
 .font-serif {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
+
+@media (min-width: 640px) {
+  .sm_font-serif {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif; } }
+
+@media (min-width: 768px) {
+  .md_font-serif {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif; } }
+
+@media (min-width: 1024px) {
+  .lg_font-serif {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif; } }
+
+@media (min-width: 1280px) {
+  .xl_font-serif {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif; } }
 
 .font-mono {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
+@media (min-width: 640px) {
+  .sm_font-mono {
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; } }
+
+@media (min-width: 768px) {
+  .md_font-mono {
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; } }
+
+@media (min-width: 1024px) {
+  .lg_font-mono {
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; } }
+
+@media (min-width: 1280px) {
+  .xl_font-mono {
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; } }
+
 .text-xs {
   font-size: 0.75rem; }
+
+@media (min-width: 640px) {
+  .sm_text-xs {
+    font-size: 0.75rem; } }
+
+@media (min-width: 768px) {
+  .md_text-xs {
+    font-size: 0.75rem; } }
+
+@media (min-width: 1024px) {
+  .lg_text-xs {
+    font-size: 0.75rem; } }
+
+@media (min-width: 1280px) {
+  .xl_text-xs {
+    font-size: 0.75rem; } }
 
 .text-sm {
   font-size: 0.875rem; }
 
+@media (min-width: 640px) {
+  .sm_text-sm {
+    font-size: 0.875rem; } }
+
+@media (min-width: 768px) {
+  .md_text-sm {
+    font-size: 0.875rem; } }
+
+@media (min-width: 1024px) {
+  .lg_text-sm {
+    font-size: 0.875rem; } }
+
+@media (min-width: 1280px) {
+  .xl_text-sm {
+    font-size: 0.875rem; } }
+
 .text-base {
   font-size: 1rem; }
+
+@media (min-width: 640px) {
+  .sm_text-base {
+    font-size: 1rem; } }
+
+@media (min-width: 768px) {
+  .md_text-base {
+    font-size: 1rem; } }
+
+@media (min-width: 1024px) {
+  .lg_text-base {
+    font-size: 1rem; } }
+
+@media (min-width: 1280px) {
+  .xl_text-base {
+    font-size: 1rem; } }
 
 .text-lg {
   font-size: 1.125rem; }
 
+@media (min-width: 640px) {
+  .sm_text-lg {
+    font-size: 1.125rem; } }
+
+@media (min-width: 768px) {
+  .md_text-lg {
+    font-size: 1.125rem; } }
+
+@media (min-width: 1024px) {
+  .lg_text-lg {
+    font-size: 1.125rem; } }
+
+@media (min-width: 1280px) {
+  .xl_text-lg {
+    font-size: 1.125rem; } }
+
 .text-xl {
   font-size: 1.25rem; }
+
+@media (min-width: 640px) {
+  .sm_text-xl {
+    font-size: 1.25rem; } }
+
+@media (min-width: 768px) {
+  .md_text-xl {
+    font-size: 1.25rem; } }
+
+@media (min-width: 1024px) {
+  .lg_text-xl {
+    font-size: 1.25rem; } }
+
+@media (min-width: 1280px) {
+  .xl_text-xl {
+    font-size: 1.25rem; } }
 
 .text-2xl {
   font-size: 1.5rem; }
 
+@media (min-width: 640px) {
+  .sm_text-2xl {
+    font-size: 1.5rem; } }
+
+@media (min-width: 768px) {
+  .md_text-2xl {
+    font-size: 1.5rem; } }
+
+@media (min-width: 1024px) {
+  .lg_text-2xl {
+    font-size: 1.5rem; } }
+
+@media (min-width: 1280px) {
+  .xl_text-2xl {
+    font-size: 1.5rem; } }
+
 .text-3xl {
   font-size: 1.875rem; }
+
+@media (min-width: 640px) {
+  .sm_text-3xl {
+    font-size: 1.875rem; } }
+
+@media (min-width: 768px) {
+  .md_text-3xl {
+    font-size: 1.875rem; } }
+
+@media (min-width: 1024px) {
+  .lg_text-3xl {
+    font-size: 1.875rem; } }
+
+@media (min-width: 1280px) {
+  .xl_text-3xl {
+    font-size: 1.875rem; } }
 
 .text-4xl {
   font-size: 2.25rem; }
 
+@media (min-width: 640px) {
+  .sm_text-4xl {
+    font-size: 2.25rem; } }
+
+@media (min-width: 768px) {
+  .md_text-4xl {
+    font-size: 2.25rem; } }
+
+@media (min-width: 1024px) {
+  .lg_text-4xl {
+    font-size: 2.25rem; } }
+
+@media (min-width: 1280px) {
+  .xl_text-4xl {
+    font-size: 2.25rem; } }
+
 .text-5xl {
   font-size: 3rem; }
 
+@media (min-width: 640px) {
+  .sm_text-5xl {
+    font-size: 3rem; } }
+
+@media (min-width: 768px) {
+  .md_text-5xl {
+    font-size: 3rem; } }
+
+@media (min-width: 1024px) {
+  .lg_text-5xl {
+    font-size: 3rem; } }
+
+@media (min-width: 1280px) {
+  .xl_text-5xl {
+    font-size: 3rem; } }
+
 .text-6xl {
   font-size: 4rem; }
+
+@media (min-width: 640px) {
+  .sm_text-6xl {
+    font-size: 4rem; } }
+
+@media (min-width: 768px) {
+  .md_text-6xl {
+    font-size: 4rem; } }
+
+@media (min-width: 1024px) {
+  .lg_text-6xl {
+    font-size: 4rem; } }
+
+@media (min-width: 1280px) {
+  .xl_text-6xl {
+    font-size: 4rem; } }
 
 .antialiased {
   -webkit-font-smoothing: antialiased;
@@ -1934,34 +2142,408 @@ video {
 .italic {
   font-style: italic; }
 
+@media (min-width: 640px) {
+  .sm_italic {
+    font-style: italic; } }
+
+@media (min-width: 768px) {
+  .md_italic {
+    font-style: italic; } }
+
+@media (min-width: 1024px) {
+  .lg_italic {
+    font-style: italic; } }
+
+@media (min-width: 1280px) {
+  .xl_italic {
+    font-style: italic; } }
+
 .not-italic {
   font-style: normal; }
 
+@media (min-width: 640px) {
+  .sm_not-italic {
+    font-style: normal; } }
+
+@media (min-width: 768px) {
+  .md_not-italic {
+    font-style: normal; } }
+
+@media (min-width: 1024px) {
+  .lg_not-italic {
+    font-style: normal; } }
+
+@media (min-width: 1280px) {
+  .xl_not-italic {
+    font-style: normal; } }
+
 .font-hairline {
+  font-weight: 100; }
+
+@media (min-width: 640px) {
+  .sm_font-hairline {
+    font-weight: 100; }
+  .sm_hover_font-hairline:hover {
+    font-weight: 100; }
+  .sm_focus_font-hairline:focus {
+    font-weight: 100; } }
+
+@media (min-width: 768px) {
+  .md_font-hairline {
+    font-weight: 100; }
+  .md_hover_font-hairline:hover {
+    font-weight: 100; }
+  .md_focus_font-hairline:focus {
+    font-weight: 100; } }
+
+@media (min-width: 1024px) {
+  .lg_font-hairline {
+    font-weight: 100; }
+  .lg_hover_font-hairline:hover {
+    font-weight: 100; }
+  .lg_focus_font-hairline:focus {
+    font-weight: 100; } }
+
+@media (min-width: 1280px) {
+  .xl_font-hairline {
+    font-weight: 100; }
+  .xl_hover_font-hairline:hover {
+    font-weight: 100; }
+  .xl_focus_font-hairline:focus {
+    font-weight: 100; } }
+
+.hover_font-hairline:hover {
+  font-weight: 100; }
+
+.focus_font-hairline:focus {
   font-weight: 100; }
 
 .font-thin {
   font-weight: 200; }
 
+@media (min-width: 640px) {
+  .sm_font-thin {
+    font-weight: 200; }
+  .sm_hover_font-thin:hover {
+    font-weight: 200; }
+  .sm_focus_font-thin:focus {
+    font-weight: 200; } }
+
+@media (min-width: 768px) {
+  .md_font-thin {
+    font-weight: 200; }
+  .md_hover_font-thin:hover {
+    font-weight: 200; }
+  .md_focus_font-thin:focus {
+    font-weight: 200; } }
+
+@media (min-width: 1024px) {
+  .lg_font-thin {
+    font-weight: 200; }
+  .lg_hover_font-thin:hover {
+    font-weight: 200; }
+  .lg_focus_font-thin:focus {
+    font-weight: 200; } }
+
+@media (min-width: 1280px) {
+  .xl_font-thin {
+    font-weight: 200; }
+  .xl_hover_font-thin:hover {
+    font-weight: 200; }
+  .xl_focus_font-thin:focus {
+    font-weight: 200; } }
+
+.hover_font-thin:hover {
+  font-weight: 200; }
+
+.focus_font-thin:focus {
+  font-weight: 200; }
+
 .font-light {
+  font-weight: 300; }
+
+@media (min-width: 640px) {
+  .sm_font-light {
+    font-weight: 300; }
+  .sm_hover_font-light:hover {
+    font-weight: 300; }
+  .sm_focus_font-light:focus {
+    font-weight: 300; } }
+
+@media (min-width: 768px) {
+  .md_font-light {
+    font-weight: 300; }
+  .md_hover_font-light:hover {
+    font-weight: 300; }
+  .md_focus_font-light:focus {
+    font-weight: 300; } }
+
+@media (min-width: 1024px) {
+  .lg_font-light {
+    font-weight: 300; }
+  .lg_hover_font-light:hover {
+    font-weight: 300; }
+  .lg_focus_font-light:focus {
+    font-weight: 300; } }
+
+@media (min-width: 1280px) {
+  .xl_font-light {
+    font-weight: 300; }
+  .xl_hover_font-light:hover {
+    font-weight: 300; }
+  .xl_focus_font-light:focus {
+    font-weight: 300; } }
+
+.hover_font-light:hover {
+  font-weight: 300; }
+
+.focus_font-light:focus {
   font-weight: 300; }
 
 .font-normal {
   font-weight: 400; }
 
+@media (min-width: 640px) {
+  .sm_font-normal {
+    font-weight: 400; }
+  .sm_hover_font-normal:hover {
+    font-weight: 400; }
+  .sm_focus_font-normal:focus {
+    font-weight: 400; } }
+
+@media (min-width: 768px) {
+  .md_font-normal {
+    font-weight: 400; }
+  .md_hover_font-normal:hover {
+    font-weight: 400; }
+  .md_focus_font-normal:focus {
+    font-weight: 400; } }
+
+@media (min-width: 1024px) {
+  .lg_font-normal {
+    font-weight: 400; }
+  .lg_hover_font-normal:hover {
+    font-weight: 400; }
+  .lg_focus_font-normal:focus {
+    font-weight: 400; } }
+
+@media (min-width: 1280px) {
+  .xl_font-normal {
+    font-weight: 400; }
+  .xl_hover_font-normal:hover {
+    font-weight: 400; }
+  .xl_focus_font-normal:focus {
+    font-weight: 400; } }
+
+.hover_font-normal:hover {
+  font-weight: 400; }
+
+.focus_font-normal:focus {
+  font-weight: 400; }
+
 .font-medium {
+  font-weight: 500; }
+
+@media (min-width: 640px) {
+  .sm_font-medium {
+    font-weight: 500; }
+  .sm_hover_font-medium:hover {
+    font-weight: 500; }
+  .sm_focus_font-medium:focus {
+    font-weight: 500; } }
+
+@media (min-width: 768px) {
+  .md_font-medium {
+    font-weight: 500; }
+  .md_hover_font-medium:hover {
+    font-weight: 500; }
+  .md_focus_font-medium:focus {
+    font-weight: 500; } }
+
+@media (min-width: 1024px) {
+  .lg_font-medium {
+    font-weight: 500; }
+  .lg_hover_font-medium:hover {
+    font-weight: 500; }
+  .lg_focus_font-medium:focus {
+    font-weight: 500; } }
+
+@media (min-width: 1280px) {
+  .xl_font-medium {
+    font-weight: 500; }
+  .xl_hover_font-medium:hover {
+    font-weight: 500; }
+  .xl_focus_font-medium:focus {
+    font-weight: 500; } }
+
+.hover_font-medium:hover {
+  font-weight: 500; }
+
+.focus_font-medium:focus {
   font-weight: 500; }
 
 .font-semibold {
   font-weight: 600; }
 
+@media (min-width: 640px) {
+  .sm_font-semibold {
+    font-weight: 600; }
+  .sm_hover_font-semibold:hover {
+    font-weight: 600; }
+  .sm_focus_font-semibold:focus {
+    font-weight: 600; } }
+
+@media (min-width: 768px) {
+  .md_font-semibold {
+    font-weight: 600; }
+  .md_hover_font-semibold:hover {
+    font-weight: 600; }
+  .md_focus_font-semibold:focus {
+    font-weight: 600; } }
+
+@media (min-width: 1024px) {
+  .lg_font-semibold {
+    font-weight: 600; }
+  .lg_hover_font-semibold:hover {
+    font-weight: 600; }
+  .lg_focus_font-semibold:focus {
+    font-weight: 600; } }
+
+@media (min-width: 1280px) {
+  .xl_font-semibold {
+    font-weight: 600; }
+  .xl_hover_font-semibold:hover {
+    font-weight: 600; }
+  .xl_focus_font-semibold:focus {
+    font-weight: 600; } }
+
+.hover_font-semibold:hover {
+  font-weight: 600; }
+
+.focus_font-semibold:focus {
+  font-weight: 600; }
+
 .font-bold {
+  font-weight: 700; }
+
+@media (min-width: 640px) {
+  .sm_font-bold {
+    font-weight: 700; }
+  .sm_hover_font-bold:hover {
+    font-weight: 700; }
+  .sm_focus_font-bold:focus {
+    font-weight: 700; } }
+
+@media (min-width: 768px) {
+  .md_font-bold {
+    font-weight: 700; }
+  .md_hover_font-bold:hover {
+    font-weight: 700; }
+  .md_focus_font-bold:focus {
+    font-weight: 700; } }
+
+@media (min-width: 1024px) {
+  .lg_font-bold {
+    font-weight: 700; }
+  .lg_hover_font-bold:hover {
+    font-weight: 700; }
+  .lg_focus_font-bold:focus {
+    font-weight: 700; } }
+
+@media (min-width: 1280px) {
+  .xl_font-bold {
+    font-weight: 700; }
+  .xl_hover_font-bold:hover {
+    font-weight: 700; }
+  .xl_focus_font-bold:focus {
+    font-weight: 700; } }
+
+.hover_font-bold:hover {
+  font-weight: 700; }
+
+.focus_font-bold:focus {
   font-weight: 700; }
 
 .font-extrabold {
   font-weight: 800; }
 
+@media (min-width: 640px) {
+  .sm_font-extrabold {
+    font-weight: 800; }
+  .sm_hover_font-extrabold:hover {
+    font-weight: 800; }
+  .sm_focus_font-extrabold:focus {
+    font-weight: 800; } }
+
+@media (min-width: 768px) {
+  .md_font-extrabold {
+    font-weight: 800; }
+  .md_hover_font-extrabold:hover {
+    font-weight: 800; }
+  .md_focus_font-extrabold:focus {
+    font-weight: 800; } }
+
+@media (min-width: 1024px) {
+  .lg_font-extrabold {
+    font-weight: 800; }
+  .lg_hover_font-extrabold:hover {
+    font-weight: 800; }
+  .lg_focus_font-extrabold:focus {
+    font-weight: 800; } }
+
+@media (min-width: 1280px) {
+  .xl_font-extrabold {
+    font-weight: 800; }
+  .xl_hover_font-extrabold:hover {
+    font-weight: 800; }
+  .xl_focus_font-extrabold:focus {
+    font-weight: 800; } }
+
+.hover_font-extrabold:hover {
+  font-weight: 800; }
+
+.focus_font-extrabold:focus {
+  font-weight: 800; }
+
 .font-black {
+  font-weight: 900; }
+
+@media (min-width: 640px) {
+  .sm_font-black {
+    font-weight: 900; }
+  .sm_hover_font-black:hover {
+    font-weight: 900; }
+  .sm_focus_font-black:focus {
+    font-weight: 900; } }
+
+@media (min-width: 768px) {
+  .md_font-black {
+    font-weight: 900; }
+  .md_hover_font-black:hover {
+    font-weight: 900; }
+  .md_focus_font-black:focus {
+    font-weight: 900; } }
+
+@media (min-width: 1024px) {
+  .lg_font-black {
+    font-weight: 900; }
+  .lg_hover_font-black:hover {
+    font-weight: 900; }
+  .lg_focus_font-black:focus {
+    font-weight: 900; } }
+
+@media (min-width: 1280px) {
+  .xl_font-black {
+    font-weight: 900; }
+  .xl_hover_font-black:hover {
+    font-weight: 900; }
+  .xl_focus_font-black:focus {
+    font-weight: 900; } }
+
+.hover_font-black:hover {
+  font-weight: 900; }
+
+.focus_font-black:focus {
   font-weight: 900; }
 
 .tracking-tighter {

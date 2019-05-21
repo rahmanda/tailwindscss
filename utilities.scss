@@ -51,19 +51,19 @@
 @import './src/utilities/word-break';
 
 @if $core-plugins-font-family {
-  @include font-family($prefix, $theme-font-family);
+  @include font-family($prefix, $theme-font-family, $variants-font-family, $separator, $theme-screens);
 }
 @if $core-plugins-font-size {
-  @include font-size($prefix, $theme-font-size);
+  @include font-size($prefix, $theme-font-size, $variants-font-size, $separator, $theme-screens);
 }
 @if $core-plugins-font-smoothing {
   @include font-smoothing($prefix, $variants-font-smoothing, $separator, $theme-screens);
 }
 @if $core-plugins-font-style {
-  @include font-style($prefix);
+  @include font-style($prefix, $variants-font-style, $separator, $theme-screens);
 }
 @if $core-plugins-font-weight {
-  @include font-weight($prefix, $theme-font-weight);
+  @include font-weight($prefix, $theme-font-weight, $variants-font-weight, $separator, $theme-screens);
 }
 @if $core-plugins-letter-spacing {
   @include letter-spacing($prefix, $theme-letter-spacing, $variants-letter-spacing, $separator, $theme-screens);
