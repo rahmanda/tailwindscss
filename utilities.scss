@@ -72,10 +72,10 @@
   @include line-height($prefix, $theme-line-height, $variants-line-height, $separator, $theme-screens);
 }
 @if $core-plugins-list-style-type {
-  @include list-style-type($prefix, $theme-list-style-type);
+  @include list-style-type($prefix, $theme-list-style-type, $variants-list-style-type, $separator, $theme-screens);
 }
 @if $core-plugins-list-style-position {
-  @include list-style-position($prefix);
+  @include list-style-position($prefix, $variants-list-style-position, $separator, $theme-screens);
 }
 @if $core-plugins-text-align {
   @include text-align($prefix);
