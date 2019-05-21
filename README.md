@@ -64,7 +64,7 @@ $core-plugins-text-color: true; // Set false to disable utility
 To customize utilities, you need to import your own configuration file at the top of your SCSS file.
 
 ```
-@import "path-to/tailwindscss.config.scss";
+@import "path-to/tailwind.config.scss";
 @import "tailwindscss/base";
 @import "tailwindscss/utilities";
 ```
