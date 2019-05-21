@@ -15,12 +15,21 @@ if (args[0] === 'init') {
     process.exit(0);
   }
 
-  fs.copyFile(configFilepath, targetPath, function err(error) {
-    if (error) {
-      throw error;
+  fs.readFile(configFilepath, 'utf-8', function readFile(readError, text) {
+    if (readError) {
+      throw readError;
     }
-    console.log('File tailwind.config has been generated in your current directory');
-  });
+    const configText = text
+          .replace(/\.\/src\/helper/g, 'tailwindscss/src/helper')
+          .replace(/\s!default/g, '');
+
+    fs.writeFile(targetPath, configText, 'utf-8', function writeFile(writeError) {
+      if (writeError) {
+        throw writeError;
+      }
+      console.log('File tailwind.config.scss has been generated in your current directory!');
+    })
+  })
 }
 
 else {
