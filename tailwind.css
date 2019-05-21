@@ -1063,20 +1063,116 @@ video {
 .tracking-tighter {
   letter-spacing: -0.05em; }
 
+@media (min-width: 640px) {
+  .sm_tracking-tighter {
+    letter-spacing: -0.05em; } }
+
+@media (min-width: 768px) {
+  .md_tracking-tighter {
+    letter-spacing: -0.05em; } }
+
+@media (min-width: 1024px) {
+  .lg_tracking-tighter {
+    letter-spacing: -0.05em; } }
+
+@media (min-width: 1280px) {
+  .xl_tracking-tighter {
+    letter-spacing: -0.05em; } }
+
 .tracking-tight {
   letter-spacing: -0.025em; }
+
+@media (min-width: 640px) {
+  .sm_tracking-tight {
+    letter-spacing: -0.025em; } }
+
+@media (min-width: 768px) {
+  .md_tracking-tight {
+    letter-spacing: -0.025em; } }
+
+@media (min-width: 1024px) {
+  .lg_tracking-tight {
+    letter-spacing: -0.025em; } }
+
+@media (min-width: 1280px) {
+  .xl_tracking-tight {
+    letter-spacing: -0.025em; } }
 
 .tracking-normal {
   letter-spacing: 0; }
 
+@media (min-width: 640px) {
+  .sm_tracking-normal {
+    letter-spacing: 0; } }
+
+@media (min-width: 768px) {
+  .md_tracking-normal {
+    letter-spacing: 0; } }
+
+@media (min-width: 1024px) {
+  .lg_tracking-normal {
+    letter-spacing: 0; } }
+
+@media (min-width: 1280px) {
+  .xl_tracking-normal {
+    letter-spacing: 0; } }
+
 .tracking-wide {
   letter-spacing: 0.025em; }
+
+@media (min-width: 640px) {
+  .sm_tracking-wide {
+    letter-spacing: 0.025em; } }
+
+@media (min-width: 768px) {
+  .md_tracking-wide {
+    letter-spacing: 0.025em; } }
+
+@media (min-width: 1024px) {
+  .lg_tracking-wide {
+    letter-spacing: 0.025em; } }
+
+@media (min-width: 1280px) {
+  .xl_tracking-wide {
+    letter-spacing: 0.025em; } }
 
 .tracking-wider {
   letter-spacing: 0.05em; }
 
+@media (min-width: 640px) {
+  .sm_tracking-wider {
+    letter-spacing: 0.05em; } }
+
+@media (min-width: 768px) {
+  .md_tracking-wider {
+    letter-spacing: 0.05em; } }
+
+@media (min-width: 1024px) {
+  .lg_tracking-wider {
+    letter-spacing: 0.05em; } }
+
+@media (min-width: 1280px) {
+  .xl_tracking-wider {
+    letter-spacing: 0.05em; } }
+
 .tracking-widest {
   letter-spacing: 0.1em; }
+
+@media (min-width: 640px) {
+  .sm_tracking-widest {
+    letter-spacing: 0.1em; } }
+
+@media (min-width: 768px) {
+  .md_tracking-widest {
+    letter-spacing: 0.1em; } }
+
+@media (min-width: 1024px) {
+  .lg_tracking-widest {
+    letter-spacing: 0.1em; } }
+
+@media (min-width: 1280px) {
+  .xl_tracking-widest {
+    letter-spacing: 0.1em; } }
 
 .leading-none {
   line-height: 1; }

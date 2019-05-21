@@ -7,22 +7,78 @@
     normal: 0,
     wide: 0.025em,
   );
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output letter-spacing stylesheet correctly') {
     @include assert {
       @include output {
-        @include letter-spacing($prefix, $theme-letter-spacing);
+        @include letter-spacing($prefix, $theme-letter-spacing, $variants, $separator, $screens);
       }
 
       @include expect {
         .tracking-tight {
           letter-spacing: -0.025em;
         }
+        @media (min-width: 640px) {
+          .sm_tracking-tight {
+            letter-spacing: -0.025em;
+          }
+          .sm_hover_tracking-tight:hover {
+            letter-spacing: -0.025em;
+          }
+          .sm_focus_tracking-tight:focus {
+            letter-spacing: -0.025em;
+          }
+        }
+        .hover_tracking-tight:hover {
+          letter-spacing: -0.025em;
+        }
+        .focus_tracking-tight:focus {
+          letter-spacing: -0.025em;
+        }
         .tracking-normal {
           letter-spacing: 0;
         }
+        @media (min-width: 640px) {
+          .sm_tracking-normal {
+            letter-spacing: 0;
+          }
+          .sm_hover_tracking-normal:hover {
+            letter-spacing: 0;
+          }
+          .sm_focus_tracking-normal:focus {
+            letter-spacing: 0;
+          }
+        }
+        .hover_tracking-normal:hover {
+          letter-spacing: 0;
+        }
+        .focus_tracking-normal:focus {
+          letter-spacing: 0;
+        }
         .tracking-wide {
+          letter-spacing: 0.025em;
+        }
+        @media (min-width: 640px) {
+          .sm_tracking-wide {
+            letter-spacing: 0.025em;
+          }
+          .sm_hover_tracking-wide:hover {
+            letter-spacing: 0.025em;
+          }
+          .sm_focus_tracking-wide:focus {
+            letter-spacing: 0.025em;
+          }
+        }
+        .hover_tracking-wide:hover {
+          letter-spacing: 0.025em;
+        }
+        .focus_tracking-wide:focus {
           letter-spacing: 0.025em;
         }
       }
