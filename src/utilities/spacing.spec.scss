@@ -5,7 +5,7 @@
 @include describe('The margin mixin') {
   $theme-margin: map-merge(
     (1: 0.25rem, auto: auto),
-    negative((1: 0.25rem)),
+    negative-map((1: 0.25rem)),
   );
   $prefix: '';
 

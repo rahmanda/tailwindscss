@@ -88,7 +88,7 @@
 
 @mixin style-color($prefix, $name, $colors, $map-props, $screens: (), $variants: (), $separator: '_') {
   @each $color, $map-values in $colors {
-    @if length($map-values) > 1 {
+    @if type-of($map-values) == map {
       @include style($prefix, #{$name}-#{$color}, $map-values, $map-props, $screens, $variants, $separator);
     }
     @else {
@@ -97,15 +97,24 @@
   }
 }
 
-@function negative($map-values) {
+@function negative($value) {
+  $new-value: $value;
+  @if type-of($value) == number {
+    $new-value: -1 * $value;
+  }
+  @if type-of($value) == string {
+    $new-value: if(str-index($value, '-'), str-slice($value, 2), -#{$value});
+  }
+  @return $new-value;
+}
+
+@function negative-map($map-values) {
   @if type-of($map-values) == map {
     $values: ();
     @each $key, $value in $map-values {
-      $new-value: (-#{$key}: $value);
-      @if type-of($value) == number {
-        $new-value: (-#{$key}: -1 * $value);
-      }
-      $values: map-merge($values, $new-value);
+      $new-key: "#{negative($key)}";
+      $new-value: negative($value);
+      $values: map-merge($values, ($new-key: $new-value));
     }
     @return $values;
   }

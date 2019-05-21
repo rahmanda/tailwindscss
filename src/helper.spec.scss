@@ -1,0 +1,559 @@
+@import 'true';
+@import './helper';
+
+@include describe('The sanitize-value function') {
+  @include it('should unquote quoted value') {
+    @include assert {
+      @include output {
+        .selector {
+          content: sanitize-value("1");
+        }
+      }
+      @include expect {
+        .selector {
+          content: 1;
+        }
+      }
+    };
+  }
+  @include it('should leave unquoted value') {
+    @include assert {
+      @include output {
+        .selector {
+          content: sanitize-value(1);
+        }
+      }
+      @include expect {
+        .selector {
+          content: 1;
+        }
+      }
+    };
+  }
+}
+
+@include describe('The format-key function') {
+  @include it('should return negated key if unit is a negative number') {
+    @include assert-equal(
+      format-key(key, -1),
+      -key
+    );
+  }
+  @include it('should return negated key if unit is a negative string') {
+    @include assert-equal(
+      format-key(key, -str),
+      -key
+    );
+  }
+  @include it('should return unmodified key for non supported type and format') {
+    @include assert-equal(
+      format-key(key, (list)),
+      key
+    );
+    @include assert-equal(
+      format-key(key, 1),
+      key
+    );
+    @include assert-equal(
+      format-key(key, str),
+      key
+    );
+  }
+}
+
+@include describe('The format-unit function') {
+  @include it('should return negated unit if unit is a negative number') {
+    @include assert-equal(
+      format-unit(-1),
+      1
+    );
+  }
+  @include it('should return negated unit if unit is a negated string') {
+    @include assert-equal(
+      format-unit(-str),
+      str
+    );
+  }
+  @include it('should return unmodified unit if unit is not a negated number or string or any other thing') {
+    @include assert-equal(
+      format-unit(1),
+      1
+    );
+    @include assert-equal(
+      format-unit(str),
+      str
+    );
+    @include assert-equal(
+      format-unit((list)),
+      (list)
+    );
+  }
+}
+
+@include describe('The style function') {
+  @include it('should render multiple values') {
+    $map-values: (
+      default: default,
+      pointer: pointer,
+    );
+    $map-props: (
+      default: cursor,
+    );
+    @include assert {
+      @include output {
+        @include style('', cursor, $map-values, $map-props);
+      }
+      @include expect {
+        .cursor {
+          cursor: default;
+        }
+        .cursor-pointer {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @include it('should render multiple props') {
+    $map-values: (
+      default: 0.25rem,
+      none: 0,
+    );
+    $map-props: (
+      default: border-radius,
+      t: border-top-left-radius border-top-right-radius,
+    );
+    @include assert {
+      @include output {
+        @include style('', rounded, $map-values, $map-props);
+      }
+      @include expect {
+        .rounded {
+          border-radius: 0.25rem;
+        }
+        .rounded-none {
+          border-radius: 0;
+        }
+        .rounded-t {
+          border-top-left-radius: 0.25rem;
+          border-top-right-radius: 0.25rem;
+        }
+        .rounded-t-none {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+    }
+  }
+  @include it('should render custom separator key name') {
+    $map-values: (
+      0: 0,
+    );
+    $map-props: (
+      default: margin,
+      x: margin-left margin-right,
+    );
+    @include assert {
+      @include output {
+        @include style('', m, $map-values, $map-props, $separator-key-name: '');
+      }
+      @include expect {
+        .m-0 {
+          margin: 0;
+        }
+        .mx-0 {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  @include it('should render custom prefix') {
+    $map-values: (
+      auto: auto,
+      hidden: hidden,
+    );
+    $map-props: (
+      default: overflow,
+    );
+    @include assert {
+      @include output {
+        @include style(tailwind-, overflow, $map-values, $map-props);
+      }
+      @include expect {
+        .tailwind-overflow-auto {
+          overflow: auto;
+        }
+        .tailwind-overflow-hidden {
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  @include it('should render empty key') {
+    $map-values: (
+      block: block,
+      flex: flex,
+    );
+    $map-props: (
+      default: display,
+    );
+    @include assert {
+      @include output {
+        @include style('', '', $map-values, $map-props);
+      }
+      @include expect {
+        .block {
+          display: block;
+        }
+        .flex {
+          display: flex;
+        }
+      }
+    }
+  }
+  @include it('should render negated key-values') {
+    $map-values: (
+      -1: -0.25rem,
+    );
+    $map-props: (
+      default: margin,
+      x: margin-left margin-right,
+    );
+    @include assert {
+      @include output {
+        @include style('', m, $map-values, $map-props, $separator-key-name: '');
+      }
+      @include expect {
+        .-m-1 {
+          margin: -0.25rem;
+        }
+        .-mx-1 {
+          margin-left: -0.25rem;
+          margin-right: -0.25rem;
+        }
+      }
+    }
+  }
+  @include it('should render variants') {
+    $map-values: (
+      1: 0.25rem,
+      -1: -0.25rem,
+    );
+    $map-props: (
+      default: margin,
+      x: margin-left margin-right,
+    );
+    $variants: (responsive, hover, focus);
+    $screens: (
+      sm: 640px,
+      md: 768px,
+    );
+    @include assert {
+      @include output {
+        @include style('', m, $map-values, $map-props, $screens, $variants, '_', $separator-key-name: '');
+      }
+      @include expect {
+        .m-1 {
+          margin: 0.25rem;
+        }
+        @media (min-width: 640px) {
+          .sm_m-1 {
+            margin: 0.25rem;
+          }
+          .sm_hover_m-1:hover {
+            margin: 0.25rem;
+          }
+          .sm_focus_m-1:focus {
+            margin: 0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_m-1 {
+            margin: 0.25rem;
+          }
+          .md_hover_m-1:hover {
+            margin: 0.25rem;
+          }
+          .md_focus_m-1:focus {
+            margin: 0.25rem;
+          }
+        }
+        .hover_m-1:hover {
+          margin: 0.25rem;
+        }
+        .focus_m-1:focus {
+          margin: 0.25rem;
+        }
+        .-m-1 {
+          margin: -0.25rem;
+        }
+        @media (min-width: 640px) {
+          .sm_-m-1 {
+            margin: -0.25rem;
+          }
+          .sm_hover_-m-1:hover {
+            margin: -0.25rem;
+          }
+          .sm_focus_-m-1:focus {
+            margin: -0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_-m-1 {
+            margin: -0.25rem;
+          }
+          .md_hover_-m-1:hover {
+            margin: -0.25rem;
+          }
+          .md_focus_-m-1:focus {
+            margin: -0.25rem;
+          }
+        }
+        .hover_-m-1:hover {
+          margin: -0.25rem;
+        }
+        .focus_-m-1:focus {
+          margin: -0.25rem;
+        }
+        .mx-1 {
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+        }
+        @media (min-width: 640px) {
+          .sm_mx-1 {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+          }
+          .sm_hover_mx-1:hover {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+          }
+          .sm_focus_mx-1:focus {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_mx-1 {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+          }
+          .md_hover_mx-1:hover {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+          }
+          .md_focus_mx-1:focus {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+          }
+        }
+        .hover_mx-1:hover {
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+        }
+        .focus_mx-1:focus {
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+        }
+        .-mx-1 {
+          margin-left: -0.25rem;
+          margin-right: -0.25rem;
+        }
+        @media (min-width: 640px) {
+          .sm_-mx-1 {
+            margin-left: -0.25rem;
+            margin-right: -0.25rem;
+          }
+          .sm_hover_-mx-1:hover {
+            margin-left: -0.25rem;
+            margin-right: -0.25rem;
+          }
+          .sm_focus_-mx-1:focus {
+            margin-left: -0.25rem;
+            margin-right: -0.25rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_-mx-1 {
+            margin-left: -0.25rem;
+            margin-right: -0.25rem;
+          }
+          .md_hover_-mx-1:hover {
+            margin-left: -0.25rem;
+            margin-right: -0.25rem;
+          }
+          .md_focus_-mx-1:focus {
+            margin-left: -0.25rem;
+            margin-right: -0.25rem;
+          }
+        }
+        .hover_-mx-1:hover {
+          margin-left: -0.25rem;
+          margin-right: -0.25rem;
+        }
+        .focus_-mx-1:focus {
+          margin-left: -0.25rem;
+          margin-right: -0.25rem;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The style-color mixin') {
+  @include it('should render style') {
+    $map-props: (
+      default: color,
+    );
+    $map-values: (
+      transparent: transparent,
+      gray: (
+        100: #f7fafc,
+        200: #edf2f7,
+      ),
+      red: (
+        100: #fff5f5,
+        200: #fed7d7,
+      ),
+    );
+    @include assert {
+      @include output {
+        @include style-color('', text, $map-values, $map-props);
+      }
+      @include expect {
+        .text-transparent {
+          color: transparent;
+        }
+        .text-gray-100 {
+          color: #f7fafc;
+        }
+        .text-gray-200 {
+          color: #edf2f7;
+        }
+        .text-red-100 {
+          color: #fff5f5;
+        }
+        .text-red-200 {
+          color: #fed7d7;
+        }
+      }
+    }
+  }
+  @include it('should render variants') {
+    $map-props: (
+      default: color,
+    );
+    $map-values: (
+      gray: (
+        100: #f7fafc,
+      ),
+      red: (
+        100: #fff5f5,
+      ),
+    );
+    $variants: (responsive, hover, focus);
+    $screens: (
+      sm: 640px,
+      md: 768px,
+    );
+    @include assert {
+      @include output {
+        @include style-color('', text, $map-values, $map-props, $screens, $variants, '_');
+      }
+      @include expect {
+        .text-gray-100 {
+          color: #f7fafc;
+        }
+        @media (min-width: 640px) {
+          .sm_text-gray-100 {
+            color: #f7fafc;
+          }
+          .sm_hover_text-gray-100:hover {
+            color: #f7fafc;
+          }
+          .sm_focus_text-gray-100:focus {
+            color: #f7fafc;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_text-gray-100 {
+            color: #f7fafc;
+          }
+          .md_hover_text-gray-100:hover {
+            color: #f7fafc;
+          }
+          .md_focus_text-gray-100:focus {
+            color: #f7fafc;
+          }
+        }
+        .hover_text-gray-100:hover {
+          color: #f7fafc;
+        }
+        .focus_text-gray-100:focus {
+          color: #f7fafc;
+        }
+        .text-red-100 {
+          color: #fff5f5;
+        }
+        @media (min-width: 640px) {
+          .sm_text-red-100 {
+            color: #fff5f5;
+          }
+          .sm_hover_text-red-100:hover {
+            color: #fff5f5;
+          }
+          .sm_focus_text-red-100:focus {
+            color: #fff5f5;
+          }
+        }
+        @media (min-width: 768px) {
+          .md_text-red-100 {
+            color: #fff5f5;
+          }
+          .md_hover_text-red-100:hover {
+            color: #fff5f5;
+          }
+          .md_focus_text-red-100:focus {
+            color: #fff5f5;
+          }
+        }
+        .hover_text-red-100:hover {
+          color: #fff5f5;
+        }
+        .focus_text-red-100:focus {
+          color: #fff5f5;
+        }
+      }
+    }
+  }
+}
+
+@include describe('The negative function') {
+  @include it('should negated number') {
+    @include assert-equal(negative(2), -2);
+    @include assert-equal(negative(-2), 2);
+  }
+  @include it('should negated string') {
+    @include assert-equal(negative(str), -str);
+    @include assert-equal(negative(-str), str);
+  }
+}
+
+@include describe('The negative-map function') {
+  @include it('should negated map values and keys') {
+    $input: (
+      px: 1px,
+      -1: -0.25rem,
+      2: 0.5rem,
+      auto: auto,
+    );
+    $received-output: negative-map($input);
+    $expected-output: (
+      '-px': -1px,
+      '1': 0.25rem,
+      '-2': -0.5rem,
+      '-auto': -auto,
+    );
+    @include assert-equal($received-output, $expected-output);
+  }
+}

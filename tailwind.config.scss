@@ -323,7 +323,7 @@ $theme-padding: $theme-spacing !default;
 
 $theme-margin: map-merge(
   map-merge($theme-spacing, (auto: auto)),
-  negative($theme-spacing),
+  negative-map($theme-spacing),
 ) !default;
 
 $theme-object-position: (
