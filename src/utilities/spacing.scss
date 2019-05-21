@@ -1,6 +1,6 @@
 @import "../helper";
 
-@mixin margin($prefix, $map-values) {
+@mixin margin($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: margin,
     t: margin-top,
@@ -10,10 +10,10 @@
     x: margin-left margin-right,
     y: margin-top margin-bottom,
   );
-  @include style($prefix, m, $map-values, $map-props, $separator-key-name: '');
+  @include style($prefix, m, $map-values, $map-props, $screens, $variants, $separator, $separator-key-name: '');
 }
 
-@mixin padding($prefix, $map-values) {
+@mixin padding($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: padding,
     t: padding-top,
@@ -23,5 +23,5 @@
     x: padding-left padding-right,
     y: padding-top padding-bottom,
   );
-  @include style($prefix, p, $map-values, $map-props, $separator-key-name: '');
+  @include style($prefix, p, $map-values, $map-props, $screens, $variants, $separator, $separator-key-name: '');
 }

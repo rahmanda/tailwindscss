@@ -180,10 +180,10 @@
 @import './src/utilities/spacing';
 
 @if $core-plugins-margin {
-  @include margin($prefix, $theme-margin);
+  @include margin($prefix, $theme-margin, $variants-margin, $separator, $theme-screens);
 }
 @if $core-plugins-padding {
-  @include padding($prefix, $theme-padding);
+  @include padding($prefix, $theme-padding, $variants-padding, $separator, $theme-screens);
 }
 
 // Sizing
