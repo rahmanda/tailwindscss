@@ -227,7 +227,7 @@
   @include box-shadow($prefix, $theme-box-shadow, $variants-box-shadow, $separator, $theme-screens);
 }
 @if $core-plugins-opacity {
-  @include opacity($prefix, $theme-opacity);
+  @include opacity($prefix, $theme-opacity, $variants-opacity, $separator, $theme-screens);
 }
 
 // Interactivity
