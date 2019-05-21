@@ -2,6 +2,11 @@
 @import './fill';
 
 @include describe('The fill mixin') {
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $theme-fill: (
     current: currentColor,
   );
@@ -9,10 +14,27 @@
   @include it('should output fill stylesheet correctly') {
     @include assert {
       @include output {
-        @include fill($prefix, $theme-fill);
+        @include fill($prefix, $theme-fill, $variants, $separator, $screens);
       }
       @include expect {
         .fill-current {
+          fill: currentColor;
+        }
+        @media (min-width: 640px) {
+          .sm_fill-current {
+            fill: currentColor;
+          }
+          .sm_hover_fill-current:hover {
+            fill: currentColor;
+          }
+          .sm_focus_fill-current:focus {
+            fill: currentColor;
+          }
+        }
+        .hover_fill-current:hover {
+          fill: currentColor;
+        }
+        .focus_fill-current:focus {
           fill: currentColor;
         }
       }

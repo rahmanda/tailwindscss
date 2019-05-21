@@ -13275,5 +13275,21 @@ video {
 .fill-current {
   fill: currentColor; }
 
+@media (min-width: 640px) {
+  .sm_fill-current {
+    fill: currentColor; } }
+
+@media (min-width: 768px) {
+  .md_fill-current {
+    fill: currentColor; } }
+
+@media (min-width: 1024px) {
+  .lg_fill-current {
+    fill: currentColor; } }
+
+@media (min-width: 1280px) {
+  .xl_fill-current {
+    fill: currentColor; } }
+
 .stroke-current {
   stroke: currentColor; }

@@ -264,7 +264,7 @@
 @import './src/utilities/stroke';
 
 @if $core-plugins-fill {
-  @include fill($prefix, $theme-fill);
+  @include fill($prefix, $theme-fill, $variants-fill, $separator, $theme-screens);
 }
 @if $core-plugins-stroke {
   @include stroke($prefix, $theme-stroke);
