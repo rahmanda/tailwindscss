@@ -17,10 +17,10 @@
   @include float($prefix, $variants-float, $separator, $theme-screens);
 }
 @if $core-plugins-object-fit {
-  @include object-fit($prefix);
+  @include object-fit($prefix, $variants-object-fit, $separator, $theme-screens);
 }
 @if $core-plugins-object-position {
-  @include object-position($prefix, $theme-object-position);
+  @include object-position($prefix, $theme-object-position, $variants-object-position, $separator, $theme-screens);
 }
 @if $core-plugins-overflow {
   @include overflow($prefix);

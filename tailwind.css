@@ -771,44 +771,268 @@ video {
 .object-contain {
   object-fit: contain; }
 
+@media (min-width: 640px) {
+  .sm_object-contain {
+    object-fit: contain; } }
+
+@media (min-width: 768px) {
+  .md_object-contain {
+    object-fit: contain; } }
+
+@media (min-width: 1024px) {
+  .lg_object-contain {
+    object-fit: contain; } }
+
+@media (min-width: 1280px) {
+  .xl_object-contain {
+    object-fit: contain; } }
+
 .object-cover {
   object-fit: cover; }
+
+@media (min-width: 640px) {
+  .sm_object-cover {
+    object-fit: cover; } }
+
+@media (min-width: 768px) {
+  .md_object-cover {
+    object-fit: cover; } }
+
+@media (min-width: 1024px) {
+  .lg_object-cover {
+    object-fit: cover; } }
+
+@media (min-width: 1280px) {
+  .xl_object-cover {
+    object-fit: cover; } }
 
 .object-fill {
   object-fit: fill; }
 
+@media (min-width: 640px) {
+  .sm_object-fill {
+    object-fit: fill; } }
+
+@media (min-width: 768px) {
+  .md_object-fill {
+    object-fit: fill; } }
+
+@media (min-width: 1024px) {
+  .lg_object-fill {
+    object-fit: fill; } }
+
+@media (min-width: 1280px) {
+  .xl_object-fill {
+    object-fit: fill; } }
+
 .object-none {
   object-fit: none; }
+
+@media (min-width: 640px) {
+  .sm_object-none {
+    object-fit: none; } }
+
+@media (min-width: 768px) {
+  .md_object-none {
+    object-fit: none; } }
+
+@media (min-width: 1024px) {
+  .lg_object-none {
+    object-fit: none; } }
+
+@media (min-width: 1280px) {
+  .xl_object-none {
+    object-fit: none; } }
 
 .object-scale-down {
   object-fit: scale-down; }
 
+@media (min-width: 640px) {
+  .sm_object-scale-down {
+    object-fit: scale-down; } }
+
+@media (min-width: 768px) {
+  .md_object-scale-down {
+    object-fit: scale-down; } }
+
+@media (min-width: 1024px) {
+  .lg_object-scale-down {
+    object-fit: scale-down; } }
+
+@media (min-width: 1280px) {
+  .xl_object-scale-down {
+    object-fit: scale-down; } }
+
 .object-bottom {
   object-position: bottom; }
+
+@media (min-width: 640px) {
+  .sm_object-bottom {
+    object-position: bottom; } }
+
+@media (min-width: 768px) {
+  .md_object-bottom {
+    object-position: bottom; } }
+
+@media (min-width: 1024px) {
+  .lg_object-bottom {
+    object-position: bottom; } }
+
+@media (min-width: 1280px) {
+  .xl_object-bottom {
+    object-position: bottom; } }
 
 .object-center {
   object-position: center; }
 
+@media (min-width: 640px) {
+  .sm_object-center {
+    object-position: center; } }
+
+@media (min-width: 768px) {
+  .md_object-center {
+    object-position: center; } }
+
+@media (min-width: 1024px) {
+  .lg_object-center {
+    object-position: center; } }
+
+@media (min-width: 1280px) {
+  .xl_object-center {
+    object-position: center; } }
+
 .object-left {
   object-position: left; }
+
+@media (min-width: 640px) {
+  .sm_object-left {
+    object-position: left; } }
+
+@media (min-width: 768px) {
+  .md_object-left {
+    object-position: left; } }
+
+@media (min-width: 1024px) {
+  .lg_object-left {
+    object-position: left; } }
+
+@media (min-width: 1280px) {
+  .xl_object-left {
+    object-position: left; } }
 
 .object-left-bottom {
   object-position: left bottom; }
 
+@media (min-width: 640px) {
+  .sm_object-left-bottom {
+    object-position: left bottom; } }
+
+@media (min-width: 768px) {
+  .md_object-left-bottom {
+    object-position: left bottom; } }
+
+@media (min-width: 1024px) {
+  .lg_object-left-bottom {
+    object-position: left bottom; } }
+
+@media (min-width: 1280px) {
+  .xl_object-left-bottom {
+    object-position: left bottom; } }
+
 .object-left-top {
   object-position: left top; }
+
+@media (min-width: 640px) {
+  .sm_object-left-top {
+    object-position: left top; } }
+
+@media (min-width: 768px) {
+  .md_object-left-top {
+    object-position: left top; } }
+
+@media (min-width: 1024px) {
+  .lg_object-left-top {
+    object-position: left top; } }
+
+@media (min-width: 1280px) {
+  .xl_object-left-top {
+    object-position: left top; } }
 
 .object-right {
   object-position: right; }
 
+@media (min-width: 640px) {
+  .sm_object-right {
+    object-position: right; } }
+
+@media (min-width: 768px) {
+  .md_object-right {
+    object-position: right; } }
+
+@media (min-width: 1024px) {
+  .lg_object-right {
+    object-position: right; } }
+
+@media (min-width: 1280px) {
+  .xl_object-right {
+    object-position: right; } }
+
 .object-right-bottom {
   object-position: right bottom; }
+
+@media (min-width: 640px) {
+  .sm_object-right-bottom {
+    object-position: right bottom; } }
+
+@media (min-width: 768px) {
+  .md_object-right-bottom {
+    object-position: right bottom; } }
+
+@media (min-width: 1024px) {
+  .lg_object-right-bottom {
+    object-position: right bottom; } }
+
+@media (min-width: 1280px) {
+  .xl_object-right-bottom {
+    object-position: right bottom; } }
 
 .object-right-top {
   object-position: right top; }
 
+@media (min-width: 640px) {
+  .sm_object-right-top {
+    object-position: right top; } }
+
+@media (min-width: 768px) {
+  .md_object-right-top {
+    object-position: right top; } }
+
+@media (min-width: 1024px) {
+  .lg_object-right-top {
+    object-position: right top; } }
+
+@media (min-width: 1280px) {
+  .xl_object-right-top {
+    object-position: right top; } }
+
 .object-top {
   object-position: top; }
+
+@media (min-width: 640px) {
+  .sm_object-top {
+    object-position: top; } }
+
+@media (min-width: 768px) {
+  .md_object-top {
+    object-position: top; } }
+
+@media (min-width: 1024px) {
+  .lg_object-top {
+    object-position: top; } }
+
+@media (min-width: 1280px) {
+  .xl_object-top {
+    object-position: top; } }
 
 .overflow-auto {
   overflow: auto; }

@@ -2,28 +2,118 @@
 @import './object';
 
 @include describe('The object-fit mixin') {
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output object-fit stylesheet correctly') {
     @include assert {
       @include output {
-        @include object-fit($prefix);
+        @include object-fit($prefix, $variants, $separator, $screens);
       }
 
       @include expect {
         .object-contain {
           object-fit: contain;
         }
+        @media (min-width: 640px) {
+          .sm_object-contain {
+            object-fit: contain;
+          }
+          .sm_hover_object-contain:hover {
+            object-fit: contain;
+          }
+          .sm_focus_object-contain:focus {
+            object-fit: contain;
+          }
+        }
+        .hover_object-contain:hover {
+          object-fit: contain;
+        }
+        .focus_object-contain:focus {
+          object-fit: contain;
+        }
         .object-cover {
+          object-fit: cover;
+        }
+        @media (min-width: 640px) {
+          .sm_object-cover {
+            object-fit: cover;
+          }
+          .sm_hover_object-cover:hover {
+            object-fit: cover;
+          }
+          .sm_focus_object-cover:focus {
+            object-fit: cover;
+          }
+        }
+        .hover_object-cover:hover {
+          object-fit: cover;
+        }
+        .focus_object-cover:focus {
           object-fit: cover;
         }
         .object-fill {
           object-fit: fill;
         }
+        @media (min-width: 640px) {
+          .sm_object-fill {
+            object-fit: fill;
+          }
+          .sm_hover_object-fill:hover {
+            object-fit: fill;
+          }
+          .sm_focus_object-fill:focus {
+            object-fit: fill;
+          }
+        }
+        .hover_object-fill:hover {
+          object-fit: fill;
+        }
+        .focus_object-fill:focus {
+          object-fit: fill;
+        }
         .object-none {
           object-fit: none;
         }
+        @media (min-width: 640px) {
+          .sm_object-none {
+            object-fit: none;
+          }
+          .sm_hover_object-none:hover {
+            object-fit: none;
+          }
+          .sm_focus_object-none:focus {
+            object-fit: none;
+          }
+        }
+        .hover_object-none:hover {
+          object-fit: none;
+        }
+        .focus_object-none:focus {
+          object-fit: none;
+        }
         .object-scale-down {
+          object-fit: scale-down;
+        }
+        @media (min-width: 640px) {
+          .sm_object-scale-down {
+            object-fit: scale-down;
+          }
+          .sm_hover_object-scale-down:hover {
+            object-fit: scale-down;
+          }
+          .sm_focus_object-scale-down:focus {
+            object-fit: scale-down;
+          }
+        }
+        .hover_object-scale-down:hover {
+          object-fit: scale-down;
+        }
+        .focus_object-scale-down:focus {
           object-fit: scale-down;
         }
       }
@@ -33,51 +123,62 @@
 
 @include describe('The object-position mixin') {
   $theme-object-position: (
-    bottom: bottom,
-    center: center,
-    left: left,
-    left-bottom: left bottom,
-    left-top: left top,
     right: right,
     right-bottom: right bottom,
-    right-top: right top,
-    top: top,
   );
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output object-position stylesheet correctly') {
     @include assert {
       @include output {
-        @include object-position($prefix, $theme-object-position);
+        @include object-position($prefix, $theme-object-position, $variants, $separator, $screens);
       }
 
       @include expect {
-        .object-bottom {
-          object-position: bottom;
-        }
-        .object-center {
-          object-position: center;
-        }
-        .object-left {
-          object-position: left;
-        }
-        .object-left-bottom {
-          object-position: left bottom;
-        }
-        .object-left-top {
-          object-position: left top;
-        }
         .object-right {
+          object-position: right;
+        }
+        @media (min-width: 640px) {
+          .sm_object-right {
+            object-position: right;
+          }
+          .sm_hover_object-right:hover {
+            object-position: right;
+          }
+          .sm_focus_object-right:focus {
+            object-position: right;
+          }
+        }
+        .hover_object-right:hover {
+          object-position: right;
+        }
+        .focus_object-right:focus {
           object-position: right;
         }
         .object-right-bottom {
           object-position: right bottom;
         }
-        .object-right-top {
-          object-position: right top;
+        @media (min-width: 640px) {
+          .sm_object-right-bottom {
+            object-position: right bottom;
+          }
+          .sm_hover_object-right-bottom:hover {
+            object-position: right bottom;
+          }
+          .sm_focus_object-right-bottom:focus {
+            object-position: right bottom;
+          }
         }
-        .object-top {
-          object-position: top;
+        .hover_object-right-bottom:hover {
+          object-position: right bottom;
+        }
+        .focus_object-right-bottom:focus {
+          object-position: right bottom;
         }
       }
     }
