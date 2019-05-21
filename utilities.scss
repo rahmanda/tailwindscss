@@ -154,19 +154,19 @@
   @include align-self($prefix, $variants-align-self, $separator, $theme-screens);
 }
 @if $core-plugins-flex {
-  @include flex($prefix, $theme-flex);
+  @include flex($prefix, $theme-flex, $variants-flex, $separator, $theme-screens);
 }
 @if $core-plugins-flex-direction {
-  @include flex-direction($prefix);
+  @include flex-direction($prefix, $variants-flex-direction, $separator, $theme-screens);
 }
 @if $core-plugins-flex-wrap {
-  @include flex-wrap($prefix);
+  @include flex-wrap($prefix, $variants-flex-wrap, $separator, $theme-screens);
 }
 @if $core-plugins-flex-grow {
-  @include flex-grow($prefix, $theme-flex-grow);
+  @include flex-grow($prefix, $theme-flex-grow, $variants-flex-grow, $separator, $theme-screens);
 }
 @if $core-plugins-flex-shrink {
-  @include flex-shrink($prefix, $theme-flex-shrink);
+  @include flex-shrink($prefix, $theme-flex-shrink, $variants-flex-shrink, $separator, $theme-screens);
 }
 @if $core-plugins-justify-content {
   @include justify-content($prefix);

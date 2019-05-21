@@ -1,13 +1,13 @@
 @import "../helper";
 
-@mixin flex($prefix, $map-values) {
+@mixin flex($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: flex,
   );
-  @include style($prefix, flex, $map-values, $map-props);
+  @include style($prefix, flex, $map-values, $map-props, $screens, $variants, $separator);
 }
 
-@mixin flex-direction($prefix) {
+@mixin flex-direction($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     row: row,
     row-reverse: row-reverse,
@@ -17,10 +17,10 @@
   $map-props: (
     default: flex-direction,
   );
-  @include style($prefix, flex, $map-values, $map-props);
+  @include style($prefix, flex, $map-values, $map-props, $screens, $variants, $separator);
 }
 
-@mixin flex-wrap($prefix) {
+@mixin flex-wrap($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     no-wrap: nowrap,
     wrap: wrap,
@@ -29,19 +29,19 @@
   $map-props: (
     default: flex-wrap,
   );
-  @include style($prefix, flex, $map-values, $map-props);
+  @include style($prefix, flex, $map-values, $map-props, $screens, $variants, $separator);
 }
 
-@mixin flex-grow($prefix, $map-values) {
+@mixin flex-grow($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: flex-grow,
   );
-  @include style($prefix, flex-grow, $map-values, $map-props);
+  @include style($prefix, flex-grow, $map-values, $map-props, $screens, $variants, $separator);
 }
 
-@mixin flex-shrink($prefix, $map-values) {
+@mixin flex-shrink($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: flex-shrink,
   );
-  @include style($prefix, flex-shrink, $map-values, $map-props);
+  @include style($prefix, flex-shrink, $map-values, $map-props, $screens, $variants, $separator);
 }
