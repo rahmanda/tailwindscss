@@ -1,6 +1,6 @@
 @import "../helper";
 
-@mixin align-items($prefix) {
+@mixin align-items($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     stretch: stretch,
     start: flex-start,
@@ -11,10 +11,10 @@
   $map-props: (
     default: align-items,
   );
-  @include style($prefix, items, $map-values, $map-props);
+  @include style($prefix, items, $map-values, $map-props, $screens, $variants, $separator);
 }
 
-@mixin align-content($prefix) {
+@mixin align-content($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     start: flex-start,
     center: center,
@@ -26,10 +26,10 @@
   $map-props: (
     default: align-content,
   );
-  @include style($prefix, content, $map-values, $map-props);
+  @include style($prefix, content, $map-values, $map-props, $screens, $variants, $separator);
 }
 
-@mixin align-self($prefix) {
+@mixin align-self($prefix, $variants: (), $separator: '_', $screens: ()) {
   $map-values: (
     auto: auto,
     start: flex-start,
@@ -41,5 +41,5 @@
   $map-props: (
     default: align-self,
   );
-  @include style($prefix, self, $map-values, $map-props);
+  @include style($prefix, self, $map-values, $map-props, $screens, $variants, $separator);
 }

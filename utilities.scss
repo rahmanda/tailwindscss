@@ -145,13 +145,13 @@
 @import './src/utilities/order';
 
 @if $core-plugins-align-items {
-  @include align-items($prefix);
+  @include align-items($prefix, $variants-align-items, $separator, $theme-screens);
 }
 @if $core-plugins-align-content {
-  @include align-content($prefix);
+  @include align-content($prefix, $variants-align-content, $separator, $theme-screens);
 }
 @if $core-plugins-align-self {
-  @include align-self($prefix);
+  @include align-self($prefix, $variants-align-self, $separator, $theme-screens);
 }
 @if $core-plugins-flex {
   @include flex($prefix, $theme-flex);

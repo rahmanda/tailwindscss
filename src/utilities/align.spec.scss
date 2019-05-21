@@ -2,27 +2,117 @@
 @import './align';
 
 @include describe('The align-items mixin') {
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output align-items stylesheet correctly') {
     @include assert {
       @include output {
-        @include align-items($prefix);
+        @include align-items($prefix, $variants, $separator, $screens);
       }
       @include expect {
         .items-stretch {
           align-items: stretch;
         }
+        @media (min-width: 640px) {
+          .sm_items-stretch {
+            align-items: stretch;
+          }
+          .sm_hover_items-stretch:hover {
+            align-items: stretch;
+          }
+          .sm_focus_items-stretch:focus {
+            align-items: stretch;
+          }
+        }
+        .hover_items-stretch:hover {
+          align-items: stretch;
+        }
+        .focus_items-stretch:focus {
+          align-items: stretch;
+        }
         .items-start {
+          align-items: flex-start;
+        }
+        @media (min-width: 640px) {
+          .sm_items-start {
+            align-items: flex-start;
+          }
+          .sm_hover_items-start:hover {
+            align-items: flex-start;
+          }
+          .sm_focus_items-start:focus {
+            align-items: flex-start;
+          }
+        }
+        .hover_items-start:hover {
+          align-items: flex-start;
+        }
+        .focus_items-start:focus {
           align-items: flex-start;
         }
         .items-center {
           align-items: center;
         }
+        @media (min-width: 640px) {
+          .sm_items-center {
+            align-items: center;
+          }
+          .sm_hover_items-center:hover {
+            align-items: center;
+          }
+          .sm_focus_items-center:focus {
+            align-items: center;
+          }
+        }
+        .hover_items-center:hover {
+          align-items: center;
+        }
+        .focus_items-center:focus {
+          align-items: center;
+        }
         .items-end {
           align-items: flex-end;
         }
+        @media (min-width: 640px) {
+          .sm_items-end {
+            align-items: flex-end;
+          }
+          .sm_hover_items-end:hover {
+            align-items: flex-end;
+          }
+          .sm_focus_items-end:focus {
+            align-items: flex-end;
+          }
+        }
+        .hover_items-end:hover {
+          align-items: flex-end;
+        }
+        .focus_items-end:focus {
+          align-items: flex-end;
+        }
         .items-baseline {
+          align-items: baseline;
+        }
+        @media (min-width: 640px) {
+          .sm_items-baseline {
+            align-items: baseline;
+          }
+          .sm_hover_items-baseline:hover {
+            align-items: baseline;
+          }
+          .sm_focus_items-baseline:focus {
+            align-items: baseline;
+          }
+        }
+        .hover_items-baseline:hover {
+          align-items: baseline;
+        }
+        .focus_items-baseline:focus {
           align-items: baseline;
         }
       }
@@ -31,27 +121,117 @@
 }
 
 @include describe('The align-content mixin') {
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output align-content stylesheet correctly') {
     @include assert {
       @include output {
-        @include align-content($prefix);
+        @include align-content($prefix, $variants, $separator, $screens);
       }
       @include expect {
         .content-start {
           align-content: flex-start;
         }
+        @media (min-width: 640px) {
+          .sm_content-start {
+            align-content: flex-start;
+          }
+          .sm_hover_content-start:hover {
+            align-content: flex-start;
+          }
+          .sm_focus_content-start:focus {
+            align-content: flex-start;
+          }
+        }
+        .hover_content-start:hover {
+          align-content: flex-start;
+        }
+        .focus_content-start:focus {
+          align-content: flex-start;
+        }
         .content-center {
+          align-content: center;
+        }
+        @media (min-width: 640px) {
+          .sm_content-center {
+            align-content: center;
+          }
+          .sm_hover_content-center:hover {
+            align-content: center;
+          }
+          .sm_focus_content-center:focus {
+            align-content: center;
+          }
+        }
+        .hover_content-center:hover {
+          align-content: center;
+        }
+        .focus_content-center:focus {
           align-content: center;
         }
         .content-end {
           align-content: flex-end;
         }
+        @media (min-width: 640px) {
+          .sm_content-end {
+            align-content: flex-end;
+          }
+          .sm_hover_content-end:hover {
+            align-content: flex-end;
+          }
+          .sm_focus_content-end:focus {
+            align-content: flex-end;
+          }
+        }
+        .hover_content-end:hover {
+          align-content: flex-end;
+        }
+        .focus_content-end:focus {
+          align-content: flex-end;
+        }
         .content-between {
           align-content: space-between;
         }
+        @media (min-width: 640px) {
+          .sm_content-between {
+            align-content: space-between;
+          }
+          .sm_hover_content-between:hover {
+            align-content: space-between;
+          }
+          .sm_focus_content-between:focus {
+            align-content: space-between;
+          }
+        }
+        .hover_content-between:hover {
+          align-content: space-between;
+        }
+        .focus_content-between:focus {
+          align-content: space-between;
+        }
         .content-around {
+          align-content: space-around;
+        }
+        @media (min-width: 640px) {
+          .sm_content-around {
+            align-content: space-around;
+          }
+          .sm_hover_content-around:hover {
+            align-content: space-around;
+          }
+          .sm_focus_content-around:focus {
+            align-content: space-around;
+          }
+        }
+        .hover_content-around:hover {
+          align-content: space-around;
+        }
+        .focus_content-around:focus {
           align-content: space-around;
         }
       }
@@ -60,27 +240,117 @@
 }
 
 @include describe('The align-self mixin') {
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output align-self stylesheet correctly') {
     @include assert {
       @include output {
-        @include align-self($prefix);
+        @include align-self($prefix, $variants, $separator, $screens);
       }
       @include expect {
         .self-auto {
           align-self: auto;
         }
+        @media (min-width: 640px) {
+          .sm_self-auto {
+            align-self: auto;
+          }
+          .sm_hover_self-auto:hover {
+            align-self: auto;
+          }
+          .sm_focus_self-auto:focus {
+            align-self: auto;
+          }
+        }
+        .hover_self-auto:hover {
+          align-self: auto;
+        }
+        .focus_self-auto:focus {
+          align-self: auto;
+        }
         .self-start {
+          align-self: flex-start;
+        }
+        @media (min-width: 640px) {
+          .sm_self-start {
+            align-self: flex-start;
+          }
+          .sm_hover_self-start:hover {
+            align-self: flex-start;
+          }
+          .sm_focus_self-start:focus {
+            align-self: flex-start;
+          }
+        }
+        .hover_self-start:hover {
+          align-self: flex-start;
+        }
+        .focus_self-start:focus {
           align-self: flex-start;
         }
         .self-center {
           align-self: center;
         }
+        @media (min-width: 640px) {
+          .sm_self-center {
+            align-self: center;
+          }
+          .sm_hover_self-center:hover {
+            align-self: center;
+          }
+          .sm_focus_self-center:focus {
+            align-self: center;
+          }
+        }
+        .hover_self-center:hover {
+          align-self: center;
+        }
+        .focus_self-center:focus {
+          align-self: center;
+        }
         .self-end {
           align-self: flex-end;
         }
+        @media (min-width: 640px) {
+          .sm_self-end {
+            align-self: flex-end;
+          }
+          .sm_hover_self-end:hover {
+            align-self: flex-end;
+          }
+          .sm_focus_self-end:focus {
+            align-self: flex-end;
+          }
+        }
+        .hover_self-end:hover {
+          align-self: flex-end;
+        }
+        .focus_self-end:focus {
+          align-self: flex-end;
+        }
         .self-stretch {
+          align-self: stretch;
+        }
+        @media (min-width: 640px) {
+          .sm_self-stretch {
+            align-self: stretch;
+          }
+          .sm_hover_self-stretch:hover {
+            align-self: stretch;
+          }
+          .sm_focus_self-stretch:focus {
+            align-self: stretch;
+          }
+        }
+        .hover_self-stretch:hover {
+          align-self: stretch;
+        }
+        .focus_self-stretch:focus {
           align-self: stretch;
         }
       }
