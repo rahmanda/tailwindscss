@@ -78,16 +78,16 @@
   @include list-style-position($prefix, $variants-list-style-position, $separator, $theme-screens);
 }
 @if $core-plugins-text-align {
-  @include text-align($prefix);
+  @include text-align($prefix, $variants-text-align, $separator, $theme-screens);
 }
 @if $core-plugins-text-decoration {
-  @include text-decoration($prefix);
+  @include text-decoration($prefix, $variants-text-decoration, $separator, $theme-screens);
 }
 @if $core-plugins-text-transform {
-  @include text-transform($prefix);
+  @include text-transform($prefix, $variants-text-transform, $separator, $theme-screens);
 }
 @if $core-plugins-text-color {
-  @include color($prefix, $theme-text-color);
+  @include color($prefix, $theme-text-color, $variants-text-color, $separator, $theme-screens);
 }
 @if $core-plugins-white-space {
   @include white-space($prefix);
