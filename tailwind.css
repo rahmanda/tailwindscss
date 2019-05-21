@@ -11451,17 +11451,97 @@ video {
 .justify-start {
   justify-content: flex-start; }
 
+@media (min-width: 640px) {
+  .sm_justify-start {
+    justify-content: flex-start; } }
+
+@media (min-width: 768px) {
+  .md_justify-start {
+    justify-content: flex-start; } }
+
+@media (min-width: 1024px) {
+  .lg_justify-start {
+    justify-content: flex-start; } }
+
+@media (min-width: 1280px) {
+  .xl_justify-start {
+    justify-content: flex-start; } }
+
 .justify-center {
   justify-content: center; }
+
+@media (min-width: 640px) {
+  .sm_justify-center {
+    justify-content: center; } }
+
+@media (min-width: 768px) {
+  .md_justify-center {
+    justify-content: center; } }
+
+@media (min-width: 1024px) {
+  .lg_justify-center {
+    justify-content: center; } }
+
+@media (min-width: 1280px) {
+  .xl_justify-center {
+    justify-content: center; } }
 
 .justify-end {
   justify-content: flex-end; }
 
+@media (min-width: 640px) {
+  .sm_justify-end {
+    justify-content: flex-end; } }
+
+@media (min-width: 768px) {
+  .md_justify-end {
+    justify-content: flex-end; } }
+
+@media (min-width: 1024px) {
+  .lg_justify-end {
+    justify-content: flex-end; } }
+
+@media (min-width: 1280px) {
+  .xl_justify-end {
+    justify-content: flex-end; } }
+
 .justify-between {
   justify-content: space-between; }
 
+@media (min-width: 640px) {
+  .sm_justify-between {
+    justify-content: space-between; } }
+
+@media (min-width: 768px) {
+  .md_justify-between {
+    justify-content: space-between; } }
+
+@media (min-width: 1024px) {
+  .lg_justify-between {
+    justify-content: space-between; } }
+
+@media (min-width: 1280px) {
+  .xl_justify-between {
+    justify-content: space-between; } }
+
 .justify-around {
   justify-content: space-around; }
+
+@media (min-width: 640px) {
+  .sm_justify-around {
+    justify-content: space-around; } }
+
+@media (min-width: 768px) {
+  .md_justify-around {
+    justify-content: space-around; } }
+
+@media (min-width: 1024px) {
+  .lg_justify-around {
+    justify-content: space-around; } }
+
+@media (min-width: 1280px) {
+  .xl_justify-around {
+    justify-content: space-around; } }
 
 .order-first {
   order: -1; }

@@ -169,7 +169,7 @@
   @include flex-shrink($prefix, $theme-flex-shrink, $variants-flex-shrink, $separator, $theme-screens);
 }
 @if $core-plugins-justify-content {
-  @include justify-content($prefix);
+  @include justify-content($prefix, $variants-justify-content, $separator, $theme-screens);
 }
 @if $core-plugins-order {
   @include order($prefix);
