@@ -23,7 +23,7 @@
   @include object-position($prefix, $theme-object-position, $variants-object-position, $separator, $theme-screens);
 }
 @if $core-plugins-overflow {
-  @include overflow($prefix);
+  @include overflow($prefix, $variants-overflow, $separator, $theme-screens);
 }
 @if $core-plugins-position {
   @include position($prefix);
