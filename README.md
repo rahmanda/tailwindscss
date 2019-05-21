@@ -81,3 +81,12 @@ Because of Sass limitation, below features cannot be provided in this library:
 
 - [Plugins](https://tailwindcss.com/docs/plugins)
 - [Functions & Directives](https://tailwindcss.com/docs/functions-and-directives)
+
+Sass do not support several characters like ':' and '/' because it will always be evaluated as language's keywords. For your safety, keep your prefix and separator with dashed ('-') and underscored ('_') characters.
+
+## TODO
+
+- [] important flag
+- [x] responsive
+- [x] pseudo-class (hover and focus)
+- [x] colors
