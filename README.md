@@ -77,12 +77,12 @@ Head to [the original website](https://tailwindcss.com) for more guideline about
 
 ## Limitation
 
-Because of Sass limitation, below features cannot be provided in this library:
+Because of SCSS limitation, below features cannot be provided in this library:
 
 - [Plugins](https://tailwindcss.com/docs/plugins)
 - [Functions & Directives](https://tailwindcss.com/docs/functions-and-directives)
 
-Sass do not support several characters like ':' and '/' because it will always be evaluated as language's keywords. For your safety, keep your prefix and separator with dashed ('-') and underscored ('_') characters.
+SCSS does not support several characters like colon (`:`) and backslash (`/`) because it will always be evaluated as language's keywords. For your safety, keep your prefix and separator with dashes (`-`) and underscore (`_`) characters.
 
 ## TODO
 
