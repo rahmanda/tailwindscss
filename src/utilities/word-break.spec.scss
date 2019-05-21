@@ -2,12 +2,17 @@
 @import './word-break';
 
 @include describe('The word-break mixin') {
+  $screens: (
+    sm: 640px,
+  );
+  $variants: responsive hover focus;
+  $separator: '_';
   $prefix: '';
 
   @include it('should output word-break stylesheet correctly') {
     @include assert {
       @include output {
-        @include word-break($prefix);
+        @include word-break($prefix, $variants, $separator, $screens);
       }
 
       @include expect {
@@ -15,13 +20,96 @@
           word-break: normal;
           overflow-wrap: normal;
         }
+        @media (min-width: 640px) {
+          .sm_break-normal {
+            word-break: normal;
+            overflow-wrap: normal;
+          }
+          .sm_hover_break-normal:hover {
+            word-break: normal;
+            overflow-wrap: normal;
+          }
+          .sm_focus_break-normal:focus {
+            word-break: normal;
+            overflow-wrap: normal;
+          }
+        }
+        .hover_break-normal:hover {
+          word-break: normal;
+          overflow-wrap: normal;
+        }
+        .focus_break-normal:focus {
+          word-break: normal;
+          overflow-wrap: normal;
+        }
         .break-words {
+          overflow-wrap: break-word;
+        }
+        @media (min-width: 640px) {
+          .sm_break-words {
+            overflow-wrap: break-word;
+          }
+          .sm_hover_break-words:hover {
+            overflow-wrap: break-word;
+          }
+          .sm_focus_break-words:focus {
+            overflow-wrap: break-word;
+          }
+        }
+        .hover_break-words:hover {
+          overflow-wrap: break-word;
+        }
+        .focus_break-words:focus {
           overflow-wrap: break-word;
         }
         .break-all {
           word-break: normal;
         }
+        @media (min-width: 640px) {
+          .sm_break-all {
+            word-break: normal;
+          }
+          .sm_hover_break-all:hover {
+            word-break: normal;
+          }
+          .sm_focus_break-all:focus {
+            word-break: normal;
+          }
+        }
+        .hover_break-all:hover {
+          word-break: normal;
+        }
+        .focus_break-all:focus {
+          word-break: normal;
+        }
         .truncate {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        @media (min-width: 640px) {
+          .sm_truncate {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .sm_hover_truncate:hover {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .sm_focus_truncate:focus {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+        .hover_truncate:hover {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .focus_truncate:focus {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;

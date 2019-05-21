@@ -6476,16 +6476,92 @@ video {
   word-break: normal;
   overflow-wrap: normal; }
 
+@media (min-width: 640px) {
+  .sm_break-normal {
+    word-break: normal;
+    overflow-wrap: normal; } }
+
+@media (min-width: 768px) {
+  .md_break-normal {
+    word-break: normal;
+    overflow-wrap: normal; } }
+
+@media (min-width: 1024px) {
+  .lg_break-normal {
+    word-break: normal;
+    overflow-wrap: normal; } }
+
+@media (min-width: 1280px) {
+  .xl_break-normal {
+    word-break: normal;
+    overflow-wrap: normal; } }
+
 .break-words {
   overflow-wrap: break-word; }
 
+@media (min-width: 640px) {
+  .sm_break-words {
+    overflow-wrap: break-word; } }
+
+@media (min-width: 768px) {
+  .md_break-words {
+    overflow-wrap: break-word; } }
+
+@media (min-width: 1024px) {
+  .lg_break-words {
+    overflow-wrap: break-word; } }
+
+@media (min-width: 1280px) {
+  .xl_break-words {
+    overflow-wrap: break-word; } }
+
 .break-all {
   word-break: normal; }
+
+@media (min-width: 640px) {
+  .sm_break-all {
+    word-break: normal; } }
+
+@media (min-width: 768px) {
+  .md_break-all {
+    word-break: normal; } }
+
+@media (min-width: 1024px) {
+  .lg_break-all {
+    word-break: normal; } }
+
+@media (min-width: 1280px) {
+  .xl_break-all {
+    word-break: normal; } }
 
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
+
+@media (min-width: 640px) {
+  .sm_truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; } }
+
+@media (min-width: 768px) {
+  .md_truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; } }
+
+@media (min-width: 1024px) {
+  .lg_truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; } }
+
+@media (min-width: 1280px) {
+  .xl_truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; } }
 
 .bg-fixed {
   background-attachment: fixed; }

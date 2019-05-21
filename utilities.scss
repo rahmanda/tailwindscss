@@ -96,7 +96,7 @@
   @include white-space($prefix, $variants-white-space, $separator, $theme-screens);
 }
 @if $core-plugins-word-break {
-  @include word-break($prefix);
+  @include word-break($prefix, $variants-word-break, $separator, $theme-screens);
 }
 
 // Background

@@ -1,15 +1,17 @@
-@mixin word-break($prefix) {
-  .#{$prefix}break-normal {
+@import "../helper";
+
+@mixin word-break($prefix, $variants: (), $separator: '_', $screens: ()) {
+  @include raw-style($prefix, break-normal, $screens, $variants, $separator) {
     word-break: normal;
     overflow-wrap: normal;
   }
-  .#{$prefix}break-words {
+  @include raw-style($prefix, break-words, $screens, $variants, $separator) {
     overflow-wrap: break-word;
   }
-  .#{$prefix}break-all {
+  @include raw-style($prefix, break-all, $screens, $variants, $separator) {
     word-break: normal;
   }
-  .#{$prefix}truncate {
+  @include raw-style($prefix, truncate, $screens, $variants, $separator) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
