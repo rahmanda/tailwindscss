@@ -32,7 +32,7 @@
   @include inset($prefix, $theme-inset, $variants-inset, $separator, $theme-screens);
 }
 @if $core-plugins-visibility {
-  @include visibility($prefix);
+  @include visibility($prefix, $variants-visibility, $separator, $theme-screens);
 }
 @if $core-plugins-z-index {
   @include z-index($prefix, $theme-z-index);

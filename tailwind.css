@@ -1676,8 +1676,40 @@ video {
 .visible {
   visibility: visible; }
 
+@media (min-width: 640px) {
+  .sm_visible {
+    visibility: visible; } }
+
+@media (min-width: 768px) {
+  .md_visible {
+    visibility: visible; } }
+
+@media (min-width: 1024px) {
+  .lg_visible {
+    visibility: visible; } }
+
+@media (min-width: 1280px) {
+  .xl_visible {
+    visibility: visible; } }
+
 .invisible {
   visibility: hidden; }
+
+@media (min-width: 640px) {
+  .sm_invisible {
+    visibility: hidden; } }
+
+@media (min-width: 768px) {
+  .md_invisible {
+    visibility: hidden; } }
+
+@media (min-width: 1024px) {
+  .lg_invisible {
+    visibility: hidden; } }
+
+@media (min-width: 1280px) {
+  .xl_invisible {
+    visibility: hidden; } }
 
 .z-auto {
   z-index: auto; }
