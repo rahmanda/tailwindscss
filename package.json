@@ -1,6 +1,6 @@
 {
   "name": "tailwindscss",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "SCSS version of Tailwind CSS for people who don't use modern module bundler",
   "main": "tailwind.css",
   "style": "tailwind.scss",
