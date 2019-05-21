@@ -192,22 +192,22 @@
 @import './src/utilities/height';
 
 @if $core-plugins-width {
-  @include width($prefix, $theme-width);
+  @include width($prefix, $theme-width, $variants-width, $separator, $theme-screens);
 }
 @if $core-plugins-min-width {
-  @include min-width($prefix, $theme-min-width);
+  @include min-width($prefix, $theme-min-width, $variants-min-width, $separator, $theme-screens);
 }
 @if $core-plugins-max-width {
-  @include max-width($prefix, $theme-max-width);
+  @include max-width($prefix, $theme-max-width, $variants-max-width, $separator, $theme-screens);
 }
 @if $core-plugins-height {
-  @include height($prefix, $theme-height);
+  @include height($prefix, $theme-height, $variants-height, $separator, $theme-screens);
 }
 @if $core-plugins-min-height {
-  @include min-height($prefix, $theme-min-height);
+  @include min-height($prefix, $theme-min-height, $variants-min-height, $separator, $theme-screens);
 }
 @if $core-plugins-max-height {
-  @include max-height($prefix, $theme-max-height);
+  @include max-height($prefix, $theme-max-height, $variants-max-height, $separator, $theme-screens);
 }
 
 // Tables

@@ -1,25 +1,25 @@
 @import '../helper';
 
-@mixin width($prefix, $map-values) {
+@mixin width($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: width,
   );
 
-  @include style($prefix, w, $map-values, $map-props);
+  @include style($prefix, w, $map-values, $map-props, $screens, $variants, $separator);
 }
 
-@mixin min-width($prefix, $map-values) {
+@mixin min-width($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: min-width,
   );
 
-  @include style($prefix, min-w, $map-values, $map-props);
+  @include style($prefix, min-w, $map-values, $map-props, $screens, $variants, $separator);
 }
 
-@mixin max-width($prefix, $map-values) {
+@mixin max-width($prefix, $map-values, $variants: (), $separator: '_', $screens: ()) {
   $map-props: (
     default: max-width,
   );
 
-  @include style($prefix, max-w, $map-values, $map-props);
+  @include style($prefix, max-w, $map-values, $map-props, $screens, $variants, $separator);
 }
