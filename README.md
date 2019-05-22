@@ -75,6 +75,8 @@ To customize utilities, you need to import your own configuration file at the to
 
 For starting out, you can run `npx tailwindscss init` to get full configuration.
 
+Note: You need to configure how your bundler can refer to tailwindscss node_modules yourself.
+
 ## Documentation
 
 Head to [the original website](https://tailwindcss.com) for more guideline about utilities. Of course, some sections like installation are not applicable for this library.
