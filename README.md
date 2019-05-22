@@ -32,13 +32,13 @@ yarn add tailwindscss
 
 To use it on your SCSS, you can import entire style like this:
 
-```
+``` scss
 @import "tailwindscss";
 ```
 
 or you can choose to import one by one:
 
-```
+``` scss
 @import "tailwindscss/base";
 @import "tailwindscss/utilities";
 ```
@@ -47,8 +47,7 @@ or you can choose to import one by one:
 
 By default, it will generate all styles which are equivalent to Tailwind CSS's default configuration. Below is what our configuration looks like.
 
-```
-
+``` scss
 @import 'tailwindscss/src/helper';
 
 $prefix: ''; // Selector prefix;
@@ -62,12 +61,11 @@ $theme-colors: (
 $variants-text-color: (responsive, hover, focus); // Variants configuration
 
 $core-plugins-text-color: true; // Set false to disable utility
-
 ```
 
 To customize utilities, you need to import your own configuration file at the top of your SCSS file.
 
-```
+``` scss
 @import "path-to/tailwind.config.scss";
 @import "tailwindscss/base";
 @import "tailwindscss/utilities";
