@@ -77,7 +77,7 @@ Note: You need to configure how your bundler can refer to tailwindscss node_modu
 
 ## Documentation
 
-Head to [the original website](https://tailwindcss.com) for more guideline about utilities. Of course, some sections like installation are not applicable for this library.
+Head over to [the original website](https://tailwindcss.com) for more guideline about utilities. Of course, some sections like installation are not applicable for this library.
 
 ## Limitation
 
