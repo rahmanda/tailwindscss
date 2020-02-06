@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'tailwindscss'
-  s.version = '0.3.0'
+  s.version = '0.3.1'
   s.date = '2020-02-06'
   s.summary = "SCSS version of Tailwind CSS for people who don't use modern module bundler"
   s.authors = ['Rahmanda Wibowo']
