@@ -159,3 +159,16 @@
     }
   }
 }
+
+@mixin dark-mode-selector() {
+  @if $dark-mode == 'media' {
+      @media (prefers-color-scheme: dark){
+        @content;
+    }
+  }
+  @if $dark-mode == 'class' {
+    .dark {
+      @content;
+    }
+  }
+}
