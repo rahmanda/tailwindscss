@@ -148,6 +148,11 @@
 @if $core-plugins-text-color {
   @include color($prefix, $theme-text-color, $variants-text-color, $separator);
 }
+@if $core-plugins-text-color-dark {
+  @include dark-mode-selector() {
+    @include color("#{$prefix}dark", $theme-text-color, $variants-text-color, $separator);
+  }
+}
 @if $core-plugins-vertical-align {
   @include vertical-align($prefix, $variants-vertical-align, $separator);
 }
@@ -173,6 +178,11 @@
 @if $core-plugins-background-color {
   @include background-color($prefix, $theme-background-color, $variants-background-color, $separator);
 }
+@if $core-plugins-background-color-dark {
+  @include dark-mode-selector() {
+    @include background-color("#{$prefix}dark", $theme-background-color, $variants-background-color, $separator);
+  }
+}
 
 // Border
 
@@ -187,6 +197,11 @@
 }
 @if $core-plugins-border-color {
   @include border-color($prefix, $theme-border-color, $variants-border-color, $separator);
+}
+@if $core-plugins-border-color-dark {
+  @include dark-mode-selector() {
+    @include border-color("#{$prefix}dark", $theme-border-color, $variants-border-color, $separator);
+  }
 }
 @if $core-plugins-border-collapse {
   @include border-collapse($prefix, $variants-border-collapse, $separator);

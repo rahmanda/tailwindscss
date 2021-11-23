@@ -3,6 +3,8 @@
 $prefix: '' !default;
 $separator: '_' !default;
 
+$dark-mode: "media" !default; // or 'class' or false
+
 $theme-colors: (
   transparent: transparent,
   black: #000,
@@ -489,11 +491,13 @@ $variants-z-index: (responsive) !default;
 $core-plugins-appearance: true !default;
 $core-plugins-background-attachment: true !default;
 $core-plugins-background-color: true !default;
+$core-plugins-background-color-dark: true !default;
 $core-plugins-background-position: true !default;
 $core-plugins-background-repeat: true !default;
 $core-plugins-background-size: true !default;
 $core-plugins-border-collapse: true !default;
 $core-plugins-border-color: true !default;
+$core-plugins-border-color-dark: true !default;
 $core-plugins-border-radius: true !default;
 $core-plugins-border-style: true !default;
 $core-plugins-border-width: true !default;
@@ -537,6 +541,7 @@ $core-plugins-stroke: true !default;
 $core-plugins-table-layout: true !default;
 $core-plugins-text-align: true !default;
 $core-plugins-text-color: true !default;
+$core-plugins-text-color-dark: true !default;
 $core-plugins-font-size: true !default;
 $core-plugins-font-style: true !default;
 $core-plugins-text-transform: true !default;
