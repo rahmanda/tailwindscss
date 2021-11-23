@@ -150,7 +150,7 @@
 }
 @if $core-plugins-text-color-dark {
   @include dark-mode-selector() {
-    @include color("#{$prefix}dark", $theme-text-color, $variants-text-color, $separator);
+    @include color("#{$prefix}dark#{$separator}", $theme-text-color, $variants-text-color-dark, $separator);
   }
 }
 @if $core-plugins-vertical-align {
@@ -180,7 +180,7 @@
 }
 @if $core-plugins-background-color-dark {
   @include dark-mode-selector() {
-    @include background-color("#{$prefix}dark", $theme-background-color, $variants-background-color, $separator);
+    @include background-color("#{$prefix}dark#{$separator}", $theme-background-color, $variants-background-color-dark, $separator);
   }
 }
 
@@ -200,7 +200,7 @@
 }
 @if $core-plugins-border-color-dark {
   @include dark-mode-selector() {
-    @include border-color("#{$prefix}dark", $theme-border-color, $variants-border-color, $separator);
+    @include border-color("#{$prefix}dark#{$separator}", $theme-border-color, $variants-border-color-dark, $separator);
   }
 }
 @if $core-plugins-border-collapse {
