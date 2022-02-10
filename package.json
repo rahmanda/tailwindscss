@@ -30,7 +30,7 @@
   "devDependencies": {
     "glob": "^7.1.4",
     "jest": "^24.8.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-true": "^4.0.0"
   }
 }
